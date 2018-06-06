@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://zhangdi.site/solve-crossdomain-issues-cors-and-jsonp.html</loc>
-    <lastmod>2018-06-06T18:35:50.338Z</lastmod>
+    <lastmod>2018-06-06T19:17:22.020Z</lastmod>
     <data>
         <display>
         <title>解决跨域问题,CORS及JSONP</title>
@@ -150,28 +150,6 @@
 
     
   <url>
-    <loc>http://zhangdi.site/macos-install-redis.html</loc>
-    <lastmod>2018-06-06T18:32:38.671Z</lastmod>
-    <data>
-        <display>
-        <title>macOS安装Redis</title>
-        <pubTime>2017-12-18T13:00:54.000Z</pubTime>
-        
-        <tag>macOS</tag>
-         
-        <tag>Redis</tag>
-         
-         
-           
-             
-              <breadCrumb title="分享境" url="http://zhangdi.site/categories/share/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://zhangdi.site/promise-and-asyncawait.html</loc>
     <lastmod>2018-06-06T18:32:38.671Z</lastmod>
     <data>
@@ -187,6 +165,28 @@
            
              
               <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/macos-install-redis.html</loc>
+    <lastmod>2018-06-06T18:32:38.671Z</lastmod>
+    <data>
+        <display>
+        <title>macOS安装Redis</title>
+        <pubTime>2017-12-18T13:00:54.000Z</pubTime>
+        
+        <tag>macOS</tag>
+         
+        <tag>Redis</tag>
+         
+         
+           
+             
+              <breadCrumb title="分享境" url="http://zhangdi.site/categories/share/"/>
           
         </display>
     </data>
