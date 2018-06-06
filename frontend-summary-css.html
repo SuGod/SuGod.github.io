@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta name="google-site-verification" content="Gqq8bcz18JexfyTrefRi_JcHDmR8qCtN-v5Tn6M8a7Q" />
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.0 -->
+    <script>
+        window.materialVersion = "1.5.0"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source"/>
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Title -->
+    
+    <title>
+        
+            前端问题总结-CSS | 
+        
+        Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.
+    </title>
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="Zeddy">
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content=",Javascript,HTML/CSS">
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","//cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/css/material.min.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","//cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/css/style.min.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+  #post_entry-right-info .post_entry-tags{
+    margin: 0 15px;
+  }
+  #post_entry-right-info .post_entry-tags::before{
+    content: "<"
+  }
+  #post_entry-right-info .post_entry-tags::after{
+    content: ">"
+  }
+
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icon -->
+
+    <link rel="stylesheet" href="//cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","//cdn.bootcss.com/jquery/2.2.4/jquery.min.js", true)</script>
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://zhangdi.site">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="前端问题总结-CSS | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
+    <meta property="og:image" content="http://zhangdi.site/img/favicon.png" />
+    <meta property="og:description" content="">
+    <meta property="og:article:tag" content="Javascript"> <meta property="og:article:tag" content="HTML/CSS"> 
+
+    
+        <meta property="article:published_time" content="Wed Nov 01 2017 21:47:19 GMT+0800" />
+        <meta property="article:modified_time" content="Thu Jun 07 2018 02:32:37 GMT+0800" />
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="前端问题总结-CSS | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="http://zhangdi.site/img/favicon.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="http://zhangdi.site" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://zhangdi.site/frontend-summary-css.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://zhangdi.site/frontend-summary-css.html",
+    "headline": "前端问题总结-CSS",
+    "datePublished": "Wed Nov 01 2017 21:47:19 GMT+0800",
+    "dateModified": "Thu Jun 07 2018 02:32:37 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Zeddy",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://oox9lo3vp.bkt.clouddn.com/17-12-14/73776896.jpg"
+        },
+        "description": "死亡是一座永恒的灯塔,不管你驶向何方,最终都会朝它转向.一切都将逝去,只有死神永生."
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",Javascript,HTML/CSS",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+        <script>
+    var _hmt = _hmt || [];
+    (function() {var hm = document.createElement('script');
+    hm.src = 'https://hm.baidu.com/hm.js?9e11228d3158bca19d5fb7c05a0c2be2';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+    
+    
+
+    <!-- Custom Head -->
+    
+
+<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#前端问题总结-CSS"><span class="post-toc-text">前端问题总结(CSS)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-介绍一下标准的CSS的盒子模型？低版本IE的盒子模型有什么不同的？"><span class="post-toc-text">1.介绍一下标准的CSS的盒子模型？低版本IE的盒子模型有什么不同的？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-CSS选择符有哪些？哪些属性可以继承？"><span class="post-toc-text">2.CSS选择符有哪些？哪些属性可以继承？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#3-CSS优先级算法如何计算？"><span class="post-toc-text">3.CSS优先级算法如何计算？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#4-CSS3新增伪类有那些？"><span class="post-toc-text">4.CSS3新增伪类有那些？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#5-如何居中div？"><span class="post-toc-text">5.如何居中div？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#6-display有哪些值？说明他们的作用"><span class="post-toc-text">6.display有哪些值？说明他们的作用.</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#7-position的值relative和absolute定位原点是？"><span class="post-toc-text">7.position的值relative和absolute定位原点是？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#8-CSS3有哪些新特性？"><span class="post-toc-text">8.CSS3有哪些新特性？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#9-请解释一下CSS3的Flexbox（弹性盒布局模型）-以及适用场景？"><span class="post-toc-text">9.请解释一下CSS3的Flexbox（弹性盒布局模型）,以及适用场景？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#10-用纯CSS创建一个三角形的原理是什么？"><span class="post-toc-text">10.用纯CSS创建一个三角形的原理是什么？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#11-一个满屏-品-字布局-如何设计"><span class="post-toc-text">11.一个满屏 品 字布局 如何设计?</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#12-css多列等高如何实现？"><span class="post-toc-text">12.css多列等高如何实现？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#13-经常遇到的浏览器的兼容性有哪些？原因-解决方法是什么-常用hack的技巧-？"><span class="post-toc-text">13.经常遇到的浏览器的兼容性有哪些？原因,解决方法是什么,常用hack的技巧 ？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#14-li与li之间有看不见的空白间隔是什么原因引起的？有什么解决办法？"><span class="post-toc-text">14.li与li之间有看不见的空白间隔是什么原因引起的？有什么解决办法？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#15-为什么要初始化CSS样式"><span class="post-toc-text">15.为什么要初始化CSS样式.</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#16-absolute的containing-block-容器块-计算方式跟正常流有什么不同？"><span class="post-toc-text">16.absolute的containing block(容器块)计算方式跟正常流有什么不同？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#17-CSS里的visibility属性有个collapse属性值是干嘛用的？在不同浏览器下以后什么区别？"><span class="post-toc-text">17.CSS里的visibility属性有个collapse属性值是干嘛用的？在不同浏览器下以后什么区别？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#18-position跟display、margin-collapse、overflow、float这些特性相互叠加后会怎么样？"><span class="post-toc-text">18.position跟display、margin collapse、overflow、float这些特性相互叠加后会怎么样？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#19-对BFC规范-块级格式化上下文：block-formatting-context-的理解？"><span class="post-toc-text">19.对BFC规范(块级格式化上下文：block formatting context)的理解？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#20-css定义的权重"><span class="post-toc-text">20.css定义的权重</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#21-请解释一下为什么需要清除浮动？清除浮动的方式"><span class="post-toc-text">21.请解释一下为什么需要清除浮动？清除浮动的方式</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#22-什么是外边距合并？"><span class="post-toc-text">22.什么是外边距合并？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#23-zoom-1的清除浮动原理"><span class="post-toc-text">23.zoom:1的清除浮动原理?</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#24-移动端的布局用过媒体查询吗？"><span class="post-toc-text">24.移动端的布局用过媒体查询吗？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#25-使用-CSS-预处理器吗？喜欢那个？"><span class="post-toc-text">25.使用 CSS 预处理器吗？喜欢那个？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#26-CSS优化、提高性能的方法有哪些？"><span class="post-toc-text">26.CSS优化、提高性能的方法有哪些？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#27-浏览器是怎样解析CSS选择器的？"><span class="post-toc-text">27.浏览器是怎样解析CSS选择器的？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#28-在网页中的应该使用奇数还是偶数的字体？为什么呢？"><span class="post-toc-text">28.在网页中的应该使用奇数还是偶数的字体？为什么呢？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#29-margin和padding分别适合什么场景使用？"><span class="post-toc-text">29.margin和padding分别适合什么场景使用？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#30-抽离样式模块怎么写-说出思路？"><span class="post-toc-text">30.抽离样式模块怎么写,说出思路？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#31-元素竖向的百分比设定是相对于容器的高度吗？"><span class="post-toc-text">31.元素竖向的百分比设定是相对于容器的高度吗？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#32-全屏滚动的原理是什么？用到了CSS的那些属性？"><span class="post-toc-text">32.全屏滚动的原理是什么？用到了CSS的那些属性？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#33-什么是响应式设计？响应式设计的基本原理是什么？如何兼容低版本的IE？"><span class="post-toc-text">33.什么是响应式设计？响应式设计的基本原理是什么？如何兼容低版本的IE？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#34-视差滚动效果-如何给每页做不同的动画？（回到顶部-向下滑动要再次出现-和只出现一次分别怎么做？）"><span class="post-toc-text">34.视差滚动效果,如何给每页做不同的动画？（回到顶部,向下滑动要再次出现,和只出现一次分别怎么做？）</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#35-before-和-after中双冒号和单冒号-有什么区别？解释一下这2个伪元素的作用"><span class="post-toc-text">35.::before 和 :after中双冒号和单冒号 有什么区别？解释一下这2个伪元素的作用.</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#36-如何修改chrome记住密码后自动填充表单的黄色背景-？"><span class="post-toc-text">36.如何修改chrome记住密码后自动填充表单的黄色背景 ？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#37-你对line-height是如何理解的？"><span class="post-toc-text">37.你对line-height是如何理解的？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#38-设置元素浮动后-该元素的display值是多少？"><span class="post-toc-text">38.设置元素浮动后,该元素的display值是多少？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#39-怎么让Chrome支持小于12px-的文字？"><span class="post-toc-text">39.怎么让Chrome支持小于12px 的文字？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#40-让页面里的字体变清晰-变细用CSS怎么做？"><span class="post-toc-text">40.让页面里的字体变清晰,变细用CSS怎么做？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#41-font-style属性可以让它赋值为“oblique”-oblique是什么意思？"><span class="post-toc-text">41.font-style属性可以让它赋值为“oblique” oblique是什么意思？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#42-position-fixed-在android下无效怎么处理？"><span class="post-toc-text">42.position:fixed;在android下无效怎么处理？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#43-如果需要手动写动画-你认为最小时间间隔是多久-为什么？"><span class="post-toc-text">43.如果需要手动写动画,你认为最小时间间隔是多久,为什么？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#44-display-inline-block-什么时候会显示间隙？"><span class="post-toc-text">44.display:inline-block 什么时候会显示间隙？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#45-overflow-scroll时不能平滑滚动的问题怎么处理？"><span class="post-toc-text">45.overflow: scroll时不能平滑滚动的问题怎么处理？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#46-有一个高度自适应的div-里面有两个div-一个高度100px-希望另一个填满剩下的高度"><span class="post-toc-text">46.有一个高度自适应的div,里面有两个div,一个高度100px,希望另一个填满剩下的高度.</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#47-png、jpg、gif-这些图片格式解释一下-分别什么时候用-有没有了解过webp？"><span class="post-toc-text">47.png、jpg、gif 这些图片格式解释一下,分别什么时候用.有没有了解过webp？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#48-什么是Cookie-隔离？（或者说：请求资源的时候不要让它带cookie怎么做）"><span class="post-toc-text">48.什么是Cookie 隔离？（或者说：请求资源的时候不要让它带cookie怎么做）</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#49-style标签写在body后与body前有什么区别？"><span class="post-toc-text">49.style标签写在body后与body前有什么区别？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#50-什么是CSS-预处理器-后处理器？"><span class="post-toc-text">50.什么是CSS 预处理器 / 后处理器？</span></a></li></ol></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                前端问题总结-CSS
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="http://oox9lo3vp.bkt.clouddn.com/17-12-14/73776896.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Zeddy</strong>
+        <span>11月 01, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACZklEQVR42u3ay47jMAwEwPz/T+9eFwjG003Jijcon4K8rPJBJFp8/fnq64WHh4eHh4eHh/cw3iu+kl/9++n76/ffvr+/YW14eHh4R3i/bLWXS/npH67ZyXeGa8PDw8M7yMs3+rZs5J+urA0PDw/v+bx8+04KzHVhwMPDw/sO3vX3r7f+GRUPDw/vaby2tW0xbVH5QNaCh4eHF/PyQ6bzr4+e7+Hh4eEFvHqkaRS/5u345qErPDw8vBt467fPj8Rmowb1evDw8PBu5s2C13yJK4+gHdLCw8PDO8PLg9eVYaxZqWjxeHh4eGd49cF8WTyK+LU8ZsPDw8P7LK9tstt4Im+v22Z6eACGh4eHdzMv2fRXmuC6aV4fHcDDw8PbxFvZlNv2d9cAVtFS4+Hh4W3lJZt+EhDkbXfbmhcFBg8PD+8Ib7aIXUdcex8iHh4e3t28pJ1twUlb3Aa+yf/j4eHhneElIWnb+OalIm/El4au8PDw8Lbyksgg3/TzAtMOEAxjXDw8PLyD46r57YsbjwKLejwLDw8P72Ze++M2JpgNrS7Fx3h4eHhHePl2nD+aXYdhdZSMh4eH91FeXgza+DV/NLdkLXh4eHhbebNGuUXOopBhGIGHh4e3lddeScFoY4uVAAIPDw/vPK/djtcPrmahxtLQFR4eHt4NvLwYJMtN4oNZgcHDw8N7Gq/doNfj3ZVxLjw8PLz/i5cj8yK0HhDj4eHhPZmXtMJtvNsev/34mPDw8PAO8vJDr9lWPns0eTONh4eHd5I3iwDyBjovAHmoccv5Hh4eHl7A+74LDw8PDw8PDw/vAddfLX81ABGqCL4AAAAASUVORK5CYII=">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/HTML-CSS/">HTML/CSS</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Javascript/">Javascript</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=前端问题总结-CSS&url=http://zhangdi.site/frontend-summary-css.html&pic=http://zhangdi.site/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=前端问题总结-CSS&url=http://zhangdi.site/frontend-summary-css.html&via=Zeddy" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zhangdi.site/frontend-summary-css.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://zhangdi.site/frontend-summary-css.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.&title=前端问题总结-CSS&summary=&pics=http://zhangdi.site/img/favicon.png&url=http://zhangdi.site/frontend-summary-css.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p><strong>前端问题总结</strong></p>
+<ol>
+<li>HTML</li>
+<li><strong>CSS</strong></li>
+<li>JavaScript</li>
+<li>ECMAScript 6</li>
+<li>React 相关</li>
+<li>其他</li>
+</ol>
+<h3 id="前端问题总结-CSS"><a href="#前端问题总结-CSS" class="headerlink" title="前端问题总结(CSS)"></a>前端问题总结(CSS)</h3><h5 id="1-介绍一下标准的CSS的盒子模型？低版本IE的盒子模型有什么不同的？"><a href="#1-介绍一下标准的CSS的盒子模型？低版本IE的盒子模型有什么不同的？" class="headerlink" title="1.介绍一下标准的CSS的盒子模型？低版本IE的盒子模型有什么不同的？"></a>1.介绍一下标准的CSS的盒子模型？低版本IE的盒子模型有什么不同的？</h5><blockquote>
+<p>CSS 框模型 (Box Model) 规定了元素框处理元素内容、内边距、边框 和 外边距 的方式.</p>
+<p>根据 W3C 的规范,元素内容占据的空间是由 width 属性设置的,而内容周围的 padding 和 border 值是另外计算的.<br>IE5,IE6 在怪异模式中使用自己的非标准模型,这些浏览器的 width 属性不是内容的宽度,而是内容、内边距和边框的宽度的总和.</p>
+<p>标准的css盒子模型 -&gt;宽高 = 内容区宽高</p>
+<p>低版本IE css盒子模型 -&gt;宽高 = 内容宽高 + 内边距 + 边框</p>
+</blockquote>
+<h5 id="2-CSS选择符有哪些？哪些属性可以继承？"><a href="#2-CSS选择符有哪些？哪些属性可以继承？" class="headerlink" title="2.CSS选择符有哪些？哪些属性可以继承？"></a>2.CSS选择符有哪些？哪些属性可以继承？</h5><blockquote>
+<p>CSS选择器基本可以分为:</p>
+<ul>
+<li>通配选择器</li>
+<li>标签选择器</li>
+<li>类选择器</li>
+<li>ID选择器</li>
+<li>属性选择器(简单属性,具体属性,根据部分属性值选择,特定属性选择)</li>
+<li>从结构上分还有 后代选择器,子元素选择器 相邻兄弟元素选择器以及伪类.</li>
+</ul>
+<p>可以继承的有: <code>font-size</code> <code>font-family</code> <code>color</code><br>不能继承的有: <code>border</code> <code>padding</code> <code>margin</code> <code>background</code> <code>width</code> <code>height</code>等</p>
+</blockquote>
+<h5 id="3-CSS优先级算法如何计算？"><a href="#3-CSS优先级算法如何计算？" class="headerlink" title="3.CSS优先级算法如何计算？"></a>3.CSS优先级算法如何计算？</h5><blockquote>
+<p>CSS的specificity 特性或非凡性,他是衡量css优先级的一个标准,specificity用一个四位数表示,像是四个级别,从左到右,左边最大,一级大于以及,数位之间没有进制,多个选择符作用到同一个元素上是那么specificity上值最高的最终获得优先级.</p>
+<p>简答的总结为:!important 可以改变优先级为最高,其次是 style对象, 然后是 id &gt; class &gt; tag ,另外统计样式按照申明的顺序,后出现的样式具有更高的优先级.</p>
+</blockquote>
+<h5 id="4-CSS3新增伪类有那些？"><a href="#4-CSS3新增伪类有那些？" class="headerlink" title="4.CSS3新增伪类有那些？"></a>4.CSS3新增伪类有那些？</h5><blockquote>
+<p><img src="http://oox9lo3vp.bkt.clouddn.com/17-11-1/34098140.jpg" alt="CSS3选择器"><br><a href="http://www.w3school.com.cn/cssref/css_selectors.asp" target="_blank" rel="noopener">CSS3选择器详情</a><br>//懒得写了</p>
+</blockquote>
+<h5 id="5-如何居中div？"><a href="#5-如何居中div？" class="headerlink" title="5.如何居中div？"></a>5.如何居中div？</h5><blockquote>
+<p>老生常谈的问题了,方法很多,各有优缺点,根据实际情况选用.</p>
+</blockquote>
+<p><strong>表格布局法</strong>   </p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>wrapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>  
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>cell<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Content goes here<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>  
+</code></pre>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token id">#wrapper</span> </span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> table<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector"><span class="token id">#cell</span> </span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> table-cell<span class="token punctuation">;</span>
+    <span class="token property">vertical-align</span><span class="token punctuation">:</span> middle<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>优点:content 可以动态改变高度(不需在 CSS 中定义).当 wrapper 里没有足够空间时, content 不会被截断.<br>缺点:IE中无效   </p>
+<p><strong>inline-block</strong></p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>wrapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>  
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>likeImg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Content goes here<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>  
+</code></pre>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token id">#wrapper</span> </span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> table<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector"><span class="token id">#likeImg</span> </span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
+    <span class="token property">vertical-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>优点:在各种浏览器中兼容性都非常好,ie6和7中有间距问题.<br>缺点:很容易影响其他的布局,导致网页布局全部瘫痪.   </p>
+<p><strong>绝对定位法</strong>   </p>
+<p>这个方法使用绝对定位的 div,把它的 top 设置为 50％,top margin 设置为负的 content 高度.</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> Content goes here<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+</code></pre>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token id">#content</span> </span><span class="token punctuation">{</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">50%</span><span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">240</span>px<span class="token punctuation">;</span>
+    <span class="token property">margin-top</span><span class="token punctuation">:</span> -<span class="token number">120</span>px<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* 盒子本身高度的一半 */</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>优点:适用于所有浏览器,不需要嵌套标签.<br>缺点:没有足够空间时,content 会消失.   </p>
+<p><strong>浮动</strong></p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Content here<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>floater<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+</code></pre>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token id">#floater</span> </span><span class="token punctuation">{</span>
+    <span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">50%</span><span class="token punctuation">;</span>
+    <span class="token property">margin-bottom</span><span class="token punctuation">:</span> -<span class="token number">120</span>px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector"><span class="token id">#content</span> </span><span class="token punctuation">{</span>
+    <span class="token property">clear</span><span class="token punctuation">:</span> both<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">240</span>px<span class="token punctuation">;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>优点:适用于所有浏览器,没有足够空间时(例如:窗口缩小) content 不会被截断,滚动条出现.<br>缺点:空元素.  </p>
+<h5 id="6-display有哪些值？说明他们的作用"><a href="#6-display有哪些值？说明他们的作用" class="headerlink" title="6.display有哪些值？说明他们的作用."></a>6.display有哪些值？说明他们的作用.</h5><blockquote>
+<p><code>none</code>    此元素不会被显示.<br><code>block</code>    此元素将显示为块级元素,此元素前后会带有换行符.<br><code>inline</code>    默认.此元素会被显示为内联元素,元素前后没有换行符.<br><code>inline-block</code>    行内块元素.（CSS2.1 新增的值）<br><code>list-item</code>    此元素会作为列表显示.<br><code>run-in</code>    此元素会根据上下文作为块级元素或内联元素显示.<br><code>table</code>    此元素会作为块级表格来显示（类似 <code>&lt;table&gt;</code>）,表格前后带有换行符.<br><code>inline-table</code>    此元素会作为内联表格来显示（类似 <code>&lt;table&gt;</code>）,表格前后没有换行符.<br><code>table-row-group</code>    此元素会作为一个或多个行的分组来显示（类似 <code>&lt;tbody&gt;</code>）.<br><code>table-header-group</code>    此元素会作为一个或多个行的分组来显示（类似 <code>&lt;thead&gt;</code>）.<br><code>table-footer-group</code>    此元素会作为一个或多个行的分组来显示（类似 <code>&lt;tfoot&gt;</code>）.<br><code>table-row</code>    此元素会作为一个表格行显示（类似 <code>&lt;tr&gt;</code>）.<br><code>table-column-group</code>    此元素会作为一个或多个列的分组来显示（类似 <code>&lt;colgroup&gt;</code>）.<br><code>table-column</code>    此元素会作为一个单元格列显示（类似 <code>&lt;col&gt;</code>）<br><code>table-cell</code>    此元素会作为一个表格单元格显示（类似 <code>&lt;td&gt;</code> 和 <code>&lt;th&gt;</code>）<br><code>table-caption</code>    此元素会作为一个表格标题显示（类似 <code>&lt;caption&gt;</code>）<br><code>inherit</code>    规定应该从父元素继承 display 属性的值.  </p>
+</blockquote>
+<h5 id="7-position的值relative和absolute定位原点是？"><a href="#7-position的值relative和absolute定位原点是？" class="headerlink" title="7.position的值relative和absolute定位原点是？"></a>7.position的值relative和absolute定位原点是？</h5><blockquote>
+<ul>
+<li>relative（相对定位）：定位原点是元素本身所在位置； </li>
+<li>absolute（绝对定位）：定位原点是离自己这一级元素最近的一级position设置为absolute或者relative的父元素的左上角为原点的</li>
+</ul>
+</blockquote>
+<h5 id="8-CSS3有哪些新特性？"><a href="#8-CSS3有哪些新特性？" class="headerlink" title="8.CSS3有哪些新特性？"></a>8.CSS3有哪些新特性？</h5><blockquote>
+<ol>
+<li>增加了选择器(解决了很多我们之前需要用 JavaScript 脚本才能解决的问题)</li>
+<li>@Font-face 特性 能够加载服务器端的字体文件,让客户端显示客户端所没有安装的字体.</li>
+<li>Word-wrap &amp; Text-overflow 样式<!-- ,Word-wrap设置或检索当当前行超过指定容器的边界时是否断开转行;Text-overflow设置或检索当当前行超过指定容器的边界时如何显示,有“clip”和“ellipsis”两种可供选择 --></li>
+<li>多列布局（multi-column layout）</li>
+<li>边框和颜色（color, border） 颜色的透明度,圆角</li>
+<li>颜色渐变效果（Gradient） 线性渐变 径向渐变</li>
+<li>阴影（Shadow）和反射（Reflect）效果  </li>
+<li>盒子模型</li>
+<li>Transitions(过渡效果), Transforms(指拉伸,压缩,旋转,偏移等等一些图形学里面的基本变换) 和 Animation(动画)</li>
+</ol>
+</blockquote>
+<h5 id="9-请解释一下CSS3的Flexbox（弹性盒布局模型）-以及适用场景？"><a href="#9-请解释一下CSS3的Flexbox（弹性盒布局模型）-以及适用场景？" class="headerlink" title="9.请解释一下CSS3的Flexbox（弹性盒布局模型）,以及适用场景？"></a>9.请解释一下CSS3的Flexbox（弹性盒布局模型）,以及适用场景？</h5><blockquote>
+<p>引入弹性盒布局模型的目的是提供一种更加有效的方式来对一个容器中的条目进行排列、对齐和分配空白空间.即便容器中条目的尺寸未知或是动态变化的,弹性盒布局模型也能正常的工作.在该布局模型中,容器会根据布局的需要,调整其中包含的条目的尺寸和顺序来最好地填充所有可用的空间.当容器的尺寸由于屏幕大小或窗口尺寸发生变化时,其中包含的条目也会被动态地调整.<br>Web 应用的样式设计中,布局是非常重要的一部分.布局用来确定页面上不同组件和元素的尺寸和位置.随着响应式用户界面的流行,Web 应用一般都要求适配不同的设备尺寸和浏览器分辨率.响应式用户界面设计中最重要的一环就是布局.需要根据窗口尺寸来调整布局,从而改变组件的尺寸和位置,以达到最佳的显示效果.这也使得布局的逻辑变得更加复杂.CSS3 规范中引入的新布局模型：弹性盒模型（flex box）.弹性盒模型可以用简单的方式满足很多常见的复杂的布局需求.它的优势在于开发人员只是声明布局应该具有的行为,而不需要给出具体的实现方式.浏览器会负责完成实际的布局.该布局模型在主流浏览器中都得到了支持.</p>
+</blockquote>
+<h5 id="10-用纯CSS创建一个三角形的原理是什么？"><a href="#10-用纯CSS创建一个三角形的原理是什么？" class="headerlink" title="10.用纯CSS创建一个三角形的原理是什么？"></a>10.用纯CSS创建一个三角形的原理是什么？</h5><blockquote>
+<p>块级元素 显示为矩形,让宽高为0,设置边框,不需要显示的边框显示颜色为 transparent(透明) 需要显示的边框添加颜色.</p>
+</blockquote>
+<h5 id="11-一个满屏-品-字布局-如何设计"><a href="#11-一个满屏-品-字布局-如何设计" class="headerlink" title="11.一个满屏 品 字布局 如何设计?"></a>11.一个满屏 品 字布局 如何设计?</h5><pre class=" language-html"><code class="language-html">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>first box<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>clearfix<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span class="token comment" spellcheck="true">&lt;!-- 清除浮动 --></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>second box lf<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>third box rf<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
+</code></pre>
+<pre class=" language-css"><code class="language-css">    <span class="token selector">html,body</span><span class="token punctuation">{</span> <span class="token property">width</span><span class="token punctuation">:</span><span class="token number">100%</span>,<span class="token property">height</span><span class="token punctuation">:</span><span class="token number">100%</span>,<span class="token property">margin</span><span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token property">pandding</span><span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token selector"><span class="token class">.lf</span></span><span class="token punctuation">{</span><span class="token property">float</span><span class="token punctuation">:</span>left<span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token selector"><span class="token class">.rf</span></span><span class="token punctuation">{</span><span class="token property">float</span><span class="token punctuation">:</span>right<span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token selector"><span class="token class">.clearfix</span><span class="token pseudo-element">:after</span> </span><span class="token punctuation">{</span><span class="token property">content</span><span class="token punctuation">:</span><span class="token string">"\200B"</span><span class="token punctuation">;</span><span class="token property">display</span><span class="token punctuation">:</span>block<span class="token punctuation">;</span><span class="token property">height</span><span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token property">clear</span><span class="token punctuation">:</span>both<span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token selector"><span class="token class">.box</span></span><span class="token punctuation">{</span><span class="token property">width</span><span class="token punctuation">:</span><span class="token number">50%</span><span class="token punctuation">;</span><span class="token property">height</span><span class="token punctuation">:</span><span class="token number">50%</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token selector"><span class="token class">.first</span></span><span class="token punctuation">{</span><span class="token property">margin</span><span class="token punctuation">:</span>auto<span class="token punctuation">;</span><span class="token property">background</span><span class="token punctuation">:</span>red<span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token selector"><span class="token class">.second</span></span><span class="token punctuation">{</span><span class="token property">background</span><span class="token punctuation">:</span>blue<span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token selector"><span class="token class">.third</span></span><span class="token punctuation">{</span><span class="token property">background</span><span class="token punctuation">:</span>yellow<span class="token punctuation">;</span><span class="token punctuation">}</span>
+</code></pre>
+<h5 id="12-css多列等高如何实现？"><a href="#12-css多列等高如何实现？" class="headerlink" title="12.css多列等高如何实现？"></a>12.css多列等高如何实现？</h5><blockquote>
+</blockquote>
+<h5 id="13-经常遇到的浏览器的兼容性有哪些？原因-解决方法是什么-常用hack的技巧-？"><a href="#13-经常遇到的浏览器的兼容性有哪些？原因-解决方法是什么-常用hack的技巧-？" class="headerlink" title="13.经常遇到的浏览器的兼容性有哪些？原因,解决方法是什么,常用hack的技巧 ？"></a>13.经常遇到的浏览器的兼容性有哪些？原因,解决方法是什么,常用hack的技巧 ？</h5><blockquote>
+<ul>
+<li>png24位的图片在iE6浏览器上出现背景，解决方案是做成PNG8.    </li>
+<li>浏览器默认的margin和padding不同。解决方案是加一个全局的*{margin:0;padding:0;}来统一。   </li>
+<li>IE6双边距bug:块属性标签float后，又有横行的margin情况下，在ie6显示margin比设置的大。<br>浮动ie产生的双倍距离 #box{ float:left; width:10px; margin:0 0 0 100px;}<br>这种情况之下IE会产生20px的距离，解决方案是在float的标签样式控制中加入 ——<em>display:inline;将其转化为行内属性。(</em>这个符号只有ie6会识别)<br>渐进识别的方式，从总体中逐渐排除局部。<br>首先，巧妙的使用“\9”这一标记，将IE游览器从所有情况中分离出来。<br>接着，再次使用“+”将IE8和IE7、IE6分离开来，这样IE8已经独立识别。</li>
+</ul>
+</blockquote>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.bb</span></span><span class="token punctuation">{</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span>red<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*所有识别*/</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span><span class="token hexcode">#00deff</span><span class="token entity" title="\9">\9</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*IE6、7、8识别*/</span>
+    +<span class="token property">background-color</span><span class="token punctuation">:</span><span class="token hexcode">#a200ff</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*IE6、7识别*/</span>
+    <span class="token property">_background-color</span><span class="token punctuation">:</span><span class="token hexcode">#1e0bd1</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*IE6识别*/</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<blockquote>
+<ul>
+<li>IE下,可以使用获取常规属性的方法来获取自定义属性,<br>  也可以使用getAttribute()获取自定义属性;<br>  Firefox下,只能使用getAttribute()获取自定义属性。<br>  解决方法:统一通过getAttribute()获取自定义属性。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>IE下,even对象有x,y属性,但是没有pageX,pageY属性;</li>
+<li>Firefox下,event对象有pageX,pageY属性,但是没有x,y属性。    </li>
+<li>解决方法：（条件注释）缺点是在IE浏览器下可能会增加额外的HTTP请求数。   </li>
+<li>Chrome 中文界面下默认会将小于 12px 的文本强制按照 12px 显示,可通过加入 CSS 属性 -webkit-text-size-adjust: none; 解决。超链接访问过后hover样式就不出现了 被点击访问过的超链接样式不在具有hover和active了解决方法是改变CSS属性的排列顺序:<br><code>L-V-H-A :  a:link {} a:visited {} a:hover {} a:active {}</code></li>
+</ul>
+</blockquote>
+<h5 id="14-li与li之间有看不见的空白间隔是什么原因引起的？有什么解决办法？"><a href="#14-li与li之间有看不见的空白间隔是什么原因引起的？有什么解决办法？" class="headerlink" title="14.li与li之间有看不见的空白间隔是什么原因引起的？有什么解决办法？"></a>14.li与li之间有看不见的空白间隔是什么原因引起的？有什么解决办法？</h5><blockquote>
+<p>行框的排列会受到中间空白（回车\空格）等的影响，因为空格也属于字符,这些空白也会被应用样式，占据空间，所以会有间隔，把字符大小设为0，就没有空格了。</p>
+</blockquote>
+<h5 id="15-为什么要初始化CSS样式"><a href="#15-为什么要初始化CSS样式" class="headerlink" title="15.为什么要初始化CSS样式."></a>15.为什么要初始化CSS样式.</h5><blockquote>
+<p>因为浏览器的兼容问题,不同浏览器对有些标签的默认值是不同的,如果没对CSS初始化往往会出现浏览器之间的页面显示差异.</p>
+</blockquote>
+<h5 id="16-absolute的containing-block-容器块-计算方式跟正常流有什么不同？"><a href="#16-absolute的containing-block-容器块-计算方式跟正常流有什么不同？" class="headerlink" title="16.absolute的containing block(容器块)计算方式跟正常流有什么不同？"></a>16.absolute的containing block(容器块)计算方式跟正常流有什么不同？</h5><blockquote>
+<p>无论属于哪种，都要先找到其祖先元素中最近的 position 值不为 static 的元素，然后再判断：</p>
+<ol>
+<li>若此元素为 inline 元素，则 containing block 为能够包含这个元素生成的第一个和最后一个 inline box 的 padding box (除 margin, border 外的区域) 的最小矩形；</li>
+<li>否则,则由这个祖先元素的 padding box 构成。   </li>
+</ol>
+</blockquote>
+<h5 id="17-CSS里的visibility属性有个collapse属性值是干嘛用的？在不同浏览器下以后什么区别？"><a href="#17-CSS里的visibility属性有个collapse属性值是干嘛用的？在不同浏览器下以后什么区别？" class="headerlink" title="17.CSS里的visibility属性有个collapse属性值是干嘛用的？在不同浏览器下以后什么区别？"></a>17.CSS里的visibility属性有个collapse属性值是干嘛用的？在不同浏览器下以后什么区别？</h5><blockquote>
+</blockquote>
+<h5 id="18-position跟display、margin-collapse、overflow、float这些特性相互叠加后会怎么样？"><a href="#18-position跟display、margin-collapse、overflow、float这些特性相互叠加后会怎么样？" class="headerlink" title="18.position跟display、margin collapse、overflow、float这些特性相互叠加后会怎么样？"></a>18.position跟display、margin collapse、overflow、float这些特性相互叠加后会怎么样？</h5><blockquote>
+</blockquote>
+<h5 id="19-对BFC规范-块级格式化上下文：block-formatting-context-的理解？"><a href="#19-对BFC规范-块级格式化上下文：block-formatting-context-的理解？" class="headerlink" title="19.对BFC规范(块级格式化上下文：block formatting context)的理解？"></a>19.对BFC规范(块级格式化上下文：block formatting context)的理解？</h5><blockquote>
+</blockquote>
+<h5 id="20-css定义的权重"><a href="#20-css定义的权重" class="headerlink" title="20.css定义的权重"></a>20.css定义的权重</h5><pre class=" language-css"><code class="language-css">以下是权重的规则：标签的权重为<span class="token number">1</span>，class的权重为<span class="token number">10</span>，id的权重为<span class="token number">100</span>，以下例子是演示各种定义的权重值：*/
+
+<span class="token comment" spellcheck="true">/*权重为1*/</span>
+<span class="token selector">div</span><span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">/*权重为10*/</span>
+<span class="token selector"><span class="token class">.class1</span></span><span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">/*权重为100*/</span>
+<span class="token selector"><span class="token id">#id1</span></span><span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">/*权重为100+1=101*/</span>
+<span class="token selector"><span class="token id">#id1</span> div</span><span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">/*权重为10+1=11*/</span>
+<span class="token selector"><span class="token class">.class1</span> div</span><span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">/*权重为10+10+1=21*/</span>
+<span class="token selector"><span class="token class">.class1</span> <span class="token class">.class2</span> div</span><span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+
+/*如果权重相同，则最后定义的样式会起作用，但是应该避免这种情况出现
+</code></pre>
+<h5 id="21-请解释一下为什么需要清除浮动？清除浮动的方式"><a href="#21-请解释一下为什么需要清除浮动？清除浮动的方式" class="headerlink" title="21.请解释一下为什么需要清除浮动？清除浮动的方式"></a>21.请解释一下为什么需要清除浮动？清除浮动的方式</h5><blockquote>
+<p>清除浮动是为了清除使用浮动元素产生的影响。浮动的元素，高度会塌陷，而高度的塌陷使我们页面后面的布局不能正常显示。</p>
+</blockquote>
+<pre class=" language-css"><code class="language-css">
+<span class="token comment" spellcheck="true">/*版本一*/</span>
+<span class="token selector"><span class="token class">.clearfix</span><span class="token pseudo-element">:before</span>,<span class="token class">.clearfix</span><span class="token pseudo-element">:after</span></span><span class="token punctuation">{</span> 
+    <span class="token property">content</span><span class="token punctuation">:</span><span class="token string">""</span><span class="token punctuation">;</span> 
+    <span class="token property">display</span><span class="token punctuation">:</span>table<span class="token punctuation">;</span> 
+<span class="token punctuation">}</span> 
+
+<span class="token selector"><span class="token class">.clearfix</span><span class="token pseudo-element">:after</span></span><span class="token punctuation">{</span><span class="token property">clear</span><span class="token punctuation">:</span>both<span class="token punctuation">;</span><span class="token punctuation">}</span> 
+<span class="token selector"><span class="token class">.clearfix</span></span><span class="token punctuation">{</span> 
+    *<span class="token property">zoom</span><span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span> 
+
+<span class="token comment" spellcheck="true">/*版本二*/</span>
+<span class="token selector"><span class="token class">.clearfix</span><span class="token pseudo-element">:after</span> </span><span class="token punctuation">{</span> 
+    <span class="token property">content</span><span class="token punctuation">:</span><span class="token string">"\200B"</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*Unicode字符里有一个“零宽度空格”，即 U+200B，代替原来的“ ”，而且不再使用visibility:hidden。*/</span>
+    <span class="token property">display</span><span class="token punctuation">:</span>block<span class="token punctuation">;</span> 
+    <span class="token property">height</span><span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">;</span> 
+    <span class="token property">clear</span><span class="token punctuation">:</span>both<span class="token punctuation">;</span> 
+<span class="token punctuation">}</span> 
+
+<span class="token selector"><span class="token class">.clearfix</span> </span><span class="token punctuation">{</span>*<span class="token property">zoom</span><span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token punctuation">}</span> 
+
+</code></pre>
+<h5 id="22-什么是外边距合并？"><a href="#22-什么是外边距合并？" class="headerlink" title="22.什么是外边距合并？"></a>22.什么是外边距合并？</h5><blockquote>
+<p>外边距合并指的是，当两个垂直外边距相遇时，它们将形成一个外边距。合并后的外边距的高度等于两个发生合并的外边距的高度中的较大者。</p>
+</blockquote>
+<h5 id="23-zoom-1的清除浮动原理"><a href="#23-zoom-1的清除浮动原理" class="headerlink" title="23.zoom:1的清除浮动原理?"></a>23.zoom:1的清除浮动原理?</h5><blockquote>
+<p>Zoom属性是IE浏览器的专有属性，它可以设置或检索对象的缩放比例。解决ie下比较奇葩的bug。</p>
+</blockquote>
+<h5 id="24-移动端的布局用过媒体查询吗？"><a href="#24-移动端的布局用过媒体查询吗？" class="headerlink" title="24.移动端的布局用过媒体查询吗？"></a>24.移动端的布局用过媒体查询吗？</h5><blockquote>
+<p>假设你现在正用一台显示设备来阅读这篇文章，同时你也想把它投影到屏幕上，或者打印出来， 而显示设备、屏幕投影和打印等这些媒介都有自己的特点，CSS就是为文档提供在不同媒介上展示的适配方法<br>当媒体查询为真时，相关的样式表或样式规则会按照正常的级联规被应用。 当媒体查询返回假， 标签上带有媒体查询的样式表 仍将被下载 （只不过不会被应用）。<br>包含了一个媒体类型和至少一个使用 宽度、高度和颜色等媒体属性来限制样式表范围的表达式。 CSS3加入的媒体查询使得无需修改内容便可以使样式应用于某些特定的设备范围。</p>
+<pre class=" language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 700px<span class="token punctuation">)</span> and <span class="token punctuation">(</span><span class="token property">orientation</span><span class="token punctuation">:</span> landscape<span class="token punctuation">)</span></span><span class="token punctuation">{</span> <span class="token selector"><span class="token class">.sidebar</span> </span><span class="token punctuation">{</span> <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span> 
+</code></pre>
+</blockquote>
+<h5 id="25-使用-CSS-预处理器吗？喜欢那个？"><a href="#25-使用-CSS-预处理器吗？喜欢那个？" class="headerlink" title="25.使用 CSS 预处理器吗？喜欢那个？"></a>25.使用 CSS 预处理器吗？喜欢那个？</h5><blockquote>
+<p>都差不多啊,偏向 less </p>
+</blockquote>
+<h5 id="26-CSS优化、提高性能的方法有哪些？"><a href="#26-CSS优化、提高性能的方法有哪些？" class="headerlink" title="26.CSS优化、提高性能的方法有哪些？"></a>26.CSS优化、提高性能的方法有哪些？</h5><blockquote>
+<p>关键选择器（key selector）。选择器的最后面的部分为关键选择器（即用来匹配目标元素的部分）；如果规则拥有 ID 选择器作为其关键选择器，则不要为规则增加标签。过滤掉无关的规则（这样样式系统就不会浪费时间去匹配它们了）；提取项目的通用公有样式，增强可复用性，按模块编写组件；增强项目的协同开发性、可维护性和可扩展性;使用预处理工具或构建工具（gulp对css进行语法检查、自动补前缀、打包压缩、自动优雅降级）；</p>
+</blockquote>
+<h5 id="27-浏览器是怎样解析CSS选择器的？"><a href="#27-浏览器是怎样解析CSS选择器的？" class="headerlink" title="27.浏览器是怎样解析CSS选择器的？"></a>27.浏览器是怎样解析CSS选择器的？</h5><blockquote>
+<p>样式系统从关键选择器开始匹配，然后左移查找规则选择器的祖先元素。只要选择器的子树一直在工作，样式系统就会持续左移，直到和规则匹配，或者是因为不匹配而放弃该规则</p>
+</blockquote>
+<h5 id="28-在网页中的应该使用奇数还是偶数的字体？为什么呢？"><a href="#28-在网页中的应该使用奇数还是偶数的字体？为什么呢？" class="headerlink" title="28.在网页中的应该使用奇数还是偶数的字体？为什么呢？"></a>28.在网页中的应该使用奇数还是偶数的字体？为什么呢？</h5><blockquote>
+<p>这个其实无所谓啊~~!!!  ( chrome 最小字号是12px so,我习惯使用偶数.)</p>
+</blockquote>
+<h5 id="29-margin和padding分别适合什么场景使用？"><a href="#29-margin和padding分别适合什么场景使用？" class="headerlink" title="29.margin和padding分别适合什么场景使用？"></a>29.margin和padding分别适合什么场景使用？</h5><blockquote>
+<p>margin是用来隔开元素与元素的间距；padding是用来隔开元素与内容的间隔。<br>margin用于布局分开元素使元素与元素互不相干；<br>padding用于元素与内容之间的间隔，让内容（文字）与（包裹）元素之间有一段</p>
+</blockquote>
+<h5 id="30-抽离样式模块怎么写-说出思路？"><a href="#30-抽离样式模块怎么写-说出思路？" class="headerlink" title="30.抽离样式模块怎么写,说出思路？"></a>30.抽离样式模块怎么写,说出思路？</h5><blockquote>
+</blockquote>
+<h5 id="31-元素竖向的百分比设定是相对于容器的高度吗？"><a href="#31-元素竖向的百分比设定是相对于容器的高度吗？" class="headerlink" title="31.元素竖向的百分比设定是相对于容器的高度吗？"></a>31.元素竖向的百分比设定是相对于容器的高度吗？</h5><blockquote>
+</blockquote>
+<h5 id="32-全屏滚动的原理是什么？用到了CSS的那些属性？"><a href="#32-全屏滚动的原理是什么？用到了CSS的那些属性？" class="headerlink" title="32.全屏滚动的原理是什么？用到了CSS的那些属性？"></a>32.全屏滚动的原理是什么？用到了CSS的那些属性？</h5><blockquote>
+</blockquote>
+<h5 id="33-什么是响应式设计？响应式设计的基本原理是什么？如何兼容低版本的IE？"><a href="#33-什么是响应式设计？响应式设计的基本原理是什么？如何兼容低版本的IE？" class="headerlink" title="33.什么是响应式设计？响应式设计的基本原理是什么？如何兼容低版本的IE？"></a>33.什么是响应式设计？响应式设计的基本原理是什么？如何兼容低版本的IE？</h5><blockquote>
+</blockquote>
+<h5 id="34-视差滚动效果-如何给每页做不同的动画？（回到顶部-向下滑动要再次出现-和只出现一次分别怎么做？）"><a href="#34-视差滚动效果-如何给每页做不同的动画？（回到顶部-向下滑动要再次出现-和只出现一次分别怎么做？）" class="headerlink" title="34.视差滚动效果,如何给每页做不同的动画？（回到顶部,向下滑动要再次出现,和只出现一次分别怎么做？）"></a>34.视差滚动效果,如何给每页做不同的动画？（回到顶部,向下滑动要再次出现,和只出现一次分别怎么做？）</h5><blockquote>
+</blockquote>
+<h5 id="35-before-和-after中双冒号和单冒号-有什么区别？解释一下这2个伪元素的作用"><a href="#35-before-和-after中双冒号和单冒号-有什么区别？解释一下这2个伪元素的作用" class="headerlink" title="35.::before 和 :after中双冒号和单冒号 有什么区别？解释一下这2个伪元素的作用."></a>35.::before 和 :after中双冒号和单冒号 有什么区别？解释一下这2个伪元素的作用.</h5><blockquote>
+<p>CSS3中 双冒号 主要是为了区分 <strong>:伪类</strong> 和 <strong>::伪元素</strong> 实际是没有区别的,但是有些伪类是之前版本已经存在了,所以写成单冒号也可以. 作用就是在元素之前/之后 插入元素.</p>
+</blockquote>
+<h5 id="36-如何修改chrome记住密码后自动填充表单的黄色背景-？"><a href="#36-如何修改chrome记住密码后自动填充表单的黄色背景-？" class="headerlink" title="36.如何修改chrome记住密码后自动填充表单的黄色背景 ？"></a>36.如何修改chrome记住密码后自动填充表单的黄色背景 ？</h5><pre class=" language-css"><code class="language-css"><span class="token selector">input<span class="token pseudo-class">:-webkit-autofill</span>, textarea<span class="token pseudo-class">:-webkit-autofill</span>, select<span class="token pseudo-class">:-webkit-autofill</span> </span><span class="token punctuation">{</span>
+<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span><span class="token number">250</span>, <span class="token number">255</span>, <span class="token number">189</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* #FAFFBD; */</span>
+<span class="token property">background-image</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+<span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span><span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h5 id="37-你对line-height是如何理解的？"><a href="#37-你对line-height是如何理解的？" class="headerlink" title="37.你对line-height是如何理解的？"></a>37.你对line-height是如何理解的？</h5><blockquote>
+<p>基线位置是由字体确定的,css的line-height指的是一行字的高度,包含了字间距,实际上就是下一行的基线到上一行的基线距离</p>
+</blockquote>
+<h5 id="38-设置元素浮动后-该元素的display值是多少？"><a href="#38-设置元素浮动后-该元素的display值是多少？" class="headerlink" title="38.设置元素浮动后,该元素的display值是多少？"></a>38.设置元素浮动后,该元素的display值是多少？</h5><blockquote>
+<p>block</p>
+</blockquote>
+<h5 id="39-怎么让Chrome支持小于12px-的文字？"><a href="#39-怎么让Chrome支持小于12px-的文字？" class="headerlink" title="39.怎么让Chrome支持小于12px 的文字？"></a>39.怎么让Chrome支持小于12px 的文字？</h5><blockquote>
+<p>使用<code>-webkit-transform:scale(0.8)</code>进行缩放.</p>
+</blockquote>
+<h5 id="40-让页面里的字体变清晰-变细用CSS怎么做？"><a href="#40-让页面里的字体变清晰-变细用CSS怎么做？" class="headerlink" title="40.让页面里的字体变清晰,变细用CSS怎么做？"></a>40.让页面里的字体变清晰,变细用CSS怎么做？</h5><blockquote>
+<p>据说这个属性可以,<code>-webkit-font-smoothing:antialiased</code>,但是我在实际测试中 发现没有效果.</p>
+</blockquote>
+<h5 id="41-font-style属性可以让它赋值为“oblique”-oblique是什么意思？"><a href="#41-font-style属性可以让它赋值为“oblique”-oblique是什么意思？" class="headerlink" title="41.font-style属性可以让它赋值为“oblique” oblique是什么意思？"></a>41.font-style属性可以让它赋值为“oblique” oblique是什么意思？</h5><blockquote>
+<p>斜体.oblique基本上是一种模仿的斜体,而不是真正的斜体.italic是使用字体的斜体;</p>
+</blockquote>
+<h5 id="42-position-fixed-在android下无效怎么处理？"><a href="#42-position-fixed-在android下无效怎么处理？" class="headerlink" title="42.position:fixed;在android下无效怎么处理？"></a>42.position:fixed;在android下无效怎么处理？</h5><p>头部添加mate</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width<span class="token punctuation">=</span>device-width, initial-scale<span class="token punctuation">=</span>1.0, maximum-scale<span class="token punctuation">=</span>1.0, minimum-scale<span class="token punctuation">=</span>1.0, user-scalable<span class="token punctuation">=</span>no<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+</code></pre>
+<h5 id="43-如果需要手动写动画-你认为最小时间间隔是多久-为什么？"><a href="#43-如果需要手动写动画-你认为最小时间间隔是多久-为什么？" class="headerlink" title="43.如果需要手动写动画,你认为最小时间间隔是多久,为什么？"></a>43.如果需要手动写动画,你认为最小时间间隔是多久,为什么？</h5><blockquote>
+<p>多数显示器默认频率是60Hz，即1秒刷新60次，所以理论上最小间隔为1/60＊1000ms ＝ 16.7ms</p>
+</blockquote>
+<h5 id="44-display-inline-block-什么时候会显示间隙？"><a href="#44-display-inline-block-什么时候会显示间隙？" class="headerlink" title="44.display:inline-block 什么时候会显示间隙？"></a>44.display:inline-block 什么时候会显示间隙？</h5><blockquote>
+<p>移除空格、使用margin负值、使用font-size:0、letter-spacing、word-spacing</p>
+</blockquote>
+<h5 id="45-overflow-scroll时不能平滑滚动的问题怎么处理？"><a href="#45-overflow-scroll时不能平滑滚动的问题怎么处理？" class="headerlink" title="45.overflow: scroll时不能平滑滚动的问题怎么处理？"></a>45.overflow: scroll时不能平滑滚动的问题怎么处理？</h5><blockquote>
+</blockquote>
+<h5 id="46-有一个高度自适应的div-里面有两个div-一个高度100px-希望另一个填满剩下的高度"><a href="#46-有一个高度自适应的div-里面有两个div-一个高度100px-希望另一个填满剩下的高度" class="headerlink" title="46.有一个高度自适应的div,里面有两个div,一个高度100px,希望另一个填满剩下的高度."></a>46.有一个高度自适应的div,里面有两个div,一个高度100px,希望另一个填满剩下的高度.</h5><blockquote>
+<p>100px 的div 设置绝对定位,top:0; 另一个div 也设置绝对定位 top:100px;bottom:0;</p>
+</blockquote>
+<h5 id="47-png、jpg、gif-这些图片格式解释一下-分别什么时候用-有没有了解过webp？"><a href="#47-png、jpg、gif-这些图片格式解释一下-分别什么时候用-有没有了解过webp？" class="headerlink" title="47.png、jpg、gif 这些图片格式解释一下,分别什么时候用.有没有了解过webp？"></a>47.png、jpg、gif 这些图片格式解释一下,分别什么时候用.有没有了解过webp？</h5><blockquote>
+</blockquote>
+<h5 id="48-什么是Cookie-隔离？（或者说：请求资源的时候不要让它带cookie怎么做）"><a href="#48-什么是Cookie-隔离？（或者说：请求资源的时候不要让它带cookie怎么做）" class="headerlink" title="48.什么是Cookie 隔离？（或者说：请求资源的时候不要让它带cookie怎么做）"></a>48.什么是Cookie 隔离？（或者说：请求资源的时候不要让它带cookie怎么做）</h5><blockquote>
+<p>如果静态文件都放在主域名下,那静态文件请求的时候都带有的cookie的数据提交给server的,非常浪费流量,所以不如隔离开.<br>因为cookie有域的限制,因此不能跨域提交请求,故使用非主要域名的时候,请求头中就不会带有cookie数据,这样可以降低请求头的大小,降低请求时间,从而达到降低整体请求延时的目的.<br>同时这种方式不会将cookie传入Web Server,也减少了Web Server对cookie的处理分析环节,提高了webserver的http请求的解析速度.</p>
+</blockquote>
+<h5 id="49-style标签写在body后与body前有什么区别？"><a href="#49-style标签写在body后与body前有什么区别？" class="headerlink" title="49.style标签写在body后与body前有什么区别？"></a>49.style标签写在body后与body前有什么区别？</h5><blockquote>
+<p>如果style元素出现在body元素,最终效果和style元素出现在head里是一样的.但是可能引起FOUC、重绘或重新布局.</p>
+</blockquote>
+<h5 id="50-什么是CSS-预处理器-后处理器？"><a href="#50-什么是CSS-预处理器-后处理器？" class="headerlink" title="50.什么是CSS 预处理器 / 后处理器？"></a>50.什么是CSS 预处理器 / 后处理器？</h5><blockquote>
+<ul>
+<li>预处理器例如：LESS、Sass、Stylus,用来预编译Sass或less,增强了css代码的复用性,还有层级、mixin、变量、循环、函数等,具有很方便的UI组件模块化开发能力,极大的提高工作效率.</li>
+<li>后处理器例如：PostCSS,通常被视为在完成的样式表中根据CSS规范处理CSS,让其更有效；目前最常做的是给CSS属性添加浏览器私有前缀,实现跨浏览器兼容性的问题.</li>
+</ul>
+</blockquote>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://zhangdi.site/frontend-summary-css.html';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://zhangdi.site/frontend-summary-css.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//zhangdi.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/build-a-react-family-bucket-based-on-createreactapp.html" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/frontend-issues-summary-html.html" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(http://oox9lo3vp.bkt.clouddn.com/17-12-14/47172263.jpg);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="http://oox9lo3vp.bkt.clouddn.com/17-12-14/73776896.jpg" alt="Zeddy's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        zhangdi0809@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">12</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/hexo/">Hexo<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/share/">分享境<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/technology/">技术向<span class="sidebar_archives-count">25</span></a></li><li><a class="sidebar_archives-link" href="/categories/self-talk/">自言语<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签云">
+                
+                    <i class="material-icons sidebar-material-icons">bookmark</i>
+                
+                标签云
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/about" title="关于我">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于我
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Resume -->
+
+    <a href="http://zhangdi666.gitee.io/resume/"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+             我的简历
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/SuGod" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2015&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Zhangdi'Blog --- 爱技术爱折腾,无折腾不技术.
+            
+                <br>
+                
+                     蜀ICP备17019667号-1
+                
+            
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <span>Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></span>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <span>Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></span>
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+       
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+        -->
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","//cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/js/lazyload.min.js", true)</script>
+
+
+
+    <script>lsloader.load("js_js","//cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/js/js.min.js", true)</script>
+
+
+
+    <script>lsloader.load("np_js","//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("sm_js","//cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/js/smoothscroll.js", true)</script>
+    
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//zhangdi.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+//console.log('\n %c © Material Theme | Version: 1.5.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

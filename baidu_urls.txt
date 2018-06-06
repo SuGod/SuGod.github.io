@@ -1,0 +1,1 @@
+http://zhangdi.site/solve-crossdomain-issues-cors-and-jsonp.html

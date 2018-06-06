@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta name="google-site-verification" content="Gqq8bcz18JexfyTrefRi_JcHDmR8qCtN-v5Tn6M8a7Q" />
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.0 -->
+    <script>
+        window.materialVersion = "1.5.0"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source"/>
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Title -->
+    
+    <title>
+        
+            前端问题总结(HTML) | 
+        
+        Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.
+    </title>
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="Zeddy">
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content=",Javascript,HTML/CSS">
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","//cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/css/material.min.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","//cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/css/style.min.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+  #post_entry-right-info .post_entry-tags{
+    margin: 0 15px;
+  }
+  #post_entry-right-info .post_entry-tags::before{
+    content: "<"
+  }
+  #post_entry-right-info .post_entry-tags::after{
+    content: ">"
+  }
+
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icon -->
+
+    <link rel="stylesheet" href="//cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","//cdn.bootcss.com/jquery/2.2.4/jquery.min.js", true)</script>
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://zhangdi.site">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="前端问题总结(HTML) | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
+    <meta property="og:image" content="http://zhangdi.site/img/favicon.png" />
+    <meta property="og:description" content="">
+    <meta property="og:article:tag" content="Javascript"> <meta property="og:article:tag" content="HTML/CSS"> 
+
+    
+        <meta property="article:published_time" content="Wed Nov 01 2017 16:55:54 GMT+0800" />
+        <meta property="article:modified_time" content="Thu Jun 07 2018 02:32:37 GMT+0800" />
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="前端问题总结(HTML) | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="http://zhangdi.site/img/favicon.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="http://zhangdi.site" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://zhangdi.site/frontend-issues-summary-html.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://zhangdi.site/frontend-issues-summary-html.html",
+    "headline": "前端问题总结(HTML)",
+    "datePublished": "Wed Nov 01 2017 16:55:54 GMT+0800",
+    "dateModified": "Thu Jun 07 2018 02:32:37 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Zeddy",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://oox9lo3vp.bkt.clouddn.com/17-12-14/73776896.jpg"
+        },
+        "description": "死亡是一座永恒的灯塔,不管你驶向何方,最终都会朝它转向.一切都将逝去,只有死神永生."
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",Javascript,HTML/CSS",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+        <script>
+    var _hmt = _hmt || [];
+    (function() {var hm = document.createElement('script');
+    hm.src = 'https://hm.baidu.com/hm.js?9e11228d3158bca19d5fb7c05a0c2be2';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+    
+    
+
+    <!-- Custom Head -->
+    
+
+<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#前端问题总结-HTML"><span class="post-toc-text">前端问题总结(HTML)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-Doctype的作用-标准模式与兼容模式各有什么区别"><span class="post-toc-text">1. Doctype的作用,标准模式与兼容模式各有什么区别?</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-HTML5为什么只需要写-lt-DOCTYPE-HTML-gt"><span class="post-toc-text">2.HTML5为什么只需要写&lt;!DOCTYPE HTML&gt; ?</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#3-行内元素有哪些-块级元素有哪些-空-void-元素有哪些"><span class="post-toc-text">3.行内元素有哪些?块级元素有哪些?空(void)元素有哪些?</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#4-页面导入样式时使用-link-和-import-有什么区别"><span class="post-toc-text">4.页面导入样式时使用 link 和 @import 有什么区别?</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#5-介绍你对浏览器内核的了解"><span class="post-toc-text">5.介绍你对浏览器内核的了解.</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#6-常见的浏览器内核有哪些"><span class="post-toc-text">6.常见的浏览器内核有哪些?</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#7-html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分-HTML-和-HTML5？"><span class="post-toc-text">7.html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#8-简述一下你对HTML语义化的理解？"><span class="post-toc-text">8.简述一下你对HTML语义化的理解？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#9-HTML5的离线储存怎么使用及工作原理？"><span class="post-toc-text">9.HTML5的离线储存怎么使用及工作原理？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#10-iframe有那些缺点？"><span class="post-toc-text">10.iframe有那些缺点？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#11-Label的作用是什么？是怎么用的？"><span class="post-toc-text">11.Label的作用是什么？是怎么用的？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#12-HTML5的form如何关闭自动完成功能？"><span class="post-toc-text">12.HTML5的form如何关闭自动完成功能？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#13-如何实现浏览器内多个标签页之间的通信"><span class="post-toc-text">13.如何实现浏览器内多个标签页之间的通信?</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#14-webSocket如何兼容低浏览器？"><span class="post-toc-text">14.webSocket如何兼容低浏览器？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#15-页面可见性（Page-Visibility-API）-可以有哪些用途？"><span class="post-toc-text">15.页面可见性（Page Visibility API） 可以有哪些用途？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#16-如何在页面上实现一个圆形的可点击区域？"><span class="post-toc-text">16.如何在页面上实现一个圆形的可点击区域？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#17-实现不使用-border-画出1px高的线，在不同浏览器的标准模式与怪异模式下都能保持一致的效果"><span class="post-toc-text">17.实现不使用 border 画出1px高的线，在不同浏览器的标准模式与怪异模式下都能保持一致的效果.</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#18-网页验证码是干嘛的，是为了解决什么安全问题"><span class="post-toc-text">18.网页验证码是干嘛的，是为了解决什么安全问题.</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#19-title与h1的区别、b与strong的区别、i与em的区别？"><span class="post-toc-text">19.title与h1的区别、b与strong的区别、i与em的区别？</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#21-请描述一下-cookies，sessionStorage-和-localStorage-的区别？"><span class="post-toc-text">21.请描述一下 cookies，sessionStorage 和 localStorage 的区别？</span></a></li></ol></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                前端问题总结(HTML)
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="http://oox9lo3vp.bkt.clouddn.com/17-12-14/73776896.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Zeddy</strong>
+        <span>11月 01, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACW0lEQVR42u3aQW7DMAwEwPz/0+21QFBnScqyEIxPOQSxRgUkdsnXz1c/Lzw8PDw8PDw8vMN4r/j5+/33z++/VljQP9+vrg0PDw9vJy9/fb6U3hYk77pePx4eHt5OXn4ZVJH5uyZrw8PDwzuT9x9y1TZNfhMPDw/vTF5yJSRRQh5G4OHh4Z3Mq8asyRGfbFOVfWPWgoeHhxfz5g2w+z4f0d/Dw8PDWzvkdLkRqy6Awnrw8PDwbuZdl8LJQZyHCPkGTZpneHh4eHfzrpH5BVAtiCfttA+bhYeHh7eFV45Ki0vsleP5dYWHh4d3Gi9ZULVVlmDyrcTDw8PbyUtK1TyKzUe18l9ItgwPDw9vJ6/XrOqNT/XC2TIYDw8PbyNvchkkQwO9kCK/wPDw8PD286pBai/wTUr2fLBgVFLj4eHhtXi9UCAPF6qkybAXHh4e3rO8pLDuFdl5eZ1vAR4eHt5O3iTMrUYVCyLa3n8MeHh4eEt51YGnvH2VD2ZNNmhZSY2Hh4c3aIBNoofecMCqwBcPDw9vD683XHVfi6tXRuPh4eHt5zWP4EVHfI6M3o6Hh4f3KK86cjqJaPP1fNgIPDw8vC28amuqEKq2DvpRKIyHh4d3M6/6VIPaXqHcK/Hx8PDw9vCqx/F8NKo3DouHh4d3Gm/Svuo1sZKyPrl+8PDw8J7l5cFE3gbrDa2OinI8PDy8g3lJwX1Hyd4cHcDDw8N7iNcbFFgL/nDl4OHh4W3k9Zpek3GBVRcMHh4e3n5e9Zieh7PVUKPwx8DDw8O7mfd9Dx4eHh4eHh4e3gHPL4nakc3Kr63lAAAAAElFTkSuQmCC">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/HTML-CSS/">HTML/CSS</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Javascript/">Javascript</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=前端问题总结(HTML)&url=http://zhangdi.site/frontend-issues-summary-html.html&pic=http://zhangdi.site/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=前端问题总结(HTML)&url=http://zhangdi.site/frontend-issues-summary-html.html&via=Zeddy" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zhangdi.site/frontend-issues-summary-html.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://zhangdi.site/frontend-issues-summary-html.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.&title=前端问题总结(HTML)&summary=&pics=http://zhangdi.site/img/favicon.png&url=http://zhangdi.site/frontend-issues-summary-html.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <blockquote>
+<p>最近在网上找了一些前端方面的问题,看下来发现还是很多答不上来的, 所以决定把这些问题做个汇总.目的是希望每天能回答5-10题(尽量写Demo),一方面对已知的知识加深理解,另一方面找到自己缺乏的知识进而补充完善自己对前端的知识面.</p>
+</blockquote>
+<p><strong>前端问题总结</strong></p>
+<ol>
+<li><strong>HTML</strong></li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>ECMAScript 6</li>
+<li>React 相关</li>
+<li>其他</li>
+</ol>
+<h3 id="前端问题总结-HTML"><a href="#前端问题总结-HTML" class="headerlink" title="前端问题总结(HTML)"></a>前端问题总结(HTML)</h3><h5 id="1-Doctype的作用-标准模式与兼容模式各有什么区别"><a href="#1-Doctype的作用-标准模式与兼容模式各有什么区别" class="headerlink" title="1. Doctype的作用,标准模式与兼容模式各有什么区别?"></a>1. Doctype的作用,标准模式与兼容模式各有什么区别?</h5><blockquote>
+<ol>
+<li>&lt;!DOCTYPE&gt; 声明位于HTML文档的第一行,处于 <html>标签之前.告知浏览器的解析器用什么文档标准解析这个文档.DOCTYPE不存在或者格式不正确会导致文档以兼容模式呈现;</html></li>
+<li>标准模式的排版 JS 运作模式都是以该浏览器能支持的最高标准运行.在兼容模式下,页面以宽松的向后兼容的方式显示,模拟老式浏览器的行为以防止站点无法工作;</li>
+</ol>
+</blockquote>
+<h5 id="2-HTML5为什么只需要写-lt-DOCTYPE-HTML-gt"><a href="#2-HTML5为什么只需要写-lt-DOCTYPE-HTML-gt" class="headerlink" title="2.HTML5为什么只需要写&lt;!DOCTYPE HTML&gt; ?"></a>2.HTML5为什么只需要写&lt;!DOCTYPE HTML&gt; ?</h5><blockquote>
+<p>HTML5不基于SGML,因此不需要对DTD进行引用,但是需要doctype来规范浏览器的行为(让浏览器按照它们应该的方式来运行);<br>而HTML4.01基于SGML,所以需要对DTD进行引用,才能告诉浏览器文档所使用的文档类型;</p>
+</blockquote>
+<h5 id="3-行内元素有哪些-块级元素有哪些-空-void-元素有哪些"><a href="#3-行内元素有哪些-块级元素有哪些-空-void-元素有哪些" class="headerlink" title="3.行内元素有哪些?块级元素有哪些?空(void)元素有哪些?"></a>3.行内元素有哪些?块级元素有哪些?空(void)元素有哪些?</h5><blockquote>
+<p>首先:CSS官方规定,每个元素都有 <em>display</em> 属性,以确定该元素的类型,每个元素都有默认的<em>display</em>值,如 <strong>div</strong> 的 <em>display</em> 值为 <em>block</em> ,是一个<strong>块级元素</strong>, <strong>span</strong> 标签的默认 <em>display</em> 属性的默认值为 <em>inline</em> 是<strong>行内元素</strong>;</p>
+<ul>
+<li>行内元素:<br><code>&lt;a&gt;</code> <code>&lt;b&gt;</code> <code>&lt;span&gt;</code> <code>&lt;img&gt;</code> <code>&lt;input&gt;</code> <code>&lt;select&gt;</code> <code>&lt;strong&gt;</code></li>
+<li>块级元素:<br><code>&lt;div&gt;</code> <code>&lt;ul&gt;</code> <code>&lt;ol&gt;</code> <code>&lt;li&gt;</code> <code>&lt;dl&gt;</code> <code>&lt;dt&gt;</code> <code>&lt;dd&gt;</code> <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code> <code>&lt;p&gt;</code></li>
+<li>常见空元素:<br><code>&lt;br&gt;</code> <code>&lt;hr&gt;</code>  <code>&lt;img&gt;</code>  <code>&lt;input&gt;</code>  <code>&lt;link&gt;</code>  <code>&lt;meta&gt;</code><br><code>&lt;area&gt;</code> <code>&lt;base&gt;</code> <code>&lt;col&gt;</code> <code>&lt;command&gt;</code> <code>&lt;embed&gt;</code> <code>&lt;param&gt;</code> <code>&lt;source&gt;</code> <code>&lt;track&gt;</code> <code>&lt;wbr&gt;</code><br><em>不同浏览器(版本)实际略有差异</em></li>
+</ul>
+</blockquote>
+<h5 id="4-页面导入样式时使用-link-和-import-有什么区别"><a href="#4-页面导入样式时使用-link-和-import-有什么区别" class="headerlink" title="4.页面导入样式时使用 link 和 @import 有什么区别?"></a>4.页面导入样式时使用 link 和 @import 有什么区别?</h5><blockquote>
+<ol>
+<li><code>link</code> 是 XHTML标签,除了加载CSS样式外,还能定义RSS,定义rel连接属性等作用;而<code>@import</code> 是CSS提供的,只能用于加载CSS;</li>
+<li>页面被加载时 <code>link</code> 会同时被加载,而<code>@import</code> 引用只能等到页面被加载完成后再加载;</li>
+<li>import时CSS2.1提出的,只在IE5以上才能被识别,而<code>link</code>时XHTML标签,无兼容问题;</li>
+</ol>
+</blockquote>
+<h5 id="5-介绍你对浏览器内核的了解"><a href="#5-介绍你对浏览器内核的了解" class="headerlink" title="5.介绍你对浏览器内核的了解."></a>5.介绍你对浏览器内核的了解.</h5><blockquote>
+<p>主要有两个部分组成:</p>
+<ol>
+<li><strong>渲染引擎:</strong>主要负责取得网页的内容(HTML/XML/图像等),整理信息(如加入CSS等),以及计算网页的显示方式,然后输出至显示器或打印机.浏览器的内核的不同对于网页语法解释会有不同,所以渲染效果也不相同.</li>
+<li><strong>JavaScript引擎:</strong> 解析和执行<code>JavaScript</code>脚本.</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>最开始渲染引擎和JS引擎并没有区分的很明确，后来JS引擎越来越独立，内核就倾向于只指渲染引擎。</p>
+</blockquote>
+<h5 id="6-常见的浏览器内核有哪些"><a href="#6-常见的浏览器内核有哪些" class="headerlink" title="6.常见的浏览器内核有哪些?"></a>6.常见的浏览器内核有哪些?</h5><blockquote>
+<p>浏览器最重要或者说核心部分是”Rendering Engine”,可大概意为:”渲染引擎”,不过我们一般习惯将之称为”浏览器内核”.负责读i网页语法解释,(如标准通用标记语言HTML,JavaScript)并渲染(显示)网页.所以通常所谓的浏览器内核也就是浏览器所采用的渲染引擎,渲染引擎确定了浏览器如何显示网页的内容以及页面的格式信息.不同的浏览器内核对网页编写语法的解释不同,因此同一网页在不同的内核浏览器的渲染效果不同,这也是网页编写者需要在不同内核的浏览器中测试网页显示效果的原因.</p>
+<ul>
+<li>Triden  IE浏览器内核</li>
+<li>Gecko Firefox浏览器内核</li>
+<li>Webkit safar内核 chrome 内核原型</li>
+<li>Blink Google和Opera 开发的排版引擎</li>
+<li><del>Presto 前Opera内核</del>,已废弃</li>
+</ul>
+</blockquote>
+<h5 id="7-html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分-HTML-和-HTML5？"><a href="#7-html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分-HTML-和-HTML5？" class="headerlink" title="7.html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？"></a>7.html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？</h5><blockquote>
+<p><strong>新特性:</strong></p>
+<ul>
+<li>拖拽释放API</li>
+<li>画布(Canvas) API</li>
+<li>地理(Geolocation) API</li>
+<li>本地离线存储(localStorage) 长期存储,浏览器关闭数据不丢失</li>
+<li>sessionStorage 浏览器关闭自动删除</li>
+<li>支持 webworker/websocket/geolocation<br><strong>新元素</strong><br>语义化标签<code>&lt;header&gt;</code> <code>&lt;nav&gt;</code> <code>&lt;footer&gt;</code> <code>&lt;aside&gt;</code> <code>&lt;article&gt;</code> <code>&lt;section&gt;</code><br>画布<code>&lt;canvas&gt;</code> 音视频 <code>&lt;audio&gt;</code> <code>&lt;video&gt;</code>表单控件 <code>calendar</code> <code>date</code> <code>time</code> <code>email</code> <code>url</code> <code>search</code><br><strong>移除的元素</strong><br>纯表现的元素：<code>&lt;basefont&gt;</code> <code>&lt;big&gt;</code> <code>&lt;center&gt;</code> <code>&lt;font&gt;</code> <code>&lt;s&gt;</code> <code>&lt;tt&gt;</code> <code>&lt;u&gt;</code><br>对可用性产生负面影响的元素: <code>&lt;frame&gt;</code> <code>&lt;frameset&gt;</code> <code>&lt;noframes&gt;</code><br><strong>处理HTML5新标签的浏览器兼容问题</strong>:<br>可以通过 document.createElement方法产生新的标签,然后给标签添加默认样式.<br>或者使用成熟的框架 如: html5shim<br><strong>区分HTML和HTML5</strong>  可以通过DOCTYPE 声明</li>
+</ul>
+</blockquote>
+<h5 id="8-简述一下你对HTML语义化的理解？"><a href="#8-简述一下你对HTML语义化的理解？" class="headerlink" title="8.简述一下你对HTML语义化的理解？"></a>8.简述一下你对HTML语义化的理解？</h5><blockquote>
+<ul>
+<li>简单的说就是 根据内容结构化(语义化) 选择合适的标签 便于开发者阅读和写出更优雅的代码的同时让浏览器的爬虫和机器很好的解析;<br><strong>为什么要语义化?</strong></li>
+<li>在没有css的情况下 页面也能呈现出很好的内容结构\代码结构.<br>更好的 用户体验;如 title alt 等</li>
+<li>有利于 SEO 和搜索引擎建立良好的沟通,有助于爬虫抓取更多的有效信息;爬虫依赖于标签来确定上下文和各个关键字的权重;</li>
+<li>便于其他设备解析(如屏幕阅读器 盲人阅读器等)以意义的方式来渲染网页;</li>
+<li>便于团队开发和维护 语义化更具可读性 遵循W3C标准 可以有效减少差异化.</li>
+</ul>
+</blockquote>
+<h5 id="9-HTML5的离线储存怎么使用及工作原理？"><a href="#9-HTML5的离线储存怎么使用及工作原理？" class="headerlink" title="9.HTML5的离线储存怎么使用及工作原理？"></a>9.HTML5的离线储存怎么使用及工作原理？</h5><blockquote>
+<p>离线存储通过创建 cache manifest 文件,可以创建web应用的离线版本.即 新建一个 .appcache 文件,通过这个文件上的 <em>解析清单</em> 离线存储资源,这些资源就会被存储下来.</p>
+</blockquote>
+<pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">manifest</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>demo.appcache<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+The content of the document......
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>Manifest文件</p>
+<pre class=" language-txt"><code class="language-txt">CACHE MANIFEST
+//需要缓存的文件，无论在线与否，均从缓存里读取
+CACHE:
+chched.js
+cached.css
+
+//不缓存的文件，无论缓存中存在与否，均从新获取
+NETWORK:
+uncached.js
+uncached.css
+
+//获取不到资源时的备选路径，如index.html访问失败，则返回404页面
+FALLBACK:
+index.html 404.html
+</code></pre>
+<blockquote>
+<ul>
+<li>在线的情况下，浏览器发现<code>html</code>头部有<code>manifest</code>属性,会请求<code>manifest</code>文件，如果是第一次访问应用，浏览器就会根据manifest文件的内容下载相应的资源并且进行离线存储。如果已经访问过应用并且资源已经离线存储了，那么浏览器就会使用离线的资源加载页面，然后浏览器会对比新的<code>manifest</code>文件与旧的<code>manifest</code>文件，如果文件没有发生改变，就不做任何操作，如果文件改变了，那么就会重新下载文件中的资源并进行离线存储。</li>
+<li>离线的情况下，浏览器就直接使用离线存储的资源。</li>
+</ul>
+</blockquote>
+<h5 id="10-iframe有那些缺点？"><a href="#10-iframe有那些缺点？" class="headerlink" title="10.iframe有那些缺点？"></a>10.iframe有那些缺点？</h5><blockquote>
+<ul>
+<li>对网页性能有影响(样式脚本需要额外链入  增加http请求)</li>
+<li>不利于SEO</li>
+<li>阻塞页面加载</li>
+<li>对老式浏览器不友好(老式浏览器连接数限制)</li>
+</ul>
+</blockquote>
+<h5 id="11-Label的作用是什么？是怎么用的？"><a href="#11-Label的作用是什么？是怎么用的？" class="headerlink" title="11.Label的作用是什么？是怎么用的？"></a>11.Label的作用是什么？是怎么用的？</h5><blockquote>
+<p>label元素不会向用户成仙任何特殊效果,不过,他为鼠标用户改进了可用性.如果在label元素内点击文本,就会触发此控件;就是说当用户选择该标签时,浏览器就会自动将焦点转到和标签相关的表单控件上.</p>
+</blockquote>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>male<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Male<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>radio<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>sex<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>male<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span>
+</code></pre>
+<h5 id="12-HTML5的form如何关闭自动完成功能？"><a href="#12-HTML5的form如何关闭自动完成功能？" class="headerlink" title="12.HTML5的form如何关闭自动完成功能？"></a>12.HTML5的form如何关闭自动完成功能？</h5><blockquote>
+<p>设置<code>form</code> / <code>input</code>的 <code>autocomplete</code>属性为: <code>on</code> /<code>off</code></p>
+</blockquote>
+<h5 id="13-如何实现浏览器内多个标签页之间的通信"><a href="#13-如何实现浏览器内多个标签页之间的通信" class="headerlink" title="13.如何实现浏览器内多个标签页之间的通信?"></a>13.如何实现浏览器内多个标签页之间的通信?</h5><blockquote>
+<p><strong>思路:</strong>通过浏览器的 localStorage 和 storage 事件 实现</p>
+</blockquote>
+<pre class=" language-JavaScript"><code class="language-JavaScript">//发送消息
+function sendMsg(msg){
+    window.localStorage.setItem('msg',msg);
+}
+//接收消息
+window.addEventListener('storage',function(event){
+    if(event.key == 'msg'){
+        console.log(evt.newValue);
+    }
+})
+</code></pre>
+<p><strong> 多次设置相同键值 不会触发 storage 事件 </strong></p>
+<h5 id="14-webSocket如何兼容低浏览器？"><a href="#14-webSocket如何兼容低浏览器？" class="headerlink" title="14.webSocket如何兼容低浏览器？"></a>14.webSocket如何兼容低浏览器？</h5><blockquote>
+<p>暂时没有什么好的思路,只能想到替代,如果一定要用webscoket的,据说有个webscoket.js的工具,没找着…暂且放这吧.</p>
+</blockquote>
+<h5 id="15-页面可见性（Page-Visibility-API）-可以有哪些用途？"><a href="#15-页面可见性（Page-Visibility-API）-可以有哪些用途？" class="headerlink" title="15.页面可见性（Page Visibility API） 可以有哪些用途？"></a>15.页面可见性（Page Visibility API） 可以有哪些用途？</h5><blockquote>
+<p>Page Visibility API 在节约资源上非常有用,当网页不可见时,这个API通过提供给开发者可以操作不必须的任务的接口。<br>如: 页面正在播放一个视频,当页面不可见时可以暂停视频,当用户切换回来时,再继续播放视频,不会因网页不可见而失去视频进度.</p>
+</blockquote>
+<h5 id="16-如何在页面上实现一个圆形的可点击区域？"><a href="#16-如何在页面上实现一个圆形的可点击区域？" class="headerlink" title="16.如何在页面上实现一个圆形的可点击区域？"></a>16.如何在页面上实现一个圆形的可点击区域？</h5><p>三种方式:<br>0.利用html标签 img map&gt;area</p>
+<pre class=" language-html"><code class="language-html">    <span class="token comment" spellcheck="true">&lt;!-- 先放一张图片 使用 usemap属性指定map的 name/id (根据浏览器,所以一般设置map的name==id)  --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>testImg<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>test.gif<span class="token punctuation">"</span></span> <span class="token attr-name">usemap</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#Map<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span> 
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>map</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Map<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Map<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token comment" spellcheck="true">&lt;!-- area 点击区域. shape 设定区域形状,circle 圆形,reat 矩形, coords 坐标  --></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>area</span> <span class="token attr-name">shape</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>circle<span class="token punctuation">"</span></span> <span class="token attr-name">coords</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>50,50,50<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>test.html<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>点击区域<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>map</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>1.利用css属性 border-radius</p>
+<pre class=" language-html"><code class="language-html">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">width</span><span class="token punctuation">:</span><span class="token number">100</span>px<span class="token punctuation">;</span><span class="token property">height</span><span class="token punctuation">:</span><span class="token number">100</span>px<span class="token punctuation">;</span><span class="token property">border-radius</span><span class="token punctuation">:</span><span class="token number">50%</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span> <span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>func()<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>2.利用JavaScript 判断鼠标坐标来实现 (这个方法思路时有但是这代码还真写不出来…)</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//需要求一个点在不在圆上简单算法、获取鼠标坐标等等</span>
+<span class="token comment" spellcheck="true">//代码如下： </span>
+<span class="token operator">|</span>AB<span class="token operator">|</span><span class="token operator">=</span>Math<span class="token punctuation">.</span><span class="token function">abs</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">sqrt</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span>X2<span class="token operator">-</span>X1<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">+</span>Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span>Y2<span class="token operator">-</span>Y1<span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+Math<span class="token punctuation">.</span><span class="token function">abs</span><span class="token punctuation">(</span><span class="token punctuation">)</span>求绝对值
+Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span>底数<span class="token punctuation">,</span>指数<span class="token punctuation">)</span>
+Math<span class="token punctuation">.</span><span class="token function">sqrt</span><span class="token punctuation">(</span><span class="token punctuation">)</span>求平方根
+
+document<span class="token punctuation">.</span>onclick<span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> r<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//圆的半径  </span>
+    <span class="token keyword">var</span> x1<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">,</span>y1<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">,</span>x2<span class="token operator">=</span> e<span class="token punctuation">.</span>clientX<span class="token punctuation">;</span>y2<span class="token operator">=</span> e<span class="token punctuation">.</span>clientY<span class="token punctuation">;</span>  
+    <span class="token comment" spellcheck="true">//计算鼠标点的位置与圆心的距离  </span>
+    <span class="token keyword">var</span> len<span class="token operator">=</span>Math<span class="token punctuation">.</span><span class="token function">abs</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">sqrt</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span>x2<span class="token operator">-</span>x1<span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">+</span>Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span>y2<span class="token operator">-</span>y1<span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+    <span class="token keyword">if</span><span class="token punctuation">(</span>len<span class="token operator">&lt;=</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">{</span>  
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"内"</span><span class="token punctuation">)</span>  
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>  
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"外"</span><span class="token punctuation">)</span>  
+    <span class="token punctuation">}</span>  
+<span class="token punctuation">}</span>  
+</code></pre>
+<h5 id="17-实现不使用-border-画出1px高的线，在不同浏览器的标准模式与怪异模式下都能保持一致的效果"><a href="#17-实现不使用-border-画出1px高的线，在不同浏览器的标准模式与怪异模式下都能保持一致的效果" class="headerlink" title="17.实现不使用 border 画出1px高的线，在不同浏览器的标准模式与怪异模式下都能保持一致的效果."></a>17.实现不使用 border 画出1px高的线，在不同浏览器的标准模式与怪异模式下都能保持一致的效果.</h5><blockquote>
+<p>使用高度为1px 的div 设置背景色;</p>
+</blockquote>
+<h5 id="18-网页验证码是干嘛的，是为了解决什么安全问题"><a href="#18-网页验证码是干嘛的，是为了解决什么安全问题" class="headerlink" title="18.网页验证码是干嘛的，是为了解决什么安全问题."></a>18.网页验证码是干嘛的，是为了解决什么安全问题.</h5><blockquote>
+<p>增加验证码的主要目的是减少非正常的请求,以保护用户权益.所谓非正常的请求有以下:</p>
+<ol>
+<li>爬虫脚本登录,比如登录之后批量发布不良信息.</li>
+<li>扫号脚本暴力探测用户帐号,比如暴力破解某些用户的密码.</li>
+<li>频繁的使用某一个涉及后台性能瓶颈的功能,导致系统负载过高.</li>
+</ol>
+</blockquote>
+<h5 id="19-title与h1的区别、b与strong的区别、i与em的区别？"><a href="#19-title与h1的区别、b与strong的区别、i与em的区别？" class="headerlink" title="19.title与h1的区别、b与strong的区别、i与em的区别？"></a>19.title与h1的区别、b与strong的区别、i与em的区别？</h5><blockquote>
+<p>它们的区别就再于一个是物理元素，一个是逻辑元素。</p>
+</blockquote>
+<blockquote>
+<p>物理元素所强调的是一种物理行为，比如说我把一段文字用 <code>b</code> 标记加粗了，我的意思是告诉浏览器应该给我加粗了显示这段文字，从单词的语义也可以分析得出，<code>b</code> 是 Bold(加粗) 的简写，所以这个 <code>b</code> 标记所传达的意思只是加粗，没有任何其它的作用。<br>而 <code>Strong</code> 我们从字面理解就可以知道他是强调的意思，所以我们用这个标记向浏览器传达了一个强调某段文字的消息，而这个 <code>Strong</code> 就是我们所说的逻辑元素，他是强调文档逻辑的，并非是通知浏览器应该如何显示。</p>
+</blockquote>
+<blockquote>
+<p>同样，<code>i</code> 是Italic(斜体)，而 <code>em</code> 是emphasize(强调)。<br>所以说：物理元素是告诉浏览器我应该以何种格式显示文字，逻辑元素告诉浏览器这些文字有怎么样的重要性。</p>
+</blockquote>
+<h5 id="21-请描述一下-cookies，sessionStorage-和-localStorage-的区别？"><a href="#21-请描述一下-cookies，sessionStorage-和-localStorage-的区别？" class="headerlink" title="21.请描述一下 cookies，sessionStorage 和 localStorage 的区别？"></a>21.请描述一下 cookies，sessionStorage 和 localStorage 的区别？</h5><blockquote>
+<ul>
+<li><strong>cookie</strong> 是网站为了标识用户身份而存储在用户本地(浏览器/或其他终端)的数据,cookie数据始终在同源的http请求中携带.(在用户终端和服务器之间来回传递),可以设置cookie失效时间,有效时间内数据持久保存;</li>
+<li><strong>localStorage</strong> 存储在用户本地终端的<strong>持久数据</strong>  不会自动传递给服务器,仅在本地保存.浏览器关闭数据不丢失</li>
+<li><strong>sessionStorage</strong> 和localStorage 一样区别在于它是非持久数据 浏览器关闭自动删除;</li>
+</ul>
+</blockquote>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://zhangdi.site/frontend-issues-summary-html.html';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://zhangdi.site/frontend-issues-summary-html.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//zhangdi.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/frontend-summary-css.html" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/hello-hexo.html" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(http://oox9lo3vp.bkt.clouddn.com/17-12-14/47172263.jpg);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="http://oox9lo3vp.bkt.clouddn.com/17-12-14/73776896.jpg" alt="Zeddy's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        zhangdi0809@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">12</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/hexo/">Hexo<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/share/">分享境<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/technology/">技术向<span class="sidebar_archives-count">25</span></a></li><li><a class="sidebar_archives-link" href="/categories/self-talk/">自言语<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签云">
+                
+                    <i class="material-icons sidebar-material-icons">bookmark</i>
+                
+                标签云
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/about" title="关于我">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于我
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Resume -->
+
+    <a href="http://zhangdi666.gitee.io/resume/"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+             我的简历
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/SuGod" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2015&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Zhangdi'Blog --- 爱技术爱折腾,无折腾不技术.
+            
+                <br>
+                
+                     蜀ICP备17019667号-1
+                
+            
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <span>Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></span>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <span>Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></span>
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+       
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+        -->
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","//cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/js/lazyload.min.js", true)</script>
+
+
+
+    <script>lsloader.load("js_js","//cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/js/js.min.js", true)</script>
+
+
+
+    <script>lsloader.load("np_js","//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("sm_js","//cdn.jsdelivr.net/gh/viosey/hexo-theme-material@latest/source/js/smoothscroll.js", true)</script>
+    
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//zhangdi.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+//console.log('\n %c © Material Theme | Version: 1.5.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

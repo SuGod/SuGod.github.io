@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://zhangdi.site/solve-crossdomain-issues-cors-and-jsonp.html</loc>
+    <lastmod>2018-06-06T18:35:50.338Z</lastmod>
+    <data>
+        <display>
+        <title>解决跨域问题,CORS及JSONP</title>
+        <pubTime>2018-06-06T18:18:39.000Z</pubTime>
+        
+        <tag>跨域</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/hexo-agonizing.html</loc>
+    <lastmod>2018-06-06T18:32:38.702Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo折腾记</title>
+        <pubTime>2018-03-23T03:26:06.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>SEO</tag>
+         
+         
+           
+             
+              <breadCrumb title="Hexo" url="http://zhangdi.site/categories/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/sass-study-notes.html</loc>
+    <lastmod>2018-06-06T18:32:38.695Z</lastmod>
+    <data>
+        <display>
+        <title>SASS 学习笔记</title>
+        <pubTime>2017-11-20T02:56:49.000Z</pubTime>
+        
+        <tag>HTML/CSS</tag>
+         
+        <tag>Sass</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/build-a-mock-server-with-koa.html</loc>
+    <lastmod>2018-06-06T18:32:38.694Z</lastmod>
+    <data>
+        <display>
+        <title>使用Koa搭建Mock Server</title>
+        <pubTime>2018-04-23T08:54:32.000Z</pubTime>
+        
+        <tag>koa</tag>
+         
+        <tag>mockjs</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/css-commonly-used-practical-finishing.html</loc>
+    <lastmod>2018-06-06T18:32:38.683Z</lastmod>
+    <data>
+        <display>
+        <title>CSS常用实用整理</title>
+        <pubTime>2017-11-02T14:51:10.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="分享境" url="http://zhangdi.site/categories/share/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/rxjs-study-notes-a.html</loc>
+    <lastmod>2018-06-06T18:32:38.683Z</lastmod>
+    <data>
+        <display>
+        <title>RxJs学习笔记(一)</title>
+        <pubTime>2018-02-08T14:58:21.000Z</pubTime>
+        
+        <tag>Javascript</tag>
+         
+        <tag>RxJs</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/react-native-development-environment.html</loc>
+    <lastmod>2018-06-06T18:32:38.673Z</lastmod>
+    <data>
+        <display>
+        <title>React Native 开发环境搭建</title>
+        <pubTime>2018-03-15T12:54:55.000Z</pubTime>
+        
+        <tag>React-Native</tag>
+         
+         
+           
+             
+              <breadCrumb title="分享境" url="http://zhangdi.site/categories/share/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/macos-install-redis.html</loc>
+    <lastmod>2018-06-06T18:32:38.671Z</lastmod>
+    <data>
+        <display>
+        <title>macOS安装Redis</title>
+        <pubTime>2017-12-18T13:00:54.000Z</pubTime>
+        
+        <tag>macOS</tag>
+         
+        <tag>Redis</tag>
+         
+         
+           
+             
+              <breadCrumb title="分享境" url="http://zhangdi.site/categories/share/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/promise-and-asyncawait.html</loc>
+    <lastmod>2018-06-06T18:32:38.671Z</lastmod>
+    <data>
+        <display>
+        <title>Promise和async/await</title>
+        <pubTime>2018-04-12T03:38:58.000Z</pubTime>
+        
+        <tag>ES6</tag>
+         
+        <tag>Javascript</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/hello-hexo.html</loc>
+    <lastmod>2018-06-06T18:32:38.666Z</lastmod>
+    <data>
+        <display>
+        <title>Hello Hexo</title>
+        <pubTime>2017-11-01T03:23:46.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="自言语" url="http://zhangdi.site/categories/self-talk/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/indepth-study-react-a.html</loc>
+    <lastmod>2018-06-06T18:32:38.666Z</lastmod>
+    <data>
+        <display>
+        <title>深入学习React(一)</title>
+        <pubTime>2018-04-07T17:02:28.000Z</pubTime>
+        
+        <tag>React</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/hexo-article-url-optimization.html</loc>
+    <lastmod>2018-06-06T18:32:38.659Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo 文章URL优化</title>
+        <pubTime>2018-04-11T01:46:18.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>SEO</tag>
+         
+         
+           
+             
+              <breadCrumb title="Hexo" url="http://zhangdi.site/categories/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/requirejs-from-theory-to-actual-combat.html</loc>
+    <lastmod>2018-06-06T18:32:38.659Z</lastmod>
+    <data>
+        <display>
+        <title>RequireJs从理论到实战</title>
+        <pubTime>2017-12-30T02:03:07.000Z</pubTime>
+        
+        <tag>requireJs</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/git-tips.html</loc>
+    <lastmod>2018-06-06T18:32:38.656Z</lastmod>
+    <data>
+        <display>
+        <title>Git小技巧</title>
+        <pubTime>2018-01-16T07:09:36.000Z</pubTime>
+        
+        <tag>Git</tag>
+         
+        <tag>Github</tag>
+         
+        <tag>SVN</tag>
+         
+         
+           
+             
+              <breadCrumb title="分享境" url="http://zhangdi.site/categories/share/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/github-deploys-hexo-blog-to-migrate-cloud-host.html</loc>
+    <lastmod>2018-06-06T18:32:38.646Z</lastmod>
+    <data>
+        <display>
+        <title>GitHub部署的Hexo博客迁移到云主机</title>
+        <pubTime>2018-03-21T06:24:36.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>Hexo</tag>
+         
+        <tag>Nginx</tag>
+         
+         
+           
+             
+              <breadCrumb title="Hexo" url="http://zhangdi.site/categories/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/linux-common-commands.html</loc>
+    <lastmod>2018-06-06T18:32:37.837Z</lastmod>
+    <data>
+        <display>
+        <title>Linux 常用命令</title>
+        <pubTime>2018-01-09T02:33:45.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="分享境" url="http://zhangdi.site/categories/share/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/usage-of-svn-in-macos-environment-client.html</loc>
+    <lastmod>2018-06-06T18:32:37.836Z</lastmod>
+    <data>
+        <display>
+        <title>macOS 环境下 SVN 的使用(客户端)</title>
+        <pubTime>2017-11-22T04:27:59.000Z</pubTime>
+        
+        <tag>SVN</tag>
+         
+        <tag>macOS</tag>
+         
+         
+           
+             
+              <breadCrumb title="分享境" url="http://zhangdi.site/categories/share/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/building-shadowsocks-service-based-on-google-cloud-platform.html</loc>
+    <lastmod>2018-06-06T18:32:37.836Z</lastmod>
+    <data>
+        <display>
+        <title>基于Google Cloud Platform搭建Shadowsocks服务</title>
+        <pubTime>2018-01-09T03:19:12.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>Google Cloud</tag>
+         
+        <tag>Shadowsocks</tag>
+         
+         
+           
+             
+              <breadCrumb title="分享境" url="http://zhangdi.site/categories/share/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://zhangdi.site/understand-pixels-and-dpr.html</loc>
+    <lastmod>2018-06-06T18:32:37.835Z</lastmod>
+    <data>
+        <display>
+        <title>理解像素和DPR</title>
+        <pubTime>2017-11-26T04:35:42.000Z</pubTime>
+        
+        <tag>HTML/CSS</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/build-a-react-family-bucket-based-on-createreactapp.html</loc>
+    <lastmod>2018-06-06T18:32:37.835Z</lastmod>
+    <data>
+        <display>
+        <title>基于create-react-app构建React全家桶</title>
+        <pubTime>2017-11-02T02:53:24.000Z</pubTime>
+        
+        <tag>React</tag>
+         
+        <tag>Webpack</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/essay-20180520.html</loc>
+    <lastmod>2018-06-06T18:32:37.835Z</lastmod>
+    <data>
+        <display>
+        <title>随笔-20180520</title>
+        <pubTime>2018-05-20T14:24:48.000Z</pubTime>
+        
+        <tag>eslint</tag>
+         
+        <tag>tree</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/frontend-summary-css.html</loc>
+    <lastmod>2018-06-06T18:32:37.834Z</lastmod>
+    <data>
+        <display>
+        <title>前端问题总结-CSS</title>
+        <pubTime>2017-11-01T13:47:19.000Z</pubTime>
+        
+        <tag>Javascript</tag>
+         
+        <tag>HTML/CSS</tag>
+         
+         
+           
+             
+              <breadCrumb title="分享境" url="http://zhangdi.site/categories/share/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/frontend-issues-summary-html.html</loc>
+    <lastmod>2018-06-06T18:32:37.834Z</lastmod>
+    <data>
+        <display>
+        <title>前端问题总结(HTML)</title>
+        <pubTime>2017-11-01T08:55:54.000Z</pubTime>
+        
+        <tag>Javascript</tag>
+         
+        <tag>HTML/CSS</tag>
+         
+         
+           
+             
+              <breadCrumb title="分享境" url="http://zhangdi.site/categories/share/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://zhangdi.site/understand-browser-object-modelbom.html</loc>
+    <lastmod>2018-06-06T18:32:37.831Z</lastmod>
+    <data>
+        <display>
+        <title>理解浏览器对象模型--BOM</title>
+        <pubTime>2017-11-25T02:43:54.000Z</pubTime>
+        
+        <tag>Javascript</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/understanding-redux.html</loc>
+    <lastmod>2018-06-06T18:32:37.831Z</lastmod>
+    <data>
+        <display>
+        <title>理解Redux</title>
+        <pubTime>2017-11-02T05:15:47.000Z</pubTime>
+        
+        <tag>Redux</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/understand-react-highend-components.html</loc>
+    <lastmod>2018-06-06T18:32:37.830Z</lastmod>
+    <data>
+        <display>
+        <title>理解React高阶组件</title>
+        <pubTime>2017-12-13T02:00:08.000Z</pubTime>
+        
+        <tag>React</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/webpack-study-notes-a.html</loc>
+    <lastmod>2018-06-06T18:32:37.829Z</lastmod>
+    <data>
+        <display>
+        <title>webpack 学习笔记(一)</title>
+        <pubTime>2017-11-17T09:59:47.000Z</pubTime>
+        
+        <tag>Webpack</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/webpackloader-configuration.html</loc>
+    <lastmod>2018-06-06T18:32:37.829Z</lastmod>
+    <data>
+        <display>
+        <title>Webpack-loader配置</title>
+        <pubTime>2018-04-17T16:12:50.000Z</pubTime>
+        
+        <tag>Webpack</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/webpack-study-notes-b.html</loc>
+    <lastmod>2018-06-06T18:32:37.810Z</lastmod>
+    <data>
+        <display>
+        <title>webpack 学习笔记(二)</title>
+        <pubTime>2018-01-16T16:04:00.000Z</pubTime>
+        
+        <tag>Webpack</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/how-to-write-a-jquery-plugin.html</loc>
+    <lastmod>2018-06-06T18:32:37.810Z</lastmod>
+    <data>
+        <display>
+        <title>如何写一个jQuery插件</title>
+        <pubTime>2017-12-02T06:52:48.000Z</pubTime>
+        
+        <tag>Javascript</tag>
+         
+        <tag>jQuery</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/springboot-integration-mybatis.html</loc>
+    <lastmod>2018-06-06T18:32:37.809Z</lastmod>
+    <data>
+        <display>
+        <title>SpringBoot集成Mybatis</title>
+        <pubTime>2017-12-18T02:11:20.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>Spring-boot</tag>
+         
+        <tag>myBatis</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/understanding-javascript-prototypes.html</loc>
+    <lastmod>2018-06-06T18:32:37.809Z</lastmod>
+    <data>
+        <display>
+        <title>理解JavaScript原型</title>
+        <pubTime>2018-03-18T13:26:09.000Z</pubTime>
+        
+        <tag>Javascript</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/macos-connection-to-mysql-cant-connect-local-server-through-socket-tmpmysqlsock-2-solution.html</loc>
+    <lastmod>2018-06-06T18:32:37.808Z</lastmod>
+    <data>
+        <display>
+        <title>macOs连接MySQL出现Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)解决办法</title>
+        <pubTime>2018-03-26T05:47:45.000Z</pubTime>
+        
+        <tag>macOS</tag>
+         
+        <tag>mySQL</tag>
+         
+         
+           
+             
+              <breadCrumb title="分享境" url="http://zhangdi.site/categories/share/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/understanding-springdatajpa.html</loc>
+    <lastmod>2018-06-06T18:32:37.785Z</lastmod>
+    <data>
+        <display>
+        <title>理解Spring-data-jpa</title>
+        <pubTime>2017-12-26T13:20:35.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>Spring</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/webpack4-study-notes.html</loc>
+    <lastmod>2018-06-06T18:32:37.785Z</lastmod>
+    <data>
+        <display>
+        <title>Webpack4学习笔记</title>
+        <pubTime>2018-04-23T08:46:01.000Z</pubTime>
+        
+        <tag>Webpack</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/jquery-source-html-method-parsing.html</loc>
+    <lastmod>2018-06-06T18:32:37.778Z</lastmod>
+    <data>
+        <display>
+        <title>jQuery源码之html()方法解析</title>
+        <pubTime>2018-01-11T05:02:54.000Z</pubTime>
+        
+        <tag>Javascript</tag>
+         
+        <tag>jQuery</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/undefined.html</loc>
+    <lastmod>2018-04-13T05:39:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>Vue+Webpack开发环境进阶配置</title>
+        <pubTime>2018-03-31T06:32:13.000Z</pubTime>
+        
+        <tag>Vue</tag>
+         
+        <tag>Webpack</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/undefined.html</loc>
+    <lastmod>2018-04-13T05:39:10.000Z</lastmod>
+    <data>
+        <display>
+        <title>Vue+Webpack开发环境构建</title>
+        <pubTime>2018-02-26T03:27:01.000Z</pubTime>
+        
+        <tag>Vue</tag>
+         
+        <tag>Webpack</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/undefined.html</loc>
+    <lastmod>2018-04-13T05:37:24.000Z</lastmod>
+    <data>
+        <display>
+        <title>React+Node.js全栈开发(一)</title>
+        <pubTime>2017-11-24T04:13:07.000Z</pubTime>
+        
+        <tag>React</tag>
+         
+        <tag>Redux</tag>
+         
+        <tag>React-router</tag>
+         
+        <tag>NodeJs</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+</urlset>
