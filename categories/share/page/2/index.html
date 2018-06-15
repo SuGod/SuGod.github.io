@@ -40,7 +40,7 @@
     
     <title>
         
-            React+Node.js全栈开发(一) | 
+            分类: 分享境 | 
         
         Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.
     </title>
@@ -52,7 +52,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Zeddy">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",React,Redux,React-router,NodeJs">
+    <meta name="keywords" content="">
 
     <!-- Import lsloader -->
     <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
@@ -244,18 +244,15 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://zhangdi.site">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="React+Node.js全栈开发(一) | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
+    <meta property="og:title" content="分类: 分享境 | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
     <meta property="og:image" content="http://zhangdi.site/img/favicon.png" />
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="React"> <meta property="og:article:tag" content="Redux"> <meta property="og:article:tag" content="React-router"> <meta property="og:article:tag" content="NodeJs"> 
-
     
-        <meta property="article:published_time" content="Fri Nov 24 2017 12:13:07 GMT+0800" />
-        <meta property="article:modified_time" content="Fri Apr 13 2018 13:37:24 GMT+0800" />
+
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="React+Node.js全栈开发(一) | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
+    <meta name="twitter:title" content="分类: 分享境 | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="http://zhangdi.site/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -263,43 +260,13 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://zhangdi.site/undefined.html" />
+        <link rel="canonical" href="http://zhangdi.site/categories/share/page/2/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "mainEntityOfPage": "http://zhangdi.site/undefined.html",
-    "headline": "React+Node.js全栈开发(一)",
-    "datePublished": "Fri Nov 24 2017 12:13:07 GMT+0800",
-    "dateModified": "Fri Apr 13 2018 13:37:24 GMT+0800",
-    "author": {
-        "@type": "Person",
-        "name": "Zeddy",
-        "image": {
-            "@type": "ImageObject",
-            "url": "http://oox9lo3vp.bkt.clouddn.com/17-12-14/73776896.jpg"
-        },
-        "description": "死亡是一座永恒的灯塔,不管你驶向何方,最终都会朝它转向.一切都将逝去,只有死神永生."
-    },
-    "publisher": {
-        "@type": "Organization",
-        "name": "Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.",
-        "logo": {
-            "@type":"ImageObject",
-            "url": "/img/favicon.png"
-        }
-    },
-    "keywords": ",React,Redux,React-router,NodeJs",
-    "description": "",
-}
-</script>
 
 
     
@@ -342,399 +309,110 @@
                         </button>
                     
 
-                    <!-- Post TOC -->
-
+                    <!-- Index Module -->
+<div class="material-index mdl-grid">
     
-    <!-- Back Button -->
-    <!--
-    <div class="material-back" id="backhome-div" tabindex="0">
-        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
-           href="#" onclick="window.history.back();return false;"
-           target="_self"
-           role="button"
-           data-upgraded=",MaterialButton,MaterialRipple">
-            <i class="material-icons" role="presentation">arrow_back</i>
-            <span class="mdl-button__ripple-container">
-                <span class="mdl-ripple"></span>
-            </span>
-        </a>
-    </div>
-    -->
+    <div class="locate-thumbnail-symbol"></div>
 
-
-    <!-- Left aligned menu below button -->
-    
-    
-    <button id="post-toc-trigger-btn"
-        class="mdl-button mdl-js-button mdl-button--icon">
-        <i class="material-icons">format_list_numbered</i>
-    </button>
-
-    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#技术栈-React-Redux-React-Router-Antd-mobile-Webpack-NodeJs-Express-MongoDB"><span class="post-toc-text">技术栈: React Redux React-Router Antd-mobile Webpack NodeJs Express MongoDB</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#正式开始"><span class="post-toc-text">正式开始:</span></a>
-    </ul>
+    <!-- Pin on top -->
     
 
-
-
-
-<!-- Layouts -->
-
-    <!-- Post Module -->
-    <div class="material-post_container">
-
-        <div class="material-post mdl-grid">
-            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
-
-                <!-- Post Header(Thumbnail & Title) -->
-                
-    <!-- Paradox Post Header -->
+    <!-- Normal Post -->
+    
+        
+            
+                <!-- Paradox Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post Thumbnail -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-            <script type="text/ls-javascript" id="post-thumbnail-script">
-    var randomNum = Math.floor(Math.random() * 19 + 1);
+        
+    
 
-    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+        <!-- Post Title -->
+        <p class="article-headline-p"><a href="/frontend-issues-summary-html.html">前端问题总结(HTML)</a></p>
+    </div>
+
+    <!-- Post Excerpt -->
+    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+        
+            
+最近在网上找了一些前端方面的问题,看下来发现还是很多答不上来的, 所以决定把这些问题做个汇总.目的是希望每天能回答5-10...
+        
+        &nbsp;&nbsp;&nbsp;
+        <span>
+            <a href="/frontend-issues-summary-html.html" target="_self">阅读全文</a>
+        </span>
+    </div>
+    <!-- Post_entry Info-->
+    <div id="post_entry-info">
+        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
+            <!-- Author Avatar -->
+            <div id="author-avatar">
+                <img src="http://oox9lo3vp.bkt.clouddn.com/17-12-14/73776896.jpg" width="44px" height="44px" alt="Zeddy's avatar">
+            </div>
+            <div>
+                <strong>Zeddy</strong>
+                <span>11月 01, 2017</span>
+            </div>
+        </div>
+        <div id="post_entry-right-info">
+            
+                <!-- tags -->
+                <span class="post_entry-tags">
+                    <a class="post_entry_tag-link" href="/tags/HTML-CSS/">HTML/CSS</a>, <a class="post_entry_tag-link" href="/tags/Javascript/">Javascript</a>
+                </span>
+            
+
+            
+              <!-- Category -->
+              <span class="post_entry-category">
+                  <a class="post_category-link" href="/categories/share/">分享境</a>
+              </span>
+            
+            
+
+            
+
+            <!-- Post Views -->
+            <span class="post_entry-views">
+            </span>
+        </div>
+    </div>
+</div>
+
+            
+            
+        
+    
+
+    
+    <!-- Index nav -->
+        <nav class="material-nav mdl-cell mdl-cell--12-col">
+            <a class="extend prev" rel="prev" href="/categories/share/"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_back</i></button></a><a class="page-number" href="/categories/share/">1</a><span class="page-number current">2</span>
+        </nav>
+    
+
+    
+        <script type="text/ls-javascript" id="thumbnail-script">
+    var randomNum;
+
+    var locatePost = $('.locate-thumbnail-symbol').next();
+    for(var i = 0; i < 10; i++) {
+        randomNum = Math.floor(Math.random() * 19 + 1);
+
+        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
+        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
+
+        locatePost = locatePost.next();
+    }
 </script>
-
-        
-    
-            <p class="article-headline-p">
-                React+Node.js全栈开发(一)
-            </p>
-        </div>
-
-
-
-
-
-                
-                    <!-- Paradox Post Info -->
-                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
-
-    <!-- Author Avatar -->
-    <div id="author-avatar">
-        <img src="http://oox9lo3vp.bkt.clouddn.com/17-12-14/73776896.jpg" width="44px" height="44px" alt="Author Avatar"/>
-    </div>
-    <!-- Author Name & Date -->
-    <div>
-        <strong>Zeddy</strong>
-        <span>11月 24, 2017</span>
-    </div>
-
-    <div class="section-spacer"></div>
-
-    <!-- Favorite -->
-    <!--
-        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
-            <i class="material-icons" role="presentation">favorite</i>
-            <span class="visuallyhidden">favorites</span>
-        </button>
-    -->
-
-    <!-- Qrcode -->
-    
-        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-    <i class="material-icons" role="presentation">devices other</i>
-    <span class="visuallyhidden">devices other</span>
-</button>
-<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
-    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
-    
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAAB4UlEQVR42u3aQXLDIAwFUN//0u0BOsVfgJsaPa8ymcTWy+IHIa6vI64LAwMDAwMDA+PfMK74+vn58oN/+Va1BgwMjJ6M6uPHD8i/u1QDBgZGS8Y4ZMe3Hkdz8slqDRgYGBjjx+SkZFmJgYGB8Rwjb3p3/QQYGBgYSQN5swUWNLfjwP2jXhwDA+OFjOpg4InXH5hvYGBgvIQxN4a8WbRtGgY8eGYEAwPjVYy5xjIZA+xqg5dWuBgYGEcwqhttSZjmjejmpSEGBsahjPVgTQqaa24n/zcwMDCOZiQxmsdxdTmYt80YGBg9Gbu2z/IY3bCgxMDAaMlIysrDsbpMzCvBwMDoxlhpZZNQfjCyMTAw2jPmyl0vMV9EYmBg9GTkW2/5Ii8fheZhjYGB0Y2RH26oNrdz95wMXAwMjKMZeYnRUa1i61utBAMDAyM/fvHECLN87AMDA6MNoxqyeUSuhHi0qYeBgdGGUb2qBybyCK6+j4GB0YdRjb+8Kd11RAwDAwMj2QJLQnB98VdubjEwMFoy1o9KzEVq3ipjYGBgVEePyWBg5ecoN7EYGBgYU5txK/e8GRVgYGC0ZKwfvyjE5dQGHAYGRmfG+mCgWkp+tKKw3YaBgXEo470XBgYGBgYGBsZHr2/SXdQBFzeVTgAAAABJRU5ErkJggg==">
-    
-</ul>
-
-    
-
-    <!-- Tags (bookmark) -->
-    
-    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-        <i class="material-icons" role="presentation">bookmark</i>
-        <span class="visuallyhidden">bookmark</span>
-    </button>
-    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
-        <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/NodeJs/">NodeJs</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/React/">React</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/React-router/">React-router</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Redux/">Redux</a>
-    </ul>
-    
-
-    <!-- Share -->
-    
-        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-    <i class="material-icons" role="presentation">share</i>
-    <span class="visuallyhidden">share</span>
-</button>
-<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
-    
-
-    
-
-    <!-- Share Weibo -->
-    
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=React+Node.js全栈开发(一)&url=http://zhangdi.site/undefined.html&pic=http://zhangdi.site/img/favicon.png&searchPic=false&style=simple" target="_blank">
-            <li class="mdl-menu__item">
-                分享到微博
-            </li>
-        </a>
-    
-
-    <!-- Share Twitter -->
-    
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=React+Node.js全栈开发(一)&url=http://zhangdi.site/undefined.html&via=Zeddy" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 Twitter
-            </li>
-        </a>
-    
-
-    <!-- Share Facebook -->
-    
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zhangdi.site/undefined.html" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 Facebook
-            </li>
-        </a>
-    
-
-    <!-- Share Google+ -->
-    
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://zhangdi.site/undefined.html" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 Google+
-            </li>
-        </a>
-    
-
-    <!-- Share LinkedIn -->
-    
-
-    <!-- Share QQ -->
-    
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.&title=React+Node.js全栈开发(一)&summary=&pics=http://zhangdi.site/img/favicon.png&url=http://zhangdi.site/undefined.html" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 QQ
-            </li>
-        </a>
-    
-
-    <!-- Share Telegram -->
-    
-</ul>
 
     
 </div>
-
-                
-
-                <!-- Post Content -->
-                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
-    
-        <h4 id="技术栈-React-Redux-React-Router-Antd-mobile-Webpack-NodeJs-Express-MongoDB"><a href="#技术栈-React-Redux-React-Router-Antd-mobile-Webpack-NodeJs-Express-MongoDB" class="headerlink" title="技术栈: React Redux React-Router Antd-mobile Webpack NodeJs Express MongoDB"></a>技术栈: React Redux React-Router Antd-mobile Webpack NodeJs Express MongoDB</h4><p>开发前准备:</p>
-<p>nodeJS MongoDB create-react-app的安装就不赘述了.</p>
-<p><a href="http://es6.ruanyifeng.com/" target="_blank" rel="noopener">ES6语法参考 &lt;&lt;阮一峰-ECMAScript 6 入门&gt;&gt;</a></p>
-<h3 id="正式开始"><a href="#正式开始" class="headerlink" title="正式开始:"></a>正式开始:</h3><ol>
-<li><p>使用create-react-app 搭建 react全家桶(react redux router webpack antd-mobile …) <a href="!http://zhangdi.site/2017/11/02/%E5%9F%BA%E4%BA%8Ecreate-react-app%E6%9E%84%E5%BB%BAReact%E5%85%A8%E5%AE%B6%E6%A1%B6/">过程&gt;&gt;</a></p>
-<p> <img src="http://oox9lo3vp.bkt.clouddn.com/17-11-27/16476351.jpg" alt="项目结构"></p>
-<p> <img src="http://oox9lo3vp.bkt.clouddn.com/17-11-27/36406085.jpg" alt="默认package.json"></p>
-<p> 终端执行<code>npm run eject</code></p>
-<p> <strong>(如果项目使用git)执行这里可能会遇到一个错误</strong></p>
-<p> <img src="http://oox9lo3vp.bkt.clouddn.com/17-11-27/43474637.jpg" alt="run eject 错误"></p>
-<p> 解决办法是:在<code>.gitignore</code>文件中添加<code>/.idea</code>过滤项.然后重新<code>commit</code> and <code>push</code>;我认为原因是弹出配置这个操作是不可逆的,所以fb的工程师很人性化的去检查了<code>git</code>是否有未提交的内容,如果只是像看看配置项,或者不想弹出配置项了,还可以从<code>git</code>上恢复.<code>.idea</code>是<code>webstorm</code>生成的编辑器配置文件,应该是随时变化的,所以把<code>.idea</code>过滤掉就可以了.</p>
-<p> <img src="http://oox9lo3vp.bkt.clouddn.com/17-11-27/8862925.jpg" alt="弹出配置后文件目录"></p>
-</li>
-<li><p>安装各种插件</p>
-</li>
-</ol>
-<pre class=" language-bash"><code class="language-bash">yarn add redux react-redux react-router-dom antd-mobile babel-plugin-import babel-plugin-transform-decorators-legacy axios
-
-yarn add express mongoose --dev
-</code></pre>
-<ol>
-<li>配置及前后台联调.</li>
-</ol>
-<p>接下来在<code>package.json</code>中配置 <code>plugins</code>部分.其中第一项为<code>antd-mobile</code>的按需加载,第二项为<code>transform-decorators-legacy</code>插件,使<code>babel</code>支持装饰器写法.</p>
-<pre class=" language-json"><code class="language-json"><span class="token property">"babel"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token property">"presets"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-      <span class="token string">"react-app"</span>
-    <span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token property">"plugins"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-      <span class="token punctuation">[</span>
-        <span class="token string">"import"</span><span class="token punctuation">,</span>
-        <span class="token punctuation">{</span>
-          <span class="token property">"libraryName"</span><span class="token operator">:</span> <span class="token string">"antd-mobile"</span><span class="token punctuation">,</span>
-          <span class="token property">"style"</span><span class="token operator">:</span> <span class="token string">"css"</span>
-        <span class="token punctuation">}</span>
-      <span class="token punctuation">]</span><span class="token punctuation">,</span>
-      <span class="token string">"transform-decorators-legacy"</span>
-    <span class="token punctuation">]</span>
-<span class="token punctuation">}</span>
-
-</code></pre>
-<p>然后配置server,在项目根路径下新建 <code>server</code>文件夹,用于存放后端server的内容.<code>src</code>下是前台内容.</p>
-<p>关于<code>express</code> <a href="http://www.expressjs.com.cn/" target="_blank" rel="noopener">官方文档</a>有详细介绍.</p>
-<p>在<code>server</code>下新建<code>server.js</code>:</p>
-<pre class=" language-JavaScript"><code class="language-JavaScript">const express = require('express');
-
-const app = express();
-
-//监听8080端口启动server
-const server = app.listen('8080',function(){
-    let host = server.address().address,
-        port = server.address().port;
-    //启动成功后在控制台打印.
-    console.log('Express app listening at http://%s:%s',host,port);
-})
-
-</code></pre>
-<p>在 <code>package.json</code>添加<code>proxy</code>配置项. 表示把请求转发到<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a>.</p>
-<pre class=" language-json"><code class="language-json"> <span class="token property">"proxy"</span><span class="token operator">:</span><span class="token string">"http://localhost:8080"</span>
-</code></pre>
-<p>ok,到这一步就基本完成了前后台的配置.接下来进行测试:</p>
-<p>启动<code>server.js</code>,这里推荐 <code>nodemon</code>  自动重启的工具,使用 <code>nodemon</code>来启动<code>server.js</code>;</p>
-<pre class=" language-"><code class="language-">nodemon server/server.js 
-</code></pre>
-<p>同时启动 react</p>
-<pre><code>yarn start
-</code></pre><p><code>server.js</code>添加路由</p>
-<pre class=" language-JavaScript"><code class="language-JavaScript">app.get('/user',function (req,res) {
-    res.json({
-        name:'张三',
-        age:18
-    })
-});
-</code></pre>
-<p>修改<code>/src/App.js</code></p>
-<pre class=" language-JavaScript"><code class="language-JavaScript">import React from 'react';
-import {Button} from 'antd-mobile';
-import axios from 'axios';
-import './App.css';
-
-class App extends React.Component {
-
-    constructor(props){
-        super(props);
-        this.state = {
-            user:{
-                name:'李四',
-                age:12
-            }
-        }
-    }
-
-    componentDidMount(){
-        console.log('component did mount!');
-    }
-    handleClick(){
-        axios.get('/user').then(res => {
-            console.log(res);
-            if(res.status === 200){
-                this.setState({
-                    user:res.data
-                })
-            }
-        })
-    }
-
-    render() {
-        return (
-            <div className="App">
-                <Button type="primary" onClick={this.handleClick.bind(this)}>获取</Button>
-                <p>
-                    我叫{this.state.user.name} ,我今年{this.state.user.age}岁.
-                </p>
-            </div>
-        );
-    }
-}
-
-export default App;
-</code></pre>
-<p>到这里前后端联调已经通了,但是后台还没有链接数据库(mongodb),react还没有使用 redux 和 router 等,接下来我们需要对 项目进一步改造.</p>
-<p>未完待续…</p>
-<ol>
-<li>配置使用 mongodb</li>
-</ol>
-<p>关于<code>mongodb</code>.<a href="http://www.runoob.com/mongodb/mongodb-tutorial.html" target="_blank" rel="noopener">查看文档了解更多</a></p>
-
-        
-    
-
-    
-</div>
-
-
-                
-
-                <!-- Post Comments -->
-                
-                    
-    <!-- 使用 DISQUS -->
-<div id="disqus-comment">
-    <div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_config = function () {
-        this.page.url = 'http://zhangdi.site/undefined.html';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://zhangdi.site/undefined.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-</script>
-<script type="text/ls-javascript" id="disqus-thread-script">
-    queue.offer(function() {
-            (function() { // DON'T EDIT BELOW THIS LINE
-                var d = document;
-                var s = d.createElement('script');
-                s.src = '//zhangdi.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', + new Date());
-                (d.head || d.body).appendChild(s);
-            })();
-        });
-</script>
-
-</div>
-<style>
-    #disqus-comment{
-        background-color: #eee;
-        padding: 2pc;
-    }
-</style>
-
-                
-            </div>
-
-            <!-- Post Prev & Next Nav -->
-            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
-    <!-- Prev Nav -->
-    
-        <a href="/understand-browser-object-modelbom.html" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
-
-    <!-- Section Spacer -->
-    <div class="section-spacer"></div>
-
-    <!-- Next Nav -->
-    
-        <a href="/usage-of-svn-in-macos-environment-client.html" id="post_nav-older" class="next-content">
-            旧篇
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_forward</i>
-            </button>
-        </a>
-    
-</nav>
-
-        </div>
-    </div>
-
 
 
                     
@@ -834,7 +512,7 @@ export default App;
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/hexo/">Hexo<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/share/">分享境<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/technology/">技术向<span class="sidebar_archives-count">25</span></a></li><li><a class="sidebar_archives-link" href="/categories/self-talk/">自言语<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/hexo/">Hexo<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/share/">分享境<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/technology/">技术向<span class="sidebar_archives-count">25</span></a></li><li><a class="sidebar_archives-link" href="/categories/self-talk/">自言语<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
