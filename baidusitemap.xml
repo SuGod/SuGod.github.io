@@ -427,6 +427,26 @@
 
     
   <url>
+    <loc>http://zhangdi.site/webpack-study-notes-a.html</loc>
+    <lastmod>2018-06-26T14:01:50.541Z</lastmod>
+    <data>
+        <display>
+        <title>webpack 学习笔记(一)</title>
+        <pubTime>2017-11-17T09:59:47.000Z</pubTime>
+        
+        <tag>Webpack</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zhangdi.site/macos-install-redis.html</loc>
     <lastmod>2018-06-26T14:01:50.541Z</lastmod>
     <data>
@@ -442,26 +462,6 @@
            
              
               <breadCrumb title="分享境" url="http://zhangdi.site/categories/share/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zhangdi.site/webpack-study-notes-a.html</loc>
-    <lastmod>2018-06-26T14:01:50.541Z</lastmod>
-    <data>
-        <display>
-        <title>webpack 学习笔记(一)</title>
-        <pubTime>2017-11-17T09:59:47.000Z</pubTime>
-        
-        <tag>Webpack</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
           
         </display>
     </data>
@@ -643,6 +643,28 @@
 
     
   <url>
+    <loc>http://zhangdi.site/promise-and-asyncawait.html</loc>
+    <lastmod>2018-06-26T14:01:50.481Z</lastmod>
+    <data>
+        <display>
+        <title>Promise和async/await</title>
+        <pubTime>2018-04-12T03:38:58.000Z</pubTime>
+        
+        <tag>ES6</tag>
+         
+        <tag>Javascript</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zhangdi.site/github-quick-accessdownloads.html</loc>
     <lastmod>2018-06-26T14:01:50.481Z</lastmod>
     <data>
@@ -665,21 +687,19 @@
 
     
   <url>
-    <loc>http://zhangdi.site/promise-and-asyncawait.html</loc>
-    <lastmod>2018-06-26T14:01:50.481Z</lastmod>
+    <loc>http://zhangdi.site/react-native-development-environment.html</loc>
+    <lastmod>2018-06-26T14:01:50.480Z</lastmod>
     <data>
         <display>
-        <title>Promise和async/await</title>
-        <pubTime>2018-04-12T03:38:58.000Z</pubTime>
+        <title>React Native 开发环境搭建</title>
+        <pubTime>2018-03-15T12:54:55.000Z</pubTime>
         
-        <tag>ES6</tag>
-         
-        <tag>Javascript</tag>
+        <tag>React-Native</tag>
          
          
            
              
-              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+              <breadCrumb title="分享境" url="http://zhangdi.site/categories/share/"/>
           
         </display>
     </data>
@@ -724,26 +744,6 @@
            
              
               <breadCrumb title="Hexo" url="http://zhangdi.site/categories/hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zhangdi.site/react-native-development-environment.html</loc>
-    <lastmod>2018-06-26T14:01:50.480Z</lastmod>
-    <data>
-        <display>
-        <title>React Native 开发环境搭建</title>
-        <pubTime>2018-03-15T12:54:55.000Z</pubTime>
-        
-        <tag>React-Native</tag>
-         
-         
-           
-             
-              <breadCrumb title="分享境" url="http://zhangdi.site/categories/share/"/>
           
         </display>
     </data>
