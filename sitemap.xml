@@ -2,296 +2,303 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://zhangdi.site/github-quick-accessdownloads.html</loc>
+    <loc>http://zhangdi.site/reading-slash-youth.html</loc>
     
-    <lastmod>2018-06-15T17:42:36.043Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangdi.site/solve-crossdomain-issues-cors-and-jsonp.html</loc>
-    
-    <lastmod>2018-06-06T19:17:22.000Z</lastmod>
+    <lastmod>2018-06-26T14:21:11.306Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhangdi.site/git-tips.html</loc>
+    <loc>http://zhangdi.site/vue-Webpack-dev-build-advance.html</loc>
     
-    <lastmod>2018-06-06T18:32:38.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangdi.site/hello-hexo.html</loc>
-    
-    <lastmod>2018-06-06T18:32:38.000Z</lastmod>
+    <lastmod>2018-06-26T14:18:44.348Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhangdi.site/hexo-article-url-optimization.html</loc>
+    <loc>http://zhangdi.site/vue-Webpack-dev-build.html</loc>
     
-    <lastmod>2018-06-06T18:32:38.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangdi.site/hexo-agonizing.html</loc>
-    
-    <lastmod>2018-06-06T18:32:38.000Z</lastmod>
+    <lastmod>2018-06-26T14:18:20.230Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhangdi.site/promise-and-asyncawait.html</loc>
+    <loc>http://zhangdi.site/Redux-React-Router-Node-js-a.html</loc>
     
-    <lastmod>2018-06-06T18:32:38.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangdi.site/react-native-development-environment.html</loc>
-    
-    <lastmod>2018-06-06T18:32:38.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangdi.site/github-deploys-hexo-blog-to-migrate-cloud-host.html</loc>
-    
-    <lastmod>2018-06-06T18:32:38.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangdi.site/rxjs-study-notes-a.html</loc>
-    
-    <lastmod>2018-06-06T18:32:38.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangdi.site/sass-study-notes.html</loc>
-    
-    <lastmod>2018-06-06T18:32:38.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangdi.site/macos-install-redis.html</loc>
-    
-    <lastmod>2018-06-06T18:32:38.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangdi.site/css-commonly-used-practical-finishing.html</loc>
-    
-    <lastmod>2018-06-06T18:32:38.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangdi.site/build-a-mock-server-with-koa.html</loc>
-    
-    <lastmod>2018-06-06T18:32:38.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangdi.site/indepth-study-react-a.html</loc>
-    
-    <lastmod>2018-06-06T18:32:38.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangdi.site/requirejs-from-theory-to-actual-combat.html</loc>
-    
-    <lastmod>2018-06-06T18:32:38.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangdi.site/jquery-source-html-method-parsing.html</loc>
-    
-    <lastmod>2018-06-06T18:32:37.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangdi.site/usage-of-svn-in-macos-environment-client.html</loc>
-    
-    <lastmod>2018-06-06T18:32:37.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangdi.site/about/index.html</loc>
-    
-    <lastmod>2018-06-06T18:32:37.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangdi.site/macos-connection-to-mysql-cant-connect-local-server-through-socket-tmpmysqlsock-2-solution.html</loc>
-    
-    <lastmod>2018-06-06T18:32:37.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangdi.site/webpack-study-notes-a.html</loc>
-    
-    <lastmod>2018-06-06T18:32:37.000Z</lastmod>
+    <lastmod>2018-06-26T14:17:10.206Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://zhangdi.site/tags/index.html</loc>
     
-    <lastmod>2018-06-06T18:32:37.000Z</lastmod>
+    <lastmod>2018-06-26T14:01:50.629Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://zhangdi.site/frontend-summary-css.html</loc>
     
-    <lastmod>2018-06-06T18:32:37.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangdi.site/building-shadowsocks-service-based-on-google-cloud-platform.html</loc>
-    
-    <lastmod>2018-06-06T18:32:37.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangdi.site/build-a-react-family-bucket-based-on-createreactapp.html</loc>
-    
-    <lastmod>2018-06-06T18:32:37.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangdi.site/how-to-write-a-jquery-plugin.html</loc>
-    
-    <lastmod>2018-06-06T18:32:37.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangdi.site/understanding-javascript-prototypes.html</loc>
-    
-    <lastmod>2018-06-06T18:32:37.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangdi.site/linux-common-commands.html</loc>
-    
-    <lastmod>2018-06-06T18:32:37.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangdi.site/understand-react-highend-components.html</loc>
-    
-    <lastmod>2018-06-06T18:32:37.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangdi.site/understanding-redux.html</loc>
-    
-    <lastmod>2018-06-06T18:32:37.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangdi.site/understanding-springdatajpa.html</loc>
-    
-    <lastmod>2018-06-06T18:32:37.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangdi.site/understand-pixels-and-dpr.html</loc>
-    
-    <lastmod>2018-06-06T18:32:37.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangdi.site/webpack4-study-notes.html</loc>
-    
-    <lastmod>2018-06-06T18:32:37.000Z</lastmod>
+    <lastmod>2018-06-26T14:01:50.611Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://zhangdi.site/springboot-integration-mybatis.html</loc>
     
-    <lastmod>2018-06-06T18:32:37.000Z</lastmod>
+    <lastmod>2018-06-26T14:01:50.611Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhangdi.site/webpackloader-configuration.html</loc>
+    <loc>http://zhangdi.site/understand-pixels-and-dpr.html</loc>
     
-    <lastmod>2018-06-06T18:32:37.000Z</lastmod>
+    <lastmod>2018-06-26T14:01:50.611Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/about/index.html</loc>
+    
+    <lastmod>2018-06-26T14:01:50.584Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://zhangdi.site/frontend-issues-summary-html.html</loc>
     
-    <lastmod>2018-06-06T18:32:37.000Z</lastmod>
+    <lastmod>2018-06-26T14:01:50.583Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhangdi.site/understand-browser-object-modelbom.html</loc>
+    <loc>http://zhangdi.site/understanding-springdatajpa.html</loc>
     
-    <lastmod>2018-06-06T18:32:37.000Z</lastmod>
+    <lastmod>2018-06-26T14:01:50.583Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhangdi.site/essay-20180520.html</loc>
+    <loc>http://zhangdi.site/webpackloader-configuration.html</loc>
     
-    <lastmod>2018-06-06T18:32:37.000Z</lastmod>
+    <lastmod>2018-06-26T14:01:50.582Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/solve-crossdomain-issues-cors-and-jsonp.html</loc>
+    
+    <lastmod>2018-06-26T14:01:50.568Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/understanding-javascript-prototypes.html</loc>
+    
+    <lastmod>2018-06-26T14:01:50.568Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/understanding-redux.html</loc>
+    
+    <lastmod>2018-06-26T14:01:50.567Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/indepth-study-react-a.html</loc>
+    
+    <lastmod>2018-06-26T14:01:50.567Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/understand-react-highend-components.html</loc>
+    
+    <lastmod>2018-06-26T14:01:50.566Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/build-a-react-family-bucket-based-on-createreactapp.html</loc>
+    
+    <lastmod>2018-06-26T14:01:50.558Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/how-to-write-a-jquery-plugin.html</loc>
+    
+    <lastmod>2018-06-26T14:01:50.557Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/build-a-mock-server-with-koa.html</loc>
+    
+    <lastmod>2018-06-26T14:01:50.557Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://zhangdi.site/webpack-study-notes-b.html</loc>
     
-    <lastmod>2018-06-06T18:32:37.000Z</lastmod>
+    <lastmod>2018-06-26T14:01:50.548Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhangdi.site/.html</loc>
+    <loc>http://zhangdi.site/macos-install-redis.html</loc>
     
-    <lastmod>2018-04-13T05:39:52.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangdi.site/.html</loc>
-    
-    <lastmod>2018-04-13T05:39:10.000Z</lastmod>
+    <lastmod>2018-06-26T14:01:50.541Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhangdi.site/.html</loc>
+    <loc>http://zhangdi.site/webpack-study-notes-a.html</loc>
     
-    <lastmod>2018-04-13T05:37:24.000Z</lastmod>
+    <lastmod>2018-06-26T14:01:50.541Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/usage-of-svn-in-macos-environment-client.html</loc>
+    
+    <lastmod>2018-06-26T14:01:50.540Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/webpack4-study-notes.html</loc>
+    
+    <lastmod>2018-06-26T14:01:50.540Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/macos-connection-to-mysql-cant-connect-local-server-through-socket-tmpmysqlsock-2-solution.html</loc>
+    
+    <lastmod>2018-06-26T14:01:50.530Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/requirejs-from-theory-to-actual-combat.html</loc>
+    
+    <lastmod>2018-06-26T14:01:50.529Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/jquery-source-html-method-parsing.html</loc>
+    
+    <lastmod>2018-06-26T14:01:50.528Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/hexo-agonizing.html</loc>
+    
+    <lastmod>2018-06-26T14:01:50.517Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/sass-study-notes.html</loc>
+    
+    <lastmod>2018-06-26T14:01:50.515Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/building-shadowsocks-service-based-on-google-cloud-platform.html</loc>
+    
+    <lastmod>2018-06-26T14:01:50.510Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/promise-and-asyncawait.html</loc>
+    
+    <lastmod>2018-06-26T14:01:50.481Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/github-quick-accessdownloads.html</loc>
+    
+    <lastmod>2018-06-26T14:01:50.481Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/react-native-development-environment.html</loc>
+    
+    <lastmod>2018-06-26T14:01:50.480Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/hexo-article-url-optimization.html</loc>
+    
+    <lastmod>2018-06-26T14:01:50.480Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/rxjs-study-notes-a.html</loc>
+    
+    <lastmod>2018-06-26T14:01:50.480Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/hello-hexo.html</loc>
+    
+    <lastmod>2018-06-26T14:01:50.473Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/github-deploys-hexo-blog-to-migrate-cloud-host.html</loc>
+    
+    <lastmod>2018-06-26T14:01:50.472Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/css-commonly-used-practical-finishing.html</loc>
+    
+    <lastmod>2018-06-26T14:01:50.468Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/git-tips.html</loc>
+    
+    <lastmod>2018-06-26T14:01:50.460Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/linux-common-commands.html</loc>
+    
+    <lastmod>2018-06-26T14:01:49.883Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/essay-20180520.html</loc>
+    
+    <lastmod>2018-06-26T14:01:49.882Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/understand-browser-object-modelbom.html</loc>
+    
+    <lastmod>2018-06-26T14:01:49.855Z</lastmod>
     
   </url>
   
