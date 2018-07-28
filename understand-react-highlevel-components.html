@@ -40,7 +40,7 @@
     
     <title>
         
-            React+Node.js全栈开发(一) | 
+            理解React高阶组件 | 
         
         Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.
     </title>
@@ -52,7 +52,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Zeddy">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",React,Redux,React-router,NodeJs">
+    <meta name="keywords" content=",React">
 
     <!-- Import lsloader -->
     <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
@@ -244,18 +244,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://zhangdi.site">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="React+Node.js全栈开发(一) | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
+    <meta property="og:title" content="理解React高阶组件 | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
     <meta property="og:image" content="http://zhangdi.site/img/favicon.png" />
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="React"> <meta property="og:article:tag" content="Redux"> <meta property="og:article:tag" content="React-router"> <meta property="og:article:tag" content="NodeJs"> 
+    <meta property="og:article:tag" content="React"> 
 
     
-        <meta property="article:published_time" content="Fri Nov 24 2017 12:13:07 GMT+0800" />
-        <meta property="article:modified_time" content="Tue Jun 26 2018 22:17:10 GMT+0800" />
+        <meta property="article:published_time" content="Wed Dec 13 2017 10:00:08 GMT+0800" />
+        <meta property="article:modified_time" content="Tue Jun 26 2018 22:01:50 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="React+Node.js全栈开发(一) | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
+    <meta name="twitter:title" content="理解React高阶组件 | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="http://zhangdi.site/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -263,7 +263,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://zhangdi.site/Redux-React-Router-Node-js-a.html" />
+        <link rel="canonical" href="http://zhangdi.site/understand-react-highlevel-components.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -275,10 +275,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://zhangdi.site/Redux-React-Router-Node-js-a.html",
-    "headline": "React+Node.js全栈开发(一)",
-    "datePublished": "Fri Nov 24 2017 12:13:07 GMT+0800",
-    "dateModified": "Tue Jun 26 2018 22:17:10 GMT+0800",
+    "mainEntityOfPage": "http://zhangdi.site/understand-react-highlevel-components.html",
+    "headline": "理解React高阶组件",
+    "datePublished": "Wed Dec 13 2017 10:00:08 GMT+0800",
+    "dateModified": "Tue Jun 26 2018 22:01:50 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Zeddy",
@@ -296,7 +296,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",React,Redux,React-router,NodeJs",
+    "keywords": ",React",
     "description": "",
 }
 </script>
@@ -371,7 +371,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#技术栈-React-Redux-React-Router-Antd-mobile-Webpack-NodeJs-Express-MongoDB"><span class="post-toc-text">技术栈: React Redux React-Router Antd-mobile Webpack NodeJs Express MongoDB</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#正式开始"><span class="post-toc-text">正式开始:</span></a>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是-高阶组件"><span class="post-toc-text">什么是 高阶组件</span></a></li></ol>
     </ul>
     
 
@@ -403,7 +403,7 @@
         
     
             <p class="article-headline-p">
-                React+Node.js全栈开发(一)
+                理解React高阶组件
             </p>
         </div>
 
@@ -422,7 +422,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Zeddy</strong>
-        <span>11月 24, 2017</span>
+        <span>12月 13, 2017</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -444,7 +444,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACaElEQVR42u3aS27DMAwFQN//0um2QBv1kbRlNxivisAfjRYiS/J4ffR14OHh4eHh4eHhPYx3xNf3+3++4efbfvlw6/d8bXh4eHg7eX8ctQPeu/vfLm75bLI1eHh4eDt5STBY39MLKknAKLwTDw8P72G8aoqcbFP+LB4eHt5/5K0T4ryU0NsmPDw8vKfx8n/4k9JDteiQsy+steDh4eHFvF4DbM/ft/X38PDw8N7wThhyGpQb8gDQHLrCw8PDu4CXtPaT43iSLlcLFqOhKzw8PLwxr9eOShjVMdZqYl2Ie3h4eHgX8/KBqqQ1lafL+XjWKDDg4eHhjXlJOXWyrPUSJ9TmZAQeHh7eFl7vY710fJKI4+Hh4e3h5UWBeZH33GJuub+Hh4eHdyqvejRXx7PKSyy+Ew8PD+9e3rzYWi1VnAvGw8PDu4tXGHJqpb9JMp2XffHw8PD283oLqhZkew2z9Vfw8PDw9vOqg6rVom1esMhHCsqjA3h4eHgX884qDVTbYL0NxcPDw7uXNxldzcNAtaiRl4nx8PDwdvLy5LX6+V5gSDYuKuPi4eHhXcyrNqLyQJL/Mkno8fDw8O7l9ZLmeYFjHqLw8PDw9vDWDyfFhVfxWm9Ktc2Gh4eHt5PXW1Y1vS4MmwaM5kwZHh4e3km8SQFi/bHeeOt8y/Dw8PD28PLDuvnJ1ihqdQ14eHh4+3mTA7oKmxcjTujv4eHh4W3kVUNC3kKrhhA8PDy85/N6R//RupoBAw8PD28jr9eUmrT5q2vAw8PDew6v1wCrJr7VRlpvqAsPDw/vat7nXXh4eHh4eHh4eA+4vgCp3ZunD1wP2AAAAABJRU5ErkJggg==">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACZ0lEQVR42u3aQW7cQAwEwP3/p5NrgMC73aQ0lo3SSTCk9dQcNESTrz+/+nrh4eHh4eHh4eE9jPeKr/yt9vf/ffKCteHh4eEd4X341L595v2y8qX//+RsbXh4eHgnefm/TP6S3H/1cZ+tDQ8PD+/JvFlhnXzc2+3Aw8PD+ym8hLTfAjw8PLzn8/IPdxLI5mFEckgcylrw8PDwYt6sTXXm/mh/Dw8PDy/g1SNNbw+ApA3WFuVHZ8rw8PDwAt4maNh/7vflOx4eHt538TbxQRsutE/W41x4eHh4N/PaZlW7EXljrD1yvnwLDw8P7yAveTlvVrWwdsvw8PDwnsbbtPPbYr2NJD5sHx4eHt5BXhvaJsudhRGzowUPDw/vDC8JGtoiux0F2AwfDPt7eHh4eAte2+JqN2V/qKxGB/Dw8PBu5iUtruHw/ajsbjcdDw8P7wxvFtHmB0COz0es6pkyPDw8vNt4myXmJXjS1poNs+Lh4eGd5NXt+fiZtjRvA9zoYMDDw8O7lJfErMM4NR5mzanRgYSHh4d3My8vdtuW/6yYvuD38fDw8A7yZoVscn/t1nz4BTw8PLyDvOTA2DTDZsfPBVkLHh4e3m28zcjULMzNI4+iVYaHh4d3M6+92iGtNuyYjTLg4eHhneS1n+NZXJtvXB5zrIau8PDw8Na8qw6Ddjs2W4mHh4f3BF7e7mrD2XY86/asBQ8PD+9beTk+CYuT8YU6jMDDw8N7MC+JOfJm27Ahh4eHh3eQlzex2uGATQBRF+h4eHh4R3ibCGC2uGIUoB0ywMPDw7uZ9/suPDw8PDw8PDy8B1x/AUHmU+91ywKHAAAAAElFTkSuQmCC">
     
 </ul>
 
@@ -458,7 +458,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/NodeJs/">NodeJs</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/React/">React</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/React-router/">React-router</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Redux/">Redux</a>
+        <a class="post_tag-link" href="/tags/React/">React</a>
     </ul>
     
 
@@ -475,7 +475,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=React+Node.js全栈开发(一)&url=http://zhangdi.site/Redux-React-Router-Node-js-a.html&pic=http://zhangdi.site/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=理解React高阶组件&url=http://zhangdi.site/understand-react-highlevel-components.html&pic=http://zhangdi.site/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -484,7 +484,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=React+Node.js全栈开发(一)&url=http://zhangdi.site/Redux-React-Router-Node-js-a.html&via=Zeddy" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=理解React高阶组件&url=http://zhangdi.site/understand-react-highlevel-components.html&via=Zeddy" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -493,7 +493,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zhangdi.site/Redux-React-Router-Node-js-a.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zhangdi.site/understand-react-highlevel-components.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -502,7 +502,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://zhangdi.site/Redux-React-Router-Node-js-a.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://zhangdi.site/understand-react-highlevel-components.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -514,7 +514,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.&title=React+Node.js全栈开发(一)&summary=&pics=http://zhangdi.site/img/favicon.png&url=http://zhangdi.site/Redux-React-Router-Node-js-a.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.&title=理解React高阶组件&summary=&pics=http://zhangdi.site/img/favicon.png&url=http://zhangdi.site/understand-react-highlevel-components.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -533,132 +533,158 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h4 id="技术栈-React-Redux-React-Router-Antd-mobile-Webpack-NodeJs-Express-MongoDB"><a href="#技术栈-React-Redux-React-Router-Antd-mobile-Webpack-NodeJs-Express-MongoDB" class="headerlink" title="技术栈: React Redux React-Router Antd-mobile Webpack NodeJs Express MongoDB"></a>技术栈: React Redux React-Router Antd-mobile Webpack NodeJs Express MongoDB</h4><p>开发前准备:</p>
-<p>nodeJS MongoDB create-react-app的安装就不赘述了.</p>
-<p><a href="http://es6.ruanyifeng.com/" target="_blank" rel="noopener">ES6语法参考 &lt;&lt;阮一峰-ECMAScript 6 入门&gt;&gt;</a></p>
-<h3 id="正式开始"><a href="#正式开始" class="headerlink" title="正式开始:"></a>正式开始:</h3><ol>
-<li><p>使用create-react-app 搭建 react全家桶(react redux router webpack antd-mobile …) <a href="!http://zhangdi.site/2017/11/02/%E5%9F%BA%E4%BA%8Ecreate-react-app%E6%9E%84%E5%BB%BAReact%E5%85%A8%E5%AE%B6%E6%A1%B6/">过程&gt;&gt;</a></p>
-<p> <img src="http://oox9lo3vp.bkt.clouddn.com/17-11-27/16476351.jpg" alt="项目结构"></p>
-<p> <img src="http://oox9lo3vp.bkt.clouddn.com/17-11-27/36406085.jpg" alt="默认package.json"></p>
-<p> 终端执行<code>npm run eject</code></p>
-<p> <strong>(如果项目使用git)执行这里可能会遇到一个错误</strong></p>
-<p> <img src="http://oox9lo3vp.bkt.clouddn.com/17-11-27/43474637.jpg" alt="run eject 错误"></p>
-<p> 解决办法是:在<code>.gitignore</code>文件中添加<code>/.idea</code>过滤项.然后重新<code>commit</code> and <code>push</code>;我认为原因是弹出配置这个操作是不可逆的,所以fb的工程师很人性化的去检查了<code>git</code>是否有未提交的内容,如果只是像看看配置项,或者不想弹出配置项了,还可以从<code>git</code>上恢复.<code>.idea</code>是<code>webstorm</code>生成的编辑器配置文件,应该是随时变化的,所以把<code>.idea</code>过滤掉就可以了.</p>
-<p> <img src="http://oox9lo3vp.bkt.clouddn.com/17-11-27/8862925.jpg" alt="弹出配置后文件目录"></p>
-</li>
-<li><p>安装各种插件</p>
-</li>
-</ol>
-<pre class=" language-bash"><code class="language-bash">yarn add redux react-redux react-router-dom antd-mobile babel-plugin-import babel-plugin-transform-decorators-legacy axios
-
-yarn add express mongoose --dev
+        <p>当我看到高阶组件(Higher-Order Components) 这个词时,这个牛逼闪闪的名词吧我镇住了,听了几位大师的讲解之后霍然开朗,这个牛逼闪闪的名词背后其实也是很简单的.</p>
+<h3 id="什么是-高阶组件"><a href="#什么是-高阶组件" class="headerlink" title="什么是 高阶组件"></a>什么是 <strong>高阶组件</strong></h3><blockquote>
+<p>高阶组件就是一个函数,能够接受一个组件并返回一个新的组件;</p>
+</blockquote>
+<p>在React中高阶组件是重用组件逻辑的一项高级技术.高阶组件并不是React API 的一部分,其源自 React 生态. </p>
+<p>组件是将props转化成UI，然而高阶组件将一个组价转化成另外一个组件。</p>
+<p>下面我们来拆解这个词, 高阶组件 可以理解为 <code>高级的</code> <code>组件</code>.</p>
+<p>先来说说什么是组件:React中定义,组件使你可以将UI划分为一个个的 独立的 可复用的 小部件,并可以对每个部件进行单独的设计.从定义上来说,组件就像是<code>JavaScript</code>的函数,组件可以接受任意输入(props),并返回React元素.</p>
+<p>组件可以是 函数形式,也可以是类形式,但是我们又知道 <code>JavaScript</code>的 类(Class)可以看做是 一个语法糖,它的类写法只是让对象原型的写法更清晰,更像面向对象编程的语法而已,说到底 它还是<code>Function</code>;</p>
+<p>以上,我们得出 <code>组件 == 函数</code> 故: <code>高阶组件 == 高阶函数</code>;</p>
+<p>接下来 看一个函数:</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> user <span class="token operator">=</span> localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">'user'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'hello'</span> <span class="token operator">+</span> user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">sayBye</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> user <span class="token operator">=</span> localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">'user'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Bye'</span> <span class="token operator">+</span> user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<ol>
-<li>配置及前后台联调.</li>
-</ol>
-<p>接下来在<code>package.json</code>中配置 <code>plugins</code>部分.其中第一项为<code>antd-mobile</code>的按需加载,第二项为<code>transform-decorators-legacy</code>插件,使<code>babel</code>支持装饰器写法.</p>
-<pre class=" language-json"><code class="language-json"><span class="token property">"babel"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token property">"presets"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-      <span class="token string">"react-app"</span>
-    <span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token property">"plugins"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-      <span class="token punctuation">[</span>
-        <span class="token string">"import"</span><span class="token punctuation">,</span>
-        <span class="token punctuation">{</span>
-          <span class="token property">"libraryName"</span><span class="token operator">:</span> <span class="token string">"antd-mobile"</span><span class="token punctuation">,</span>
-          <span class="token property">"style"</span><span class="token operator">:</span> <span class="token string">"css"</span>
-        <span class="token punctuation">}</span>
-      <span class="token punctuation">]</span><span class="token punctuation">,</span>
-      <span class="token string">"transform-decorators-legacy"</span>
-    <span class="token punctuation">]</span>
+<p>上面两个函数 按照代码复用的原则可以这么改造:</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">sayHello</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'hello'</span> <span class="token operator">+</span> user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">sayBye</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Bye'</span> <span class="token operator">+</span> user<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
+<span class="token keyword">function</span> <span class="token function">higherFn</span><span class="token punctuation">(</span>fn<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> newFn <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+         <span class="token keyword">var</span> user <span class="token operator">=</span> localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">'user'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">fn</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> newFn<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<p>然后配置server,在项目根路径下新建 <code>server</code>文件夹,用于存放后端server的内容.<code>src</code>下是前台内容.</p>
-<p>关于<code>express</code> <a href="http://www.expressjs.com.cn/" target="_blank" rel="noopener">官方文档</a>有详细介绍.</p>
-<p>在<code>server</code>下新建<code>server.js</code>:</p>
-<pre class=" language-JavaScript"><code class="language-JavaScript">const express = require('express');
+<p>从这个例子不难看出,我们做到了代码复用,符合高阶组件的定义<strong>接受一个函数,并返回一个新的函数</strong>,上面我们说了 组件也就是一个函数,那我们把上面的例子转化为 React 的组件 再来看看;</p>
+<p>SayHello原始组件:</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span>
 
-const app = express();
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">SayHello</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span><span class="token punctuation">{</span>
 
-//监听8080端口启动server
-const server = app.listen('8080',function(){
-    let host = server.address().address,
-        port = server.address().port;
-    //启动成功后在控制台打印.
-    console.log('Express app listening at http://%s:%s',host,port);
-})
+    <span class="token function">constructor</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+            user<span class="token punctuation">:</span><span class="token string">''</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">componentWillMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">let</span> user <span class="token operator">=</span> localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">'user'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            user<span class="token punctuation">:</span>user
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token operator">&lt;</span>div<span class="token operator">></span>hello <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>user<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>SayBye原始组件:</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">SayBye</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span><span class="token punctuation">{</span>
+
+    <span class="token function">constructor</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+            user<span class="token punctuation">:</span><span class="token string">''</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">componentWillMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">let</span> user <span class="token operator">=</span> localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">'user'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            user<span class="token punctuation">:</span>user
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token operator">&lt;</span>div<span class="token operator">></span>Bye<span class="token operator">!</span> <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>user<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>高阶组件:</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> higherComponent <span class="token operator">=</span> <span class="token punctuation">(</span>InnerComponent<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">class</span> <span class="token class-name">NewComponent</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span><span class="token punctuation">{</span>
+
+        <span class="token function">constructor</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+                user<span class="token punctuation">:</span><span class="token string">''</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token function">componentWillMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">let</span> user <span class="token operator">=</span> localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">'user'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                user<span class="token punctuation">:</span>user
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token operator">&lt;</span>InnerComponent usr<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>user<span class="token punctuation">}</span><span class="token operator">></span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> NewComponent
+<span class="token punctuation">}</span>
+</code></pre>
+<p>改造后的 SayHello,SayBye 组件:</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span>
+<span class="token keyword">import</span> higherComponent <span class="token keyword">from</span> <span class="token string">'higherComponent'</span>
+
+<span class="token keyword">class</span> <span class="token class-name">SayHello</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span><span class="token punctuation">{</span>
+    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token operator">&lt;</span>div<span class="token operator">></span>hello<span class="token operator">!</span> <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>user<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//把组件传入 高阶组件 返回一个新的组件.</span>
+SayHello <span class="token operator">=</span> <span class="token function">higherComponent</span><span class="token punctuation">(</span>SayHello<span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> SayHello
+</code></pre>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span>
+<span class="token keyword">import</span> higherComponent <span class="token keyword">from</span> <span class="token string">'higherComponent'</span>
+
+<span class="token keyword">class</span> <span class="token class-name">SayBye</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span><span class="token punctuation">{</span>
+    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token operator">&lt;</span>div<span class="token operator">></span>Bye<span class="token operator">!</span> <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>user<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">//把组件传入 高阶组件 返回一个新的组件.</span>
+SayBye <span class="token operator">=</span> <span class="token function">higherComponent</span><span class="token punctuation">(</span>SayBye<span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> SayBye
 
 </code></pre>
-<p>在 <code>package.json</code>添加<code>proxy</code>配置项. 表示把请求转发到<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a>.</p>
-<pre class=" language-json"><code class="language-json"> <span class="token property">"proxy"</span><span class="token operator">:</span><span class="token string">"http://localhost:8080"</span>
+<p>接着就引生出 <code>react-redux</code>的<code>connect</code>函数:</p>
+<pre class=" language-JavaScript"><code class="language-JavaScript">export default connect(mapStateToProps, mapDispatchToProps)(Component)
 </code></pre>
-<p>ok,到这一步就基本完成了前后台的配置.接下来进行测试:</p>
-<p>启动<code>server.js</code>,这里推荐 <code>nodemon</code>  自动重启的工具,使用 <code>nodemon</code>来启动<code>server.js</code>;</p>
-<pre class=" language-"><code class="language-">nodemon server/server.js 
+<pre class=" language-JavaScript"><code class="language-JavaScript">// connect是一个返回函数的函数（就是个高阶函数）
+const enhance = connect(mapStateToProps, mapDispatchToProps);
+// 返回的函数就是一个高阶组件，该高阶组件返回一个与Redux store
+// 关联起来的新组件
+const ConnectedComment = enhance(Component);
 </code></pre>
-<p>同时启动 react</p>
-<pre><code>yarn start
-</code></pre><p><code>server.js</code>添加路由</p>
-<pre class=" language-JavaScript"><code class="language-JavaScript">app.get('/user',function (req,res) {
-    res.json({
-        name:'张三',
-        age:18
-    })
-});
-</code></pre>
-<p>修改<code>/src/App.js</code></p>
-<pre class=" language-JavaScript"><code class="language-JavaScript">import React from 'react';
-import {Button} from 'antd-mobile';
-import axios from 'axios';
-import './App.css';
-
-class App extends React.Component {
-
-    constructor(props){
-        super(props);
-        this.state = {
-            user:{
-                name:'李四',
-                age:12
-            }
-        }
-    }
-
-    componentDidMount(){
-        console.log('component did mount!');
-    }
-    handleClick(){
-        axios.get('/user').then(res => {
-            console.log(res);
-            if(res.status === 200){
-                this.setState({
-                    user:res.data
-                })
-            }
-        })
-    }
-
-    render() {
-        return (
-            <div className="App">
-                <Button type="primary" onClick={this.handleClick.bind(this)}>获取</Button>
-                <p>
-                    我叫{this.state.user.name} ,我今年{this.state.user.age}岁.
-                </p>
-            </div>
-        );
-    }
-}
-
-export default App;
-</code></pre>
-<p>到这里前后端联调已经通了,但是后台还没有链接数据库(mongodb),react还没有使用 redux 和 router 等,接下来我们需要对 项目进一步改造.</p>
-<p>未完待续…</p>
-<ol>
-<li>配置使用 mongodb</li>
-</ol>
-<p>关于<code>mongodb</code>.<a href="http://www.runoob.com/mongodb/mongodb-tutorial.html" target="_blank" rel="noopener">查看文档了解更多</a></p>
+<p>注意看<code>mapStateToProps</code> <code>mapDispatchToProps</code>,这两个名字已经明确了他们的含义:<br>把<code>redux</code>的<code>state</code>和<code>action</code>创建函数，通过<code>props</code>注入给了<code>Component</code>。</p>
+<p>到这里，高阶组件就讲完了。再返回去理解下定义，是不是豁然开朗~</p>
 
         
     
@@ -677,8 +703,8 @@ export default App;
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://zhangdi.site/Redux-React-Router-Node-js-a.html';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://zhangdi.site/Redux-React-Router-Node-js-a.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://zhangdi.site/understand-react-highlevel-components.html';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://zhangdi.site/understand-react-highlevel-components.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -708,7 +734,7 @@ export default App;
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/understand-browser-object-modelbom.html" id="post_nav-newer" class="prev-content">
+        <a href="/springboot-integration-mybatis.html" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -722,7 +748,7 @@ export default App;
 
     <!-- Next Nav -->
     
-        <a href="/usage-of-svn-in-macos-environment-client.html" id="post_nav-older" class="next-content">
+        <a href="/how-to-write-a-jquery-plugin.html" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -816,7 +842,7 @@ export default App;
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">12</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">12</span></a>
             </ul>
         </li>
         
@@ -834,7 +860,7 @@ export default App;
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/hexo/">Hexo<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/share/">分享境<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/technology/">技术向<span class="sidebar_archives-count">25</span></a></li><li><a class="sidebar_archives-link" href="/categories/self-talk/">自言语<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/categories/hexo/">Hexo<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/share/">分享境<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/technology/">技术向<span class="sidebar_archives-count">26</span></a></li><li><a class="sidebar_archives-link" href="/categories/self-talk/">自言语<span class="sidebar_archives-count">2</span></a>
             </ul>
         </li>
         

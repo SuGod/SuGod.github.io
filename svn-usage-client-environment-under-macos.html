@@ -40,7 +40,7 @@
     
     <title>
         
-            webpack 学习笔记(一) | 
+            macOS 环境下 SVN 的使用(客户端) | 
         
         Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.
     </title>
@@ -52,7 +52,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Zeddy">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",Webpack">
+    <meta name="keywords" content=",SVN,macOS">
 
     <!-- Import lsloader -->
     <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
@@ -244,18 +244,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://zhangdi.site">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="webpack 学习笔记(一) | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
+    <meta property="og:title" content="macOS 环境下 SVN 的使用(客户端) | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
     <meta property="og:image" content="http://zhangdi.site/img/favicon.png" />
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="Webpack"> 
+    <meta property="og:article:tag" content="SVN"> <meta property="og:article:tag" content="macOS"> 
 
     
-        <meta property="article:published_time" content="Fri Nov 17 2017 17:59:47 GMT+0800" />
+        <meta property="article:published_time" content="Wed Nov 22 2017 12:27:59 GMT+0800" />
         <meta property="article:modified_time" content="Tue Jun 26 2018 22:01:50 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="webpack 学习笔记(一) | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
+    <meta name="twitter:title" content="macOS 环境下 SVN 的使用(客户端) | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="http://zhangdi.site/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -263,7 +263,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://zhangdi.site/webpack-study-notes-a.html" />
+        <link rel="canonical" href="http://zhangdi.site/svn-usage-client-environment-under-macos.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -275,9 +275,9 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://zhangdi.site/webpack-study-notes-a.html",
-    "headline": "webpack 学习笔记(一)",
-    "datePublished": "Fri Nov 17 2017 17:59:47 GMT+0800",
+    "mainEntityOfPage": "http://zhangdi.site/svn-usage-client-environment-under-macos.html",
+    "headline": "macOS 环境下 SVN 的使用(客户端)",
+    "datePublished": "Wed Nov 22 2017 12:27:59 GMT+0800",
     "dateModified": "Tue Jun 26 2018 22:01:50 GMT+0800",
     "author": {
         "@type": "Person",
@@ -296,7 +296,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",Webpack",
+    "keywords": ",SVN,macOS",
     "description": "",
 }
 </script>
@@ -371,7 +371,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#webpack-是什么-它能做什么"><span class="post-toc-text">webpack 是什么? 它能做什么?</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#如何使用webpack"><span class="post-toc-text">如何使用webpack?</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#从本地把已有项目上传至SVN服务器-初始化"><span class="post-toc-text">从本地把已有项目上传至SVN服务器(初始化)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#从SVN服务器端下载到本地"><span class="post-toc-text">从SVN服务器端下载到本地</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#提交-更新"><span class="post-toc-text">提交/更新</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#查看svn仓库"><span class="post-toc-text">查看svn仓库</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#其他命令"><span class="post-toc-text">其他命令</span></a></li></ol>
     </ul>
     
 
@@ -403,7 +403,7 @@
         
     
             <p class="article-headline-p">
-                webpack 学习笔记(一)
+                macOS 环境下 SVN 的使用(客户端)
             </p>
         </div>
 
@@ -422,7 +422,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Zeddy</strong>
-        <span>11月 17, 2017</span>
+        <span>11月 22, 2017</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -444,7 +444,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACaUlEQVR42u3awU7DMBAE0P7/T8MVCaXMeGMT0MupKmnsl4NtZvf18a+vFx4eHh4eHh4e3sN4r/i6fNyXv36/P3/m1Tft3PDw8PDO8H5Yai/ueZXX+99evax2bnh4eHgneWtDJhNa23jaueHh4eE9n5djkqknn/Hw8PD+Li+PEvLje7Ll4OHh4T2NNw9q241h7YC+MWvBw8PDi3l5WHD+89H6Hh4eHl7Aq1uago2hXdaTOxebrvDw8PA28CYNUu0inrcjtPPBw8PDO8nLB2vjiTyKbcPiIsbFw8PD28zLi17zqeQLfRvv4uHh4e3mtSWodll//4T2hUalNTw8PLwjvKQd6v201kLbPMAtmr3w8PDwNvPyZb1YmuN7Jt8UrQN4eHh4t/LW2k/b7aENcJMD/eKRGg8PD28Dby2GmLQCzKMQPDw8vJO8vOC0Y+mfhx3Rfwx4eHh4G3iTbWDfcr84Fh4eHt5mXh7a1nHqIIBYa/PCw8PDO8Nri1trv0qaBuYBLh4eHt4ZXl7cagtdVxNNxm23Cjw8PLzf4uUTag/Nk82g/gYPDw/vCG9yvM4LV/lLXCt94eHh4Z3nTUr4k4V+Lf6oNwY8PDy8Dbzkce3G0I6SxBM/FN7w8PDwNvPa664mgzzCSFoN8PDw8E7y1hbltqUgj3ETxqinDA8PD+8mXjLdJFBon9m2beHh4eE9jdfGCnmTwSTYvaHpCg8PD+8BvDbezRf6G1q78PDw8B7JWyv/3xtPXI6Ch4eHd5CXhBH7Ds1tbIGHh4f3u7w2AmhjgrbQ1W5XeHh4eCd5/+/Cw8PDw8PDw8N7wPUJKwldyTlkZlgAAAAASUVORK5CYII=">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAACz0lEQVR42u3aW27cMBAEQN//0skBDCndQzpYk6WvhVYPFg14lj38+nPl8YWNjY2NjY2NjY39keyv+Hi66/v5p2uevn26JnlyMWZsbGzso9n/+Nf/ek0y6Hxq2unLx4yNjY19AzspKnkxS65v37VSCLGxsbGx3695Glw0oOWpwcbGxsaeFbCnK9+f834+mRpsbGxs7JVQKWcn9+YFbD0Iw8bGxj6bnTdNP+fzf+1vY2NjY38wuz1mgf7Ku3Y9GRsbG/tUdl4YZptvZsUyeW9+PTY2NvbZ7PdBJxt03u9tN/TMGgbR5iFsbGzsQ9krrdn16cvvnW3uxMbGxr6T3cY6yfJjpaG7qzRiY2Nj38BOht5GS7vCpuT5w/42NjY29qHs/PxsO2a7cbP9YxShEjY2NvYvZ+dDaZcNwwVDPIa6XYGNjY19KHvGWG8Gz6Yyj7q21W1sbGzsX8LOP+9q6L4vY2ZbeeotO9jY2NhHsPNy0m7iScDtZqAkVMLGxsa+jb13q2W7dFmZmnxU2NjY2Lexo4Bm9uK42bDrLmxsbOwb2PmP+/o1cWA0ayfXE4GNjY19Afsd00b5M/x6mwEbGxv7TvaubZcz2GyrZRs5YWNjY5/N3rUg+ZEGbXzU/W1sbGzsI9htSYh+9McFLC9R7bfY2NjYt7HbNu1KgZkFQ0mhKtoD2NjY2Eez28Hli4EWnC85okgLGxsb+zJ2u/CYTUFS3lYKKjY2Nvad7Db6mQVMs2VGW9KwsbGxb2C3RxvQzxq0Regfty6wsbGxT2XPwv3Z0GdLnXxS6lAJGxsb+yD2LDaaRfztcLeFX9jY2NgXsGdhTXt+JTyaLWywsbGxsWeLirbx0IZT9XRjY2NjY29q8c54K9uGsLGxse9hJw/Ny0YeM+0KpIYFDBsbG/sI9lJYU05BW/za6fuR/jY2Njb2B7PvObCxsbGxsbGxsbE/5vgLuWLilaTwnPkAAAAASUVORK5CYII=">
     
 </ul>
 
@@ -458,7 +458,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/Webpack/">Webpack</a>
+        <a class="post_tag-link" href="/tags/SVN/">SVN</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/macOS/">macOS</a>
     </ul>
     
 
@@ -475,7 +475,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=webpack 学习笔记(一)&url=http://zhangdi.site/webpack-study-notes-a.html&pic=http://zhangdi.site/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=macOS 环境下 SVN 的使用(客户端)&url=http://zhangdi.site/svn-usage-client-environment-under-macos.html&pic=http://zhangdi.site/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -484,7 +484,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=webpack 学习笔记(一)&url=http://zhangdi.site/webpack-study-notes-a.html&via=Zeddy" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=macOS 环境下 SVN 的使用(客户端)&url=http://zhangdi.site/svn-usage-client-environment-under-macos.html&via=Zeddy" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -493,7 +493,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zhangdi.site/webpack-study-notes-a.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zhangdi.site/svn-usage-client-environment-under-macos.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -502,7 +502,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://zhangdi.site/webpack-study-notes-a.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://zhangdi.site/svn-usage-client-environment-under-macos.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -514,7 +514,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.&title=webpack 学习笔记(一)&summary=&pics=http://zhangdi.site/img/favicon.png&url=http://zhangdi.site/webpack-study-notes-a.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.&title=macOS 环境下 SVN 的使用(客户端)&summary=&pics=http://zhangdi.site/img/favicon.png&url=http://zhangdi.site/svn-usage-client-environment-under-macos.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -533,111 +533,301 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h4 id="webpack-是什么-它能做什么"><a href="#webpack-是什么-它能做什么" class="headerlink" title="webpack 是什么? 它能做什么?"></a>webpack 是什么? 它能做什么?</h4><p> webpack 官网上通过这张图来解释的.</p>
-<p><img src="http://oox9lo3vp.bkt.clouddn.com/18-1-16/43017484.jpg" alt=""></p>
-<p>官方说法:</p>
-<blockquote>
-<p>本质上，webpack 是一个现代 JavaScript 应用程序的模块打包器(module bundler)。当 webpack 处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个 bundle。</p>
-</blockquote>
-<p>通俗说法:</p>
-<blockquote>
-<p>通过一个给定的主文件（如：index.js），Webpack将从这个文件开始找到你的项目的所有依赖文件，使用loaders处理它们，最后打包为一个（或多个）浏览器可识别的JavaScript文件。</p>
-</blockquote>
-<h4 id="如何使用webpack"><a href="#如何使用webpack" class="headerlink" title="如何使用webpack?"></a>如何使用webpack?</h4><p>使用 <code>webpack</code> 的前提就是安装 <code>node.js</code>(不再赘述.);</p>
-<p>使用方式有两种:</p>
-<ol>
-<li>在命令行终端中使用命令来操作.</li>
-<li>通过配置文件来使用<code>webpack</code>.</li>
-</ol>
-<p>显然通过<a href="https://www.cnblogs.com/sloong/p/5584684.html" target="_blank" rel="noopener">命令的方式</a>操作失误在所难免,所以推荐使用第二种 配置文件的形式来使用.</p>
-<p>在使用<code>webpack</code>之前要先理解四个<strong>核心概念</strong>:</p>
-<ul>
-<li>入口(entry)<blockquote>
-<p>入口起点(entry point)指示 webpack 应该使用哪个模块，来作为构建其内部依赖图的开始。进入入口起点后，webpack 会找出有哪些模块和库是入口起点（直接和间接）依赖的。</p>
-</blockquote>
-</li>
-<li>输出(output)<blockquote>
-<p>output 属性告诉 webpack 在哪里输出它所创建的 bundles，以及如何命名这些文件</p>
-</blockquote>
-</li>
-<li>loader</li>
-<li>插件(plugins)</li>
-</ul>
-<p>下面我们通过实例来详细了解这四个核心概念.(习惯使用 <code>yarn</code>,抽时间要整理一下 <code>yarn</code>)</p>
-<p>创建一个新项目 <code>hello-webpack</code></p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> init
-
-<span class="token function">npm</span> <span class="token function">install</span> webpack --save--dev
+        <p>macOS 环境下 自带有 svn,下面来说说这个svn 怎么用.(针对 <strong>客户端</strong> ,服务端还没有实践过)</p>
+<h4 id="从本地把已有项目上传至SVN服务器-初始化"><a href="#从本地把已有项目上传至SVN服务器-初始化" class="headerlink" title="从本地把已有项目上传至SVN服务器(初始化)"></a>从本地把已有项目上传至SVN服务器(初始化)</h4><pre class=" language-bash"><code class="language-bash">//svn <span class="token function">import</span> <span class="token punctuation">[</span>本地项目地址<span class="token punctuation">]</span> <span class="token punctuation">[</span>svn仓库地址<span class="token punctuation">]</span> --username<span class="token operator">=</span>账号 --password<span class="token operator">=</span>密码 -m <span class="token string">"注释"</span>
+svn <span class="token function">import</span> <span class="token punctuation">[</span>localhost project url<span class="token punctuation">]</span> <span class="token punctuation">[</span>svn:url<span class="token punctuation">]</span> --username<span class="token operator">=</span>xxxxx --password<span class="token operator">=</span>xxxxx -m <span class="token string">"注释."</span>
 </code></pre>
-<p>然后在项目中创建 <code>public</code> <code>src</code> 文件夹</p>
-<ol>
-<li>在根路径新建 <code>webpack.config.js</code></li>
-<li>在<code>public</code>下 新建 <code>index.html</code></li>
-<li>在<code>src</code>下新建 <code>app.js</code> 和 <code>hello.js</code></li>
-</ol>
-<p>webpack.config.js</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// path.resolve() 解析路径</span>
-<span class="token comment" spellcheck="true">//__dirname 是node.js 的全局变量,它指向当前执行脚本所在的目录</span>
-
-<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
-    entry<span class="token punctuation">:</span>path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'./src/app.js'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>   <span class="token comment" spellcheck="true">//entry  指定入口文件路径</span>
-    output<span class="token punctuation">:</span><span class="token punctuation">{</span>    <span class="token comment" spellcheck="true">//输出</span>
-        path<span class="token punctuation">:</span>path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'./build'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>     <span class="token comment" spellcheck="true">//打包输出文件路径</span>
-        filename<span class="token punctuation">:</span><span class="token string">'bundle.js'</span>                        <span class="token comment" spellcheck="true">//打包后的文件名</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p>index.html</p>
-<pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!doctype html></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width<span class="token punctuation">=</span>device-width, user-scalable<span class="token punctuation">=</span>no, initial-scale<span class="token punctuation">=</span>1.0, maximum-scale<span class="token punctuation">=</span>1.0, minimum-scale<span class="token punctuation">=</span>1.0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>X-UA-Compatible<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ie<span class="token punctuation">=</span>edge<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>hello-webpack<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>root<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-    <span class="token comment" spellcheck="true">&lt;!-- 这里配置的就是 打包输出的文件路径 --></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>../build/bundle.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
-</code></pre>
-<p>hello.js</p>
-<pre class=" language-javascript"><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-
-    <span class="token keyword">var</span> p <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'p'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    p<span class="token punctuation">.</span>innerHTML  <span class="token operator">=</span> <span class="token string">'hello world!'</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">return</span> p<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p>app.js</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> hello <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token operator">/</span>hello<span class="token punctuation">.</span>js<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span><span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h4 id="从SVN服务器端下载到本地"><a href="#从SVN服务器端下载到本地" class="headerlink" title="从SVN服务器端下载到本地"></a>从SVN服务器端下载到本地</h4><pre class=" language-bash"><code class="language-bash">
+svn checkout <span class="token punctuation">[</span>svn:url<span class="token punctuation">]</span> --username<span class="token operator">=</span>xxxxx --password<span class="token operator">=</span>xxxxx <span class="token punctuation">[</span>localhost project url<span class="token punctuation">]</span>
 
 </code></pre>
-<p>ok,接下来只需在终端里运行<code>webpack</code>(非全局安装需使用<code>./node_modules/.bin/webpack</code>)命令就可以了，这条命令会自动引用<code>webpack.config.js</code>文件中的配置选项，示例如下：<br><img src="http://oox9lo3vp.bkt.clouddn.com/18-1-16/15720071.jpg" alt=""></p>
-<p>然后打开 index.html</p>
-<p><img src="http://oox9lo3vp.bkt.clouddn.com/18-1-16/77954312.jpg" alt=""></p>
-<p><code>./node_modules/.bin/webpack</code>这条命令 又长又丑陋..接下来优化它.</p>
-<p><code>npm</code>可以引导任务执行，对<code>npm</code>进行配置后可以在命令行中使用简单的<code>npm start</code>命令来替代上面略微繁琐的命令。在<code>package.json</code>中添加配置<code>scripts</code>:</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token string">"scripts"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    <span class="token string">"start"</span><span class="token punctuation">:</span><span class="token string">"webpack"</span>
-<span class="token punctuation">}</span>
+<h4 id="提交-更新"><a href="#提交-更新" class="headerlink" title="提交/更新"></a>提交/更新</h4><pre class=" language-bash"><code class="language-bash"><span class="token function">cd</span> project/
+svn commit -m <span class="token string">"注释说明"</span>
+svn update
 </code></pre>
-<blockquote>
-<p>注：package.json中的script会安装一定顺序寻找命令对应位置，本地的node_modules/.bin路径就在这个寻找清单中，所以无论是全局还是局部安装的Webpack，你都不需要写前面那指明详细的路径了。</p>
-</blockquote>
-<p><code>npm</code>的<code>start</code>命令是一个特殊的脚本名称，其特殊性表现在，在命令行中使用<code>npm start</code>就可以执行其对于的命令，如果对应的此脚本名称不是<code>start</code>，想要在命令行中运行时，需要这样用<code>npm run {script name}</code>如<code>npm run build</code>;</p>
-<p>执行<code>npm start</code> 后效果跟执行<code>webpack</code>是一样的.</p>
-<p>到这里.webpack的两大特性<strong>入口</strong> 和 <strong>输出</strong> 就完成了.</p>
-<p>未完待续…</p>
+<h4 id="查看svn仓库"><a href="#查看svn仓库" class="headerlink" title="查看svn仓库"></a>查看svn仓库</h4><pre class=" language-bash"><code class="language-bash">svn list <span class="token punctuation">[</span>svn:url<span class="token punctuation">]</span> --username<span class="token operator">=</span>xxxxx --password<span class="token operator">=</span>xxxxx
+</code></pre>
+<h4 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h4><pre class=" language-bash"><code class="language-bash">~$: svn <span class="token function">help</span>
 
+Available subcommands:
+   add
+   auth
+   blame <span class="token punctuation">(</span>praise, annotate, ann<span class="token punctuation">)</span>
+   <span class="token function">cat</span>
+   changelist <span class="token punctuation">(</span>cl<span class="token punctuation">)</span>
+   checkout <span class="token punctuation">(</span>co<span class="token punctuation">)</span>
+   cleanup
+   commit <span class="token punctuation">(</span>ci<span class="token punctuation">)</span>
+   copy <span class="token punctuation">(</span>cp<span class="token punctuation">)</span>
+   delete <span class="token punctuation">(</span>del, remove, rm<span class="token punctuation">)</span>
+   <span class="token function">diff</span> <span class="token punctuation">(</span>di<span class="token punctuation">)</span>
+   <span class="token function">export</span>
+   <span class="token function">help</span> <span class="token punctuation">(</span>?, h<span class="token punctuation">)</span>
+   <span class="token function">import</span>
+   info
+   list <span class="token punctuation">(</span>ls<span class="token punctuation">)</span>
+   lock
+   log
+   merge
+   mergeinfo
+   <span class="token function">mkdir</span>
+   move <span class="token punctuation">(</span>mv, rename, ren<span class="token punctuation">)</span>
+   patch
+   propdel <span class="token punctuation">(</span>pdel, pd<span class="token punctuation">)</span>
+   propedit <span class="token punctuation">(</span>pedit, pe<span class="token punctuation">)</span>
+   propget <span class="token punctuation">(</span>pget, pg<span class="token punctuation">)</span>
+   proplist <span class="token punctuation">(</span>plist, pl<span class="token punctuation">)</span>
+   propset <span class="token punctuation">(</span>pset, ps<span class="token punctuation">)</span>
+   relocate
+   resolve
+   resolved
+   revert
+   status <span class="token punctuation">(</span>stat, st<span class="token punctuation">)</span>
+   switch <span class="token punctuation">(</span>sw<span class="token punctuation">)</span>
+   unlock
+   update <span class="token punctuation">(</span>up<span class="token punctuation">)</span>
+   upgrade
+
+Subversion is a tool <span class="token keyword">for</span> version control.
+
+</code></pre>
+<p>括号中代表 命令的简写,如:</p>
+<pre class=" language-bash"><code class="language-bash">svn commit   <span class="token operator">==</span><span class="token operator">=</span>     svn ci
+svn checkout   <span class="token operator">==</span><span class="token operator">=</span>     svn co
+</code></pre>
+<font color="red"><strong>*注意</strong></font>
+
+<p>在输入地址时  精良不要出现特殊字符如<code>()</code>中文等.</p>
+<p>() 括号在使用是需要转义成  <code>%28</code>  <code>%29</code> 否则报错.</p>
+<pre><code>另附上ASCII字符与URL编码的对照表。  
+
+ASCII字符   URL编码  
+空格          %20  
+!            %21  
+&quot;            %22  
+#            %23  
+$            %24  
+%            %25  
+&amp;            %26  
+&#39;            %27  
+(            %28  
+)            %29  
+*            %2A  
++            %2B  
+,            %2C  
+-            %2D  
+.            %2E  
+/            %2F  
+0            %30  
+1            %31  
+2            %32  
+3            %33  
+4            %34  
+5            %35  
+6            %36  
+7            %37  
+8            %38  
+9            %39  
+:            %3A  
+;            %3B  
+&lt;            %3C 
+=            %3D 
+&gt;            %3E  
+?            %3F  
+@            %40  
+A            %41  
+B            %42  
+C            %43  
+D            %44  
+E            %45  
+F            %46  
+G            %47  
+H            %48  
+I            %49  
+J            %4A  
+K            %4B  
+L            %4C  
+M            %4D  
+N            %4E  
+O            %4F  
+P            %50  
+Q            %51  
+R            %52  
+S            %53  
+T            %54  
+U            %55  
+V            %56  
+W            %57  
+X            %58  
+Y            %59  
+Z            %5A  
+[            %5B  
+\            %5C  
+]            %5D  
+^            %5E  
+_            %5F  
+`            %60  
+a            %61  
+b            %62  
+c            %63  
+d            %64  
+e            %65  
+f            %66  
+g            %67  
+h            %68  
+i            %69  
+j            %6A  
+k            %6B  
+l            %6C  
+m            %6D  
+n            %6E  
+o            %6F  
+p            %70  
+q            %71  
+r            %72  
+s            %73  
+t            %74  
+u            %75  
+v            %76  
+w            %77  
+x            %78  
+y            %79  
+z            %7A  
+{            %7B  
+|            %7C  
+}            %7D  
+~            %7E  
+%7F  
+€            %80  
+%81  
+‚            %82  
+ƒ            %83  
+„            %84  
+…            %85  
+†            %86  
+‡            %87  
+ˆ            %88  
+‰            %89  
+Š            %8A  
+‹            %8B  
+Œ            %8C  
+%8D  
+Ž            %8E  
+%8F  
+%90  
+‘            %91  
+’            %92  
+“            %93  
+”            %94  
+•            %95  
+–            %96  
+—            %97  
+˜            %98  
+™            %99  
+š            %9A  
+›            %9B  
+œ            %9C  
+%9D  
+ž            %9E  
+Ÿ            %9F  
+%A0  
+¡            %A1  
+¢            %A2  
+£            %A3  
+%A4  
+¥            %A5  
+|            %A6  
+§            %A7  
+¨            %A8  
+©            %A9  
+ª            %AA  
+«            %AB  
+¬            %AC  
+¯            %AD  
+®            %AE  
+¯            %AF  
+°            %B0  
+±            %B1  
+²            %B2  
+³            %B3  
+´            %B4  
+µ            %B5  
+¶            %B6  
+·            %B7  
+¸            %B8  
+¹            %B9  
+º            %BA  
+»            %BB  
+¼            %BC  
+½            %BD  
+¾            %BE  
+¿            %BF  
+À            %C0  
+Á            %C1  
+Â            %C2  
+Ã            %C3  
+Ä            %C4  
+Å            %C5  
+Æ            %C6  
+Ç            %C7  
+È            %C8  
+É            %C9  
+Ê            %CA  
+Ë            %CB  
+Ì            %CC  
+Í            %CD  
+Î            %CE  
+Ï            %CF  
+Ð            %D0  
+Ñ            %D1  
+Ò            %D2  
+Ó            %D3  
+Ô            %D4  
+Õ            %D5  
+Ö            %D6  
+%D7  
+Ø            %D8  
+Ù            %D9  
+Ú            %DA  
+Û            %DB  
+Ü            %DC  
+Ý            %DD  
+Þ            %DE  
+ß            %DF  
+à            %E0  
+á            %E1  
+â            %E2  
+ã            %E3  
+ä            %E4  
+å            %E5  
+æ            %E6  
+ç            %E7  
+è            %E8  
+é            %E9  
+ê            %EA  
+ë            %EB  
+ì            %EC  
+í            %ED  
+î            %EE  
+ï            %EF  
+ð            %F0  
+ñ            %F1  
+ò            %F2  
+ó            %F3  
+ô            %F4  
+õ            %F5  
+ö            %F6  
+÷            %F7  
+ø            %F8  
+ù            %F9  
+ú            %FA  
+û            %FB  
+ü            %FC  
+ý            %FD  
+þ            %FE  
+ÿ            %FF
+
+</code></pre>
         
     
 
@@ -655,8 +845,8 @@ document<span class="token punctuation">.</span><span class="token function">get
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://zhangdi.site/webpack-study-notes-a.html';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://zhangdi.site/webpack-study-notes-a.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://zhangdi.site/svn-usage-client-environment-under-macos.html';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://zhangdi.site/svn-usage-client-environment-under-macos.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -686,7 +876,7 @@ document<span class="token punctuation">.</span><span class="token function">get
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/sass-study-notes.html" id="post_nav-newer" class="prev-content">
+        <a href="/.html" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -700,7 +890,7 @@ document<span class="token punctuation">.</span><span class="token function">get
 
     <!-- Next Nav -->
     
-        <a href="/css-commonly-used-practical-finishing.html" id="post_nav-older" class="next-content">
+        <a href="/sass-study-notes.html" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -794,7 +984,7 @@ document<span class="token punctuation">.</span><span class="token function">get
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">12</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">12</span></a>
             </ul>
         </li>
         
@@ -812,7 +1002,7 @@ document<span class="token punctuation">.</span><span class="token function">get
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/hexo/">Hexo<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/share/">分享境<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/technology/">技术向<span class="sidebar_archives-count">25</span></a></li><li><a class="sidebar_archives-link" href="/categories/self-talk/">自言语<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/categories/hexo/">Hexo<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/share/">分享境<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/technology/">技术向<span class="sidebar_archives-count">26</span></a></li><li><a class="sidebar_archives-link" href="/categories/self-talk/">自言语<span class="sidebar_archives-count">2</span></a>
             </ul>
         </li>
         

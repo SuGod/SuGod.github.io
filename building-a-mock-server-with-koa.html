@@ -40,7 +40,7 @@
     
     <title>
         
-            GitHub部署的Hexo博客迁移到云主机 | 
+            使用Koa搭建Mock Server | 
         
         Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.
     </title>
@@ -52,7 +52,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Zeddy">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",Linux,Hexo,Nginx">
+    <meta name="keywords" content=",koa,mockjs">
 
     <!-- Import lsloader -->
     <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
@@ -244,18 +244,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://zhangdi.site">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="GitHub部署的Hexo博客迁移到云主机 | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
+    <meta property="og:title" content="使用Koa搭建Mock Server | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
     <meta property="og:image" content="http://zhangdi.site/img/favicon.png" />
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="Linux"> <meta property="og:article:tag" content="Hexo"> <meta property="og:article:tag" content="Nginx"> 
+    <meta property="og:article:tag" content="koa"> <meta property="og:article:tag" content="mockjs"> 
 
     
-        <meta property="article:published_time" content="Wed Mar 21 2018 14:24:36 GMT+0800" />
+        <meta property="article:published_time" content="Mon Apr 23 2018 16:54:32 GMT+0800" />
         <meta property="article:modified_time" content="Tue Jun 26 2018 22:01:50 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="GitHub部署的Hexo博客迁移到云主机 | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
+    <meta name="twitter:title" content="使用Koa搭建Mock Server | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="http://zhangdi.site/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -263,7 +263,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://zhangdi.site/github-deploys-hexo-blog-to-migrate-cloud-host.html" />
+        <link rel="canonical" href="http://zhangdi.site/building-a-mock-server-with-koa.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -275,9 +275,9 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://zhangdi.site/github-deploys-hexo-blog-to-migrate-cloud-host.html",
-    "headline": "GitHub部署的Hexo博客迁移到云主机",
-    "datePublished": "Wed Mar 21 2018 14:24:36 GMT+0800",
+    "mainEntityOfPage": "http://zhangdi.site/building-a-mock-server-with-koa.html",
+    "headline": "使用Koa搭建Mock Server",
+    "datePublished": "Mon Apr 23 2018 16:54:32 GMT+0800",
     "dateModified": "Tue Jun 26 2018 22:01:50 GMT+0800",
     "author": {
         "@type": "Person",
@@ -296,7 +296,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",Linux,Hexo,Nginx",
+    "keywords": ",koa,mockjs",
     "description": "",
 }
 </script>
@@ -365,15 +365,6 @@
     <!-- Left aligned menu below button -->
     
     
-    <button id="post-toc-trigger-btn"
-        class="mdl-button mdl-js-button mdl-button--icon">
-        <i class="material-icons">format_list_numbered</i>
-    </button>
-
-    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#服务器环境搭建"><span class="post-toc-text">服务器环境搭建</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#本地环境（由于本地环境之前已经搭建完毕，略过-）"><span class="post-toc-text">本地环境（由于本地环境之前已经搭建完毕，略过..）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#服务器端配置（Git-Nginx）"><span class="post-toc-text">服务器端配置（Git/Nginx）</span></a></li></ol>
-    </ul>
-    
 
 
 
@@ -403,7 +394,7 @@
         
     
             <p class="article-headline-p">
-                GitHub部署的Hexo博客迁移到云主机
+                使用Koa搭建Mock Server
             </p>
         </div>
 
@@ -422,7 +413,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Zeddy</strong>
-        <span>3月 21, 2018</span>
+        <span>4月 23, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -444,7 +435,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC2ElEQVR42u3aQW4bQQwEQP3/08kDDEndw40ic2tPhmysWOMDQfY8/tzyeWBjY2NjY2NjY2N/JfsRP29e+uMvn32S/PbZ+yc1Y2NjY+9mJ6SWmhTUHtakZmxsbOw7sF8Xl/ycNKSi5cT1RIeFjY2Njf2y6Ml4czbGYGNjY2Nf1cDa374+rGT8wMbGxsaeLGjmK6Rnh9I2yI/u0rCxsbG/nj0p/X/9/NF8GxsbG/uL2fUVxqOGVLSZgH3B5UtsbGzsRey8MbSRbRvcXvW92NjY2Hdjt0v25MiSMKA9uCgAeP1d2NjY2EvZk+VRMlq0f5lj6s+xsbGxl7InBV3bAttK6nUVNjY29lJ2u9zJV0V5DJAMJ8lAUufb2NjY2CvYbVlnDWxyoPOxBxsbG3s3O2k5bQObtL2kIZ1dFcLGxsbeys7HiTbcbY/msuXRPN/GxsbG/lXsfISIFjfxFcyrwt3RLg0bGxt7BXvSxtoB49oVUhtIY2NjY29lv35dHrvm1GR0mRxinW9jY2NjL2JPSpwHCWfjTXFJCBsbG3s1+6zcfFBph5CzmOFNVdjY2NhL2WdLpTNkGxu0I9ObOrGxsbFXsyeLofZt+aWcyXASBb3Y2NjY69htjNqu9edHkwwhRb6NjY2NvYKdv6gdHq4NbicRLzY2NvYd2Hn7yb94HgyfBclFKoKNjY29jj2/HHkWKpy9v/6HYWNjY9+SPWl1bXw7aaWHSyVsbGzspex2DZS0sTYYbr8rqgEbGxt7Kbt98rLaNnm49M8XWNjY2NhL2WfN4CwqSN6QH0QeVGNjY2PfgX0Wr56VdRbctgeHjY2NfU92snBPwuD8Ik6yxpqvk7CxsbGx85XQvzusvLYPNTBsbGzsX87Oh5bJJ8mYVAwn2NjY2DdgtwNDflj5Kv/ssk5UMzY2NvZqdv7q5JP2Cs4kYP5Qvo2NjY39xez7PNjY2NjY2NjY2Nhf8/wFvFeukblQ3vAAAAAASUVORK5CYII=">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACZklEQVR42u3aQW7DMAwEwPz/0+0DArtLUlLcYHwKWsTW6GAyK75+vvp64eHh4eHh4eHhPYz3iq/3b13d4er+V395v+dobXh4eHhHeH+8aoNF3y/o/j73G1deGx4eHt5BXrKsfEFJSbjapt7a8PDw8J7Pqzbcycs9eRYeHh7e/+VVm91JPIGHh4f3TN78xZ0EFvnTP5C14OHh4cW8/JDp/Oej53t4eHh4Aa880lSMXO9b6vuFNleIh4eHt5mXv4ir+F6cMV8PHh4e3m5eErP+8eM/3oJqs54Pv+Lh4eGd5PVGSKNQoNhYV0vO5Z3x8PDwNvOqx1E7YtnF24qHh4d3hFcdAkjCheqQQbVxx8PDw/sULxkJXdVw53eetON4eHh4u3lJfHDfBE8Ot/LSUvgWHh4e3kHeJGKYBBz5f5eNDuDh4eENeKsOsfIt640UFIoHHh4e3mZe+ad+6xCrt4m9Jh4PDw/vDG/t8GjU+LaoUanAw8PDO85LWtsqo7qh+dEaHh4e3nlefhBVbaZ7gUVebJqTEXh4eHiLeMnj85d1r6hUBxHKKTUeHh7eUl71cy9yzVvt5LmjlhoPDw9vES9pYaulIm/NkwA3GkTAw8PDO8jLHzAvLb02fUFLjYeHhzfmVa+8kKxabnmz8PDw8Dbzem1ulZ0fek0CETw8PLyTvH2HXjtaZzw8PLzn8Kov6LxITILgxTNleHh4eB/iVQOIXmyR/x0PDw/v+bw8bkhiiLx1jgIOPDw8vIO8yaFXtaisLUV4eHh453mTcHYSN+THYPlK8PDw8Hbzvu/Cw8PDw8PDw8N7wPULmSpT752kWqYAAAAASUVORK5CYII=">
     
 </ul>
 
@@ -458,7 +449,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/Hexo/">Hexo</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Linux/">Linux</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Nginx/">Nginx</a>
+        <a class="post_tag-link" href="/tags/koa/">koa</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/mockjs/">mockjs</a>
     </ul>
     
 
@@ -475,7 +466,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=GitHub部署的Hexo博客迁移到云主机&url=http://zhangdi.site/github-deploys-hexo-blog-to-migrate-cloud-host.html&pic=http://zhangdi.site/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=使用Koa搭建Mock Server&url=http://zhangdi.site/building-a-mock-server-with-koa.html&pic=http://zhangdi.site/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -484,7 +475,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=GitHub部署的Hexo博客迁移到云主机&url=http://zhangdi.site/github-deploys-hexo-blog-to-migrate-cloud-host.html&via=Zeddy" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=使用Koa搭建Mock Server&url=http://zhangdi.site/building-a-mock-server-with-koa.html&via=Zeddy" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -493,7 +484,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zhangdi.site/github-deploys-hexo-blog-to-migrate-cloud-host.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zhangdi.site/building-a-mock-server-with-koa.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -502,7 +493,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://zhangdi.site/github-deploys-hexo-blog-to-migrate-cloud-host.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://zhangdi.site/building-a-mock-server-with-koa.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -514,7 +505,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.&title=GitHub部署的Hexo博客迁移到云主机&summary=&pics=http://zhangdi.site/img/favicon.png&url=http://zhangdi.site/github-deploys-hexo-blog-to-migrate-cloud-host.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.&title=使用Koa搭建Mock Server&summary=&pics=http://zhangdi.site/img/favicon.png&url=http://zhangdi.site/building-a-mock-server-with-koa.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -533,112 +524,76 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>​    最近由于一些 <strong>未知的原因</strong>  ╮(╯_╰)╭导致Github 访问异常的缓慢，甚至打不开的情况，我考虑把博客迁移出Github，选择了一圈下来，免费的无非就是 码云/Coding，这俩都是国内的服务 速度就比较正常，不快不慢，但问题在于 码云没有部署 <code>CNAME</code> 域名无法用，只能用<code>gitee.io</code> 的主域名，Pass！ Coding 可以部署自己的域名，但是免费用户需要进行广告页跳转，也是非常的恶心，199元年费会员能够解决问题，本想下手的，无意间群里发了消息说是 ￥360/3年 甚至5年的 腾讯云服务，5年需要简配（1C1G1M配置），其实想一想算下来真的还不如搞个云服务，买服务的时候发现我原来的域名马上到期了，正好腾讯上有个 .xyz 的域名 首年￥11，果断下手备案，总计花费：371元。</p>
-<p>首先说一下部署的整体思路：</p>
-<ul>
-<li>使用<code>Nginx</code> 来做静态Web服务器</li>
-<li>通过<code>Git</code> 来连接本地与服务器</li>
-</ul>
-<p>下面进入正题一步步完成部署。</p>
-<h4 id="服务器环境搭建"><a href="#服务器环境搭建" class="headerlink" title="服务器环境搭建"></a>服务器环境搭建</h4><p>&lt;服务器是 ubuntu server 16.04&gt;</p>
-<p>连接到服务器：</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">ssh</span> ubuntu@xxx.xx.xx.xx<span class="token punctuation">(</span>ip<span class="token punctuation">)</span>
-//输入密码
-
-//连接成功后
-
-//更新 <span class="token function">apt-get</span>
-<span class="token function">sudo</span> <span class="token function">apt-get</span> update    
-
-//安装 GIt 和 Nginx
-<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> <span class="token function">git</span> nginx -y
+        <p>在前端开发时，经常需要使用api接口来取得数据，但是作为一名frontEnder,写后端接口会觉得很麻烦，so 使用mockjs 来实现数据模拟是一个很理想的方式。</p>
+<p><a href="http://mockjs.com/" target="_blank" rel="noopener">mockjs</a>  的使用直接看官网文档，这里不赘述。以下是使用<code>koa</code> 搭建 <code>mock server</code> 结合  <code>webpack-dev-server</code> 来使用。</p>
+<p>安装包：</p>
+<pre class=" language-bash"><code class="language-bash">yarn add koa mockjs -D
 </code></pre>
-<h4 id="本地环境（由于本地环境之前已经搭建完毕，略过-）"><a href="#本地环境（由于本地环境之前已经搭建完毕，略过-）" class="headerlink" title="本地环境（由于本地环境之前已经搭建完毕，略过..）"></a>本地环境（由于本地环境之前已经搭建完毕，略过..）</h4><h4 id="服务器端配置（Git-Nginx）"><a href="#服务器端配置（Git-Nginx）" class="headerlink" title="服务器端配置（Git/Nginx）"></a>服务器端配置（Git/Nginx）</h4><ul>
-<li>创建一个本地仓库，作为hexo 静态页面的远程仓库</li>
-<li>配置<code>Nginx</code> </li>
-<li>配置<code>Git</code> 远程仓库 Hooks</li>
-</ul>
-<pre class=" language-bash"><code class="language-bash">//新建 repo 目录
-sodu <span class="token function">mkdir</span>  /var/repo
-//配置用户权限
-<span class="token function">sudo</span> <span class="token function">chown</span> -R <span class="token variable">$USER</span><span class="token keyword">:</span><span class="token variable">$USER</span> /var/repo/
-<span class="token function">sudo</span> <span class="token function">chown</span> -R 755 /var/repo/
+<p>新建<code>mock/mockServer.js</code> </p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> Koa <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'koa'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> Router <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'koa-router'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> Mock <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mockjs'</span><span class="token punctuation">)</span>
 
-//在 /var/repo 下新建裸仓库
-<span class="token function">cd</span> /var/repo
-<span class="token function">git</span> init --bare hexo_static.git
-</code></pre>
-<p>配置<code>Nginx</code>，在<code>www</code> 目录下新建一个存放 <code>hexo</code> 静态页面的文件夹:</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">mkdir</span> -p /var/www/hexo
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Koa</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Router</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-//授权
-<span class="token function">sudo</span> <span class="token function">chown</span> -R <span class="token variable">$USER</span><span class="token keyword">:</span><span class="token variable">$USER</span> /var/www/hexo
-<span class="token function">sudo</span> <span class="token function">chmod</span> -R 755 /var/www/hexo
-</code></pre>
-<p>然后，修改 <code>Nginx</code> 的  default 配置：</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">sudo</span> vim /etc/nginx/sites-available/default
-</code></pre>
-<p>将其中的 root 指令指向 /var/www/hexo 目录。</p>
-<pre class=" language-yaml"><code class="language-yaml"><span class="token punctuation">...</span>
+router<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'/api/getlist/:page/:limit'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>ctx<span class="token punctuation">,</span> next<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">//获取URL 中的参数</span>
+  <span class="token keyword">const</span> page <span class="token operator">=</span> ctx<span class="token punctuation">.</span>params<span class="token punctuation">.</span>page
+  <span class="token keyword">const</span> limit <span class="token operator">=</span> ctx<span class="token punctuation">.</span>params<span class="token punctuation">.</span>limit
 
-server <span class="token punctuation">{</span>
-    listen 80 default_server;
-    listen <span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">:</span>80 default_server ipv6only=on;
+  <span class="token keyword">const</span> maxPage <span class="token operator">=</span> <span class="token number">10</span>
 
-    root /var/www/hexo; <span class="token comment" spellcheck="true"># 需要修改的部分</span>
-    index index.html index.htm;
-<span class="token punctuation">...</span>
-</code></pre>
-<p>保存并退出文件。<br>因为域名正在备案，所以先不填,备案成功后可以再将配置中的 default_server 修改为域名。</p>
-<p>最后，重启 Nginx 服务，使得改动生效。</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">service</span> nginx restart
-</code></pre>
-<hr>
-<p>这里要提一下 <code>vi</code> 的用法，打开文件后有三种状态，</p>
-<ul>
-<li>分别是命令模式（command mode），控制屏幕光标的移动，字符、字或行的删除，移动复制某区段及进入Insert mode下或者到 last line mode</li>
-<li>插入模式（Insertmode），只有在Insert mode下，才可以做文字输入，按<code>ESC</code>键可回到命令行模式。</li>
-<li>底行模式（last line mode），将文件保存或退出vi，也可以设置编辑环境，如寻找字符串、列出行号……等。</li>
-</ul>
-<p>进入vi之后，是处于<code>命令行模式（command mode）</code>，要切换到<code>插入模式（Insert mode）</code>才能够输入文字，在<code>命令行模式（command mode）</code>下按一下字母<code>i</code>就可以进入<code>插入模式（Insert mode）</code>，这时候你就可以开始输入文字了。</p>
-<p>在<code>命令行模式（command mode）</code>下，按一下<code>:</code>冒号键进入<code>Last line mode</code>，例如：</p>
-<p><code>:w filename</code>（输入 「w filename」将文章以指定的文件名filename保存）</p>
-<p><code>:wq</code>(输入「wq」，存盘并退出vi)</p>
-<p><code>:q!</code>(输入q!， 不存盘强制退出vi)</p>
-<hr>
-<p>配置 <code>Git</code> 钩子</p>
-<p>在服务器上的裸仓库 hexo_static 创建一个钩子，在满足特定条件时将静态 HTML 文件传送到 Web 服务器的目录下，即 /var/www/hexo，在自动生成的 hooks 目录下创建一个新的钩子文件：</p>
-<pre class=" language-bash"><code class="language-bash">vim /var/repo/hexo_static.git/hooks/post-receive
-</code></pre>
-<pre class=" language-shell"><code class="language-shell">#!/bin/bash
+  <span class="token keyword">let</span> listData <span class="token operator">=</span> Mock<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token punctuation">[</span><span class="token template-string"><span class="token string">`list|</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>limit<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+      <span class="token string">'id|+1'</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>page <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">*</span> limit <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span>
+      <span class="token string">'content'</span><span class="token punctuation">:</span> <span class="token string">'@cword(30,40)'</span> <span class="token comment" spellcheck="true">//Mock.Random.cparagraph(20, 40)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-git --work-tree=/var/www/hexo --git-dir=/var/repo/hexo_static.git checkout -f
-</code></pre>
-<p>在该文件中添加两行代码，指定 Git 的工作树（源代码）和 Git 目录（配置文件等），保存并退出文件，并让该文件变为可执行文件。</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">chmod</span> +x /var/repo/hexo_static.git/hooks/post-receive
-</code></pre>
-<p>至此，服务端的配置基本结束了。</p>
-<p>下来就是修改 本地 <code>hexo</code> 的配置了。</p>
-<pre class=" language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># URL</span>
-<span class="token comment" spellcheck="true">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span>
 
-<span class="token key atrule">url</span><span class="token punctuation">:</span> http<span class="token punctuation">:</span>//server<span class="token punctuation">-</span>ip <span class="token comment" spellcheck="true"># 域名或IP地址</span>
-<span class="token key atrule">root</span><span class="token punctuation">:</span> /
+  <span class="token comment" spellcheck="true">// 构造返回对象</span>
+  <span class="token keyword">let</span> res <span class="token operator">=</span> <span class="token punctuation">{</span>
+    success<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      hasMore<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      data<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-····
+  <span class="token comment" spellcheck="true">// 如果超过最大页面数</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>page <span class="token operator">*</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">>=</span> maxPage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    res<span class="token punctuation">.</span>data<span class="token punctuation">.</span>hasMore <span class="token operator">=</span> <span class="token boolean">false</span>
+  <span class="token punctuation">}</span>
+  res<span class="token punctuation">.</span>data<span class="token punctuation">.</span>data <span class="token operator">=</span> listData<span class="token punctuation">.</span>list
+  ctx<span class="token punctuation">.</span>body <span class="token operator">=</span> res
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-<span class="token key atrule">deploy</span><span class="token punctuation">:</span>
-    <span class="token key atrule">type</span><span class="token punctuation">:</span> git
-    <span class="token key atrule">repo</span><span class="token punctuation">:</span> ubuntu@(xxx.xx.xx.xx云服务器的IP地址)<span class="token punctuation">:</span>/var/repo/hexo_static
-    <span class="token key atrule">branch</span><span class="token punctuation">:</span> master
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>router<span class="token punctuation">.</span><span class="token function">routes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>router<span class="token punctuation">.</span><span class="token function">allowedMethods</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">//服务监听 8001 端口</span>
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">8001</span><span class="token punctuation">)</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`server is running at http://localhost:8001/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span>
 </code></pre>
-<p>然后本地执行 <code>hexo d</code> 就会提交到 <code>/var/www/hexo</code> 下。</p>
-<p>这里有个坑，我还没有解决：</p>
-<p><code>hexo d</code> 提交时提示：<code>Everything up-to-date</code></p>
-<p>我认为应该是 git 暂存的问题，应该是 <code>hexo d</code> 这个命令的执行过程的问题，具体我没搞明白。</p>
-<p>最后想了个笨办法，<code>init</code> 一个新的工程，然后把原来的文章配置等覆盖过来，然后提交能够解决问题。</p>
-<p>解决了再来更新吧。</p>
-<p>end…</p>
+<p>其中 <code>router</code> 部分可以根据需要拆分成多个 中间件，通过<code>app.use(xxx)</code>来使用。</p>
+<p>在<code>package.json</code> 中添加：</p>
+<pre class=" language-json"><code class="language-json"><span class="token punctuation">{</span>
+    <span class="token property">"scripts"</span><span class="token operator">:</span><span class="token punctuation">{</span>
+        <span class="token property">"mock"</span><span class="token operator">:</span><span class="token string">"nodemon ./mock/mockServer.js"</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<blockquote>
+<p> 这里使用了 <code>nodemon</code> ,这个工具可以监听服务 如果有改变就立即重启<code>node</code> 服务。</p>
+</blockquote>
+<pre class=" language-bash"><code class="language-bash">yarn run mock
+</code></pre>
+<p>看到<code>server is running at http://localhost:8001/1524473519294</code> 说明启动成功。</p>
+<p>打开浏览器：</p>
+<p><img src="http://oox9lo3vp.bkt.clouddn.com/18-4-23/87181037.jpg" alt=""></p>
+<p>当然还有别的方式来开启mock服务，暂时还没去了解，了解后再来补上。</p>
+<p>end..</p>
 
         
     
@@ -657,8 +612,8 @@ git --work-tree=/var/www/hexo --git-dir=/var/repo/hexo_static.git checkout -f
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://zhangdi.site/github-deploys-hexo-blog-to-migrate-cloud-host.html';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://zhangdi.site/github-deploys-hexo-blog-to-migrate-cloud-host.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://zhangdi.site/building-a-mock-server-with-koa.html';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://zhangdi.site/building-a-mock-server-with-koa.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -688,7 +643,7 @@ git --work-tree=/var/www/hexo --git-dir=/var/repo/hexo_static.git checkout -f
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/hexo-agonizing.html" id="post_nav-newer" class="prev-content">
+        <a href="/essay-20180520.html" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -702,7 +657,7 @@ git --work-tree=/var/www/hexo --git-dir=/var/repo/hexo_static.git checkout -f
 
     <!-- Next Nav -->
     
-        <a href="/understanding-javascript-prototypes.html" id="post_nav-older" class="next-content">
+        <a href="/webpack4-study-notes.html" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -796,7 +751,7 @@ git --work-tree=/var/www/hexo --git-dir=/var/repo/hexo_static.git checkout -f
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">12</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">12</span></a>
             </ul>
         </li>
         
@@ -814,7 +769,7 @@ git --work-tree=/var/www/hexo --git-dir=/var/repo/hexo_static.git checkout -f
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/hexo/">Hexo<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/share/">分享境<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/technology/">技术向<span class="sidebar_archives-count">25</span></a></li><li><a class="sidebar_archives-link" href="/categories/self-talk/">自言语<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/categories/hexo/">Hexo<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/share/">分享境<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/technology/">技术向<span class="sidebar_archives-count">26</span></a></li><li><a class="sidebar_archives-link" href="/categories/self-talk/">自言语<span class="sidebar_archives-count">2</span></a>
             </ul>
         </li>
         

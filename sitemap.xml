@@ -2,7 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://zhangdi.site/undefined.html</loc>
+    <loc>http://zhangdi.site/javascript-object-copy.html</loc>
+    
+    <lastmod>2018-07-28T09:33:02.226Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/vue-technology-stack-to-do-the-backend-management-system-filling-pit-diary-basic-articles.html</loc>
     
     <lastmod>2018-06-26T18:05:14.569Z</lastmod>
     
@@ -16,21 +23,21 @@
   </url>
   
   <url>
-    <loc>http://zhangdi.site/vue-Webpack-dev-build-advance.html</loc>
+    <loc>http://zhangdi.site/.html</loc>
     
     <lastmod>2018-06-26T14:18:44.348Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhangdi.site/vue-Webpack-dev-build.html</loc>
+    <loc>http://zhangdi.site/.html</loc>
     
     <lastmod>2018-06-26T14:18:20.230Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhangdi.site/Redux-React-Router-Node-js-a.html</loc>
+    <loc>http://zhangdi.site/.html</loc>
     
     <lastmod>2018-06-26T14:17:10.206Z</lastmod>
     
@@ -44,7 +51,7 @@
   </url>
   
   <url>
-    <loc>http://zhangdi.site/frontend-summary-css.html</loc>
+    <loc>http://zhangdi.site/front-end-problem-summary-css.html</loc>
     
     <lastmod>2018-06-26T14:01:50.611Z</lastmod>
     
@@ -58,7 +65,7 @@
   </url>
   
   <url>
-    <loc>http://zhangdi.site/understand-pixels-and-dpr.html</loc>
+    <loc>http://zhangdi.site/understanding-pixels-and-dpr.html</loc>
     
     <lastmod>2018-06-26T14:01:50.611Z</lastmod>
     
@@ -72,14 +79,14 @@
   </url>
   
   <url>
-    <loc>http://zhangdi.site/understanding-springdatajpa.html</loc>
+    <loc>http://zhangdi.site/summary-of-frontend-issues-html.html</loc>
     
     <lastmod>2018-06-26T14:01:50.583Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhangdi.site/frontend-issues-summary-html.html</loc>
+    <loc>http://zhangdi.site/understand-springdatajpa.html</loc>
     
     <lastmod>2018-06-26T14:01:50.583Z</lastmod>
     
@@ -107,28 +114,28 @@
   </url>
   
   <url>
-    <loc>http://zhangdi.site/understanding-redux.html</loc>
+    <loc>http://zhangdi.site/understand-redux.html</loc>
     
     <lastmod>2018-06-26T14:01:50.567Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhangdi.site/indepth-study-react-a.html</loc>
+    <loc>http://zhangdi.site/learn-more-about-react-1.html</loc>
     
     <lastmod>2018-06-26T14:01:50.567Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhangdi.site/understand-react-highend-components.html</loc>
+    <loc>http://zhangdi.site/understand-react-highlevel-components.html</loc>
     
     <lastmod>2018-06-26T14:01:50.566Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhangdi.site/build-a-react-family-bucket-based-on-createreactapp.html</loc>
+    <loc>http://zhangdi.site/building-react-family-bucket-based-on-createreactapp.html</loc>
     
     <lastmod>2018-06-26T14:01:50.558Z</lastmod>
     
@@ -142,21 +149,21 @@
   </url>
   
   <url>
-    <loc>http://zhangdi.site/build-a-mock-server-with-koa.html</loc>
+    <loc>http://zhangdi.site/building-a-mock-server-with-koa.html</loc>
     
     <lastmod>2018-06-26T14:01:50.557Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhangdi.site/webpack-study-notes-b.html</loc>
+    <loc>http://zhangdi.site/webpack-study-notes-2.html</loc>
     
     <lastmod>2018-06-26T14:01:50.548Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhangdi.site/webpack-study-notes-a.html</loc>
+    <loc>http://zhangdi.site/webpack-study-notes-1.html</loc>
     
     <lastmod>2018-06-26T14:01:50.541Z</lastmod>
     
@@ -170,7 +177,7 @@
   </url>
   
   <url>
-    <loc>http://zhangdi.site/usage-of-svn-in-macos-environment-client.html</loc>
+    <loc>http://zhangdi.site/svn-usage-client-environment-under-macos.html</loc>
     
     <lastmod>2018-06-26T14:01:50.540Z</lastmod>
     
@@ -184,7 +191,7 @@
   </url>
   
   <url>
-    <loc>http://zhangdi.site/macos-connection-to-mysql-cant-connect-local-server-through-socket-tmpmysqlsock-2-solution.html</loc>
+    <loc>http://zhangdi.site/macos-connection-mysql-appears-cant-connect-to-local-server-through-socket-tmpmysqlsock-2-solution.html</loc>
     
     <lastmod>2018-06-26T14:01:50.530Z</lastmod>
     
@@ -198,14 +205,14 @@
   </url>
   
   <url>
-    <loc>http://zhangdi.site/jquery-source-html-method-parsing.html</loc>
+    <loc>http://zhangdi.site/html-method-parsing-of-jquery-source-code.html</loc>
     
     <lastmod>2018-06-26T14:01:50.528Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhangdi.site/hexo-agonizing.html</loc>
+    <loc>http://zhangdi.site/hexo-toss.html</loc>
     
     <lastmod>2018-06-26T14:01:50.517Z</lastmod>
     
@@ -233,21 +240,21 @@
   </url>
   
   <url>
-    <loc>http://zhangdi.site/github-quick-accessdownloads.html</loc>
+    <loc>http://zhangdi.site/github-quick-access-download.html</loc>
     
     <lastmod>2018-06-26T14:01:50.481Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhangdi.site/react-native-development-environment.html</loc>
+    <loc>http://zhangdi.site/rxjs-study-notes-1.html</loc>
     
     <lastmod>2018-06-26T14:01:50.480Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhangdi.site/rxjs-study-notes-a.html</loc>
+    <loc>http://zhangdi.site/react-native-development-environment.html</loc>
     
     <lastmod>2018-06-26T14:01:50.480Z</lastmod>
     
@@ -268,14 +275,14 @@
   </url>
   
   <url>
-    <loc>http://zhangdi.site/github-deploys-hexo-blog-to-migrate-cloud-host.html</loc>
+    <loc>http://zhangdi.site/hexo-blog-deployed-by-github-migrated-to-cloud-host.html</loc>
     
     <lastmod>2018-06-26T14:01:50.472Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhangdi.site/css-commonly-used-practical-finishing.html</loc>
+    <loc>http://zhangdi.site/commonly-used-css.html</loc>
     
     <lastmod>2018-06-26T14:01:50.468Z</lastmod>
     
@@ -303,7 +310,7 @@
   </url>
   
   <url>
-    <loc>http://zhangdi.site/understand-browser-object-modelbom.html</loc>
+    <loc>http://zhangdi.site/understanding-the-browser-object-modelbom.html</loc>
     
     <lastmod>2018-06-26T14:01:49.855Z</lastmod>
     

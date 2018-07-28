@@ -40,7 +40,7 @@
     
     <title>
         
-            使用Koa搭建Mock Server | 
+            webpack 学习笔记(一) | 
         
         Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.
     </title>
@@ -52,7 +52,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Zeddy">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",koa,mockjs">
+    <meta name="keywords" content=",Webpack">
 
     <!-- Import lsloader -->
     <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
@@ -244,18 +244,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://zhangdi.site">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="使用Koa搭建Mock Server | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
+    <meta property="og:title" content="webpack 学习笔记(一) | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
     <meta property="og:image" content="http://zhangdi.site/img/favicon.png" />
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="koa"> <meta property="og:article:tag" content="mockjs"> 
+    <meta property="og:article:tag" content="Webpack"> 
 
     
-        <meta property="article:published_time" content="Mon Apr 23 2018 16:54:32 GMT+0800" />
+        <meta property="article:published_time" content="Fri Nov 17 2017 17:59:47 GMT+0800" />
         <meta property="article:modified_time" content="Tue Jun 26 2018 22:01:50 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="使用Koa搭建Mock Server | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
+    <meta name="twitter:title" content="webpack 学习笔记(一) | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="http://zhangdi.site/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -263,7 +263,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://zhangdi.site/build-a-mock-server-with-koa.html" />
+        <link rel="canonical" href="http://zhangdi.site/webpack-study-notes-1.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -275,9 +275,9 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://zhangdi.site/build-a-mock-server-with-koa.html",
-    "headline": "使用Koa搭建Mock Server",
-    "datePublished": "Mon Apr 23 2018 16:54:32 GMT+0800",
+    "mainEntityOfPage": "http://zhangdi.site/webpack-study-notes-1.html",
+    "headline": "webpack 学习笔记(一)",
+    "datePublished": "Fri Nov 17 2017 17:59:47 GMT+0800",
     "dateModified": "Tue Jun 26 2018 22:01:50 GMT+0800",
     "author": {
         "@type": "Person",
@@ -296,7 +296,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",koa,mockjs",
+    "keywords": ",Webpack",
     "description": "",
 }
 </script>
@@ -365,6 +365,15 @@
     <!-- Left aligned menu below button -->
     
     
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#webpack-是什么-它能做什么"><span class="post-toc-text">webpack 是什么? 它能做什么?</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#如何使用webpack"><span class="post-toc-text">如何使用webpack?</span></a></li></ol>
+    </ul>
+    
 
 
 
@@ -394,7 +403,7 @@
         
     
             <p class="article-headline-p">
-                使用Koa搭建Mock Server
+                webpack 学习笔记(一)
             </p>
         </div>
 
@@ -413,7 +422,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Zeddy</strong>
-        <span>4月 23, 2018</span>
+        <span>11月 17, 2017</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -435,7 +444,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACYUlEQVR42u3awXKrMAwF0Pz/T7fbN/MGuJKMoZnjVScBqsPCUiR/fr56ffDw8PDw8PDw8F7G+8Tr8HHBt/9ec/TMo0+qseHh4eHt4V1stQfX/B/0OSzHT2LDw8PD28k72nB7/zJJCeevoBobHh4e3pt5yaY/TzB4eHh438qbfFstr/Hw8PDexks29GpzoXrlw70WPDw8vJiXD5n2/711voeHh4cX8KprEm7e6h1FiIeHh3czL9+ILwrZ+PoEXI0HDw8Pbz8vGU3lhfjkyqRV0fzFgIeHh7eIlw+u7mBPSvnDGPDw8PC285KRVT74r65quY+Hh4f3FC8JcVUb945WBR4eHt5OXh5K9RBqdVufFO54eHh4+3l5MsgbBJPnjFIIHh4e3hbefPxfPT6Vtz/Kd+Hh4eFt5PUGWpOU0EswF68ADw8P72befOtPhlIXjdfWUA0PDw/vWV6vCZvfVR2Y5fc2T0bg4eHhDXj5bb0xVbVYT9LSsvkeHh4e3piXbO75ID9vBFfT0qjXgoeHh7eU1xvV51t5tWjujdnw8PDwdvKS4Oaj/XzlTRA8PDy8Z3kJqVDg3nZUCw8PD+8NvLz8XdWGyBNA/iLw8PDw7uZNytx8lFUYXwXle/NMGR4eHt4iXnU77pXdedDVg1lR3sPDw8O7gZckg/mgK08Y+YtoDsDw8PDwFvGqQ/1Jibx26IWHh4f3d3nnJe+kKfyKxICHh4e3iJcEkRTr1abDpsSAh4eHN25G9LbyagMib2rg4eHhPcWrHnXKQ191vOA8XeHh4eHt5H3fwsPDw8PDw8PDe8H6Bd7T9xO2mxJsAAAAAElFTkSuQmCC">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACXUlEQVR42u3aW27DMAwEwNz/0u0BCru7lK04wfgrCOLH+ENilnz9fPXxwsPDw8PDw8PDexjvFR9/zzr6fPRNfs2lZ8PDw8PbwvtnqT34zas8zs89f3H5s+Hh4eHt5LW3PP9l+yLOHz15Njw8PLxP4eXXyYtyPDw8vO/jDYvd07OSyAMPDw/vabzkxnmwm2wMeUC8KWvBw8PDi3l5WLD/89b+Hh4eHl7Aq0eaysb/7GqXDV3h4eHh3cBbGZBqF/F8HKF9Hjw8PLz9vASQL+6zxlgeedQxLh4eHt6lvHyxblti+VmzKLn+x4CHh4d3Ay9v8K88+mxAoRhyxcPDw9vC+6dIjVtiK8X3ZfExHh4e3hZevfgul8uzFlpUyuPh4eHdzGsHrdplehbg5ltU0QDDw8PDu4HXLtNJq6wNFGavFQ8PD28nr12gr13687CjKM3x8PDwbua1Q1fJ7a9a7mdtMDw8PLy7eUkZnQ8TXBVAzMa88PDw8N7Fy0krr2C97B6GEXh4eHi38doNYz28WBlvxcPDw9vJWwpM46K53QyWromHh4f3Jt5Ked1uHle9bjw8PLx38fJGV1vyrkQMRaiBh4eHt5GXxxPtjfO7zEIKPDw8vJ289lgfEWgjjDYmxsPDw7ubN1uUZ5tKjp+FvHh4eHg7eflmMIt6V0YH8PDw8J7MSwLZdqBqNkyQ4PHw8PA+i5d/0y707dWWhq7w8PDwNvJm7f9r44nDu+Dh4eFt5M2aXrMyevZSot/j4eHhbeG1EUAbE7SNrna7wsPDw9vJ+74DDw8PDw8PDw/vAccvHh9T702Z4WUAAAAASUVORK5CYII=">
     
 </ul>
 
@@ -449,7 +458,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/koa/">koa</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/mockjs/">mockjs</a>
+        <a class="post_tag-link" href="/tags/Webpack/">Webpack</a>
     </ul>
     
 
@@ -466,7 +475,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=使用Koa搭建Mock Server&url=http://zhangdi.site/build-a-mock-server-with-koa.html&pic=http://zhangdi.site/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=webpack 学习笔记(一)&url=http://zhangdi.site/webpack-study-notes-1.html&pic=http://zhangdi.site/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -475,7 +484,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=使用Koa搭建Mock Server&url=http://zhangdi.site/build-a-mock-server-with-koa.html&via=Zeddy" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=webpack 学习笔记(一)&url=http://zhangdi.site/webpack-study-notes-1.html&via=Zeddy" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -484,7 +493,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zhangdi.site/build-a-mock-server-with-koa.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zhangdi.site/webpack-study-notes-1.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -493,7 +502,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://zhangdi.site/build-a-mock-server-with-koa.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://zhangdi.site/webpack-study-notes-1.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -505,7 +514,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.&title=使用Koa搭建Mock Server&summary=&pics=http://zhangdi.site/img/favicon.png&url=http://zhangdi.site/build-a-mock-server-with-koa.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.&title=webpack 学习笔记(一)&summary=&pics=http://zhangdi.site/img/favicon.png&url=http://zhangdi.site/webpack-study-notes-1.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -524,76 +533,110 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>在前端开发时，经常需要使用api接口来取得数据，但是作为一名frontEnder,写后端接口会觉得很麻烦，so 使用mockjs 来实现数据模拟是一个很理想的方式。</p>
-<p><a href="http://mockjs.com/" target="_blank" rel="noopener">mockjs</a>  的使用直接看官网文档，这里不赘述。以下是使用<code>koa</code> 搭建 <code>mock server</code> 结合  <code>webpack-dev-server</code> 来使用。</p>
-<p>安装包：</p>
-<pre class=" language-bash"><code class="language-bash">yarn add koa mockjs -D
+        <h4 id="webpack-是什么-它能做什么"><a href="#webpack-是什么-它能做什么" class="headerlink" title="webpack 是什么? 它能做什么?"></a>webpack 是什么? 它能做什么?</h4><p> webpack 官网上通过这张图来解释的.</p>
+<p><img src="http://oox9lo3vp.bkt.clouddn.com/18-1-16/43017484.jpg" alt=""></p>
+<p>官方说法:</p>
+<blockquote>
+<p>本质上，webpack 是一个现代 JavaScript 应用程序的模块打包器(module bundler)。当 webpack 处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个 bundle。</p>
+</blockquote>
+<p>通俗说法:</p>
+<blockquote>
+<p>通过一个给定的主文件（如：index.js），Webpack将从这个文件开始找到你的项目的所有依赖文件，使用loaders处理它们，最后打包为一个（或多个）浏览器可识别的JavaScript文件。</p>
+</blockquote>
+<h4 id="如何使用webpack"><a href="#如何使用webpack" class="headerlink" title="如何使用webpack?"></a>如何使用webpack?</h4><p>使用 <code>webpack</code> 的前提就是安装 <code>node.js</code>(不再赘述.);</p>
+<p>使用方式有两种:</p>
+<ol>
+<li>在命令行终端中使用命令来操作.</li>
+<li>通过配置文件来使用<code>webpack</code>.</li>
+</ol>
+<p>显然通过<a href="https://www.cnblogs.com/sloong/p/5584684.html" target="_blank" rel="noopener">命令的方式</a>操作失误在所难免,所以推荐使用第二种 配置文件的形式来使用.</p>
+<p>在使用<code>webpack</code>之前要先理解四个<strong>核心概念</strong>:</p>
+<ul>
+<li>入口(entry)<blockquote>
+<p>入口起点(entry point)指示 webpack 应该使用哪个模块，来作为构建其内部依赖图的开始。进入入口起点后，webpack 会找出有哪些模块和库是入口起点（直接和间接）依赖的。</p>
+</blockquote>
+</li>
+<li>输出(output)<blockquote>
+<p>output 属性告诉 webpack 在哪里输出它所创建的 bundles，以及如何命名这些文件</p>
+</blockquote>
+</li>
+<li>loader</li>
+<li>插件(plugins)</li>
+</ul>
+<p>下面我们通过实例来详细了解这四个核心概念.(习惯使用 <code>yarn</code>,抽时间要整理一下 <code>yarn</code>)</p>
+<p>创建一个新项目 <code>hello-webpack</code></p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> init
+
+<span class="token function">npm</span> <span class="token function">install</span> webpack --save--dev
 </code></pre>
-<p>新建<code>mock/mockServer.js</code> </p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> Koa <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'koa'</span><span class="token punctuation">)</span>
-<span class="token keyword">const</span> Router <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'koa-router'</span><span class="token punctuation">)</span>
-<span class="token keyword">const</span> Mock <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mockjs'</span><span class="token punctuation">)</span>
+<p>然后在项目中创建 <code>public</code> <code>src</code> 文件夹</p>
+<ol>
+<li>在根路径新建 <code>webpack.config.js</code></li>
+<li>在<code>public</code>下 新建 <code>index.html</code></li>
+<li>在<code>src</code>下新建 <code>app.js</code> 和 <code>hello.js</code></li>
+</ol>
+<p>webpack.config.js</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// path.resolve() 解析路径</span>
+<span class="token comment" spellcheck="true">//__dirname 是node.js 的全局变量,它指向当前执行脚本所在的目录</span>
 
-<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Koa</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Router</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-router<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'/api/getlist/:page/:limit'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>ctx<span class="token punctuation">,</span> next<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-  <span class="token comment" spellcheck="true">//获取URL 中的参数</span>
-  <span class="token keyword">const</span> page <span class="token operator">=</span> ctx<span class="token punctuation">.</span>params<span class="token punctuation">.</span>page
-  <span class="token keyword">const</span> limit <span class="token operator">=</span> ctx<span class="token punctuation">.</span>params<span class="token punctuation">.</span>limit
-
-  <span class="token keyword">const</span> maxPage <span class="token operator">=</span> <span class="token number">10</span>
-
-  <span class="token keyword">let</span> listData <span class="token operator">=</span> Mock<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-    <span class="token punctuation">[</span><span class="token template-string"><span class="token string">`list|</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>limit<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
-      <span class="token string">'id|+1'</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>page <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">*</span> limit <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span>
-      <span class="token string">'content'</span><span class="token punctuation">:</span> <span class="token string">'@cword(30,40)'</span> <span class="token comment" spellcheck="true">//Mock.Random.cparagraph(20, 40)</span>
-    <span class="token punctuation">}</span><span class="token punctuation">]</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span>
-
-
-  <span class="token comment" spellcheck="true">// 构造返回对象</span>
-  <span class="token keyword">let</span> res <span class="token operator">=</span> <span class="token punctuation">{</span>
-    success<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      hasMore<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-      data<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-  <span class="token comment" spellcheck="true">// 如果超过最大页面数</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>page <span class="token operator">*</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">>=</span> maxPage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    res<span class="token punctuation">.</span>data<span class="token punctuation">.</span>hasMore <span class="token operator">=</span> <span class="token boolean">false</span>
-  <span class="token punctuation">}</span>
-  res<span class="token punctuation">.</span>data<span class="token punctuation">.</span>data <span class="token operator">=</span> listData<span class="token punctuation">.</span>list
-  ctx<span class="token punctuation">.</span>body <span class="token operator">=</span> res
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-
-app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>router<span class="token punctuation">.</span><span class="token function">routes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>router<span class="token punctuation">.</span><span class="token function">allowedMethods</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true">//服务监听 8001 端口</span>
-app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">8001</span><span class="token punctuation">)</span>
-
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`server is running at http://localhost:8001/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span>
-</code></pre>
-<p>其中 <code>router</code> 部分可以根据需要拆分成多个 中间件，通过<code>app.use(xxx)</code>来使用。</p>
-<p>在<code>package.json</code> 中添加：</p>
-<pre class=" language-json"><code class="language-json"><span class="token punctuation">{</span>
-    <span class="token property">"scripts"</span><span class="token operator">:</span><span class="token punctuation">{</span>
-        <span class="token property">"mock"</span><span class="token operator">:</span><span class="token string">"nodemon ./mock/mockServer.js"</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    entry<span class="token punctuation">:</span>path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'./src/app.js'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>   <span class="token comment" spellcheck="true">//entry  指定入口文件路径</span>
+    output<span class="token punctuation">:</span><span class="token punctuation">{</span>    <span class="token comment" spellcheck="true">//输出</span>
+        path<span class="token punctuation">:</span>path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'./build'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>     <span class="token comment" spellcheck="true">//打包输出文件路径</span>
+        filename<span class="token punctuation">:</span><span class="token string">'bundle.js'</span>                        <span class="token comment" spellcheck="true">//打包后的文件名</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<blockquote>
-<p> 这里使用了 <code>nodemon</code> ,这个工具可以监听服务 如果有改变就立即重启<code>node</code> 服务。</p>
-</blockquote>
-<pre class=" language-bash"><code class="language-bash">yarn run mock
+<p>index.html</p>
+<pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!doctype html></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width<span class="token punctuation">=</span>device-width, user-scalable<span class="token punctuation">=</span>no, initial-scale<span class="token punctuation">=</span>1.0, maximum-scale<span class="token punctuation">=</span>1.0, minimum-scale<span class="token punctuation">=</span>1.0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>X-UA-Compatible<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ie<span class="token punctuation">=</span>edge<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>hello-webpack<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>root<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token comment" spellcheck="true">&lt;!-- 这里配置的就是 打包输出的文件路径 --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>../build/bundle.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
 </code></pre>
-<p>看到<code>server is running at http://localhost:8001/1524473519294</code> 说明启动成功。</p>
-<p>打开浏览器：</p>
-<p><img src="http://oox9lo3vp.bkt.clouddn.com/18-4-23/87181037.jpg" alt=""></p>
-<p>当然还有别的方式来开启mock服务，暂时还没去了解，了解后再来补上。</p>
-<p>end..</p>
+<p>hello.js</p>
+<pre class=" language-javascript"><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token keyword">var</span> p <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'p'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    p<span class="token punctuation">.</span>innerHTML  <span class="token operator">=</span> <span class="token string">'hello world!'</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> p<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>app.js</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> hello <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token operator">/</span>hello<span class="token punctuation">.</span>js<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span><span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre>
+<p>ok,接下来只需在终端里运行<code>webpack</code>(非全局安装需使用<code>./node_modules/.bin/webpack</code>)命令就可以了，这条命令会自动引用<code>webpack.config.js</code>文件中的配置选项，示例如下：<br><img src="http://oox9lo3vp.bkt.clouddn.com/18-1-16/15720071.jpg" alt=""></p>
+<p>然后打开 index.html</p>
+<p><img src="http://oox9lo3vp.bkt.clouddn.com/18-1-16/77954312.jpg" alt=""></p>
+<p><code>./node_modules/.bin/webpack</code>这条命令 又长又丑陋..接下来优化它.</p>
+<p><code>npm</code>可以引导任务执行，对<code>npm</code>进行配置后可以在命令行中使用简单的<code>npm start</code>命令来替代上面略微繁琐的命令。在<code>package.json</code>中添加配置<code>scripts</code>:</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token string">"scripts"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"start"</span><span class="token punctuation">:</span><span class="token string">"webpack"</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<blockquote>
+<p>注：package.json中的script会安装一定顺序寻找命令对应位置，本地的node_modules/.bin路径就在这个寻找清单中，所以无论是全局还是局部安装的Webpack，你都不需要写前面那指明详细的路径了。</p>
+</blockquote>
+<p><code>npm</code>的<code>start</code>命令是一个特殊的脚本名称，其特殊性表现在，在命令行中使用<code>npm start</code>就可以执行其对于的命令，如果对应的此脚本名称不是<code>start</code>，想要在命令行中运行时，需要这样用<code>npm run {script name}</code>如<code>npm run build</code>;</p>
+<p>执行<code>npm start</code> 后效果跟执行<code>webpack</code>是一样的.</p>
+<p>到这里.webpack的两大特性<strong>入口</strong> 和 <strong>输出</strong> 就完成了.</p>
+<p>未完待续…</p>
 
         
     
@@ -612,8 +655,8 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://zhangdi.site/build-a-mock-server-with-koa.html';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://zhangdi.site/build-a-mock-server-with-koa.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://zhangdi.site/webpack-study-notes-1.html';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://zhangdi.site/webpack-study-notes-1.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -643,7 +686,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/essay-20180520.html" id="post_nav-newer" class="prev-content">
+        <a href="/sass-study-notes.html" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -657,7 +700,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 
     <!-- Next Nav -->
     
-        <a href="/webpack4-study-notes.html" id="post_nav-older" class="next-content">
+        <a href="/commonly-used-css.html" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -751,7 +794,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">12</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">12</span></a>
             </ul>
         </li>
         
@@ -769,7 +812,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/hexo/">Hexo<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/share/">分享境<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/technology/">技术向<span class="sidebar_archives-count">25</span></a></li><li><a class="sidebar_archives-link" href="/categories/self-talk/">自言语<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/categories/hexo/">Hexo<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/share/">分享境<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/technology/">技术向<span class="sidebar_archives-count">26</span></a></li><li><a class="sidebar_archives-link" href="/categories/self-talk/">自言语<span class="sidebar_archives-count">2</span></a>
             </ul>
         </li>
         

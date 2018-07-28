@@ -40,7 +40,7 @@
     
     <title>
         
-            理解Redux | 
+            理解浏览器对象模型--BOM | 
         
         Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.
     </title>
@@ -52,7 +52,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Zeddy">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",Redux">
+    <meta name="keywords" content=",Javascript">
 
     <!-- Import lsloader -->
     <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
@@ -244,18 +244,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://zhangdi.site">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="理解Redux | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
+    <meta property="og:title" content="理解浏览器对象模型--BOM | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
     <meta property="og:image" content="http://zhangdi.site/img/favicon.png" />
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="Redux"> 
+    <meta property="og:article:tag" content="Javascript"> 
 
     
-        <meta property="article:published_time" content="Thu Nov 02 2017 13:15:47 GMT+0800" />
-        <meta property="article:modified_time" content="Tue Jun 26 2018 22:01:50 GMT+0800" />
+        <meta property="article:published_time" content="Sat Nov 25 2017 10:43:54 GMT+0800" />
+        <meta property="article:modified_time" content="Tue Jun 26 2018 22:01:49 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="理解Redux | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
+    <meta name="twitter:title" content="理解浏览器对象模型--BOM | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="http://zhangdi.site/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -263,7 +263,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://zhangdi.site/understanding-redux.html" />
+        <link rel="canonical" href="http://zhangdi.site/understanding-the-browser-object-modelbom.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -275,10 +275,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://zhangdi.site/understanding-redux.html",
-    "headline": "理解Redux",
-    "datePublished": "Thu Nov 02 2017 13:15:47 GMT+0800",
-    "dateModified": "Tue Jun 26 2018 22:01:50 GMT+0800",
+    "mainEntityOfPage": "http://zhangdi.site/understanding-the-browser-object-modelbom.html",
+    "headline": "理解浏览器对象模型--BOM",
+    "datePublished": "Sat Nov 25 2017 10:43:54 GMT+0800",
+    "dateModified": "Tue Jun 26 2018 22:01:49 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Zeddy",
@@ -296,7 +296,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",Redux",
+    "keywords": ",Javascript",
     "description": "",
 }
 </script>
@@ -371,7 +371,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-Store"><span class="post-toc-text">1. Store</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-Action"><span class="post-toc-text">2. Action</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-Action-Creator"><span class="post-toc-text">3. Action Creator</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-store-dispatch"><span class="post-toc-text">4. store.dispatch()</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-Reducer"><span class="post-toc-text">6. Reducer</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#window对象"><span class="post-toc-text">window对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#窗口关系及框架"><span class="post-toc-text">窗口关系及框架</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#导航和打开窗口"><span class="post-toc-text">导航和打开窗口</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#间歇调用和超时调用"><span class="post-toc-text">间歇调用和超时调用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#系统对话框"><span class="post-toc-text">系统对话框</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#location对象"><span class="post-toc-text">location对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#history对象"><span class="post-toc-text">history对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#总结"><span class="post-toc-text">总结</span></a></li></ol>
     </ul>
     
 
@@ -403,7 +403,7 @@
         
     
             <p class="article-headline-p">
-                理解Redux
+                理解浏览器对象模型--BOM
             </p>
         </div>
 
@@ -422,7 +422,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Zeddy</strong>
-        <span>11月 02, 2017</span>
+        <span>11月 25, 2017</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -444,7 +444,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACY0lEQVR42u3awU7rQAwF0P7/T8P2SYjh3nE6CbyTFSpt4pPF2LL9+vjT1wsPDw8PDw8PD+9hvFd8/fv99R3y+3/95iQ2PDw8vJO8H47aL7x1KMl98leTx4aHh4d3njdJBuvg1k9Zf7OODQ8PD+9hvO8O673v4+Hh4f0PvGtL4eQpeHh4eE/m7TUR2s+TEG/rteDh4eHFvL0B2Jm/b5vv4eHh4V20dDUZdLXl8gVLV3h4eHhv4K3XApIHt6HP17B+KN/x8PDwjvDWsLaR2lKL0PfauHh4eHiX8pKhfttOTQLNi/U6eeDh4eG9mZcf3Fcd9+06Qr5egIeHh3cXr21DtE2KNtz8t3h4eHhneO0Iql1OTQri+uhfv1Y8PDy8N/Mmi1aT++SFdd0WwcPDwzvCy4vaNoi9ZsdeSsDDw8M7w0tK27alu3fot/Hg4eHh3cXbC64N4qpBWrSYhYeHh/dmXvLjdnW1bUO0dxh1qfHw8PDGvHagNSmy98ZpeQMXDw8P7y5ePv6fD8km7eNvXwceHh7eEV6OHD04LqxbMB4eHt5JXttazYdbbTLYS1F4eHh4d/GSRaj56CtftNp7xXh4eHhnePM0sD6y27XUyWIWHh4e3hlee00K3yTx7P0XDw8P7yTvFV9JO6BNA3sDNjw8PLwn8NrGbl6O7yWPthWCh4eHdxevbpjmjyzXUpP0UycGPDw8vJt4k/H/JOj8heLh4eH9Ft5kJatdULghMeDh4eENmhH5kGxCymMoEgMeHh7epbxJIyA5vvNP8tL8jfM9PDw8vCXv7114eHh4eHh4eHgPuD4BntObpyrBLGQAAAAASUVORK5CYII=">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC3UlEQVR42u3aW47iMBAF0N7/ppkFIDL3uiIU7OMv1Eqwj/ujqMff68j1h42NjY2NjY2Njf1I9l+83t96//xxyw/PJO9+2rE+MzY2NvbW7LVDT2CfrvL90NeXnp8HGxsb+wR2snHC+BRCkrfaiyguCxsbGxv78pnk6Nf464vDxsbGxv5OALv3EpNQh42NjY29ljDkR1wLbI+rpWFjY2M/np03TZ/z+av9bWxsbOwHs9uVh5P2oPNm83++ARsbG3tTdn64HJ+PZubN3TzoYmNjY5/Gnhwob822Zf2kCFU3MLCxsbGPYSct2/xS2uJ+3ki4uaiEjY2N/ePsNpC0wWYthSjGcZK/YGNjY2/Kbgcr1wo9yaHzdxcLYdjY2Nhbs6PyevnkpJDU7hL9HRsbG3tTdt7uzbfMQ9facM/alWFjY2Pvyk4CTP6jPy/3XAentrAVvYWNjY29KXttpCZPP9YuLilg1f82bGxs7IPZr2C1yUx+WXeFRmxsbOxd2e0ITluUX0t71kaCbsjAsLGxsX+Qnfy4z3nXqUv7bXkCEwU8bGxs7E3Z7Vjk2oHaYaC85FRcBDY2Nvam7EmJPwlLLaktIRWBEBsbG/sYdjLaOCElBaO13euiEjY2NvYW7Hb4Mg9jbaG/TXXqoSJsbGzsg9ltQGqvL9m9bT/cEMCwsbGxf5zdlnLWykCjxm3bhMDGxsY+mJ0fNyrujFsLi6kUNjY29gHsvFXQhrokaZk0nl/BwsbGxj6TnReM7i0zTVoFdVEJGxsb+8fZ7ZonHpO2wSgcYmNjY2/KbgND3nBtk5P2++swiY2Njb01exK0ro+bN27Xnk+SEGxsbOxz2Hn7tm3ZrqUl84WNjY2NPWkVJIWedpQnGSqquyLY2NjYR7KTIDRvMxTjON+P29jY2NiPZOcFnUlCMklX2gYwNjY29jnsdqhxUk7KS/zzYhM2Njb2CexzFjY2NjY2NjY2NvZj1j8YFFMlhM2HXgAAAABJRU5ErkJggg==">
     
 </ul>
 
@@ -458,7 +458,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/Redux/">Redux</a>
+        <a class="post_tag-link" href="/tags/Javascript/">Javascript</a>
     </ul>
     
 
@@ -475,7 +475,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=理解Redux&url=http://zhangdi.site/understanding-redux.html&pic=http://zhangdi.site/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=理解浏览器对象模型--BOM&url=http://zhangdi.site/understanding-the-browser-object-modelbom.html&pic=http://zhangdi.site/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -484,7 +484,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=理解Redux&url=http://zhangdi.site/understanding-redux.html&via=Zeddy" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=理解浏览器对象模型--BOM&url=http://zhangdi.site/understanding-the-browser-object-modelbom.html&via=Zeddy" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -493,7 +493,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zhangdi.site/understanding-redux.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zhangdi.site/understanding-the-browser-object-modelbom.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -502,7 +502,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://zhangdi.site/understanding-redux.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://zhangdi.site/understanding-the-browser-object-modelbom.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -514,7 +514,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.&title=理解Redux&summary=&pics=http://zhangdi.site/img/favicon.png&url=http://zhangdi.site/understanding-redux.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.&title=理解浏览器对象模型--BOM&summary=&pics=http://zhangdi.site/img/favicon.png&url=http://zhangdi.site/understanding-the-browser-object-modelbom.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -533,97 +533,261 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>React 是 DOM 层的一个抽象层,并不是 Web 应用的完整解决方案.<br>有两个方面没有涉及:</p>
-<blockquote>
-<ul>
-<li>代码结构</li>
-<li>组件之间通信</li>
-</ul>
+        <blockquote>
+<p>ECMAScript是JavaScript的核心,但是在Web(浏览器环境)中使用JavaScript,BOM(浏览器对象模型)是真正的核心.</p>
 </blockquote>
-<p>当我还没搞明白redux 到底是个啥东西的时候,大师说了这句:</p>
-<blockquote>
-<p>“如果你不知道是否需要 Redux ,那就是不需要它”.</p>
+<p>W3C为了把浏览器中的JavaScript最基本的部分标准化,已经将BOM的主要方面纳入HTML5的规范中.</p>
+<h3 id="window对象"><a href="#window对象" class="headerlink" title="window对象"></a>window对象</h3><blockquote>
+<p>BOM的核心对象是 <code>window</code>,它表示浏览器的一个实例;在浏览器中,<code>window</code>对象有双重角色,它既是通过JavaScript访问浏览器窗口的一个接口,又是ECMAScript规定的 <code>Global</code>对象.这意味着网页上定义的任何一个对象\变量\函数,都以 <code>window</code> 对象作为其 <code>Global</code> 对象.因此在全局作用域中声明的变量函数都会变成<code>window</code>对象的属性和方法.</p>
 </blockquote>
-<p>WTF?<br>当我第一次尝试使用react做项目时,翻了一天文档,写了几个demo后 觉得 react so easy…我也真的不知道我是否需要 Redux.听大师的就是不需要..<br>结果当项目复杂度提升后,因为组件间通信的问题,搞的焦头烂额!甚至一度想过放弃react..这特么什么玩意? 单向数据流? 怎么通信? 然后开始把注意力转向 Angular..因为双向数据绑定.Form 等一切都是那么美好.<br>然而大师又说:</p>
-<blockquote>
-<p>“只有遇到 React 实在解决不了的问题,你才需要 Redux “</p>
-</blockquote>
-<p>我仿佛懂了,我需要Redux..!</p>
-<p>接着看到阮一峰大神的博客,他列举了几种场景:<br>不需要:</p>
-<blockquote>
-<ul>
-<li>用户的使用方式非常简单</li>
-<li>用户之间没有协作</li>
-<li>不需要与服务器大量交互,也没有使用 WebSocket</li>
-<li>视图层（View）只从单一来源获取数据</li>
-</ul>
-</blockquote>
-<p>需要:</p>
-<blockquote>
-<ul>
-<li>用户的使用方式复杂</li>
-<li>不同身份的用户有不同的使用方式（比如普通用户和管理员）</li>
-<li>多个用户之间可以协作</li>
-<li>与服务器大量交互,或者使用了WebSocket</li>
-<li>View要从多个来源获取数据</li>
-</ul>
-</blockquote>
-<p>考虑使用:</p>
-<blockquote>
-<ul>
-<li>某个组件的状态,需要共享</li>
-<li>某个状态需要在任何地方都可以拿到</li>
-<li>一个组件需要改变全局状态</li>
-<li>一个组件需要改变另一个组件的状态</li>
-</ul>
-</blockquote>
-<p>阮一峰说 Redux 的核心思想:</p>
-<blockquote>
-<ul>
-<li>web应用是个状态机,视图与状态是一一对应的;</li>
-<li>所有的状态,保存在一个对象里;</li>
-</ul>
-</blockquote>
-<p>然后我说说我的理解吧.</p>
-<p>先说一下组件通信:比如组件A 需要根据 组件B 的一些操作来改变自身,或者根据组件A的状态来改变自己的状态.这时就需要组件A改变时通知组件B.甚至还有组件C会依赖组件B…..</p>
-<p>react的优势同时也是痛点 单向数据流 数据从父组件一级一级的往下传递,组件嵌套多层后,数据的传递就非常复杂,组件间的通信也需要通过一个桥梁,公共父组件来传递消息.如果两个组件是兄弟组件还好说,如果不是,可以想想这么做有多痛苦.</p>
-<p>Redux 就是来解决这些问题的,解决的核心思想就是<strong>所有状态保存在一个对象里.</strong>,</p>
-<p>它带来了几个概念:</p>
-<p><code>store</code>  <code>action</code>  <code>reducer</code></p>
-<h4 id="1-Store"><a href="#1-Store" class="headerlink" title="1. Store"></a>1. Store</h4><p><strong>所有状态保存在一个对象里.</strong>这个对象就是 <code>store</code></p>
-<p>Store对象包含所有数据.如果想得到某个时点的数据,就要对 <code>Store</code>生成快照.这种时点的数据集合,就叫做 <code>State</code>.</p>
-<p>Redux 规定, 一个 <code>State</code> 对应一个 View.只要 <code>State</code> 相同,View 就相同.你知道 <code>State</code>,就知道 View 是什么样,反之亦然.</p>
-<h4 id="2-Action"><a href="#2-Action" class="headerlink" title="2. Action"></a>2. Action</h4><p><code>State</code> 的变化,会导致 View 的变化.但是,用户接触不到 State,只能接触到 View.所以,<code>State</code> 的变化必须是 View 导致的.<code>Action</code> 就是 View 发出的通知,表示 <code>State</code> 应该要发生变化了.<br>可以这样理解,Action 描述当前发生的事情.改变 State 的唯一办法,就是使用 Action.它会运送数据到 Store.</p>
-<h4 id="3-Action-Creator"><a href="#3-Action-Creator" class="headerlink" title="3. Action Creator"></a>3. Action Creator</h4><p>定义一个函数来生成 <code>Action</code> ,这个函数就叫 <code>Action Creator</code>,为什么需要这个? 看下面.</p>
-<h4 id="4-store-dispatch"><a href="#4-store-dispatch" class="headerlink" title="4. store.dispatch()"></a>4. store.dispatch()</h4><p>store.dispatch()是 View 发出 Action 的唯一方法.</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//默认写法</span>
-store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>type<span class="token punctuation">:</span><span class="token string">'ADD'</span><span class="token punctuation">,</span>payload<span class="token punctuation">:</span><span class="token string">'需要携带的数据..'</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//type:'ADD',payload:'需要携带的数据..'} 就是action 每次都这么写会很麻烦,so 定义function来生成action</span>
-<span class="token keyword">const</span> ADD <span class="token operator">=</span> <span class="token string">'ADD'</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> addTodo <span class="token operator">=</span> <span class="token punctuation">(</span>text<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>type<span class="token punctuation">:</span> ADD<span class="token punctuation">,</span>text<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<pre class=" language-JavaScript"><code class="language-JavaScript">var name = 'zhangsan';
 
-store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token function">addTodo</span><span class="token punctuation">(</span><span class="token string">'需要携带的数据..'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+function sayName(){
+    alert(this.name);
+}
+
+alert(name);            //zhangsan
+alert(window.name);     //zhangsan
+window.sayName();       //zhangsan
+</code></pre>
+<p>虽然定义全局变量最终都会成为<code>window</code>对象的属性,但是全局变量和直接定义在<code>window</code>对象下的属性还是有些差别的:<em>全局变量不能通过 <code>delete</code>操作符来删除;</em><br>使用<code>var</code> 关键字创建的变量有一个 <code>configurable</code>属性,值为<code>false</code>,因此不能通过<code>delete</code>操作符来删除;</p>
+<p><strong>小技巧:</strong><br>当你尝试访问 一个未声明的变量时,会抛出一个错误,但是通过查询<code>window</code>对象可以知道某个可能未声明的变量是否存在;</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> arg1 <span class="token operator">=</span> arg2<span class="token punctuation">;</span>            <span class="token comment" spellcheck="true">//arg2 未声明 会抛出一个错误</span>
+
+<span class="token keyword">var</span> arg1 <span class="token operator">=</span> window<span class="token punctuation">.</span>arg2<span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">// arg1 == undefined</span>
 
 </code></pre>
-<h4 id="6-Reducer"><a href="#6-Reducer" class="headerlink" title="6. Reducer"></a>6. Reducer</h4><p><code>Store</code> 收到 <code>Action</code> 以后,必须给出一个新的 <code>State</code>,这样 View 才会发生变化.这种 <code>State</code> 的计算过程就叫做 <code>Reducer</code>.</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//reducer 是一个函数,它接受 Action 和当前 State 作为参数,返回一个新的 State</span>
-<span class="token keyword">const</span> reducer <span class="token operator">=</span> <span class="token punctuation">(</span>state <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> action<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">//store 收到action 后 根据 action.type 来判断如何计算state</span>
-  <span class="token keyword">switch</span> <span class="token punctuation">(</span>action<span class="token punctuation">.</span>type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">case</span> <span class="token string">'ADD'</span><span class="token punctuation">:</span>
-    <span class="token comment" spellcheck="true">//必须返回一个新的state 不能直接操作state</span>
-      <span class="token keyword">return</span> state <span class="token operator">+</span> action<span class="token punctuation">.</span>payload<span class="token punctuation">;</span>
-    <span class="token keyword">default</span><span class="token punctuation">:</span> 
-      <span class="token keyword">return</span> state<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-<span class="token keyword">const</span> ADD <span class="token operator">=</span> <span class="token string">'ADD'</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//action creator</span>
-<span class="token keyword">const</span> addTodo <span class="token operator">=</span> <span class="token punctuation">(</span>text<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>type<span class="token punctuation">:</span> ADD<span class="token punctuation">,</span>payload<span class="token punctuation">:</span>text<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<h3 id="窗口关系及框架"><a href="#窗口关系及框架" class="headerlink" title="窗口关系及框架"></a>窗口关系及框架</h3><blockquote>
+<p>如果页面中包含框架,则每个框架都拥有自己的<code>window</code>对象,并且保存在<code>frames</code>集合中;在<code>frames</code>集合中,可以通过数值索引,或者框架名称来访问相应的<code>window</code>对象.每个框架都有一个<code>name</code>属性,其中包含框架的名称;</p>
+</blockquote>
+<p>在一个框架集(多层frame嵌套)中,可以使用<code>top.frames[index]</code>来获取框架对象.其中<code>top</code>始终指向最外层的框架,也就是浏览器的窗口的<code>window</code>对象,使用<code>top</code>对象可以确保在一个框架中正确的访问另一个框架,因为对于在一个框架中编写的任何代码来说,其中的<code>window</code>对象指向的都是哪个框架的特定实例(当前框架的实例),而非最外层(最高层)的框架;</p>
+<p>除了<code>top</code>之外还有另一个<code>window</code>对象<code>parent</code>;顾名思义,<code>parent</code>对象始终指向当前框架的直接上层框架;</p>
+<h3 id="导航和打开窗口"><a href="#导航和打开窗口" class="headerlink" title="导航和打开窗口"></a>导航和打开窗口</h3><p>使用<code>window.open()</code>方法可以导航到特定的URL,也可以打开一个新的浏览器窗口.</p>
+<p>这个方法可以接受4个参数,[要加载的URL],[窗口目标],[特性字符串],[新页面是否取代浏览器历史纪录中当前加载页面的布尔值],通常只须传递第一个参数,最后一个参数只在不打开新窗口的情况下使用;</p>
+<p>如果为<code>window.open()</code>传递第二个参数,而且改参数是已有窗口或框架的名称,那么就会在具有该名称的窗口或框架中加载第一个参数指定的URL.</p>
+<pre class=" language-javascript"><code class="language-javascript">window<span class="token punctuation">,</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">'http://www.baidu.com'</span><span class="token punctuation">,</span><span class="token string">'frameName'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p>总结起来说就是:  要想改变<code>store</code> 只有发送 <code>action</code> , 要想发出<code>action</code> 只有通过<code>store.dispatch()</code>, 改变的具体实现就是 <code>reducer</code> 生成<code>action</code>可以通过<code>action creator</code>.</p>
-<p>end.</p>
+<p>等同于</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.baidu.com<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>frameName<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>如果有一个名叫 <code>frameName</code> 的窗口或者框架,就会在改窗口或者框架加载这个URL,否则就会新建一个新窗口并将其命名为<code>frameName</code>;此外,第二个蚕食也可以是一个特殊的窗口名称:<code>_self</code> , <code>_parent</code> , <code>_top</code> , <code>_blank</code></p>
+<p>如果第二个参数不是一个已经存在的窗口或框架,那么改gai方法就会根据第三个参数的字符串创建一个新的窗口或者标签页,如果没传入第三个参数则使用默认值创建;第三个参数是一个逗号分隔的设置字符串,标识新窗口中都显示哪些特性.</p>
+<table>
+<thead>
+<tr>
+<th>设置</th>
+<th>值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fullscreen</td>
+<td>yes/no</td>
+<td>浏览器窗口是否最大化(仅IE浏览器)</td>
+</tr>
+<tr>
+<td>height</td>
+<td>数值</td>
+<td>新窗口的高度,不能小于100</td>
+</tr>
+<tr>
+<td>width</td>
+<td>数值</td>
+<td>新窗口的宽度,不能小于100</td>
+</tr>
+<tr>
+<td>left</td>
+<td>数值</td>
+<td>新窗口的左坐标,不能是负值</td>
+</tr>
+<tr>
+<td>left</td>
+<td>数值</td>
+<td>新窗口的上坐标,不能是负值</td>
+</tr>
+<tr>
+<td>location</td>
+<td>yes/no</td>
+<td>是否在浏览器窗口中显示地址栏.不同的浏览器的额默认值不同,如果设置为no,地址栏可能会隐藏,也可能被禁用.</td>
+</tr>
+<tr>
+<td>menubar</td>
+<td>yes/no</td>
+<td>是否在浏览器窗口中显示菜单栏.默认no</td>
+</tr>
+<tr>
+<td>toolbar</td>
+<td>yes/no</td>
+<td>是否在浏览器窗口中显示工具栏,默认no</td>
+</tr>
+<tr>
+<td>status</td>
+<td>yes/no</td>
+<td>是否在浏览器窗口中显示状态栏,默认no</td>
+</tr>
+<tr>
+<td>resizable</td>
+<td>yes/no</td>
+<td>是否可以通过拖动浏览器窗口的边框改变其大小.默认no</td>
+</tr>
+<tr>
+<td>scrollbars</td>
+<td>yes/no</td>
+<td>如果内容在视口中显示不下,是否允许滚动.默认no</td>
+</tr>
+</tbody>
+</table>
+<p><code>window.open()</code>方法会返回一个指向新窗口的引用.引用的对象与其他<code>window</code>对象大致相似,但我们可以对其进行跟多的控制.</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> openWin <span class="token operator">=</span> window<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">'http://baidu.com'</span><span class="token punctuation">,</span><span class="token string">'baiduWindow'</span><span class="token punctuation">,</span><span class="token string">'height=400,width=400,top=100,ledt=100'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//调整大小为800*800</span>
+openWin<span class="token punctuation">.</span><span class="token function">resizeTo</span><span class="token punctuation">(</span><span class="token number">800</span><span class="token punctuation">,</span><span class="token number">800</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">//调整位置</span>
+openWin<span class="token punctuation">.</span><span class="token function">moveTo</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token number">300</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//关闭</span>
+openWin<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre>
+<h3 id="间歇调用和超时调用"><a href="#间歇调用和超时调用" class="headerlink" title="间歇调用和超时调用"></a>间歇调用和超时调用</h3><p>JavaScript 是单线程语言,但它允许通过设置超时值和简写时间的值来调度代码在特定的时刻执行.超时调用是在指定的时间过后执行代码,间歇调用是每隔指定时间就执行一次代码;</p>
+<p>JavaScript单线程的特性决定了,JavaScript在一定时间内只能执行一段代码.为了控制要执行的代码,就有一个JavaScript任务队列,这些任务将那招将他们添加到队列的顺序执行.</p>
+<p><code>setTimeout()</code> 的第二个参数的含义是,告诉JavaScript再过多长时间把当前任务添加到执行队列中.如果队列是空的则添加的代码会立即执行,如果不为空,那添加的代码就到等到之前的代码执行完成后再执行.</p>
+<p>调用<code>setTimeout()</code>后,改方法会返回一个数值ID,这个ID是计划执行代码的唯一标识符.可以通过它来取消超时调用.</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//设置超时调用</span>
+<span class="token keyword">var</span> timeoutId <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'hello'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//取消超时调用</span>
+<span class="token function">clearTimeout</span><span class="token punctuation">(</span>timeoutId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>间歇调用与超时调用类似.</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//设置间歇调用</span>
+<span class="token keyword">var</span> intervalId <span class="token operator">=</span> <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> random <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span>random<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span> random <span class="token operator">></span> <span class="token number">0.5</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//取消间歇调用</span>
+        <span class="token function">clearInterval</span><span class="token punctuation">(</span>intervalId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>一般认为 使用超时调用<code>setTimeout()</code>模拟实现间歇调用<code>setInterval()</code>是最佳模式,因为<code>setInterval()</code> <font color="red"><strong>最后一个间歇调用可能会在前一个间歇调用结束之前启动.</strong> </font></p>
+<pre class=" language-javascript"><code class="language-javascript">
+<span class="token keyword">var</span> num <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>max <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">incrementNumber</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    num<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//如果执行次数未达到最大执行次数,则设置另一次超时调用</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>num <span class="token operator">&lt;</span> max<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">setTimeout</span><span class="token punctuation">(</span>incrementNumber<span class="token punctuation">,</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'done!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span>incrementNumber<span class="token punctuation">,</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre>
+<h3 id="系统对话框"><a href="#系统对话框" class="headerlink" title="系统对话框"></a>系统对话框</h3><p>浏览器通过<code>alert()</code> <code>confirm()</code> <code>prompt()</code>方法可以调用系统对话框向用户显示消息.系统对话框与浏览器中显示的网页没有关系,也不包含HTML.他们的外观有操作系统或浏览器设置决定,通过这几个方法打开的对话框都是同步和模态的,也就是说,显示这些对话框的时候代码会停止执行.而关掉这些对话框后代码又会恢复执行;<br>此外还有:显示打印对话框 <code>window.print()</code>,显示查找对话框:<code>window.find()</code>;</p>
+<h3 id="location对象"><a href="#location对象" class="headerlink" title="location对象"></a>location对象</h3><p><code>location</code>是最有用的BOM对象之一,它提供了与当前窗口中加载的文档有关信息,还提供了一些导航功能.同时<code>location</code>也是一个特别的对象,因为它既是<code>window</code>对象的属性,也是<code>document</code>对象的属性.<code>window.location</code>和<code>document.location</code>引用的是同一个对象;<code>location</code>对象不仅保存着当前文档的信息,还将URL解析为独立的片段,让开发人员可以通过不同的属性访问这些片段;</p>
+<p>如: http:/ /<a href="http://www.zhangdi.site:8080/article/list?page=1#contents" target="_blank" rel="noopener">www.zhangdi.site:8080/article/list?page=1#contents</a></p>
+<table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>例子</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hash</td>
+<td>“#content”</td>
+<td>返回URL中的hash(#后跟零个或多个字符),如果URL中不包含散列,则返回空字符串.</td>
+</tr>
+<tr>
+<td>host</td>
+<td>“<a href="http://www.zhangdi.site:8080&quot;" target="_blank" rel="noopener">www.zhangdi.site:8080&quot;</a></td>
+<td>返回服务器名称和端口号</td>
+</tr>
+<tr>
+<td>hostname</td>
+<td>“<a href="http://www.zhangdi.site&quot;" target="_blank" rel="noopener">www.zhangdi.site&quot;</a></td>
+<td>返回不带端口号的服务器名称</td>
+</tr>
+<tr>
+<td>href</td>
+<td>“http:/ /<a href="http://www.zhangdi.site&quot;" target="_blank" rel="noopener">www.zhangdi.site&quot;</a></td>
+<td>返回当前加载页面的完成URL,而<code>location</code>对象的<code>toString()</code>方法也返回这个值.</td>
+</tr>
+<tr>
+<td>pathname</td>
+<td>“/article/list”</td>
+<td>返回URL中的目录或文件名</td>
+</tr>
+<tr>
+<td>port</td>
+<td>“8080”</td>
+<td>返回URL中指定的端口号,如果URL中不包含端口号,则这个属性返回空字符串.</td>
+</tr>
+<tr>
+<td>protocol</td>
+<td>“http:”</td>
+<td>返回页面使用的协议.</td>
+</tr>
+<tr>
+<td>search</td>
+<td>“?page=1”</td>
+<td>返回URL的查询字符串,这个字符串一问好开头.</td>
+</tr>
+</tbody>
+</table>
+<p>虽然通过上面的属性可以访问到<code>location</code>对象的大多数对象,但是其中访问URL包含的查询字符串的属性并不方便.尽管 <code>location.search</code>返回从问号到URL末尾的所有内容,但却没有办法逐个访问其中的每个查询字符串参数,为此可以创建一个函数,用以解析查询字符串,然后返回包含所有参数的一个对象:</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">function</span> getQueryStringArgs <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token keyword">var</span> qs <span class="token operator">=</span> <span class="token punctuation">(</span>location<span class="token punctuation">.</span>search<span class="token punctuation">.</span>length <span class="token operator">></span> <span class="token number">0</span> <span class="token operator">?</span> location<span class="token punctuation">.</span>search<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+
+    args <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+    items <span class="token operator">=</span> qs<span class="token punctuation">.</span>length <span class="token operator">?</span> qs<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'='</span><span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+    item <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">,</span>name <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">,</span>value <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i <span class="token operator">&lt;</span> items<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+        item <span class="token operator">=</span> item<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'='</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        name <span class="token operator">=</span> <span class="token function">decodeURIComponent</span><span class="token punctuation">(</span>item<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        value <span class="token operator">=</span> <span class="token function">decodeURIComponent</span><span class="token punctuation">(</span>item<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">if</span><span class="token punctuation">(</span>name<span class="token punctuation">.</span>lenth<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            args<span class="token punctuation">[</span>name<span class="token punctuation">]</span> <span class="token operator">=</span> value<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> args<span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<p>还可以通过<code>location</code>对象改变浏览器位置:</p>
+<ol>
+<li><code>location.assign(&#39;http://baidu.com&#39;);</code></li>
+<li><code>window.location = &#39;http://baicu.com&#39;;</code></li>
+<li><code>location.href = &#39;http://baidu.com&#39;</code></li>
+</ol>
+<p>通过修改<code>location</code>的属性(hash除外),页面都会以新URL重新加载,并且浏览器的历史纪录中就会生成一条新纪录,因此用户通过单击”后退”按钮都会导航到前一个页面.要禁用这种行为,了一使用<code>replace()</code>方法.这个方法只接受一个参数,即要导航到的URL;结果虽然会导致浏览器位置改变,但不会在历史纪录中生成新纪录,在调用<code>replace()</code>方法后,用户不能回到前一个页面;</p>
+<h3 id="history对象"><a href="#history对象" class="headerlink" title="history对象"></a>history对象</h3><p><code>history</code>对象保存用户上网的历史纪录,从窗口被打开的那一刻算起;因为<code>history</code>是<code>window</code>对象的属性,因此每个浏览器窗口,每个标签页,每个框架都有自己的<code>history</code>对象与特定的<code>window</code>对象关联;</p>
+<p>使用 <code>history</code>的 <code>go()</code>方法可以在用户的历史纪录中任意跳转;</p>
+<p>另外还可以用 <code>back()</code>和<code>forward()</code> 方法来替代<code>go()</code>;</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><blockquote>
+<p>浏览器对象模型(BOM)以<code>window</code>对象为依托,表示浏览器窗口以及页面可见区域,同时<code>window</code>对象还是ECMAScript中的 <code>Global</code>对象.因而所有全局变量和函数都是它的属性,且所有原生的构造函数以及其他函数也都存在与它的命名空间下;</p>
+<p>除了上面列出的 BOM 组成部分外,还有 <code>navigator</code>对象,它提供了与浏览器有关的信息,到底提供哪些信息,很大程度上取决于用户的浏览器;</p>
+<p>还有 <code>screen</code> 但它功能有限,<code>screen</code>对象中保存着与客户端显示器有关的信息,这些信息一般只用于站点分析.</p>
+</blockquote>
 
         
     
@@ -642,8 +806,8 @@ store<span class="token punctuation">.</span><span class="token function">dispat
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://zhangdi.site/understanding-redux.html';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://zhangdi.site/understanding-redux.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://zhangdi.site/understanding-the-browser-object-modelbom.html';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://zhangdi.site/understanding-the-browser-object-modelbom.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -673,7 +837,7 @@ store<span class="token punctuation">.</span><span class="token function">dispat
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/css-commonly-used-practical-finishing.html" id="post_nav-newer" class="prev-content">
+        <a href="/understanding-pixels-and-dpr.html" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -687,7 +851,7 @@ store<span class="token punctuation">.</span><span class="token function">dispat
 
     <!-- Next Nav -->
     
-        <a href="/build-a-react-family-bucket-based-on-createreactapp.html" id="post_nav-older" class="next-content">
+        <a href="/.html" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -781,7 +945,7 @@ store<span class="token punctuation">.</span><span class="token function">dispat
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">12</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">12</span></a>
             </ul>
         </li>
         
@@ -799,7 +963,7 @@ store<span class="token punctuation">.</span><span class="token function">dispat
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/hexo/">Hexo<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/share/">分享境<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/technology/">技术向<span class="sidebar_archives-count">25</span></a></li><li><a class="sidebar_archives-link" href="/categories/self-talk/">自言语<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/categories/hexo/">Hexo<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/share/">分享境<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/technology/">技术向<span class="sidebar_archives-count">26</span></a></li><li><a class="sidebar_archives-link" href="/categories/self-talk/">自言语<span class="sidebar_archives-count">2</span></a>
             </ul>
         </li>
         

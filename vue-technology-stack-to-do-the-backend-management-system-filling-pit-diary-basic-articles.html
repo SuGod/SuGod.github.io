@@ -40,7 +40,7 @@
     
     <title>
         
-            理解浏览器对象模型--BOM | 
+            Vue技术栈做后台管理系统填坑日记(基础篇) | 
         
         Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.
     </title>
@@ -52,7 +52,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Zeddy">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",Javascript">
+    <meta name="keywords" content="">
 
     <!-- Import lsloader -->
     <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
@@ -244,18 +244,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://zhangdi.site">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="理解浏览器对象模型--BOM | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
+    <meta property="og:title" content="Vue技术栈做后台管理系统填坑日记(基础篇) | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
     <meta property="og:image" content="http://zhangdi.site/img/favicon.png" />
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="Javascript"> 
+    
 
     
-        <meta property="article:published_time" content="Sat Nov 25 2017 10:43:54 GMT+0800" />
-        <meta property="article:modified_time" content="Tue Jun 26 2018 22:01:49 GMT+0800" />
+        <meta property="article:published_time" content="Wed Jun 27 2018 02:05:14 GMT+0800" />
+        <meta property="article:modified_time" content="Wed Jun 27 2018 02:05:14 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="理解浏览器对象模型--BOM | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
+    <meta name="twitter:title" content="Vue技术栈做后台管理系统填坑日记(基础篇) | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="http://zhangdi.site/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -263,7 +263,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://zhangdi.site/understand-browser-object-modelbom.html" />
+        <link rel="canonical" href="http://zhangdi.site/vue-technology-stack-to-do-the-backend-management-system-filling-pit-diary-basic-articles.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -275,10 +275,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://zhangdi.site/understand-browser-object-modelbom.html",
-    "headline": "理解浏览器对象模型--BOM",
-    "datePublished": "Sat Nov 25 2017 10:43:54 GMT+0800",
-    "dateModified": "Tue Jun 26 2018 22:01:49 GMT+0800",
+    "mainEntityOfPage": "http://zhangdi.site/vue-technology-stack-to-do-the-backend-management-system-filling-pit-diary-basic-articles.html",
+    "headline": "Vue技术栈做后台管理系统填坑日记(基础篇)",
+    "datePublished": "Wed Jun 27 2018 02:05:14 GMT+0800",
+    "dateModified": "Wed Jun 27 2018 02:05:14 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Zeddy",
@@ -296,7 +296,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",Javascript",
+    "keywords": "",
     "description": "",
 }
 </script>
@@ -371,7 +371,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#window对象"><span class="post-toc-text">window对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#窗口关系及框架"><span class="post-toc-text">窗口关系及框架</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#导航和打开窗口"><span class="post-toc-text">导航和打开窗口</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#间歇调用和超时调用"><span class="post-toc-text">间歇调用和超时调用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#系统对话框"><span class="post-toc-text">系统对话框</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#location对象"><span class="post-toc-text">location对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#history对象"><span class="post-toc-text">history对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#总结"><span class="post-toc-text">总结</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#技术选型及项目搭建"><span class="post-toc-text">技术选型及项目搭建</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#项目搭建"><span class="post-toc-text">项目搭建</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#依赖模块及项目结构调整"><span class="post-toc-text">依赖模块及项目结构调整</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#基础工具封装"><span class="post-toc-text">基础工具封装</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -403,7 +403,7 @@
         
     
             <p class="article-headline-p">
-                理解浏览器对象模型--BOM
+                Vue技术栈做后台管理系统填坑日记(基础篇)
             </p>
         </div>
 
@@ -422,7 +422,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Zeddy</strong>
-        <span>11月 25, 2017</span>
+        <span>6月 27, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -444,22 +444,13 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACTklEQVR42u3aS47bQAwEUN//0skBBnGqSKmtMZ5WhqEPnxZqopqvP199vPDw8PDw8PDw8B7Ge8XH8GHxnX8+ZVYbHh4e3hleUuIMlpeeXJXUhoeHh3eS1z5yU2Ky5LTPwsPDw3syr224r1pa8PDw8L6Jl5/zzxDh7T94eHh4z+S1H+g2emgXjA9kLXh4eHgxb7ZNdeb30f09PDw8vIC3GQVoP+55872qEA8PD+9mXhs05Ow8aLi2Hjw8PLy7eZvNqv3I6SzyKGJcPDw8vCO8pLj8zPz8nPGfO+Ph4eHdzBve4qJB1WIg4KrJCDw8PLw1L2+Uk3/yuHYT9a5Sajw8PLw1bxa/tsOmLXLTWOPh4eF9itcOP+UtdR4ct203Hh4e3hleG9q2S8Us7MhbeTw8PLzzvDZo2BQ6u1v9uvHw8PBu5rWbWzNMOyiQU/Hw8PDO8/LN/vaczSjA7UNXeHh4eAvee8AGk5fYDivUQ1d4eHh4t/HaLa5NnDGLj4czZXh4eHiX8jbxa3vV7MXlm2p4eHh4T+Dly0b7KZ8FH8OZMjw8PLzbeG25baudv7JV842Hh4f3IV7S2rajA/uFZzhThoeHh3cprz3a15GEvJtWGw8PD+8879qgYbYNlo8aRC8IDw8P7whvtqG1PycPI/Dw8PCeyWvHTDcb/DN21NDj4eHhPZiXR7R5O54Pv+Lh4eH9Ll7bfM+21toFBg8PD+88b/Nxz5vg5OOeBM14eHh4n+W1EcCmRW4XpHxRwcPDwzvD+74DDw8PDw8PDw/vAcdf8ep8uJJu6JIAAAAASUVORK5CYII=">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASYAAAEmCAAAAADqr2IGAAAEI0lEQVR42u3aS3LbMBAFQN3/0sk2VY6l92boRIQaK5VMQ0BzAczn8csIxgMBJkyYMGHCZGDChAnT2zM94vGXif74/vmTyX99/f7r5+9+67tnNnvEhAkTJkwnMeUbe77cfInPX1WClQBt9ogJEyZMmM5jypf73TPJBWKGlfx1djnAhAkTJkyY2gO+3V4eYCdh9uY1Y8KECRMmTJsj/6q0cnspwYQJEyZMmGYFyM3hnZdIoyabp0/+h1w4JkyYMGF6M6b8eL7v53/a34QJEyZMmN6GqR2zRO2sGWjW9JOv4cUKMWHChAnTEUz5wZkUDovAshxtGjf/LUyYMGHC9GlMLUH+/PP5iw2MXl5CjwkTJkyYzmPKg8+2SHnV4b0PwvO0NSZMmDBhOo+pTY8mZLM0a77VTZJ3FfpiwoQJE6YbMiWhY378b47qNoR+vp4L0tCYMGHChOkgptly85+cvZhNOL2/HGDChAkTplOZNqnbNh08a9PZzxC1JWHChAkTpoOYZof9bKGzlprNa5gVNTFhwoQJ0ycwtc0usyTv889tYXUThGPChAkTplOZvg3/fiJ5Gs/wfA2zX7+gnIkJEyZMmG7F9CLReWljTTtz/tfNy46SvJgwYcKE6eZMSfDZhqMz3Dx9nM883C8mTJgwYTqCabbQfftOPmeyySQArguimDBhwoTpCKY2uL3qeG6D7U24PivQYsKECROmM5jadOrmaJ+178yuCO38L5K8mDBhwoTpCKZ2WS8aX+Lm1DZIjgLX0YUGEyZMmDCdx5T8fBEuLg77dv4cYpiYxoQJEyZMH8PUJlKvXfSsAai9RmDChAkTplOZZmnWfGP7tpu2zSh/zS9WiwkTJkyYjmDKj+o8ZN0DzZLFVz2DCRMmTJjOY2rD1+T5/SWgDciTNRczYMKECROmI5jqdpZ1WNteRNorS4sVlTMxYcKECdNtmWYFxTzZOkvOztK47TqHSV5MmDBhwnQrpjwNum+sSWbeJ3bzNb9YLSZMmDBhOpSp3VheIMwD4/ZQn10+hkleTJgwYcJ0Q6a2ZLhPubaFzPz4z0unL77BhAkTJkyHMu2D4dmBvQmV2wT0MPTFhAkTJky3ZcpTpbPEblFELNt0Zo2tmDBhwoTpc5g2Bcs8+fsTwXPe1pPPjwkTJkyYzmNqRxuOtsXIPHydJanz4ismTJgwYTqD6RGPWVkxeT5vx8lD3GT+OvTFhAkTJky3ZWpLm7MwuD2w21D52pAbEyZMmDCdxzQ7UGcha3sFaVuL8vkxYcKECROmNnRsD+Z9W88s5MaECRMmTJjyo71tA2qfvCqJXLxITJgwYcJ0HFMSZObP5Lh5q9CmqNnuCxMmTJgwncQ0S4num2/2bTf5nPV6MGHChAnTEUxGdCEwMGHChAkTJkwGJkyY3mX8BpS4hvZrnp3ZAAAAAElFTkSuQmCC">
     
 </ul>
 
     
 
     <!-- Tags (bookmark) -->
-    
-    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-        <i class="material-icons" role="presentation">bookmark</i>
-        <span class="visuallyhidden">bookmark</span>
-    </button>
-    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
-        <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/Javascript/">Javascript</a>
-    </ul>
     
 
     <!-- Share -->
@@ -475,7 +466,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=理解浏览器对象模型--BOM&url=http://zhangdi.site/understand-browser-object-modelbom.html&pic=http://zhangdi.site/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Vue技术栈做后台管理系统填坑日记(基础篇)&url=http://zhangdi.site/vue-technology-stack-to-do-the-backend-management-system-filling-pit-diary-basic-articles.html&pic=http://zhangdi.site/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -484,7 +475,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=理解浏览器对象模型--BOM&url=http://zhangdi.site/understand-browser-object-modelbom.html&via=Zeddy" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Vue技术栈做后台管理系统填坑日记(基础篇)&url=http://zhangdi.site/vue-technology-stack-to-do-the-backend-management-system-filling-pit-diary-basic-articles.html&via=Zeddy" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -493,7 +484,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zhangdi.site/understand-browser-object-modelbom.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zhangdi.site/vue-technology-stack-to-do-the-backend-management-system-filling-pit-diary-basic-articles.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -502,7 +493,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://zhangdi.site/understand-browser-object-modelbom.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://zhangdi.site/vue-technology-stack-to-do-the-backend-management-system-filling-pit-diary-basic-articles.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -514,7 +505,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.&title=理解浏览器对象模型--BOM&summary=&pics=http://zhangdi.site/img/favicon.png&url=http://zhangdi.site/understand-browser-object-modelbom.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.&title=Vue技术栈做后台管理系统填坑日记(基础篇)&summary=&pics=http://zhangdi.site/img/favicon.png&url=http://zhangdi.site/vue-technology-stack-to-do-the-backend-management-system-filling-pit-diary-basic-articles.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -534,260 +525,72 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <blockquote>
-<p>ECMAScript是JavaScript的核心,但是在Web(浏览器环境)中使用JavaScript,BOM(浏览器对象模型)是真正的核心.</p>
+<p>对最近所做的基于<code>Vue/Vue-router/Vuex/Element-ui/axios</code>的后台管理系统(目前只涉及基础系统管理、权限管理方面)的<strong>填坑日记</strong>。本次准备写一系列文章，对该系统到目前为止遇到的坑做一次全面总结，为了防止自己偷懒，先把坑准备好。</p>
 </blockquote>
-<p>W3C为了把浏览器中的JavaScript最基本的部分标准化,已经将BOM的主要方面纳入HTML5的规范中.</p>
-<h3 id="window对象"><a href="#window对象" class="headerlink" title="window对象"></a>window对象</h3><blockquote>
-<p>BOM的核心对象是 <code>window</code>,它表示浏览器的一个实例;在浏览器中,<code>window</code>对象有双重角色,它既是通过JavaScript访问浏览器窗口的一个接口,又是ECMAScript规定的 <code>Global</code>对象.这意味着网页上定义的任何一个对象\变量\函数,都以 <code>window</code> 对象作为其 <code>Global</code> 对象.因此在全局作用域中声明的变量函数都会变成<code>window</code>对象的属性和方法.</p>
-</blockquote>
-<pre class=" language-JavaScript"><code class="language-JavaScript">var name = 'zhangsan';
+<p>废话少说，直入正题。</p>
+<h4 id="技术选型及项目搭建"><a href="#技术选型及项目搭建" class="headerlink" title="技术选型及项目搭建"></a>技术选型及项目搭建</h4><p>关于技术选型，我之前也没有任何<code>Vue</code> 实战经验，所以只能选一些使用比较广泛的方案，前期主要参考了一些开源项目，如 : <a href="https://github.com/PanJiaChen/vue-element-admin" target="_blank" rel="noopener">vue-element-admin</a> 及该作者的 <a href="https://segmentfault.com/blog/hand-to-hand" target="_blank" rel="noopener">手摸手系列文章</a>，iview 团队的 <a href="https://github.com/iview/iview-admin" target="_blank" rel="noopener">iview-admin</a> ,这两个项目对我启发很大，特别感谢 <a href="https://github.com/PanJiaChen" target="_blank" rel="noopener">花裤衩</a> 及 <a href="https://github.com/iview" target="_blank" rel="noopener">iview</a> 团队。<em>（值得一提的是，再此期间阅读iview-admin 2.0 源码时发现一些小bug，为项目提交了PR，并被作者采纳。小小虚荣一下，虽然是些简单的小问题。）</em></p>
+<p>正题，技术选型如下：</p>
+<ul>
+<li>Vue 全家桶，<code>vue 2.5+</code>  <code>vue-cli 3.x</code> <code>vue-router</code> <code>vuex</code> </li>
+<li>Axios ，一个基于<code>promise</code> 的 <code>HTTP</code> 库（并在此基础上做了二次封装）</li>
+<li>Element-ui，饿了么团队的 基于 Vue 2.0 的桌面端组件库 （扩展了一些常用组件库）</li>
+</ul>
+<p>以上是主要的技术框架，同时还使用了<code>stylus</code> css预处理器，阿里巴巴图标库 <code>iconfont</code> 等。</p>
+<h5 id="项目搭建"><a href="#项目搭建" class="headerlink" title="项目搭建"></a>项目搭建</h5><p><code>vue-cli</code> 3.0 bate版发布后，引入了很多很cool的功能，基本的 <code>vue create</code> 初始化命令，可自定义初始化配置，不细说很容易看懂，这里没什么坑。新版本还引入了<code>UI初始化</code> 的方式，执行 <code>vue ui</code> 会在浏览器打开 <code>http://localhost:8080</code> ，以<code>web ui</code>的方式配置项目，非常人性化。同时还有 <code>@vue/cli-service</code> 效果非常类似<code>create-react-app</code> 的<code>react-scripts</code> ，也是非常的好用，集成了<code>webpack-dev-server</code> 等插件，并带有热重载、保存时 lint 校验，以及生产环境可用的构建版本。配置相比较 <code>react-scripts</code> 也是更灵活，采用在项目根路径下创建<code>vue.config.js</code> 来配置项目。几乎不用配置就能启动一个基础的项目。总之非常好用！推荐！</p>
+<p><a href="https://github.com/vuejs/vue-cli/blob/46dd8555fa5820ffa2aaa14b04fc214c51a34d0c/docs/config/README.md" target="_blank" rel="noopener">配置方式</a>         <a href="https://cli.vuejs.org/" target="_blank" rel="noopener">CLI文档</a>   </p>
+<p>项目结构：（懒得截图了直接偷得图-.-）</p>
+<p><img src="http://oox9lo3vp.bkt.clouddn.com/18-6-27/16673030.jpg" alt=""></p>
+<h5 id="依赖模块及项目结构调整"><a href="#依赖模块及项目结构调整" class="headerlink" title="依赖模块及项目结构调整"></a>依赖模块及项目结构调整</h5><p>然后安装 <code>axios</code> <code>element-ui</code> <code>mockjs</code> <code>js-cookies</code> <code>stylus</code> 等，并在<code>src</code> 下新建基础项目结构。</p>
+<pre><code>.
+├── public
+│   ├── favicon.ico
+│   └── index.html                                // html 模板文件
+├── config
+│   ├── url.js                                    // 根据环境变量导出不同的api地址
+│   └── env.js                                    // 项目启动时根据环境 注入不同的环境变量
+├── src                                         //
+│   ├── api                                     // 所有数据请求接口的方法
+│   │   ├── index.js
+│   │   └── modules                                // 跟view/modules 对应
+│   ├── assets                                  // 资源文件夹
+│   │   ├── iconfont                            // 图标
+│   │   ├── images                              // 图片
+│   │   └── styles                              // 全局/公共样式
+│   ├── components                              // 全局/公共 组件
+│   ├── directives                              // 自定义指令(如按钮权限判断指令等)
+│   ├── router                                  // 路由
+│   │   ├── import-development.js                // 开发环境下采用require方式引入组件
+│   │   ├── import-production.js                // 生产环境下采用import方式引入组件
+│   │   └── index.js                            // 根据环境不同提供不同的引入方式方法
+│   ├── store                                   // vuex store 相关
+│   │   ├── getters.js                            // getters
+│   │   ├── index.js                            // 合并modules下的所有store
+│   │   └── modules                                // 按照功能模块拆分store
+│   ├── mock                                    // mockjs 数据模拟相关方法
+│   ├── utils                                   // 工具类
+│   │   ├── httpRequest.js                        // axios 二次封装
+│   │   ├── index.js
+│   │   ├── tokenUtil.js                        // jwt token 工具类
+│   │   └── validate.js                            // 表单验证的一些通用方法
+│   └── views                                   // 视图
+│   │   ├── commons                             // 通用视图(页),如login/error/404等.
+│   │   ├── layout                              // 布局 包括(header/sidebar/footer等)
+│   │   └── modules                             // 页面按模块分
+│   ├── main.js                                 // 入口
+│   └── App.vue                                 // 根组件
+├── vue.config.js                               // vue-cli 3.x 配置项
+├── package.json
+├── README.md                                   // 项目说明文件
+├── babel.config.js                             // babel 配置
+└── yarn.lock                                    
 
-function sayName(){
-    alert(this.name);
-}
-
-alert(name);            //zhangsan
-alert(window.name);     //zhangsan
-window.sayName();       //zhangsan
-</code></pre>
-<p>虽然定义全局变量最终都会成为<code>window</code>对象的属性,但是全局变量和直接定义在<code>window</code>对象下的属性还是有些差别的:<em>全局变量不能通过 <code>delete</code>操作符来删除;</em><br>使用<code>var</code> 关键字创建的变量有一个 <code>configurable</code>属性,值为<code>false</code>,因此不能通过<code>delete</code>操作符来删除;</p>
-<p><strong>小技巧:</strong><br>当你尝试访问 一个未声明的变量时,会抛出一个错误,但是通过查询<code>window</code>对象可以知道某个可能未声明的变量是否存在;</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> arg1 <span class="token operator">=</span> arg2<span class="token punctuation">;</span>            <span class="token comment" spellcheck="true">//arg2 未声明 会抛出一个错误</span>
-
-<span class="token keyword">var</span> arg1 <span class="token operator">=</span> window<span class="token punctuation">.</span>arg2<span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">// arg1 == undefined</span>
-
-</code></pre>
-<h3 id="窗口关系及框架"><a href="#窗口关系及框架" class="headerlink" title="窗口关系及框架"></a>窗口关系及框架</h3><blockquote>
-<p>如果页面中包含框架,则每个框架都拥有自己的<code>window</code>对象,并且保存在<code>frames</code>集合中;在<code>frames</code>集合中,可以通过数值索引,或者框架名称来访问相应的<code>window</code>对象.每个框架都有一个<code>name</code>属性,其中包含框架的名称;</p>
-</blockquote>
-<p>在一个框架集(多层frame嵌套)中,可以使用<code>top.frames[index]</code>来获取框架对象.其中<code>top</code>始终指向最外层的框架,也就是浏览器的窗口的<code>window</code>对象,使用<code>top</code>对象可以确保在一个框架中正确的访问另一个框架,因为对于在一个框架中编写的任何代码来说,其中的<code>window</code>对象指向的都是哪个框架的特定实例(当前框架的实例),而非最外层(最高层)的框架;</p>
-<p>除了<code>top</code>之外还有另一个<code>window</code>对象<code>parent</code>;顾名思义,<code>parent</code>对象始终指向当前框架的直接上层框架;</p>
-<h3 id="导航和打开窗口"><a href="#导航和打开窗口" class="headerlink" title="导航和打开窗口"></a>导航和打开窗口</h3><p>使用<code>window.open()</code>方法可以导航到特定的URL,也可以打开一个新的浏览器窗口.</p>
-<p>这个方法可以接受4个参数,[要加载的URL],[窗口目标],[特性字符串],[新页面是否取代浏览器历史纪录中当前加载页面的布尔值],通常只须传递第一个参数,最后一个参数只在不打开新窗口的情况下使用;</p>
-<p>如果为<code>window.open()</code>传递第二个参数,而且改参数是已有窗口或框架的名称,那么就会在具有该名称的窗口或框架中加载第一个参数指定的URL.</p>
-<pre class=" language-javascript"><code class="language-javascript">window<span class="token punctuation">,</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">'http://www.baidu.com'</span><span class="token punctuation">,</span><span class="token string">'frameName'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<p>等同于</p>
-<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.baidu.com<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>frameName<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
-</code></pre>
-<p>如果有一个名叫 <code>frameName</code> 的窗口或者框架,就会在改窗口或者框架加载这个URL,否则就会新建一个新窗口并将其命名为<code>frameName</code>;此外,第二个蚕食也可以是一个特殊的窗口名称:<code>_self</code> , <code>_parent</code> , <code>_top</code> , <code>_blank</code></p>
-<p>如果第二个参数不是一个已经存在的窗口或框架,那么改gai方法就会根据第三个参数的字符串创建一个新的窗口或者标签页,如果没传入第三个参数则使用默认值创建;第三个参数是一个逗号分隔的设置字符串,标识新窗口中都显示哪些特性.</p>
-<table>
-<thead>
-<tr>
-<th>设置</th>
-<th>值</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>fullscreen</td>
-<td>yes/no</td>
-<td>浏览器窗口是否最大化(仅IE浏览器)</td>
-</tr>
-<tr>
-<td>height</td>
-<td>数值</td>
-<td>新窗口的高度,不能小于100</td>
-</tr>
-<tr>
-<td>width</td>
-<td>数值</td>
-<td>新窗口的宽度,不能小于100</td>
-</tr>
-<tr>
-<td>left</td>
-<td>数值</td>
-<td>新窗口的左坐标,不能是负值</td>
-</tr>
-<tr>
-<td>left</td>
-<td>数值</td>
-<td>新窗口的上坐标,不能是负值</td>
-</tr>
-<tr>
-<td>location</td>
-<td>yes/no</td>
-<td>是否在浏览器窗口中显示地址栏.不同的浏览器的额默认值不同,如果设置为no,地址栏可能会隐藏,也可能被禁用.</td>
-</tr>
-<tr>
-<td>menubar</td>
-<td>yes/no</td>
-<td>是否在浏览器窗口中显示菜单栏.默认no</td>
-</tr>
-<tr>
-<td>toolbar</td>
-<td>yes/no</td>
-<td>是否在浏览器窗口中显示工具栏,默认no</td>
-</tr>
-<tr>
-<td>status</td>
-<td>yes/no</td>
-<td>是否在浏览器窗口中显示状态栏,默认no</td>
-</tr>
-<tr>
-<td>resizable</td>
-<td>yes/no</td>
-<td>是否可以通过拖动浏览器窗口的边框改变其大小.默认no</td>
-</tr>
-<tr>
-<td>scrollbars</td>
-<td>yes/no</td>
-<td>如果内容在视口中显示不下,是否允许滚动.默认no</td>
-</tr>
-</tbody>
-</table>
-<p><code>window.open()</code>方法会返回一个指向新窗口的引用.引用的对象与其他<code>window</code>对象大致相似,但我们可以对其进行跟多的控制.</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> openWin <span class="token operator">=</span> window<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">'http://baidu.com'</span><span class="token punctuation">,</span><span class="token string">'baiduWindow'</span><span class="token punctuation">,</span><span class="token string">'height=400,width=400,top=100,ledt=100'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment" spellcheck="true">//调整大小为800*800</span>
-openWin<span class="token punctuation">.</span><span class="token function">resizeTo</span><span class="token punctuation">(</span><span class="token number">800</span><span class="token punctuation">,</span><span class="token number">800</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true">//调整位置</span>
-openWin<span class="token punctuation">.</span><span class="token function">moveTo</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token number">300</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment" spellcheck="true">//关闭</span>
-openWin<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-</code></pre>
-<h3 id="间歇调用和超时调用"><a href="#间歇调用和超时调用" class="headerlink" title="间歇调用和超时调用"></a>间歇调用和超时调用</h3><p>JavaScript 是单线程语言,但它允许通过设置超时值和简写时间的值来调度代码在特定的时刻执行.超时调用是在指定的时间过后执行代码,间歇调用是每隔指定时间就执行一次代码;</p>
-<p>JavaScript单线程的特性决定了,JavaScript在一定时间内只能执行一段代码.为了控制要执行的代码,就有一个JavaScript任务队列,这些任务将那招将他们添加到队列的顺序执行.</p>
-<p><code>setTimeout()</code> 的第二个参数的含义是,告诉JavaScript再过多长时间把当前任务添加到执行队列中.如果队列是空的则添加的代码会立即执行,如果不为空,那添加的代码就到等到之前的代码执行完成后再执行.</p>
-<p>调用<code>setTimeout()</code>后,改方法会返回一个数值ID,这个ID是计划执行代码的唯一标识符.可以通过它来取消超时调用.</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//设置超时调用</span>
-<span class="token keyword">var</span> timeoutId <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'hello'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment" spellcheck="true">//取消超时调用</span>
-<span class="token function">clearTimeout</span><span class="token punctuation">(</span>timeoutId<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<p>间歇调用与超时调用类似.</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//设置间歇调用</span>
-<span class="token keyword">var</span> intervalId <span class="token operator">=</span> <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">var</span> random <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">alert</span><span class="token punctuation">(</span>random<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span> random <span class="token operator">></span> <span class="token number">0.5</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">//取消间歇调用</span>
-        <span class="token function">clearInterval</span><span class="token punctuation">(</span>intervalId<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<p>一般认为 使用超时调用<code>setTimeout()</code>模拟实现间歇调用<code>setInterval()</code>是最佳模式,因为<code>setInterval()</code> <font color="red"><strong>最后一个间歇调用可能会在前一个间歇调用结束之前启动.</strong> </font></p>
-<pre class=" language-javascript"><code class="language-javascript">
-<span class="token keyword">var</span> num <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>max <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
-
-<span class="token keyword">function</span> <span class="token function">incrementNumber</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    num<span class="token operator">++</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">//如果执行次数未达到最大执行次数,则设置另一次超时调用</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>num <span class="token operator">&lt;</span> max<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token function">setTimeout</span><span class="token punctuation">(</span>incrementNumber<span class="token punctuation">,</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
-        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'done!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span class="token function">setTimeout</span><span class="token punctuation">(</span>incrementNumber<span class="token punctuation">,</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-</code></pre>
-<h3 id="系统对话框"><a href="#系统对话框" class="headerlink" title="系统对话框"></a>系统对话框</h3><p>浏览器通过<code>alert()</code> <code>confirm()</code> <code>prompt()</code>方法可以调用系统对话框向用户显示消息.系统对话框与浏览器中显示的网页没有关系,也不包含HTML.他们的外观有操作系统或浏览器设置决定,通过这几个方法打开的对话框都是同步和模态的,也就是说,显示这些对话框的时候代码会停止执行.而关掉这些对话框后代码又会恢复执行;<br>此外还有:显示打印对话框 <code>window.print()</code>,显示查找对话框:<code>window.find()</code>;</p>
-<h3 id="location对象"><a href="#location对象" class="headerlink" title="location对象"></a>location对象</h3><p><code>location</code>是最有用的BOM对象之一,它提供了与当前窗口中加载的文档有关信息,还提供了一些导航功能.同时<code>location</code>也是一个特别的对象,因为它既是<code>window</code>对象的属性,也是<code>document</code>对象的属性.<code>window.location</code>和<code>document.location</code>引用的是同一个对象;<code>location</code>对象不仅保存着当前文档的信息,还将URL解析为独立的片段,让开发人员可以通过不同的属性访问这些片段;</p>
-<p>如: http:/ /<a href="http://www.zhangdi.site:8080/article/list?page=1#contents" target="_blank" rel="noopener">www.zhangdi.site:8080/article/list?page=1#contents</a></p>
-<table>
-<thead>
-<tr>
-<th>属性名</th>
-<th>例子</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>hash</td>
-<td>“#content”</td>
-<td>返回URL中的hash(#后跟零个或多个字符),如果URL中不包含散列,则返回空字符串.</td>
-</tr>
-<tr>
-<td>host</td>
-<td>“<a href="http://www.zhangdi.site:8080&quot;" target="_blank" rel="noopener">www.zhangdi.site:8080&quot;</a></td>
-<td>返回服务器名称和端口号</td>
-</tr>
-<tr>
-<td>hostname</td>
-<td>“<a href="http://www.zhangdi.site&quot;" target="_blank" rel="noopener">www.zhangdi.site&quot;</a></td>
-<td>返回不带端口号的服务器名称</td>
-</tr>
-<tr>
-<td>href</td>
-<td>“http:/ /<a href="http://www.zhangdi.site&quot;" target="_blank" rel="noopener">www.zhangdi.site&quot;</a></td>
-<td>返回当前加载页面的完成URL,而<code>location</code>对象的<code>toString()</code>方法也返回这个值.</td>
-</tr>
-<tr>
-<td>pathname</td>
-<td>“/article/list”</td>
-<td>返回URL中的目录或文件名</td>
-</tr>
-<tr>
-<td>port</td>
-<td>“8080”</td>
-<td>返回URL中指定的端口号,如果URL中不包含端口号,则这个属性返回空字符串.</td>
-</tr>
-<tr>
-<td>protocol</td>
-<td>“http:”</td>
-<td>返回页面使用的协议.</td>
-</tr>
-<tr>
-<td>search</td>
-<td>“?page=1”</td>
-<td>返回URL的查询字符串,这个字符串一问好开头.</td>
-</tr>
-</tbody>
-</table>
-<p>虽然通过上面的属性可以访问到<code>location</code>对象的大多数对象,但是其中访问URL包含的查询字符串的属性并不方便.尽管 <code>location.search</code>返回从问号到URL末尾的所有内容,但却没有办法逐个访问其中的每个查询字符串参数,为此可以创建一个函数,用以解析查询字符串,然后返回包含所有参数的一个对象:</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">function</span> getQueryStringArgs <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-
-    <span class="token keyword">var</span> qs <span class="token operator">=</span> <span class="token punctuation">(</span>location<span class="token punctuation">.</span>search<span class="token punctuation">.</span>length <span class="token operator">></span> <span class="token number">0</span> <span class="token operator">?</span> location<span class="token punctuation">.</span>search<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-
-    args <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-
-    items <span class="token operator">=</span> qs<span class="token punctuation">.</span>length <span class="token operator">?</span> qs<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'='</span><span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-
-    item <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">,</span>name <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">,</span>value <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i <span class="token operator">&lt;</span> items<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-
-        item <span class="token operator">=</span> item<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'='</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-        name <span class="token operator">=</span> <span class="token function">decodeURIComponent</span><span class="token punctuation">(</span>item<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-        value <span class="token operator">=</span> <span class="token function">decodeURIComponent</span><span class="token punctuation">(</span>item<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-        <span class="token keyword">if</span><span class="token punctuation">(</span>name<span class="token punctuation">.</span>lenth<span class="token punctuation">)</span><span class="token punctuation">{</span>
-            args<span class="token punctuation">[</span>name<span class="token punctuation">]</span> <span class="token operator">=</span> value<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">return</span> args<span class="token punctuation">;</span>
-
-<span class="token punctuation">}</span>
-</code></pre>
-<p>还可以通过<code>location</code>对象改变浏览器位置:</p>
-<ol>
-<li><code>location.assign(&#39;http://baidu.com&#39;);</code></li>
-<li><code>window.location = &#39;http://baicu.com&#39;;</code></li>
-<li><code>location.href = &#39;http://baidu.com&#39;</code></li>
+</code></pre><p><em>这里安利一个生成文件树结构的小工具 <a href="http://yijiebuyi.com/blog/c0defa3a47d16e675d58195adc35514b.html" target="_blank" rel="noopener">Tree</a></em> ，至此项目搭建完成，下面就开干了。</p>
+<h5 id="基础工具封装"><a href="#基础工具封装" class="headerlink" title="基础工具封装"></a>基础工具封装</h5><ol>
+<li>首先对<code>axios</code> 来一波二次封装，主要是对 请求/响应的拦截处理 ， <code>jwt-token</code> 处理，全局错误处理及请求方法封装。</li>
+<li><code>Layout</code> 的构建 <code>header</code> <code>sidebar</code> <code>footer</code> 及 <code>sidebar</code> 里面的 <code>menu</code> 封装。</li>
+<li>基础组件，<code>TreeMenu</code> <code>IconPicker</code> <code>DataTable(搜索栏及分页条整合)</code> <code>富文本编辑器</code>   <code>TreeTable</code> 等</li>
+<li><code>mockjs</code> 基础方法</li>
 </ol>
-<p>通过修改<code>location</code>的属性(hash除外),页面都会以新URL重新加载,并且浏览器的历史纪录中就会生成一条新纪录,因此用户通过单击”后退”按钮都会导航到前一个页面.要禁用这种行为,了一使用<code>replace()</code>方法.这个方法只接受一个参数,即要导航到的URL;结果虽然会导致浏览器位置改变,但不会在历史纪录中生成新纪录,在调用<code>replace()</code>方法后,用户不能回到前一个页面;</p>
-<h3 id="history对象"><a href="#history对象" class="headerlink" title="history对象"></a>history对象</h3><p><code>history</code>对象保存用户上网的历史纪录,从窗口被打开的那一刻算起;因为<code>history</code>是<code>window</code>对象的属性,因此每个浏览器窗口,每个标签页,每个框架都有自己的<code>history</code>对象与特定的<code>window</code>对象关联;</p>
-<p>使用 <code>history</code>的 <code>go()</code>方法可以在用户的历史纪录中任意跳转;</p>
-<p>另外还可以用 <code>back()</code>和<code>forward()</code> 方法来替代<code>go()</code>;</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><blockquote>
-<p>浏览器对象模型(BOM)以<code>window</code>对象为依托,表示浏览器窗口以及页面可见区域,同时<code>window</code>对象还是ECMAScript中的 <code>Global</code>对象.因而所有全局变量和函数都是它的属性,且所有原生的构造函数以及其他函数也都存在与它的命名空间下;</p>
-<p>除了上面列出的 BOM 组成部分外,还有 <code>navigator</code>对象,它提供了与浏览器有关的信息,到底提供哪些信息,很大程度上取决于用户的浏览器;</p>
-<p>还有 <code>screen</code> 但它功能有限,<code>screen</code>对象中保存着与客户端显示器有关的信息,这些信息一般只用于站点分析.</p>
-</blockquote>
 
         
     
@@ -806,8 +609,8 @@ openWin<span class="token punctuation">.</span><span class="token function">clos
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://zhangdi.site/understand-browser-object-modelbom.html';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://zhangdi.site/understand-browser-object-modelbom.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://zhangdi.site/vue-technology-stack-to-do-the-backend-management-system-filling-pit-diary-basic-articles.html';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://zhangdi.site/vue-technology-stack-to-do-the-backend-management-system-filling-pit-diary-basic-articles.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -837,7 +640,7 @@ openWin<span class="token punctuation">.</span><span class="token function">clos
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/understand-pixels-and-dpr.html" id="post_nav-newer" class="prev-content">
+        <a href="/javascript-object-copy.html" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -851,7 +654,7 @@ openWin<span class="token punctuation">.</span><span class="token function">clos
 
     <!-- Next Nav -->
     
-        <a href="/Redux-React-Router-Node-js-a.html" id="post_nav-older" class="next-content">
+        <a href="/reading-slash-youth.html" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -945,7 +748,7 @@ openWin<span class="token punctuation">.</span><span class="token function">clos
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">12</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">12</span></a>
             </ul>
         </li>
         
@@ -963,7 +766,7 @@ openWin<span class="token punctuation">.</span><span class="token function">clos
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/hexo/">Hexo<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/share/">分享境<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/technology/">技术向<span class="sidebar_archives-count">25</span></a></li><li><a class="sidebar_archives-link" href="/categories/self-talk/">自言语<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/categories/hexo/">Hexo<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/share/">分享境<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/technology/">技术向<span class="sidebar_archives-count">26</span></a></li><li><a class="sidebar_archives-link" href="/categories/self-talk/">自言语<span class="sidebar_archives-count">2</span></a>
             </ul>
         </li>
         

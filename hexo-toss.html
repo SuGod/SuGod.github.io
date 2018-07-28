@@ -40,7 +40,7 @@
     
     <title>
         
-            基于create-react-app构建React全家桶 | 
+            Hexo折腾记 | 
         
         Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.
     </title>
@@ -52,7 +52,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Zeddy">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",React,Webpack">
+    <meta name="keywords" content=",Hexo,SEO">
 
     <!-- Import lsloader -->
     <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
@@ -244,18 +244,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://zhangdi.site">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="基于create-react-app构建React全家桶 | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
+    <meta property="og:title" content="Hexo折腾记 | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
     <meta property="og:image" content="http://zhangdi.site/img/favicon.png" />
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="React"> <meta property="og:article:tag" content="Webpack"> 
+    <meta property="og:article:tag" content="Hexo"> <meta property="og:article:tag" content="SEO"> 
 
     
-        <meta property="article:published_time" content="Thu Nov 02 2017 10:53:24 GMT+0800" />
+        <meta property="article:published_time" content="Fri Mar 23 2018 11:26:06 GMT+0800" />
         <meta property="article:modified_time" content="Tue Jun 26 2018 22:01:50 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="基于create-react-app构建React全家桶 | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
+    <meta name="twitter:title" content="Hexo折腾记 | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="http://zhangdi.site/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -263,7 +263,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://zhangdi.site/build-a-react-family-bucket-based-on-createreactapp.html" />
+        <link rel="canonical" href="http://zhangdi.site/hexo-toss.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -275,9 +275,9 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://zhangdi.site/build-a-react-family-bucket-based-on-createreactapp.html",
-    "headline": "基于create-react-app构建React全家桶",
-    "datePublished": "Thu Nov 02 2017 10:53:24 GMT+0800",
+    "mainEntityOfPage": "http://zhangdi.site/hexo-toss.html",
+    "headline": "Hexo折腾记",
+    "datePublished": "Fri Mar 23 2018 11:26:06 GMT+0800",
     "dateModified": "Tue Jun 26 2018 22:01:50 GMT+0800",
     "author": {
         "@type": "Person",
@@ -296,7 +296,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",React,Webpack",
+    "keywords": ",Hexo,SEO",
     "description": "",
 }
 </script>
@@ -371,7 +371,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是create-react-app"><span class="post-toc-text">什么是create-react-app?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Yarn"><span class="post-toc-text">Yarn</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Quick-Overview"><span class="post-toc-text">Quick Overview</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#配置ant-design"><span class="post-toc-text">配置ant-design</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#使用-babel-plugin-import"><span class="post-toc-text">使用 babel-plugin-import</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#添加-About-页面。"><span class="post-toc-text">添加 About 页面。</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#添加404页面"><span class="post-toc-text">添加404页面</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#SEO-优化"><span class="post-toc-text">SEO 优化</span></a></li></ol>
     </ul>
     
 
@@ -403,7 +403,7 @@
         
     
             <p class="article-headline-p">
-                基于create-react-app构建React全家桶
+                Hexo折腾记
             </p>
         </div>
 
@@ -422,7 +422,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Zeddy</strong>
-        <span>11月 02, 2017</span>
+        <span>3月 23, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -444,7 +444,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAACyUlEQVR42u3aQXIbMQwEQP3/0841B2s9Q6ziDdl7UskSxWaqMgWAr68jnxc2NjY2NjY2Njb2I9mv+PlmoTefSd65XuHvv7573e4ZGxsbe2/2D//1B+wck69wfYjtnrGxsbFPYF8H0tvl4hi7Bue8ds/Y2NjY2PkRJIA80vL9YGNjY2NP2HdtLjkObGxsbOx5U+m6hMg3MSlIfqGXho2Njf14dj40fc7rfzrfxsbGxn4wu30mjaR8eJD/brFzbGxs7E3ZbVGRlyht2TC59BldD8LGxsY+ht1ezUlWS1ZoG0nJkAAbGxv7BHYeS+0lywQZBU+wQvSL2NjY2Iex14qQPITuvVhZD3qxsbGxN2W3YZNftWk/OQmtOsCwsbGx/3N2HlTtMeWFTd5Imox+sbGxsfdm5w39tsWfx9jaQLdocmFjY2NvzW4bN+0B3XU0k9jDxsbG3pXdDgmSo1l7Pz+ytb1hY2Njn8CehMd863WTqD1cbGxs7K3Zk6uTkw3dde0y+hY2Njb21uzky2uYvPxYK42Kthc2Njb21uy84d5e00mCai0465EGNjY29gHsz12IzC/ftKPl/FixsbGx92YnRcj8yRtDSXzm1zGxsbGxT2DPx67XoZIUMG2sYmNjY2PnG/1ccZJH1GTP2NjY2Cewb/6BuyLnppEDNjY29gnsvGWz1vppG1htmN1QimBjY2NvxG43NGlL5aPfyRgYGxsb+xx2G0jXcTJpS7UrJ8eNjY2NvSt7bZQ7aQzV243/io2NjX0mexIJeQSuXeLJX0ftJ2xsbOyt2W3rPw+SPJaSz7fxho2NjX0au23TT4bBa2ODPGhH821sbGzsA9iTGFsb6679k2BjY2Njt0uvvT8pMPLvYmNjY5/AngwAJtd62oJkrQmFjY2NvTd7rVnTBlI7AL73CiY2Njb2ruxzHmxsbGxsbGxsbOzHPH8AHT5yFGgHt5sAAAAASUVORK5CYII=">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAAB5ElEQVR42u3aQW6EMAwFUO5/6XZbqZrp/w60hbysRoAYPxZWHPv4eMQ6MDAwMDAwMDD+DeOI1/vnX939ev37M7MYMDAw9mT8kNqCgF7+2YvrKzFgYGDszEjSZRtKApvFgIGBgTHb2CWBJgkdAwMD44RXlGElKRgDAwPjrCK2LXfzQvdXa3EMDIwbMtrGwBW//6C/gYGBcRNGPeJQbh9XjvAunBnBwMC4FaMdg2hhsxbm+6gwMDD2ZCQbuBX2Ua6lIhYDA+PRjNkBWZuU11MtBgYGxkrSbNsG+XDGCQkXAwPj5oy8GdkOWyTbzTxBY2BgYLSvPqslmXyUE2ZGMDAwbstIAm1L2bb9mW9VMTAwdmbkx2H5IMVKyyG6joGBsTGjPb6ffZT3Y2QYGBgYs63brIgtDvpjGAYGxm6MvDEwO2JrE3TeFsXAwNiHMWtD5sn63KExDAyMnRmzgbDkbtvUXEq4GBgYj2bkq/6ztjRd78RiYGA8jrE+wrXeNmiP6jAwMPZk5AVtOxyWD1vk8WBgYOzMaJPsWRvEWSmLgYGB0bYq82O45PnoQ2BgYGCMxr/yzeJ6KYuBgbEnYzZ4kTQv2wGLy4/bMDAwbsi4YsM3a1IWHwIDA2Mbxn0XBgYGBgYGBsafrk8Kn88UVpq1gAAAAABJRU5ErkJggg==">
     
 </ul>
 
@@ -458,7 +458,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/React/">React</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Webpack/">Webpack</a>
+        <a class="post_tag-link" href="/tags/Hexo/">Hexo</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/SEO/">SEO</a>
     </ul>
     
 
@@ -475,7 +475,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=基于create-react-app构建React全家桶&url=http://zhangdi.site/build-a-react-family-bucket-based-on-createreactapp.html&pic=http://zhangdi.site/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Hexo折腾记&url=http://zhangdi.site/hexo-toss.html&pic=http://zhangdi.site/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -484,7 +484,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=基于create-react-app构建React全家桶&url=http://zhangdi.site/build-a-react-family-bucket-based-on-createreactapp.html&via=Zeddy" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Hexo折腾记&url=http://zhangdi.site/hexo-toss.html&via=Zeddy" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -493,7 +493,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zhangdi.site/build-a-react-family-bucket-based-on-createreactapp.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zhangdi.site/hexo-toss.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -502,7 +502,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://zhangdi.site/build-a-react-family-bucket-based-on-createreactapp.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://zhangdi.site/hexo-toss.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -514,7 +514,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.&title=基于create-react-app构建React全家桶&summary=&pics=http://zhangdi.site/img/favicon.png&url=http://zhangdi.site/build-a-react-family-bucket-based-on-createreactapp.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.&title=Hexo折腾记&summary=&pics=http://zhangdi.site/img/favicon.png&url=http://zhangdi.site/hexo-toss.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -533,174 +533,74 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h3 id="什么是create-react-app"><a href="#什么是create-react-app" class="headerlink" title="什么是create-react-app?"></a>什么是create-react-app?</h3><blockquote>
-<p><a href="https://github.com/facebookincubator/create-react-app" target="_blank" rel="noopener">create-react-app</a>是Facebook官方推出的React应用开发脚手架工具,几乎可以零配置的构建webpack+react的开发环境,内置了热更新等一系列功能;</p>
-</blockquote>
-<hr>
-<p>create-react-app 可以使用 yarn 替代 npm 来安装包.</p>
-<pre><code>常用命令:
-npm start or yarn start          //启动
-npm test or yarn test           //测试
-npm run build or yarn build    //打包
-npm run eject                 //弹出配置项
-
-</code></pre><h3 id="Yarn"><a href="#Yarn" class="headerlink" title="Yarn"></a>Yarn</h3><ol>
-<li>安装yarn</li>
-</ol>
-<p>windows  下载安装程序 <a href="https://yarnpkg.com/latest.msi" target="_blank" rel="noopener">Yarn</a> 直接安装</p>
-<p>Mac 使用brew安装</p>
-<pre class=" language-bash"><code class="language-bash">brew <span class="token function">install</span> yarn
+        <p>继把博客迁移到腾讯云后，继续折腾Hexo。</p>
+<h4 id="添加-About-页面。"><a href="#添加-About-页面。" class="headerlink" title="添加 About 页面。"></a>添加 About 页面。</h4><pre class=" language-bash"><code class="language-bash">hexo new page <span class="token string">"about"</span>
 </code></pre>
-<ol>
-<li>基本命令</li>
-</ol>
-<pre class=" language-JavaScript"><code class="language-JavaScript">yarn add: 在你当前的包里添加一个包来使用。
-
-yarn init: 初始化包的开发环境。
-
-yarn install: 安装 package.json 文件里定义的所有依赖。
-
-yarn publish: 发布一个包到包管理器。
-
-yarn remove: 从你当前包里移除一个未使用的包。
+<p>heox 会根据<code>scaffolds/page.md</code> 在<code>source</code> 下创建一个<code>about/index.md</code> 文件，写文章一样编辑这个文件，<code>hexo g</code> 时就会编译出一个页面。</p>
+<p>然后在<code>themes</code> 下的<code>__config.yml</code> 的 <code>menu</code> 下添加导航菜单;</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">pages</span><span class="token punctuation">:</span>
+    <span class="token key atrule">关于我</span><span class="token punctuation">:</span>    <span class="token comment" spellcheck="true">#Name</span>
+        <span class="token key atrule">link</span><span class="token punctuation">:</span> <span class="token string">"/about"</span>    <span class="token comment" spellcheck="true">#路径</span>
+        <span class="token key atrule">icon</span><span class="token punctuation">:</span> person    <span class="token comment" spellcheck="true">#导航图标</span>
+        <span class="token key atrule">divider</span><span class="token punctuation">:</span> <span class="token boolean important">true    </span><span class="token comment" spellcheck="true">#主题的————样式</span>
 </code></pre>
-<p>运行 yarn 不带命令将运行 <code>yarn install</code> ，并把参数标志传递给它。</p>
-<p>命令跟 npm 类似. 区别 <code>add</code> 时不需要 <code>--save</code> 默认保存到 <code>package.json</code> , 开发依赖 <code>-dev</code></p>
-<h3 id="Quick-Overview"><a href="#Quick-Overview" class="headerlink" title="Quick Overview"></a>Quick Overview</h3><pre class=" language-JavaScript"><code class="language-JavaScript">//全局安装 create-react-app
-npm install -g create-react-app
-
-//新建一个 名为 my-app 的工程
-create-react-app my-app
-
-//构建完成之后 进入
-cd my-app/
-
-//启动
-npm start
-
+<p>重新 生成页面后 会在导航菜单上多一个 关于我  的菜单。</p>
+<p>这里其实还添加了 <code>resume</code> 页面，只是我的简历并没有部署到服务器中，在码云的pages里，只是做个链接过去就行了，但是为了方便修改，我在主题配置中添加了一个变量，用来管理是否显示简历导航入口，然后修改 主题的模版 添加一行简历页面入口。</p>
+<h4 id="添加404页面"><a href="#添加404页面" class="headerlink" title="添加404页面"></a>添加404页面</h4><p>在 <code>source</code> 目录下新建<code>error/404.html</code>  </p>
+<p>编辑<code>404.html</code> 页面。</p>
+<p>配置<code>__config.yml</code>  添加配置项：</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">skip_render</span><span class="token punctuation">:</span> error/**       <span class="token comment" spellcheck="true">#文件夹下的内容将不会转化为html，直接被 copy 到public 文件夹</span>
 </code></pre>
-<p>浏览器打开  <a href="http://localhost:3000/" target="_blank" rel="noopener">http://localhost:3000/</a></p>
-<p>生成的项目结构:</p>
-<pre><code>my-app
-├── README.md
-├── node_modules
-├── package.json
-├── .gitignore
-├── public
-│   └── favicon.ico
-│   └── index.html
-│   └── manifest.json
-└── src
-    └── App.css
-    └── App.js
-    └── App.test.js
-    └── index.css
-    └── index.js
-    └── logo.svg
-    └── registerServiceWorker.js
-</code></pre><p>可以发现项目虽然是 基于 webpack 构建的 但是完全看不到熟悉的 <code>webpack.config.js</code>等配置文件,因为官方为了更<code>优雅</code>(?_?)的代码结构,就把配置项都通过 <code>react-scripts</code> 包配置好了.<br>在<code>node_modules</code>下找到 <code>react-scripts</code>可以看到 配置项都在这里.</p>
-<p>打开 <code>package.json</code> </p>
-<pre class=" language-json"><code class="language-json"><span class="token punctuation">{</span>
-  ....
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token property">"start"</span><span class="token operator">:</span> <span class="token string">"react-scripts start"</span><span class="token punctuation">,</span>
-    <span class="token property">"build"</span><span class="token operator">:</span> <span class="token string">"react-scripts build"</span><span class="token punctuation">,</span>
-    <span class="token property">"test"</span><span class="token operator">:</span> <span class="token string">"react-scripts test --env=jsdom"</span><span class="token punctuation">,</span>
-    <span class="token property">"eject"</span><span class="token operator">:</span> <span class="token string">"react-scripts eject"</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
+<p>在服务器中 <code>Nginx</code>的配置文件中添加如下配置：</p>
+<pre class=" language-bash"><code class="language-bash">sodu vim /etc/nginx/sites-available/default
 </code></pre>
-<p>实际开发中自定义配置在所难免,so 官方给了个 <code>eject</code>, </p>
-<pre class=" language-javascript"><code class="language-javascript">npm run eject <span class="token comment" spellcheck="true">//弹出配置项</span>
+<pre class=" language-nginx"><code class="language-nginx"><span class="token keyword">error_page</span> <span class="token number">404</span> <span class="token number">403</span> <span class="token number">500</span> <span class="token number">502</span> <span class="token number">503</span> <span class="token number">504</span> <span class="token operator">/</span><span class="token number">404</span><span class="token punctuation">.</span>html<span class="token punctuation">;</span>
+
+<span class="token keyword">location</span> <span class="token operator">=</span> <span class="token operator">/</span><span class="token number">404</span><span class="token punctuation">.</span>html <span class="token punctuation">{</span>
+    <span class="token keyword">root</span> <span class="token operator">/</span>var<span class="token operator">/</span>www<span class="token operator">/</span>hexo<span class="token operator">/</span>error<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>    
 </code></pre>
-<blockquote>
-<p>Note: this is a one-way operation. Once you eject, you can’t go back!<br>官方提示:这个操作是不可逆的,一旦操作就回不去了.</p>
-</blockquote>
-<p>配置弹出来然后开始安装react全家桶</p>
-<pre class=" language-JavaScript"><code class="language-JavaScript">npm install --save react-router-dom         //4.*
-npm install --save redux react-redux        //redux  react-redux
-npm install --save redux-thunk              //异步中间件
-npm install --save less-loader              //less-loader
-npm install --save ....                     //各种包
+<p><code>hexo g &amp;&amp; hexo d</code> 👌</p>
+<h4 id="SEO-优化"><a href="#SEO-优化" class="headerlink" title="SEO 优化"></a>SEO 优化</h4><p>原来部署在<code>Github pages</code> 时，<code>github</code> 禁止搜索引擎爬虫，SEO做不做其实影响不大，既然迁移到自己的服务商了就还是做一些吧，虽然SEO我只懂点皮毛。</p>
+<p>首先我能想到的就是 URL 路径的优化，原来我的文章路径都是<code>:year/:month/:day/:title/</code> 格式,很不利于SEO。</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># permalink: :year/:month/:day/:title/</span>
+<span class="token key atrule">permalink</span><span class="token punctuation">:</span> <span class="token punctuation">:</span>title.html  <span class="token comment" spellcheck="true">#优化 URL 利于SEO</span>
 </code></pre>
-<p>在 <code>config</code> 目录下配置 <code>webpack</code> 如 less-loader  url-loader  插件等.</p>
-<h3 id="配置ant-design"><a href="#配置ant-design" class="headerlink" title="配置ant-design"></a>配置ant-design</h3><blockquote>
-<p>Ant Design 是一个致力于提升『用户』和『设计者』使用体验的中台设计语言。它模糊了产品经理、交互设计师、视觉设计师、前端工程师、开发工程师等角色边界，将进行 UE 设计和 UI 设计人员统称为『设计者』，利用统一的规范进行设计赋能，全面提高中台产品体验和研发效率。</p>
-</blockquote>
-<p>安装antd</p>
-<pre class=" language-JavaScript"><code class="language-JavaScript">npm install --save antd   //或者 yarn add antd
+<p>文章直接修改在根路径下。</p>
+<p>然后打开百度搜索：</p>
+<pre class=" language-tex"><code class="language-tex">site:zhangdi.site
 </code></pre>
-<p>使用:   <code>import antd</code> 组件    </p>
-<p>在文件顶部引入 <code>antd/dist/antd.css</code>。</p>
-<pre class=" language-jsx"><code class="language-jsx">@<span class="token keyword">import</span> <span class="token string">'~antd/dist/antd.css'</span><span class="token punctuation">;</span>
+<p>发现果然没收录，收录的内容还是原来我再百度云托管的 简历页面。</p>
+<p>打开<a href="https://ziyuan.baidu.com/" target="_blank" rel="noopener">百度站长平台</a> 注册并认证域名：我使用的是 域名解析认证，因为这个最方便，直接在云解析中添加解析就行。</p>
+<p>添加 sitemap 插件</p>
+<pre class=" language-bash"><code class="language-bash">yarn add hexo-generator-sitemap hexo-generator-baidu-sitemap
+</code></pre>
+<p>然后打开 <a href="http://zhangdi.site/baidusitemap.xml">http://zhangdi.site/baidusitemap.xml</a> 查看<code>sitemap.xml</code> 已经生成。👌</p>
+<p>然后配置 主动向 百度提交链接：</p>
+<p>安装插件：</p>
+<pre class=" language-bash"><code class="language-bash">yarn add hexo-baidu-url-submit
+</code></pre>
+<p>在百度站长平台 &gt; 链接提交 &gt; 主动推送 下找到 <code>token</code></p>
+<p><img src="http://oox9lo3vp.bkt.clouddn.com/18-3-23/52408285.jpg" alt=""></p>
+<p>添加配置项：</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">baidu_url_submit</span><span class="token punctuation">:</span>
+  <span class="token key atrule">count</span><span class="token punctuation">:</span> <span class="token number">100 </span>
+  <span class="token key atrule">host</span><span class="token punctuation">:</span> zhangdi.site <span class="token comment" spellcheck="true"># 注册的域名</span>
+  <span class="token key atrule">token</span><span class="token punctuation">:</span> xxxxxxxxxxxxx <span class="token comment" spellcheck="true"># 秘钥 token</span>
+  <span class="token key atrule">path</span><span class="token punctuation">:</span> baidu_urls.txt <span class="token comment" spellcheck="true"># 文本文档的地址， 新链接会保存在此文本文档里</span>
 
-<span class="token punctuation">.</span>App <span class="token punctuation">{</span>
-  text<span class="token operator">-</span>align<span class="token punctuation">:</span> center<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token operator">...</span>
-
-<span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">-</span>
-
-<span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> Button <span class="token keyword">from</span> <span class="token string">'antd/lib/button'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token string">'./App.css'</span><span class="token punctuation">;</span>
-
-<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
-  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token punctuation">(</span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>App<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Button<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Button</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-    <span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+  ·····
+<span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+<span class="token punctuation">-</span> <span class="token key atrule">type</span><span class="token punctuation">:</span> git
+  <span class="token key atrule">repo</span><span class="token punctuation">:</span> xxxxxxxxx
+  <span class="token key atrule">branch</span><span class="token punctuation">:</span> master
+<span class="token punctuation">-</span> <span class="token key atrule">type</span><span class="token punctuation">:</span> baidu_url_submitter 
 
 </code></pre>
-<blockquote>
-<p>现在已经把组件成功运行起来了，但是在实际开发过程中还有很多问题，例如上面的例子实际上加载了全部的 antd 组件的样式（对前端性能是个隐患）。</p>
-</blockquote>
-<h4 id="使用-babel-plugin-import"><a href="#使用-babel-plugin-import" class="headerlink" title="使用 babel-plugin-import"></a>使用 babel-plugin-import</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//安装babel-plugin-import</span>
-npm install <span class="token operator">--</span>save<span class="token operator">-</span>dev babel<span class="token operator">-</span>plugin<span class="token operator">-</span><span class="token keyword">import</span> <span class="token comment" spellcheck="true">//或者  yarn add babel-plugin-import --dev</span>
-</code></pre>
-<p>打开 package.json</p>
-<pre class=" language-json"><code class="language-json"><span class="token punctuation">{</span>
-    ...
-    <span class="token property">"babel"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token property">"presets"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-      <span class="token string">"react-app"</span>
-    <span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token property">"plugins"</span><span class="token operator">:</span><span class="token punctuation">[</span>
-      <span class="token punctuation">[</span><span class="token string">"import"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token property">"libraryName"</span><span class="token operator">:</span> <span class="token string">"antd"</span><span class="token punctuation">,</span> <span class="token property">"style"</span><span class="token operator">:</span> <span class="token string">"css"</span> <span class="token punctuation">}</span><span class="token punctuation">]</span> //添加
-    <span class="token punctuation">]</span>
-    ...
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span>
-
-</code></pre>
-<p>修改 App.js  再使用 <code>Button</code>组件就可以 import Button 就可以使用了.</p>
-<pre class=" language-jsx"><code class="language-jsx">  <span class="token comment" spellcheck="true">// scr/App.js</span>
-  <span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
-  <span class="token keyword">import</span> <span class="token punctuation">{</span> Button <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'antd'</span><span class="token punctuation">;</span>
-  <span class="token keyword">import</span> <span class="token string">'./App.css'</span><span class="token punctuation">;</span>
-
-  <span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
-    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">return</span> <span class="token punctuation">(</span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>App<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Button<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Button</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-      <span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-
-  <span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
-</code></pre>
-<p>其他 antd 配置可查看  <a href="http://ant-design.gitee.io/index-cn" target="_blank" rel="noopener">antd文档</a></p>
-<p>end.</p>
+<p>配置完成后，每次<code>hexo d</code> 提交时，都会向百度推送链接。</p>
+<p><img src="http://oox9lo3vp.bkt.clouddn.com/18-3-23/44138147.jpg" alt=""></p>
+<p>但是百度的反应很慢，提交了一天了 也没什么反应。。好吧，先这样吧；</p>
+<p>其他搜索引擎应该也差不多，但是懒得搞 -_-</p>
 
         
     
@@ -719,8 +619,8 @@ npm install <span class="token operator">--</span>save<span class="token operato
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://zhangdi.site/build-a-react-family-bucket-based-on-createreactapp.html';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://zhangdi.site/build-a-react-family-bucket-based-on-createreactapp.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://zhangdi.site/hexo-toss.html';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://zhangdi.site/hexo-toss.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -750,7 +650,7 @@ npm install <span class="token operator">--</span>save<span class="token operato
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/understanding-redux.html" id="post_nav-newer" class="prev-content">
+        <a href="/macos-connection-mysql-appears-cant-connect-to-local-server-through-socket-tmpmysqlsock-2-solution.html" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -764,7 +664,7 @@ npm install <span class="token operator">--</span>save<span class="token operato
 
     <!-- Next Nav -->
     
-        <a href="/frontend-summary-css.html" id="post_nav-older" class="next-content">
+        <a href="/hexo-blog-deployed-by-github-migrated-to-cloud-host.html" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -858,7 +758,7 @@ npm install <span class="token operator">--</span>save<span class="token operato
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">12</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">12</span></a>
             </ul>
         </li>
         
@@ -876,7 +776,7 @@ npm install <span class="token operator">--</span>save<span class="token operato
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/hexo/">Hexo<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/share/">分享境<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/technology/">技术向<span class="sidebar_archives-count">25</span></a></li><li><a class="sidebar_archives-link" href="/categories/self-talk/">自言语<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/categories/hexo/">Hexo<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/share/">分享境<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/technology/">技术向<span class="sidebar_archives-count">26</span></a></li><li><a class="sidebar_archives-link" href="/categories/self-talk/">自言语<span class="sidebar_archives-count">2</span></a>
             </ul>
         </li>
         
