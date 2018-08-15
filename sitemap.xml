@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zhangdi.site/yahoos-35-military-regulations-for-optimization-of-frontend-performance-reproduced.html</loc>
+    
+    <lastmod>2018-08-15T16:11:50.019Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://zhangdi.site/rxjs-study-notes-1.html</loc>
     
     <lastmod>2018-07-28T09:34:13.786Z</lastmod>
@@ -9,14 +16,14 @@
   </url>
   
   <url>
-    <loc>http://zhangdi.site/vue-technology-stack-to-do-the-backend-management-system-filling-pit-diary-basic-articles.html</loc>
+    <loc>http://zhangdi.site/macos-connection-mysql-appears-cant-connect-to-local-server-through-socket-tmpmysqlsock-2-solution.html</loc>
     
     <lastmod>2018-07-28T09:34:13.785Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhangdi.site/macos-connection-mysql-appears-cant-connect-to-local-server-through-socket-tmpmysqlsock-2-solution.html</loc>
+    <loc>http://zhangdi.site/vue-technology-stack-to-do-the-backend-management-system-filling-pit-diary-basic-articles.html</loc>
     
     <lastmod>2018-07-28T09:34:13.785Z</lastmod>
     
@@ -37,13 +44,6 @@
   </url>
   
   <url>
-    <loc>http://zhangdi.site/javascript-object-copy.html</loc>
-    
-    <lastmod>2018-07-28T09:34:13.783Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://zhangdi.site/summary-of-frontend-issues-html.html</loc>
     
     <lastmod>2018-07-28T09:34:13.783Z</lastmod>
@@ -51,14 +51,21 @@
   </url>
   
   <url>
-    <loc>http://zhangdi.site/understand-springdatajpa.html</loc>
+    <loc>http://zhangdi.site/javascript-object-copy.html</loc>
+    
+    <lastmod>2018-07-28T09:34:13.783Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangdi.site/html-method-parsing-of-jquery-source-code.html</loc>
     
     <lastmod>2018-07-28T09:34:13.782Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhangdi.site/html-method-parsing-of-jquery-source-code.html</loc>
+    <loc>http://zhangdi.site/understand-springdatajpa.html</loc>
     
     <lastmod>2018-07-28T09:34:13.782Z</lastmod>
     
@@ -72,7 +79,7 @@
   </url>
   
   <url>
-    <loc>http://zhangdi.site/svn-usage-client-environment-under-macos.html</loc>
+    <loc>http://zhangdi.site/use-of-svn-in-the-macos-environment-client.html</loc>
     
     <lastmod>2018-07-28T09:34:13.768Z</lastmod>
     
@@ -100,14 +107,14 @@
   </url>
   
   <url>
-    <loc>http://zhangdi.site/understanding-the-browser-object-modelbom.html</loc>
+    <loc>http://zhangdi.site/front-end-problem-summary-css.html</loc>
     
     <lastmod>2018-07-28T09:34:13.708Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhangdi.site/front-end-problem-summary-css.html</loc>
+    <loc>http://zhangdi.site/understanding-the-browser-object-modelbom.html</loc>
     
     <lastmod>2018-07-28T09:34:13.708Z</lastmod>
     
@@ -184,14 +191,14 @@
   </url>
   
   <url>
-    <loc>http://zhangdi.site/hexo-article-url-optimization.html</loc>
+    <loc>http://zhangdi.site/webpackloader-configuration.html</loc>
     
     <lastmod>2018-07-28T09:33:40.601Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhangdi.site/webpackloader-configuration.html</loc>
+    <loc>http://zhangdi.site/hexo-article-url-optimization.html</loc>
     
     <lastmod>2018-07-28T09:33:40.601Z</lastmod>
     
@@ -296,21 +303,21 @@
   </url>
   
   <url>
-    <loc>http://zhangdi.site/vue-Webpack-dev-build-advance.html</loc>
+    <loc>http://zhangdi.site/.html</loc>
     
     <lastmod>2018-06-26T14:18:44.348Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhangdi.site/vue-Webpack-dev-build.html</loc>
+    <loc>http://zhangdi.site/.html</loc>
     
     <lastmod>2018-06-26T14:18:20.230Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhangdi.site/Redux-React-Router-Node-js-a.html</loc>
+    <loc>http://zhangdi.site/.html</loc>
     
     <lastmod>2018-06-26T14:17:10.206Z</lastmod>
     

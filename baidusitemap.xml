@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://zhangdi.site/yahoos-35-military-regulations-for-optimization-of-frontend-performance-reproduced.html</loc>
+    <lastmod>2018-08-15T16:11:50.019Z</lastmod>
+    <data>
+        <display>
+        <title>前端性能优化之雅虎35条军规（转载）</title>
+        <pubTime>2018-08-15T16:11:03.000Z</pubTime>
+        
+        <tag>优化</tag>
+         
+        <tag>转载</tag>
+         
+         
+           
+             
+              <breadCrumb title="分享境" url="http://zhangdi.site/categories/share/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zhangdi.site/rxjs-study-notes-1.html</loc>
     <lastmod>2018-07-28T09:34:13.786Z</lastmod>
     <data>
@@ -26,21 +48,6 @@
 
     
   <url>
-    <loc>http://zhangdi.site/vue-technology-stack-to-do-the-backend-management-system-filling-pit-diary-basic-articles.html</loc>
-    <lastmod>2018-07-28T09:34:13.785Z</lastmod>
-    <data>
-        <display>
-        <title>Vue技术栈做后台管理系统填坑日记(基础篇)</title>
-        <pubTime>2018-06-26T18:05:14.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://zhangdi.site/macos-connection-mysql-appears-cant-connect-to-local-server-through-socket-tmpmysqlsock-2-solution.html</loc>
     <lastmod>2018-07-28T09:34:13.785Z</lastmod>
     <data>
@@ -57,6 +64,21 @@
              
               <breadCrumb title="分享境" url="http://zhangdi.site/categories/share/"/>
           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/vue-technology-stack-to-do-the-backend-management-system-filling-pit-diary-basic-articles.html</loc>
+    <lastmod>2018-07-28T09:34:13.785Z</lastmod>
+    <data>
+        <display>
+        <title>Vue技术栈做后台管理系统填坑日记(基础篇)</title>
+        <pubTime>2018-06-26T18:05:14.000Z</pubTime>
+        
+         
+           
         </display>
     </data>
     </url>
@@ -103,26 +125,6 @@
 
     
   <url>
-    <loc>http://zhangdi.site/javascript-object-copy.html</loc>
-    <lastmod>2018-07-28T09:34:13.783Z</lastmod>
-    <data>
-        <display>
-        <title>JavaScript对象拷贝</title>
-        <pubTime>2018-07-28T09:29:56.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://zhangdi.site/summary-of-frontend-issues-html.html</loc>
     <lastmod>2018-07-28T09:34:13.783Z</lastmod>
     <data>
@@ -145,16 +147,14 @@
 
     
   <url>
-    <loc>http://zhangdi.site/understand-springdatajpa.html</loc>
-    <lastmod>2018-07-28T09:34:13.782Z</lastmod>
+    <loc>http://zhangdi.site/javascript-object-copy.html</loc>
+    <lastmod>2018-07-28T09:34:13.783Z</lastmod>
     <data>
         <display>
-        <title>理解Spring-data-jpa</title>
-        <pubTime>2017-12-26T13:20:35.000Z</pubTime>
+        <title>JavaScript对象拷贝</title>
+        <pubTime>2018-07-28T09:29:56.000Z</pubTime>
         
-        <tag>Java</tag>
-         
-        <tag>Spring</tag>
+        <tag>JavaScript</tag>
          
          
            
@@ -189,6 +189,28 @@
 
     
   <url>
+    <loc>http://zhangdi.site/understand-springdatajpa.html</loc>
+    <lastmod>2018-07-28T09:34:13.782Z</lastmod>
+    <data>
+        <display>
+        <title>理解Spring-data-jpa</title>
+        <pubTime>2017-12-26T13:20:35.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>Spring</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zhangdi.site/understand-redux.html</loc>
     <lastmod>2018-07-28T09:34:13.769Z</lastmod>
     <data>
@@ -209,7 +231,7 @@
 
     
   <url>
-    <loc>http://zhangdi.site/svn-usage-client-environment-under-macos.html</loc>
+    <loc>http://zhangdi.site/use-of-svn-in-the-macos-environment-client.html</loc>
     <lastmod>2018-07-28T09:34:13.768Z</lastmod>
     <data>
         <display>
@@ -293,26 +315,6 @@
 
     
   <url>
-    <loc>http://zhangdi.site/understanding-the-browser-object-modelbom.html</loc>
-    <lastmod>2018-07-28T09:34:13.708Z</lastmod>
-    <data>
-        <display>
-        <title>理解浏览器对象模型--BOM</title>
-        <pubTime>2017-11-25T02:43:54.000Z</pubTime>
-        
-        <tag>Javascript</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://zhangdi.site/front-end-problem-summary-css.html</loc>
     <lastmod>2018-07-28T09:34:13.708Z</lastmod>
     <data>
@@ -328,6 +330,26 @@
            
              
               <breadCrumb title="分享境" url="http://zhangdi.site/categories/share/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangdi.site/understanding-the-browser-object-modelbom.html</loc>
+    <lastmod>2018-07-28T09:34:13.708Z</lastmod>
+    <data>
+        <display>
+        <title>理解浏览器对象模型--BOM</title>
+        <pubTime>2017-11-25T02:43:54.000Z</pubTime>
+        
+        <tag>Javascript</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
           
         </display>
     </data>
@@ -490,11 +512,11 @@
         <title>SpringBoot集成Mybatis</title>
         <pubTime>2017-12-18T02:11:20.000Z</pubTime>
         
+        <tag>Java</tag>
+         
         <tag>Spring-boot</tag>
          
         <tag>myBatis</tag>
-         
-        <tag>Java</tag>
          
          
            
@@ -549,6 +571,26 @@
 
     
   <url>
+    <loc>http://zhangdi.site/webpackloader-configuration.html</loc>
+    <lastmod>2018-07-28T09:33:40.601Z</lastmod>
+    <data>
+        <display>
+        <title>Webpack-loader配置</title>
+        <pubTime>2018-04-17T16:12:50.000Z</pubTime>
+        
+        <tag>Webpack</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zhangdi.site/hexo-article-url-optimization.html</loc>
     <lastmod>2018-07-28T09:33:40.601Z</lastmod>
     <data>
@@ -564,26 +606,6 @@
            
              
               <breadCrumb title="Hexo" url="http://zhangdi.site/categories/hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zhangdi.site/webpackloader-configuration.html</loc>
-    <lastmod>2018-07-28T09:33:40.601Z</lastmod>
-    <data>
-        <display>
-        <title>Webpack-loader配置</title>
-        <pubTime>2018-04-17T16:12:50.000Z</pubTime>
-        
-        <tag>Webpack</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术向" url="http://zhangdi.site/categories/technology/"/>
           
         </display>
     </data>
@@ -847,7 +869,7 @@
     
     
   <url>
-    <loc>http://zhangdi.site/vue-Webpack-dev-build-advance.html</loc>
+    <loc>http://zhangdi.site/.html</loc>
     <lastmod>2018-06-26T14:18:44.348Z</lastmod>
     <data>
         <display>
@@ -869,7 +891,7 @@
 
     
   <url>
-    <loc>http://zhangdi.site/vue-Webpack-dev-build.html</loc>
+    <loc>http://zhangdi.site/.html</loc>
     <lastmod>2018-06-26T14:18:20.230Z</lastmod>
     <data>
         <display>
@@ -891,7 +913,7 @@
 
     
   <url>
-    <loc>http://zhangdi.site/Redux-React-Router-Node-js-a.html</loc>
+    <loc>http://zhangdi.site/.html</loc>
     <lastmod>2018-06-26T14:17:10.206Z</lastmod>
     <data>
         <display>

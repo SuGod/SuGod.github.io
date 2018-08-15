@@ -40,7 +40,7 @@
     
     <title>
         
-            标签: Spring-boot | 
+            macOS 环境下 SVN 的使用(客户端) | 
         
         Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.
     </title>
@@ -52,7 +52,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Zeddy">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",SVN,macOS">
 
     <!-- Import lsloader -->
     <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
@@ -244,15 +244,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://zhangdi.site">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: Spring-boot | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
+    <meta property="og:title" content="macOS 环境下 SVN 的使用(客户端) | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
     <meta property="og:image" content="http://zhangdi.site/img/favicon.png" />
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="SVN"> <meta property="og:article:tag" content="macOS"> 
 
+    
+        <meta property="article:published_time" content="Wed Nov 22 2017 12:27:59 GMT+0800" />
+        <meta property="article:modified_time" content="Sat Jul 28 2018 17:34:13 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="标签: Spring-boot | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
+    <meta name="twitter:title" content="macOS 环境下 SVN 的使用(客户端) | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="http://zhangdi.site/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -260,13 +263,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://zhangdi.site/tags/Spring-boot/index.html" />
+        <link rel="canonical" href="http://zhangdi.site/use-of-svn-in-the-macos-environment-client.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://zhangdi.site/use-of-svn-in-the-macos-environment-client.html",
+    "headline": "macOS 环境下 SVN 的使用(客户端)",
+    "datePublished": "Wed Nov 22 2017 12:27:59 GMT+0800",
+    "dateModified": "Sat Jul 28 2018 17:34:13 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Zeddy",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://oox9lo3vp.bkt.clouddn.com/17-12-14/73776896.jpg"
+        },
+        "description": "死亡是一座永恒的灯塔,不管你驶向何方,最终都会朝它转向.一切都将逝去,只有死神永生."
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",SVN,macOS",
+    "description": "",
+}
+</script>
 
 
     
@@ -309,105 +342,567 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#从本地把已有项目上传至SVN服务器-初始化"><span class="post-toc-text">从本地把已有项目上传至SVN服务器(初始化)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#从SVN服务器端下载到本地"><span class="post-toc-text">从SVN服务器端下载到本地</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#提交-更新"><span class="post-toc-text">提交/更新</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#查看svn仓库"><span class="post-toc-text">查看svn仓库</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#其他命令"><span class="post-toc-text">其他命令</span></a></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/springboot-integration-mybatis.html">SpringBoot集成Mybatis</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            在传统项目中使用mybatis需要很多配置文件,但是在springboot项目中,一切都化繁为简.
-下面我们...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/springboot-integration-mybatis.html" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="http://oox9lo3vp.bkt.clouddn.com/17-12-14/73776896.jpg" width="44px" height="44px" alt="Zeddy's avatar">
-            </div>
-            <div>
-                <strong>Zeddy</strong>
-                <span>12月 18, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            
-                <!-- tags -->
-                <span class="post_entry-tags">
-                    <a class="post_entry_tag-link" href="/tags/Java/">Java</a>, <a class="post_entry_tag-link" href="/tags/Spring-boot/">Spring-boot</a>, <a class="post_entry_tag-link" href="/tags/myBatis/">myBatis</a>
-                </span>
-            
-
-            
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/technology/">技术向</a>
-              </span>
-            
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                macOS 环境下 SVN 的使用(客户端)
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="http://oox9lo3vp.bkt.clouddn.com/17-12-14/73776896.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Zeddy</strong>
+        <span>11月 22, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC2klEQVR42u3aUW4bMQwEUN//0u0Bgq5nqHW6lt5+BY6d6DFAWXL0+nPk88LGxsbGxsbGxsZ+JPsVPz8/9fPr61euP5W/PjwzNjY29tbsN//0B+/JeUkR25+QnBkbGxv7BPa/GkDbeK6PlTSb9jxRsbCxsbGxLxtMPhhcDypt6bGxsbGxVxpYPqLM1kbJd7GxsbGx2wVN21RacLQe+v1dGjY2Nvbj2bNB4v9+/av5NjY2NvaD2fcOEu0KadY4hyfHxsbG3pSdN4bro6/HACsBcFJKbGxs7BPY66/XR4mDh/UVFTY2Nvau7HacSFZO944ZSTNL3o+NjY29KztfBrVR66wtrSywloJebGxs7C9nz1Y/K21mNsy0l/ixsbGxT2DP2kMSMORFzAOGWRPFxsbG3ps9+299vuKfNbxkgZVHztjY2Nh7s9uV/SweWBlgVi4GYWNjY5/GXg+A89aVr7SSQkRFxMbGxt6UnWPWCzQ7bh4SY2NjY5/JXjn0517Jz3ND0IuNjY29KTsfFZJBpb1eM/uNb9obNjY29tbsfJWTxwP5eDOLh+srPtjY2Nhbs++6TLM+WrQrpHz5hY2Njb0rO/pAcIh2sJnFvcUK6XoUwcbGxt6InbeQvI1Fg0Ec07ZhQBH0YmNjY2/EbqPfdlU0az+zYLhORbCxsbG/nJ2v+O8NYmeFa8chbGxs7HPYs0LMBpg3A8MoNoiaIjY2NvYx7NlwsrJaaoPhYUGxsbGxD2B/YpVzvfqf4WchATY2Nvau7Pa5LscsDG6Lkv98bGxs7BPYbWPIj5WT2vBgeB0TGxsbe2t227TaOGGlrO2Qc9suDRsbG/sL2cmCpo11Z1c2P1FEbGxsbOx8kZR8ql7uLwfM2NjY2Nh3LeuTltZe04mWXNjY2NgHsNuFTsLO35OXI/8DYGNjY5/Dbi81rpDaRVLeqD6Yb2NjY2M/mH3Og42NjY2NjY2Njf2Y5y+lEpEDkL4blAAAAABJRU5ErkJggg==">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/SVN/">SVN</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/macOS/">macOS</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=macOS 环境下 SVN 的使用(客户端)&url=http://zhangdi.site/use-of-svn-in-the-macos-environment-client.html&pic=http://zhangdi.site/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=macOS 环境下 SVN 的使用(客户端)&url=http://zhangdi.site/use-of-svn-in-the-macos-environment-client.html&via=Zeddy" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zhangdi.site/use-of-svn-in-the-macos-environment-client.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://zhangdi.site/use-of-svn-in-the-macos-environment-client.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.&title=macOS 环境下 SVN 的使用(客户端)&summary=&pics=http://zhangdi.site/img/favicon.png&url=http://zhangdi.site/use-of-svn-in-the-macos-environment-client.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>macOS 环境下 自带有 svn,下面来说说这个svn 怎么用.(针对 <strong>客户端</strong> ,服务端还没有实践过)</p>
+<h4 id="从本地把已有项目上传至SVN服务器-初始化"><a href="#从本地把已有项目上传至SVN服务器-初始化" class="headerlink" title="从本地把已有项目上传至SVN服务器(初始化)"></a>从本地把已有项目上传至SVN服务器(初始化)</h4><pre class=" language-bash"><code class="language-bash">//svn <span class="token function">import</span> <span class="token punctuation">[</span>本地项目地址<span class="token punctuation">]</span> <span class="token punctuation">[</span>svn仓库地址<span class="token punctuation">]</span> --username<span class="token operator">=</span>账号 --password<span class="token operator">=</span>密码 -m <span class="token string">"注释"</span>
+svn <span class="token function">import</span> <span class="token punctuation">[</span>localhost project url<span class="token punctuation">]</span> <span class="token punctuation">[</span>svn:url<span class="token punctuation">]</span> --username<span class="token operator">=</span>xxxxx --password<span class="token operator">=</span>xxxxx -m <span class="token string">"注释."</span>
+</code></pre>
+<h4 id="从SVN服务器端下载到本地"><a href="#从SVN服务器端下载到本地" class="headerlink" title="从SVN服务器端下载到本地"></a>从SVN服务器端下载到本地</h4><pre class=" language-bash"><code class="language-bash">
+svn checkout <span class="token punctuation">[</span>svn:url<span class="token punctuation">]</span> --username<span class="token operator">=</span>xxxxx --password<span class="token operator">=</span>xxxxx <span class="token punctuation">[</span>localhost project url<span class="token punctuation">]</span>
+
+</code></pre>
+<h4 id="提交-更新"><a href="#提交-更新" class="headerlink" title="提交/更新"></a>提交/更新</h4><pre class=" language-bash"><code class="language-bash"><span class="token function">cd</span> project/
+svn commit -m <span class="token string">"注释说明"</span>
+svn update
+</code></pre>
+<h4 id="查看svn仓库"><a href="#查看svn仓库" class="headerlink" title="查看svn仓库"></a>查看svn仓库</h4><pre class=" language-bash"><code class="language-bash">svn list <span class="token punctuation">[</span>svn:url<span class="token punctuation">]</span> --username<span class="token operator">=</span>xxxxx --password<span class="token operator">=</span>xxxxx
+</code></pre>
+<h4 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h4><pre class=" language-bash"><code class="language-bash">~$: svn <span class="token function">help</span>
+
+Available subcommands:
+   add
+   auth
+   blame <span class="token punctuation">(</span>praise, annotate, ann<span class="token punctuation">)</span>
+   <span class="token function">cat</span>
+   changelist <span class="token punctuation">(</span>cl<span class="token punctuation">)</span>
+   checkout <span class="token punctuation">(</span>co<span class="token punctuation">)</span>
+   cleanup
+   commit <span class="token punctuation">(</span>ci<span class="token punctuation">)</span>
+   copy <span class="token punctuation">(</span>cp<span class="token punctuation">)</span>
+   delete <span class="token punctuation">(</span>del, remove, rm<span class="token punctuation">)</span>
+   <span class="token function">diff</span> <span class="token punctuation">(</span>di<span class="token punctuation">)</span>
+   <span class="token function">export</span>
+   <span class="token function">help</span> <span class="token punctuation">(</span>?, h<span class="token punctuation">)</span>
+   <span class="token function">import</span>
+   info
+   list <span class="token punctuation">(</span>ls<span class="token punctuation">)</span>
+   lock
+   log
+   merge
+   mergeinfo
+   <span class="token function">mkdir</span>
+   move <span class="token punctuation">(</span>mv, rename, ren<span class="token punctuation">)</span>
+   patch
+   propdel <span class="token punctuation">(</span>pdel, pd<span class="token punctuation">)</span>
+   propedit <span class="token punctuation">(</span>pedit, pe<span class="token punctuation">)</span>
+   propget <span class="token punctuation">(</span>pget, pg<span class="token punctuation">)</span>
+   proplist <span class="token punctuation">(</span>plist, pl<span class="token punctuation">)</span>
+   propset <span class="token punctuation">(</span>pset, ps<span class="token punctuation">)</span>
+   relocate
+   resolve
+   resolved
+   revert
+   status <span class="token punctuation">(</span>stat, st<span class="token punctuation">)</span>
+   switch <span class="token punctuation">(</span>sw<span class="token punctuation">)</span>
+   unlock
+   update <span class="token punctuation">(</span>up<span class="token punctuation">)</span>
+   upgrade
+
+Subversion is a tool <span class="token keyword">for</span> version control.
+
+</code></pre>
+<p>括号中代表 命令的简写,如:</p>
+<pre class=" language-bash"><code class="language-bash">svn commit   <span class="token operator">==</span><span class="token operator">=</span>     svn ci
+svn checkout   <span class="token operator">==</span><span class="token operator">=</span>     svn co
+</code></pre>
+<font color="red"><strong>*注意</strong></font>
+
+<p>在输入地址时  精良不要出现特殊字符如<code>()</code>中文等.</p>
+<p>() 括号在使用是需要转义成  <code>%28</code>  <code>%29</code> 否则报错.</p>
+<pre><code>另附上ASCII字符与URL编码的对照表。  
+
+ASCII字符   URL编码  
+空格          %20  
+!            %21  
+&quot;            %22  
+#            %23  
+$            %24  
+%            %25  
+&amp;            %26  
+&#39;            %27  
+(            %28  
+)            %29  
+*            %2A  
++            %2B  
+,            %2C  
+-            %2D  
+.            %2E  
+/            %2F  
+0            %30  
+1            %31  
+2            %32  
+3            %33  
+4            %34  
+5            %35  
+6            %36  
+7            %37  
+8            %38  
+9            %39  
+:            %3A  
+;            %3B  
+&lt;            %3C 
+=            %3D 
+&gt;            %3E  
+?            %3F  
+@            %40  
+A            %41  
+B            %42  
+C            %43  
+D            %44  
+E            %45  
+F            %46  
+G            %47  
+H            %48  
+I            %49  
+J            %4A  
+K            %4B  
+L            %4C  
+M            %4D  
+N            %4E  
+O            %4F  
+P            %50  
+Q            %51  
+R            %52  
+S            %53  
+T            %54  
+U            %55  
+V            %56  
+W            %57  
+X            %58  
+Y            %59  
+Z            %5A  
+[            %5B  
+\            %5C  
+]            %5D  
+^            %5E  
+_            %5F  
+`            %60  
+a            %61  
+b            %62  
+c            %63  
+d            %64  
+e            %65  
+f            %66  
+g            %67  
+h            %68  
+i            %69  
+j            %6A  
+k            %6B  
+l            %6C  
+m            %6D  
+n            %6E  
+o            %6F  
+p            %70  
+q            %71  
+r            %72  
+s            %73  
+t            %74  
+u            %75  
+v            %76  
+w            %77  
+x            %78  
+y            %79  
+z            %7A  
+{            %7B  
+|            %7C  
+}            %7D  
+~            %7E  
+%7F  
+€            %80  
+%81  
+‚            %82  
+ƒ            %83  
+„            %84  
+…            %85  
+†            %86  
+‡            %87  
+ˆ            %88  
+‰            %89  
+Š            %8A  
+‹            %8B  
+Œ            %8C  
+%8D  
+Ž            %8E  
+%8F  
+%90  
+‘            %91  
+’            %92  
+“            %93  
+”            %94  
+•            %95  
+–            %96  
+—            %97  
+˜            %98  
+™            %99  
+š            %9A  
+›            %9B  
+œ            %9C  
+%9D  
+ž            %9E  
+Ÿ            %9F  
+%A0  
+¡            %A1  
+¢            %A2  
+£            %A3  
+%A4  
+¥            %A5  
+|            %A6  
+§            %A7  
+¨            %A8  
+©            %A9  
+ª            %AA  
+«            %AB  
+¬            %AC  
+¯            %AD  
+®            %AE  
+¯            %AF  
+°            %B0  
+±            %B1  
+²            %B2  
+³            %B3  
+´            %B4  
+µ            %B5  
+¶            %B6  
+·            %B7  
+¸            %B8  
+¹            %B9  
+º            %BA  
+»            %BB  
+¼            %BC  
+½            %BD  
+¾            %BE  
+¿            %BF  
+À            %C0  
+Á            %C1  
+Â            %C2  
+Ã            %C3  
+Ä            %C4  
+Å            %C5  
+Æ            %C6  
+Ç            %C7  
+È            %C8  
+É            %C9  
+Ê            %CA  
+Ë            %CB  
+Ì            %CC  
+Í            %CD  
+Î            %CE  
+Ï            %CF  
+Ð            %D0  
+Ñ            %D1  
+Ò            %D2  
+Ó            %D3  
+Ô            %D4  
+Õ            %D5  
+Ö            %D6  
+%D7  
+Ø            %D8  
+Ù            %D9  
+Ú            %DA  
+Û            %DB  
+Ü            %DC  
+Ý            %DD  
+Þ            %DE  
+ß            %DF  
+à            %E0  
+á            %E1  
+â            %E2  
+ã            %E3  
+ä            %E4  
+å            %E5  
+æ            %E6  
+ç            %E7  
+è            %E8  
+é            %E9  
+ê            %EA  
+ë            %EB  
+ì            %EC  
+í            %ED  
+î            %EE  
+ï            %EF  
+ð            %F0  
+ñ            %F1  
+ò            %F2  
+ó            %F3  
+ô            %F4  
+õ            %F5  
+ö            %F6  
+÷            %F7  
+ø            %F8  
+ù            %F9  
+ú            %FA  
+û            %FB  
+ü            %FC  
+ý            %FD  
+þ            %FE  
+ÿ            %FF
+
+</code></pre>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://zhangdi.site/use-of-svn-in-the-macos-environment-client.html';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://zhangdi.site/use-of-svn-in-the-macos-environment-client.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//zhangdi.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/.html" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/sass-study-notes.html" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -600,6 +1095,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
