@@ -251,7 +251,7 @@
 
     
         <meta property="article:published_time" content="Thu Aug 16 2018 00:11:03 GMT+0800" />
-        <meta property="article:modified_time" content="Thu Aug 16 2018 00:11:50 GMT+0800" />
+        <meta property="article:modified_time" content="Thu Aug 16 2018 00:24:54 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
@@ -278,7 +278,7 @@
     "mainEntityOfPage": "http://zhangdi.site/yahoos-35-military-regulations-for-optimization-of-frontend-performance-reproduced.html",
     "headline": "前端性能优化之雅虎35条军规（转载）",
     "datePublished": "Thu Aug 16 2018 00:11:03 GMT+0800",
-    "dateModified": "Thu Aug 16 2018 00:11:50 GMT+0800",
+    "dateModified": "Thu Aug 16 2018 00:24:54 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Zeddy",
@@ -668,13 +668,6 @@
 </code></pre>
 <h2 id="（5）尽早输出（flush）缓冲"><a href="#（5）尽早输出（flush）缓冲" class="headerlink" title="（5）尽早输出（flush）缓冲"></a>（5）尽早输出（flush）缓冲</h2><p>用户请求页面时，服务器通常需要花费200 ~ 500毫秒来组合 HTML 页面。在此期间，浏览器处于空闲、等待数据状态。使用PHP中的flush()函数，可以发送部分已经准备好的 HTML到浏览器，以便服务器还在忙于处理剩余页面时，浏览器可以提前开始获取资源。</p>
 <p>可以考虑在<code>&lt;/head&gt;</code>之后输出一次缓冲，HTML head一般比较容易生成，先发送以便浏览器开始获取<code>&lt;head&gt;</code>里引用的CSS等资源。</p>
-<p>Example:</p>
-<pre class=" language-php+HTML"><code class="language-php+HTML"><!-- css, js -->
-<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
-<?php flush(); ?>
-<body>
-<!-- content -->
-</code></pre>
 <h2 id="（6）Ajax请求使用GET方法"><a href="#（6）Ajax请求使用GET方法" class="headerlink" title="（6）Ajax请求使用GET方法"></a>（6）Ajax请求使用GET方法</h2><p>浏览器执行XMLHttpRequest POST请求时分成两步，先发送Http Header，再发送data。而GET只使用一个TCP数据包（Http Header与data）发送数据，所以首选GET方法。</p>
 <p>根据HTTP规范，GET用于获取数据，POST则用于向服务器发送数据，所以Ajax请求数据时使用GET更符合规范。</p>
 <h2 id="（7）避免图片src为空"><a href="#（7）避免图片src为空" class="headerlink" title="（7）避免图片src为空"></a>（7）避免图片src为空</h2><p>图片src属性值为空字符串可能以下面两种形式出现：</p>
@@ -850,6 +843,14 @@ img<span class="token punctuation">.</span>src <span class="token operator">=</s
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
+        <a href="/selfcultivation-of-a-front-end-reproduced.html" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
@@ -950,7 +951,7 @@ img<span class="token punctuation">.</span>src <span class="token operator">=</s
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">12</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">12</span></a>
             </ul>
         </li>
         
