@@ -40,7 +40,7 @@
     
     <title>
         
-            理解Redux | 
+            CentOs搭建EasyMock服务 | 
         
         Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.
     </title>
@@ -52,7 +52,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Zeddy">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",Redux">
+    <meta name="keywords" content=",Linux,CentOs,EasyMock">
 
     <!-- Import lsloader -->
     <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
@@ -244,18 +244,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://zhangdi.site">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="理解Redux | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
+    <meta property="og:title" content="CentOs搭建EasyMock服务 | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
     <meta property="og:image" content="http://zhangdi.site/img/favicon.png" />
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="Redux"> 
+    <meta property="og:article:tag" content="Linux"> <meta property="og:article:tag" content="CentOs"> <meta property="og:article:tag" content="EasyMock"> 
 
     
-        <meta property="article:published_time" content="Thu Nov 02 2017 13:15:47 GMT+0800" />
-        <meta property="article:modified_time" content="Fri Aug 24 2018 15:04:06 GMT+0800" />
+        <meta property="article:published_time" content="Thu Aug 23 2018 15:51:11 GMT+0800" />
+        <meta property="article:modified_time" content="Fri Aug 24 2018 15:24:20 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="理解Redux | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
+    <meta name="twitter:title" content="CentOs搭建EasyMock服务 | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="http://zhangdi.site/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -263,7 +263,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://zhangdi.site/understand-redux.html" />
+        <link rel="canonical" href="http://zhangdi.site/centos-builds-easymock-service.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -275,10 +275,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://zhangdi.site/understand-redux.html",
-    "headline": "理解Redux",
-    "datePublished": "Thu Nov 02 2017 13:15:47 GMT+0800",
-    "dateModified": "Fri Aug 24 2018 15:04:06 GMT+0800",
+    "mainEntityOfPage": "http://zhangdi.site/centos-builds-easymock-service.html",
+    "headline": "CentOs搭建EasyMock服务",
+    "datePublished": "Thu Aug 23 2018 15:51:11 GMT+0800",
+    "dateModified": "Fri Aug 24 2018 15:24:20 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Zeddy",
@@ -296,7 +296,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",Redux",
+    "keywords": ",Linux,CentOs,EasyMock",
     "description": "",
 }
 </script>
@@ -371,7 +371,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-Store"><span class="post-toc-text">1. Store</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-Action"><span class="post-toc-text">2. Action</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-Action-Creator"><span class="post-toc-text">3. Action Creator</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-store-dispatch"><span class="post-toc-text">4. store.dispatch()</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-Reducer"><span class="post-toc-text">6. Reducer</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#环境搭建"><span class="post-toc-text">环境搭建</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#安装-NodeJs"><span class="post-toc-text">安装 NodeJs</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#安装-MongoDB"><span class="post-toc-text">安装 MongoDB</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#安装-redis"><span class="post-toc-text">安装 redis</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#部署EasyMock"><span class="post-toc-text">部署EasyMock</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#克隆工程并安装依赖"><span class="post-toc-text">克隆工程并安装依赖</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#配置"><span class="post-toc-text">配置</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#最后附-pm2-常用命令："><span class="post-toc-text">最后附 pm2 常用命令：</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -403,7 +403,7 @@
         
     
             <p class="article-headline-p">
-                理解Redux
+                CentOs搭建EasyMock服务
             </p>
         </div>
 
@@ -422,7 +422,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Zeddy</strong>
-        <span>11月 02, 2017</span>
+        <span>8月 23, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -444,7 +444,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAAB7UlEQVR42u3aQXbDIAwFQN//0u0B2tAvEdexNaz8khiYLPSQxPH1iHFgYGBgYGBgYHwM44jHz7fWz78s/GLO5h4wMDCGMf4IbQEjWTifP9oDBgbGSMY6IK5Ja2p1/vVvMDAwMPJl1oe/9Sc7e8DAwMCoMqrp7ocGXAwMjJswkgQyT1aTby/LxTEwMG7IyIvy5z3/a38DAwPjVozyFYcggFYD7gV3RjAwMG7F6DUjk+PgTnKbNEExMDDmMHZK/70EtXoEjJJYDAyMkYykuHZeI7N5wsXAwBjMqAbcvNmZBPqXfxYGBsYYRjLpfgraa1iWc3EMDIyHMqrJ5/5bvaNnoYWJgYHxOEZ+gMu3m8+w0+bEwMCYw8ivSlTbk+VCfxGDgYExk1FNYnNAM6T2Ai4GBsbjGPnVh7zNmYfy3uoYGBgzGUnwXYfp/GJZMk+zv4GBgTGA0Svx55tOwvTWZQsMDIzBjN61iWpJrpxIY2BgjGFUR7VA1mtbRu0HDAyMMYxq2au6cPU4uJXEYmBgPJpRTT6Twly1/Vkt1WFgYMxkvCsgntHILOfiGBgY4xnl4FhsIbyhaoiBgTGe0QP31m22MDEwMB7K6DUDks3tpLgYGBgY1QRyJ3TmKW7ULsXAwBjDuO/AwMDAwMDAwLh0fANX7Mon7ZcZ3wAAAABJRU5ErkJggg==">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACZUlEQVR42u3aW3LCMBAEQO5/6eQACWZGLwzV/qKIbKuVKq3Y3cfPV18PPDw8PDw8PDy8m/Ee8fXPg+Ix1+/6O3Jmbnh4eHhneC+22iHe2NJcg5O54eHh4Z3k5a/Mv2nvnZkbHh4e3p15eWC4Pi63n/Hw8PA+l5cflMcCBh4eHt6n8JIf/HmSNypWXd77hlwLHh4eXszLi0znPx+t7+Hh4eEFvJmtvP3cHsEXNF3h4eHhbeDlG/H15NpvZo7vL56Ah4eHd4RX3FxOfeawnjRyDf5iwMPDw1vESx6RlLXaZcpDTnQvHh4e3hFe8oK1JasWMJWlxsPDw9vGm9n08/aCZMmSdqupXAseHh7eBC9/RPJ92wTQBqHoLjw8PLzNvCRhur1kFS9o9G/Aw8PDO8Kb2oinEwp52mJBZwQeHh7e0q6kscDQlqxadnvQx8PDw9vNy7fsvHFqrBEhb7EqCmB4eHh4G3gtJpl0u6En4CJU4OHh4R3ktcmImSUY++tUMgIPDw9vES8vOM0UpZJC19jxGg8PD+88r51Qm1xYFSqKMXh4eHgHefnG3W79YyPbBC4eHh7eeV4SEtqRbQjJEyJFAQwPDw9vM6/YgheFgUd8RcuNh4eHt5nXXm0rwKolS4INHh4e3hne2Ka8I7QkSd5nI/Hw8PDO8+bTqWOFq5mFeDpbPDw8vIO8ZLp5GEiCSrt8SXjAw8PDuycv3+iLwlXZqoWHh4f3ibz20Hw9Pk9PbD9S4+Hh4S1NRuQJ1rHUbd5YgIeHh/de3lgKID8c5wGgnQkeHh7eed73XXh4eHh4eHh4eDe4fgG1KNgkKaE/PwAAAABJRU5ErkJggg==">
     
 </ul>
 
@@ -458,7 +458,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/Redux/">Redux</a>
+        <a class="post_tag-link" href="/tags/CentOs/">CentOs</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/EasyMock/">EasyMock</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Linux/">Linux</a>
     </ul>
     
 
@@ -475,7 +475,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=理解Redux&url=http://zhangdi.site/understand-redux.html&pic=http://zhangdi.site/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=CentOs搭建EasyMock服务&url=http://zhangdi.site/centos-builds-easymock-service.html&pic=http://zhangdi.site/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -484,7 +484,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=理解Redux&url=http://zhangdi.site/understand-redux.html&via=Zeddy" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=CentOs搭建EasyMock服务&url=http://zhangdi.site/centos-builds-easymock-service.html&via=Zeddy" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -493,7 +493,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zhangdi.site/understand-redux.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zhangdi.site/centos-builds-easymock-service.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -502,7 +502,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://zhangdi.site/understand-redux.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://zhangdi.site/centos-builds-easymock-service.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -514,7 +514,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.&title=理解Redux&summary=&pics=http://zhangdi.site/img/favicon.png&url=http://zhangdi.site/understand-redux.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.&title=CentOs搭建EasyMock服务&summary=&pics=http://zhangdi.site/img/favicon.png&url=http://zhangdi.site/centos-builds-easymock-service.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -533,97 +533,193 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>React 是 DOM 层的一个抽象层,并不是 Web 应用的完整解决方案.<br>有两个方面没有涉及:</p>
-<blockquote>
-<ul>
-<li>代码结构</li>
-<li>组件之间通信</li>
-</ul>
+        <blockquote>
+<p>Easy Mock 是一个可视化，并且能快速生成<strong>模拟数据</strong>的持久化服务。</p>
 </blockquote>
-<p>当我还没搞明白redux 到底是个啥东西的时候,大师说了这句:</p>
-<blockquote>
-<p>“如果你不知道是否需要 Redux ,那就是不需要它”.</p>
-</blockquote>
-<p>WTF?<br>当我第一次尝试使用react做项目时,翻了一天文档,写了几个demo后 觉得 react so easy…我也真的不知道我是否需要 Redux.听大师的就是不需要..<br>结果当项目复杂度提升后,因为组件间通信的问题,搞的焦头烂额!甚至一度想过放弃react..这特么什么玩意? 单向数据流? 怎么通信? 然后开始把注意力转向 Angular..因为双向数据绑定.Form 等一切都是那么美好.<br>然而大师又说:</p>
-<blockquote>
-<p>“只有遇到 React 实在解决不了的问题,你才需要 Redux “</p>
-</blockquote>
-<p>我仿佛懂了,我需要Redux..!</p>
-<p>接着看到阮一峰大神的博客,他列举了几种场景:<br>不需要:</p>
-<blockquote>
-<ul>
-<li>用户的使用方式非常简单</li>
-<li>用户之间没有协作</li>
-<li>不需要与服务器大量交互,也没有使用 WebSocket</li>
-<li>视图层（View）只从单一来源获取数据</li>
-</ul>
-</blockquote>
-<p>需要:</p>
-<blockquote>
-<ul>
-<li>用户的使用方式复杂</li>
-<li>不同身份的用户有不同的使用方式（比如普通用户和管理员）</li>
-<li>多个用户之间可以协作</li>
-<li>与服务器大量交互,或者使用了WebSocket</li>
-<li>View要从多个来源获取数据</li>
-</ul>
-</blockquote>
-<p>考虑使用:</p>
-<blockquote>
-<ul>
-<li>某个组件的状态,需要共享</li>
-<li>某个状态需要在任何地方都可以拿到</li>
-<li>一个组件需要改变全局状态</li>
-<li>一个组件需要改变另一个组件的状态</li>
-</ul>
-</blockquote>
-<p>阮一峰说 Redux 的核心思想:</p>
-<blockquote>
-<ul>
-<li>web应用是个状态机,视图与状态是一一对应的;</li>
-<li>所有的状态,保存在一个对象里;</li>
-</ul>
-</blockquote>
-<p>然后我说说我的理解吧.</p>
-<p>先说一下组件通信:比如组件A 需要根据 组件B 的一些操作来改变自身,或者根据组件A的状态来改变自己的状态.这时就需要组件A改变时通知组件B.甚至还有组件C会依赖组件B…..</p>
-<p>react的优势同时也是痛点 单向数据流 数据从父组件一级一级的往下传递,组件嵌套多层后,数据的传递就非常复杂,组件间的通信也需要通过一个桥梁,公共父组件来传递消息.如果两个组件是兄弟组件还好说,如果不是,可以想想这么做有多痛苦.</p>
-<p>Redux 就是来解决这些问题的,解决的核心思想就是<strong>所有状态保存在一个对象里.</strong>,</p>
-<p>它带来了几个概念:</p>
-<p><code>store</code>  <code>action</code>  <code>reducer</code></p>
-<h4 id="1-Store"><a href="#1-Store" class="headerlink" title="1. Store"></a>1. Store</h4><p><strong>所有状态保存在一个对象里.</strong>这个对象就是 <code>store</code></p>
-<p>Store对象包含所有数据.如果想得到某个时点的数据,就要对 <code>Store</code>生成快照.这种时点的数据集合,就叫做 <code>State</code>.</p>
-<p>Redux 规定, 一个 <code>State</code> 对应一个 View.只要 <code>State</code> 相同,View 就相同.你知道 <code>State</code>,就知道 View 是什么样,反之亦然.</p>
-<h4 id="2-Action"><a href="#2-Action" class="headerlink" title="2. Action"></a>2. Action</h4><p><code>State</code> 的变化,会导致 View 的变化.但是,用户接触不到 State,只能接触到 View.所以,<code>State</code> 的变化必须是 View 导致的.<code>Action</code> 就是 View 发出的通知,表示 <code>State</code> 应该要发生变化了.<br>可以这样理解,Action 描述当前发生的事情.改变 State 的唯一办法,就是使用 Action.它会运送数据到 Store.</p>
-<h4 id="3-Action-Creator"><a href="#3-Action-Creator" class="headerlink" title="3. Action Creator"></a>3. Action Creator</h4><p>定义一个函数来生成 <code>Action</code> ,这个函数就叫 <code>Action Creator</code>,为什么需要这个? 看下面.</p>
-<h4 id="4-store-dispatch"><a href="#4-store-dispatch" class="headerlink" title="4. store.dispatch()"></a>4. store.dispatch()</h4><p>store.dispatch()是 View 发出 Action 的唯一方法.</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//默认写法</span>
-store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>type<span class="token punctuation">:</span><span class="token string">'ADD'</span><span class="token punctuation">,</span>payload<span class="token punctuation">:</span><span class="token string">'需要携带的数据..'</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//type:'ADD',payload:'需要携带的数据..'} 就是action 每次都这么写会很麻烦,so 定义function来生成action</span>
-<span class="token keyword">const</span> ADD <span class="token operator">=</span> <span class="token string">'ADD'</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> addTodo <span class="token operator">=</span> <span class="token punctuation">(</span>text<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>type<span class="token punctuation">:</span> ADD<span class="token punctuation">,</span>text<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<p>今天记录一下在<code>CentOs 7</code> 上安装部署 <code>Easy-Mock</code>,废话不多说，直接进正题。</p>
+<h4 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h4><p>环境： <a href="https://nodejs.org/" target="_blank" rel="noopener">Node.js</a>（&gt;= <strong>v8.9</strong>）&amp; <a href="https://www.mongodb.com/" target="_blank" rel="noopener">MongoDB</a>（&gt;= <strong>v3.4</strong>）&amp; <a href="https://redis.io/" target="_blank" rel="noopener">Redis</a>（&gt;= <strong>v4.0</strong>）</p>
+<h5 id="安装-NodeJs"><a href="#安装-NodeJs" class="headerlink" title="安装 NodeJs"></a>安装 <code>NodeJs</code></h5><p>Node.js v8 LTS版本命令：</p>
+<pre class=" language-bash"><code class="language-bash">$ curl --silent --location https://rpm.nodesource.com/setup_8.x <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">bash</span> -
+</code></pre>
+<p> Node.js 10 的命令：</p>
+<pre class=" language-bash"><code class="language-bash">$ curl --silent --location https://rpm.nodesource.com/setup_10.x <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">bash</span> -
+</code></pre>
+<p>然后安装：</p>
+<pre class=" language-bash"><code class="language-bash">$ <span class="token function">sudo</span> yum -y <span class="token function">install</span> nodejs
+</code></pre>
+<p><strong>可选：</strong>： 安装构建工具</p>
+<p>为构建和安装本地化的 npm 插件，你或许需要安装构建工具：</p>
+<pre class=" language-bash"><code class="language-bash">$ <span class="token function">sudo</span> yum <span class="token function">install</span> gcc-c++ <span class="token function">make</span>
+<span class="token comment" spellcheck="true"># or: sudo yum groupinstall 'Development Tools'</span>
+</code></pre>
+<p> 安装完成后<code>node -v</code>  <code>npm -v</code> 查看版本验证安装成功！</p>
+<h5 id="安装-MongoDB"><a href="#安装-MongoDB" class="headerlink" title="安装 MongoDB"></a>安装 <code>MongoDB</code></h5><p>配置包管理系统（<code>yum</code>）</p>
+<p>创建一个<code>/etc/yum.repos.d/mongodb-org-4.0.repo</code>文件，以便使用<code>yum</code>命令直接安装MongoDB ：</p>
+<pre class=" language-bash"><code class="language-bash">$ <span class="token function">vi</span> /etc/yum.repos.d/mongodb-org-4.0.repo
+</code></pre>
+<p>输入如下内容：</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">[</span>mongodb-org-4.0<span class="token punctuation">]</span> 
+name <span class="token operator">=</span> MongoDB Repository 
+baseurl <span class="token operator">=</span> https://repo.mongodb.org/yum/redhat/<span class="token variable">$releasever</span>/mongodb-org/4.0/x86_64/ 
+gpgcheck <span class="token operator">=</span> 1 
+enabled <span class="token operator">=</span> 1 
+gpgkey <span class="token operator">=</span> https：// www.mongodb.org/static/pgp/server-4.0.asc
+</code></pre>
+<p>可以找到<code>.repo</code>每个版本的文件。奇数次要版本（例如3.5）是开发版本，不适合生产使用。</p>
+<p>安装最新的稳定版<code>MongoDB</code>：</p>
+<pre class=" language-bash"><code class="language-bash">$ <span class="token function">sudo</span> yum <span class="token function">install</span> -y mongodb-org
+</code></pre>
+<p>可以指定任何可用的MongoDB版本。但是<code>yum</code> ，当有更新的版本可用时，会升级软件包。为防止意外升级，要固定包，将以下<code>exclude</code>指令添加到<code>/etc/yum.conf</code>文件中：</p>
+<pre class=" language-bash"><code class="language-bash">$ exclude <span class="token operator">=</span> mongodb-org，mongodb-org-server，mongodb-org-shell，mongodb-org-mongos，mongodb-org-tools
+</code></pre>
+<p><code>mongo -version</code> 可以查看版本，验证是否安装成功.</p>
+<p>启动MongoDB</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 启动</span>
+$ <span class="token function">sudo</span> <span class="token function">service</span> mongod start
 
-store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token function">addTodo</span><span class="token punctuation">(</span><span class="token string">'需要携带的数据..'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true"># 停止</span>
+$ <span class="token function">sudo</span> <span class="token function">service</span> mongod stop
+</code></pre>
+<p><code>more /var/log/mongodb/mongod.log</code> 查看 <code>log</code> </p>
+<h5 id="安装-redis"><a href="#安装-redis" class="headerlink" title="安装 redis"></a>安装 <code>redis</code></h5><p>由于<code>CentOS</code>官方<code>yum</code>源里面没有<code>Redis</code>,这里我们需要安装一个第三方的<code>yum</code>源,这里用了<code>Fedora</code>的<code>epel</code>仓库.</p>
+<p>安装过程中会有让你确认的,输入y按回车就可以了.</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 安装仓库</span>
+$ yum <span class="token function">install</span> epel-release
+
+<span class="token comment" spellcheck="true"># 安装redis</span>
+$ yum <span class="token function">install</span> redis
+
+<span class="token comment" spellcheck="true"># 修改 redis 配置  如：端口号 密码等.</span>
+$ vim /etc/redis.conf
+
+<span class="token comment" spellcheck="true"># 启动redis</span>
+$ <span class="token function">service</span> redis start
+
+<span class="token comment" spellcheck="true"># 检查redis进程</span>
+$ <span class="token function">ps</span> -ef <span class="token operator">|</span><span class="token function">grep</span> redis
+
+redis     37712      1  0 04:32 ?        00:00:00 /usr/bin/redis-server 127.0.0.1:6379
+root      37721  36189  0 04:32 pts/1    00:00:00 <span class="token function">grep</span> --color<span class="token operator">=</span>auto redis
 
 </code></pre>
-<h4 id="6-Reducer"><a href="#6-Reducer" class="headerlink" title="6. Reducer"></a>6. Reducer</h4><p><code>Store</code> 收到 <code>Action</code> 以后,必须给出一个新的 <code>State</code>,这样 View 才会发生变化.这种 <code>State</code> 的计算过程就叫做 <code>Reducer</code>.</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//reducer 是一个函数,它接受 Action 和当前 State 作为参数,返回一个新的 State</span>
-<span class="token keyword">const</span> reducer <span class="token operator">=</span> <span class="token punctuation">(</span>state <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> action<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">//store 收到action 后 根据 action.type 来判断如何计算state</span>
-  <span class="token keyword">switch</span> <span class="token punctuation">(</span>action<span class="token punctuation">.</span>type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">case</span> <span class="token string">'ADD'</span><span class="token punctuation">:</span>
-    <span class="token comment" spellcheck="true">//必须返回一个新的state 不能直接操作state</span>
-      <span class="token keyword">return</span> state <span class="token operator">+</span> action<span class="token punctuation">.</span>payload<span class="token punctuation">;</span>
-    <span class="token keyword">default</span><span class="token punctuation">:</span> 
-      <span class="token keyword">return</span> state<span class="token punctuation">;</span>
+<h4 id="部署EasyMock"><a href="#部署EasyMock" class="headerlink" title="部署EasyMock"></a>部署EasyMock</h4><h5 id="克隆工程并安装依赖"><a href="#克隆工程并安装依赖" class="headerlink" title="克隆工程并安装依赖"></a>克隆工程并安装依赖</h5><pre class=" language-bash"><code class="language-bash">$ <span class="token function">git</span> clone https://github.com/easy-mock/easy-mock.git
+$ <span class="token function">cd</span> easy-mock <span class="token operator">&amp;&amp;</span> <span class="token function">npm</span> <span class="token function">install</span>
+</code></pre>
+<p>这里有两种方式：</p>
+<ol>
+<li>本地<code>clone</code> 代码下来配置好然后<code>ftp</code> 到服务器然后启动。</li>
+<li>服务器安装 <code>git</code> 然后<code>clone</code> 代码修改启动。</li>
+</ol>
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 前端静态资源构建打包</span>
+$ <span class="token function">npm</span> run build
+
+<span class="token comment" spellcheck="true"># 以生产环境方式启动，需要提前执行 build</span>
+$ <span class="token function">npm</span> run start
+
+<span class="token comment" spellcheck="true"># 单元测试</span>
+$ <span class="token function">npm</span> run <span class="token function">test</span>
+
+<span class="token comment" spellcheck="true"># 语法检测</span>
+$ <span class="token function">npm</span> run lint
+</code></pre>
+<p>文档说推荐使用 <a href="https://github.com/Unitech/pm2" target="_blank" rel="noopener">PM2</a> 来守护应用进程。== 安装 <code>pm2</code></p>
+<pre class=" language-bash"><code class="language-bash">$ <span class="token function">sudo</span> <span class="token function">npm</span> <span class="token function">install</span> pm2 -g
+</code></pre>
+<h5 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h5><p>默认配置如下：(<code>json</code>中不能写注释哦-.-)</p>
+<pre class=" language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"port"</span><span class="token operator">:</span> <span class="token number">7300</span><span class="token punctuation">,</span>
+  <span class="token property">"host"</span><span class="token operator">:</span> <span class="token string">"0.0.0.0"</span><span class="token punctuation">,</span>
+  <span class="token property">"pageSize"</span><span class="token operator">:</span> <span class="token number">30</span><span class="token punctuation">,</span>
+  <span class="token property">"proxy"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token property">"db"</span><span class="token operator">:</span> <span class="token string">"mongodb://localhost/easy-mock"</span><span class="token punctuation">,</span>
+  <span class="token property">"unsplashClientId"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+  <span class="token property">"redis"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"keyPrefix"</span><span class="token operator">:</span> <span class="token string">"[Easy Mock]"</span><span class="token punctuation">,</span>
+    <span class="token property">"port"</span><span class="token operator">:</span> <span class="token number">6379</span><span class="token punctuation">,</span>
+    <span class="token property">"host"</span><span class="token operator">:</span> <span class="token string">"localhost"</span><span class="token punctuation">,</span>
+    <span class="token property">"password"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+    <span class="token property">"db"</span><span class="token operator">:</span> <span class="token number">0</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"blackList"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"projects"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> // projectId<span class="token punctuation">,</span> e.g.<span class="token string">"5a4495e16ef711102113e500"</span>
+    <span class="token property">"ips"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> // ip<span class="token punctuation">,</span> e.g. <span class="token string">"127.0.0.1"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"rateLimit"</span><span class="token operator">:</span> <span class="token punctuation">{</span> // https<span class="token operator">:</span>//github.com/koajs/ratelimit
+    <span class="token property">"max"</span><span class="token operator">:</span> <span class="token number">1000</span><span class="token punctuation">,</span>
+    <span class="token property">"duration"</span><span class="token operator">:</span> <span class="token number">1000</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"jwt"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"expire"</span><span class="token operator">:</span> <span class="token string">"14 days"</span><span class="token punctuation">,</span>
+    <span class="token property">"secret"</span><span class="token operator">:</span> <span class="token string">"shared-secret"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"upload"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"types"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">".jpg"</span><span class="token punctuation">,</span> <span class="token string">".jpeg"</span><span class="token punctuation">,</span> <span class="token string">".png"</span><span class="token punctuation">,</span> <span class="token string">".gif"</span><span class="token punctuation">,</span> <span class="token string">".json"</span><span class="token punctuation">,</span> <span class="token string">".yml"</span><span class="token punctuation">,</span> <span class="token string">".yaml"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"size"</span><span class="token operator">:</span> <span class="token number">5242880</span><span class="token punctuation">,</span>
+    <span class="token property">"dir"</span><span class="token operator">:</span> <span class="token string">"../public/upload"</span><span class="token punctuation">,</span>
+    <span class="token property">"expire"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">"types"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">".json"</span><span class="token punctuation">,</span> <span class="token string">".yml"</span><span class="token punctuation">,</span> <span class="token string">".yaml"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token property">"day"</span><span class="token operator">:</span> -<span class="token number">1</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"ldap"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"server"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span> // Set server to enable LDAP login. e.g. <span class="token string">"ldap://localhost:389"</span> or <span class="token string">"ldaps://localhost:389"</span>（use SSL）
+    <span class="token property">"bindDN"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span> // Username，e.g. <span class="token string">"cn=admin,dc=example,dc=com"</span>
+    <span class="token property">"password"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+    <span class="token property">"filter"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">"base"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span> // Base where we can search for users，e.g. <span class="token string">"dc=example,dc=com"</span>
+      <span class="token property">"attributeName"</span><span class="token operator">:</span> <span class="token string">""</span> // e.g. <span class="token string">"mail"</span> or <span class="token string">"email"</span> etc.
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"fe"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"copyright"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+    <span class="token property">"storageNamespace"</span><span class="token operator">:</span> <span class="token string">"easy-mock_"</span><span class="token punctuation">,</span>
+    <span class="token property">"timeout"</span><span class="token operator">:</span> <span class="token number">25000</span><span class="token punctuation">,</span>
+    <span class="token property">"publicPath"</span><span class="token operator">:</span> <span class="token string">"/dist/"</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-<span class="token keyword">const</span> ADD <span class="token operator">=</span> <span class="token string">'ADD'</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//action creator</span>
-<span class="token keyword">const</span> addTodo <span class="token operator">=</span> <span class="token punctuation">(</span>text<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>type<span class="token punctuation">:</span> ADD<span class="token punctuation">,</span>payload<span class="token punctuation">:</span>text<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<p>总结起来说就是:  要想改变<code>store</code> 只有发送 <code>action</code> , 要想发出<code>action</code> 只有通过<code>store.dispatch()</code>, 改变的具体实现就是 <code>reducer</code> 生成<code>action</code>可以通过<code>action creator</code>.</p>
-<p>end.</p>
+<p>如果环境都在本地，一般就不需要改动什么配置了，可以直接使用默认配置。</p>
+<p>然后（前提是配置好<code>config/default.json</code> 并 <code>run build</code> ）</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 这步很重要，每次修改代码后都要重新build</span>
+$ <span class="token function">npm</span> run build
+
+<span class="token comment" spellcheck="true"># npm run start</span>
+
+<span class="token comment" spellcheck="true"># pm2 启动</span>
+$ NODE_ENV<span class="token operator">=</span>production pm2 start app.js
+</code></pre>
+<p>访问 <a href="http://IpAddress:port" target="_blank" rel="noopener">http://IpAddress:port</a> ,至此<code>easy-mock</code> 就搭建完成了。</p>
+<h5 id="最后附-pm2-常用命令："><a href="#最后附-pm2-常用命令：" class="headerlink" title="最后附 pm2 常用命令："></a>最后附 <code>pm2</code> 常用命令：</h5><pre class=" language-bash"><code class="language-bash">$ pm2 start app.js <span class="token comment" spellcheck="true"># 启动app.js应用程序</span>
+$ pm2 start app.js -i 4 <span class="token comment" spellcheck="true"># cluster mode 模式启动4个app.js的应用实例 4个应用程序会自动进行负载均衡</span>
+$ pm2 start app.js --name<span class="token operator">=</span><span class="token string">"api"</span> <span class="token comment" spellcheck="true"># 启动应用程序并命名为 "api"</span>
+$ pm2 start app.js --watch <span class="token comment" spellcheck="true"># 当文件变化时自动重启应用</span>
+$ pm2 start script.sh <span class="token comment" spellcheck="true"># 启动 bash 脚本</span>
+
+$ pm2 list <span class="token comment" spellcheck="true"># 列表 PM2 启动的所有的应用程序</span>
+$ pm2 monit <span class="token comment" spellcheck="true"># 显示每个应用程序的CPU和内存占用情况</span>
+$ pm2 show <span class="token punctuation">[</span>app-name<span class="token punctuation">]</span> <span class="token comment" spellcheck="true"># 显示应用程序的所有信息</span>
+
+$ pm2 logs <span class="token comment" spellcheck="true"># 显示所有应用程序的日志</span>
+$ pm2 logs <span class="token punctuation">[</span>app-name<span class="token punctuation">]</span> <span class="token comment" spellcheck="true"># 显示指定应用程序的日志</span>
+$ pm2 flush
+
+$ pm2 stop all <span class="token comment" spellcheck="true"># 停止所有的应用程序</span>
+$ pm2 stop 0 <span class="token comment" spellcheck="true"># 停止 id为 0的指定应用程序</span>
+$ pm2 restart all <span class="token comment" spellcheck="true"># 重启所有应用</span>
+$ pm2 reload all <span class="token comment" spellcheck="true"># 重启 cluster mode下的所有应用</span>
+$ pm2 gracefulReload all <span class="token comment" spellcheck="true"># Graceful reload all apps in cluster mode</span>
+$ pm2 delete all <span class="token comment" spellcheck="true"># 关闭并删除所有应用</span>
+$ pm2 delete 0 <span class="token comment" spellcheck="true"># 删除指定应用 id 0</span>
+$ pm2 scale api 10 <span class="token comment" spellcheck="true"># 把名字叫api的应用扩展到10个实例</span>
+$ pm2 reset <span class="token punctuation">[</span>app-name<span class="token punctuation">]</span> <span class="token comment" spellcheck="true"># 重置重启数量</span>
+
+$ pm2 startup <span class="token comment" spellcheck="true"># 创建开机自启动命令</span>
+$ pm2 save <span class="token comment" spellcheck="true"># 保存当前应用列表</span>
+$ pm2 resurrect <span class="token comment" spellcheck="true"># 重新加载保存的应用列表</span>
+$ pm2 update <span class="token comment" spellcheck="true"># Save processes, kill PM2 and restore processes</span>
+$ pm2 generate <span class="token comment" spellcheck="true"># Generate a sample json configuration file</span>
+$ pm2 start app.js --node-args<span class="token operator">=</span><span class="token string">"--max-old-space-size=1024"</span>
+</code></pre>
 
         
     
@@ -642,8 +738,8 @@ store<span class="token punctuation">.</span><span class="token function">dispat
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://zhangdi.site/understand-redux.html';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://zhangdi.site/understand-redux.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://zhangdi.site/centos-builds-easymock-service.html';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://zhangdi.site/centos-builds-easymock-service.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -673,21 +769,13 @@ store<span class="token punctuation">.</span><span class="token function">dispat
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/commonly-used-css.html" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/building-react-family-bucket-based-on-createreactapp.html" id="post_nav-older" class="next-content">
+        <a href="/selfcultivation-of-a-front-end-reproduced.html" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
