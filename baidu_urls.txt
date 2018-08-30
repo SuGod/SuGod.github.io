@@ -1,1 +1,1 @@
-http://zhangdi.site/centos-builds-easymock-service.html
+http://zhangdi.site/configuring-spring-boot-to-use-gson.html

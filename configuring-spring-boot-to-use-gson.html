@@ -40,7 +40,7 @@
     
     <title>
         
-            Vue+Webpack开发环境进阶配置 | 
+            配置Spring Boot使用Gson | 
         
         Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.
     </title>
@@ -52,7 +52,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Zeddy">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",Vue,Webpack">
+    <meta name="keywords" content=",Spring Boot">
 
     <!-- Import lsloader -->
     <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
@@ -244,18 +244,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://zhangdi.site">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Vue+Webpack开发环境进阶配置 | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
+    <meta property="og:title" content="配置Spring Boot使用Gson | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
     <meta property="og:image" content="http://zhangdi.site/img/favicon.png" />
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="Vue"> <meta property="og:article:tag" content="Webpack"> 
+    <meta property="og:article:tag" content="Spring Boot"> 
 
     
-        <meta property="article:published_time" content="Sat Mar 31 2018 14:32:13 GMT+0800" />
-        <meta property="article:modified_time" content="Tue Jun 26 2018 22:18:44 GMT+0800" />
+        <meta property="article:published_time" content="Thu Aug 30 2018 23:40:48 GMT+0800" />
+        <meta property="article:modified_time" content="Fri Aug 31 2018 00:10:48 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="Vue+Webpack开发环境进阶配置 | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
+    <meta name="twitter:title" content="配置Spring Boot使用Gson | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="http://zhangdi.site/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -263,7 +263,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://zhangdi.site/vue-Webpack-dev-build-advance.html" />
+        <link rel="canonical" href="http://zhangdi.site/configuring-spring-boot-to-use-gson.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -275,10 +275,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://zhangdi.site/vue-Webpack-dev-build-advance.html",
-    "headline": "Vue+Webpack开发环境进阶配置",
-    "datePublished": "Sat Mar 31 2018 14:32:13 GMT+0800",
-    "dateModified": "Tue Jun 26 2018 22:18:44 GMT+0800",
+    "mainEntityOfPage": "http://zhangdi.site/configuring-spring-boot-to-use-gson.html",
+    "headline": "配置Spring Boot使用Gson",
+    "datePublished": "Thu Aug 30 2018 23:40:48 GMT+0800",
+    "dateModified": "Fri Aug 31 2018 00:10:48 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Zeddy",
@@ -296,7 +296,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",Vue,Webpack",
+    "keywords": ",Spring Boot",
     "description": "",
 }
 </script>
@@ -371,7 +371,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#配置开发环境和正式环境采用不同的配置项"><span class="post-toc-text">配置开发环境和正式环境采用不同的配置项</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Html文件通过插件生成"><span class="post-toc-text">Html文件通过插件生成</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#添加更多的loader"><span class="post-toc-text">添加更多的loader</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#组件热加载"><span class="post-toc-text">组件热加载</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-添加Gson依赖项"><span class="post-toc-text">1. 添加Gson依赖项</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-将首选Json解析器设置为gson"><span class="post-toc-text">2. 将首选Json解析器设置为gson</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-如果使用Swagger-会出现异常"><span class="post-toc-text">3. 如果使用Swagger 会出现异常</span></a></li></ol>
     </ul>
     
 
@@ -403,7 +403,7 @@
         
     
             <p class="article-headline-p">
-                Vue+Webpack开发环境进阶配置
+                配置Spring Boot使用Gson
             </p>
         </div>
 
@@ -422,7 +422,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Zeddy</strong>
-        <span>3月 31, 2018</span>
+        <span>8月 30, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -444,7 +444,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACa0lEQVR42u3aQW7DMAwEwPz/0+0Diri7lKwYwfhUGHaq8UEilnz9fPX1wsPDw8PDw8PDexjvFV/v3np3J3ny7/0Na8PDw8M7wvtnq33zj/Ol5L9/DY7WhoeHh3eQl2zZ188ki8vxw+MEDw8P78G8vGjOGXh4eHjfymsXlxwJ13fw8PDwnslrw4IkSmiPhA9nLXh4eHgxL28ynf/7aH8PDw8PL+DVI01lGJH8TnIADIeu8PDw8G7g5RvxyluzCGM2joCHh4d3N28W4LbLnRXr+fArHh4e3nleu8RZA+x6oXl8fP0uHh4e3kne3pZYMjrQluDDkhoPDw9vKy9vPuXFd7vEdvj1nwMJDw8P7yCvXVz7zMq4arEGPDw8vCO8ZEGzQCEfR5h94uhgwMPDw7uBV0elC9t9fhjkMQceHh7eeV5eKOefpv39NoyIRgfw8PDwbuDtigPyAGLWMLu+g4eHh3ee17bBknAhb4+17a566AoPDw/vCG+2TbfgZBQgP2Dw8PDwzvCS5lYbrbbHyazs3jAZgYeHh7eV14YRyUdJ3s3/e5FS4+Hh4d3Gmw0/zQrfNtTIhxLw8PDwPstrg9QoLCg/QT2YhYeHh3eQ1wa77djBrnGE4cGAh4eHt4m3UubOkMNFB6OxeHh4eGd4K5tyXjq3wwEtCQ8PD+88LzkMdgUWeUssKfGX+nt4eHh4y7ykqZ8PAayUyyuRBB4eHt4zeUl5PUPOBrnw8PDwns/LY9zko+SNt6gVh4eHh3eQl48FtNt6/nxeZOPh4eF9lpdHAO1WPgt/2yMEDw8P7yTv+y48PDw8PDw8PLwHXL+QiFPv+CAT1QAAAABJRU5ErkJggg==">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACV0lEQVR42u3aQW7DMAwEwPz/0+0DirhL0qadYHwqAqfSKIBErPj6+ernhYeHh4eHh4eH9zDeK37efevv5+8+Of7Px6MU5oaHh4e3wvtnq43fyaeSIHtzw8PDw9vk9YasTi4HVOeGh4eH92TeZAkmC4GHh4f36bz8YMgDDjw8PLzP4uWlbR5GJBHtPATBw8PD2+dV49fNv1fv9/Dw8PACXrml6bC8ztsLjqd4WtMVHh4e3gW8fCOutgtMmg9688HDw8O7l9cb/qwlmBwqeHh4eDu84+ghfycPf6shb+FnwMPDw1vnJaXwpICuhsXlAwYPDw/vYl4vqO21TFXxeeGOh4eHt8nLJ5Fs35NouFqsN7MWPDw8vDEvQVYL32rZPWnGis49PDw8vFN5+XacRwPJcuSjJI1ceHh4eHfxkm39eIr5J3n8UY2M8fDw8PZ5vQK6GkYk233eyoCHh4d3L68X6eaNXPm41Ws5PDw8vB1eEq3mQUB+YZYvQf4+Hh4e3iavd1l12pVVcSH+KcTx8PDwLublgelkQz8roo2WGw8PD2+RNzkMzoqAe8cVHh4e3r28XtNVLxpOjqL80MLDw8O7i3fWhdZk6qOGAzw8PLyLedWnOmRv0nmJj4eHh7fPm2/KOal65OQkPDw8vH1echgk1/zVDb26ENHhhIeHh7fIq8av1TK6unzVSzU8PDy8T+El352U4Kel1Hh4eHiP4eWBbPVb+Vh4eHh4d/GSkre3KD1ksxEBDw8Pb4U3iQCqpF4AUWgywMPDw7uY930PHh4eHh4eHh7eA55fG8opxc24+I4AAAAASUVORK5CYII=">
     
 </ul>
 
@@ -458,7 +458,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/Vue/">Vue</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Webpack/">Webpack</a>
+        <a class="post_tag-link" href="/tags/Spring-Boot/">Spring Boot</a>
     </ul>
     
 
@@ -475,7 +475,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Vue+Webpack开发环境进阶配置&url=http://zhangdi.site/vue-Webpack-dev-build-advance.html&pic=http://zhangdi.site/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=配置Spring Boot使用Gson&url=http://zhangdi.site/configuring-spring-boot-to-use-gson.html&pic=http://zhangdi.site/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -484,7 +484,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Vue+Webpack开发环境进阶配置&url=http://zhangdi.site/vue-Webpack-dev-build-advance.html&via=Zeddy" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=配置Spring Boot使用Gson&url=http://zhangdi.site/configuring-spring-boot-to-use-gson.html&via=Zeddy" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -493,7 +493,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zhangdi.site/vue-Webpack-dev-build-advance.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zhangdi.site/configuring-spring-boot-to-use-gson.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -502,7 +502,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://zhangdi.site/vue-Webpack-dev-build-advance.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://zhangdi.site/configuring-spring-boot-to-use-gson.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -514,7 +514,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.&title=Vue+Webpack开发环境进阶配置&summary=&pics=http://zhangdi.site/img/favicon.png&url=http://zhangdi.site/vue-Webpack-dev-build-advance.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.&title=配置Spring Boot使用Gson&summary=&pics=http://zhangdi.site/img/favicon.png&url=http://zhangdi.site/configuring-spring-boot-to-use-gson.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -533,144 +533,126 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>​    上次搭建了一个基础的 Vue+Webpack的开发环境。那个环境只能作为hello world 环境使用，还是非常的稚嫩的，这次要在上次的基础上做一些进阶的配置。</p>
-<p>这次要做的一些配置项：</p>
-<ul>
-<li>环境配置为 开发环境和正式环境</li>
-</ul>
-<ul>
-<li>Html文件通过插件生成</li>
-<li>添加更多的 loader 进一步处理打包</li>
-<li>添加组件热加载</li>
-</ul>
-<h4 id="配置开发环境和正式环境采用不同的配置项"><a href="#配置开发环境和正式环境采用不同的配置项" class="headerlink" title="配置开发环境和正式环境采用不同的配置项"></a>配置开发环境和正式环境采用不同的配置项</h4><p>首先打开 <code>package.json</code>修改 <code>scripts</code> 项：</p>
-<pre class=" language-json"><code class="language-json"><span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token property">"build"</span><span class="token operator">:</span> <span class="token string">"NODE_ENV=production webpack"</span><span class="token punctuation">,</span>
-    <span class="token property">"dev"</span><span class="token operator">:</span> <span class="token string">"NODE_ENV=development webpack-dev-server"</span>
+        <blockquote>
+<p><code>Jackson</code>一直是<code>springframework</code>默认的<code>JSON</code>库，直到4.1版本添加了对<code>GsonHttpMessageConverter</code>的支持。</p>
+<p><a href="https://github.com/google/gson" target="_blank" rel="noopener"><strong>Gson</strong></a>(又称<code>Google Gson</code>)是<code>Google</code>公司发布的一个开放源代码的<code>Java</code>库，主要用途为序列化<code>Java</code>对象为<code>JSON</code>字符串，或反序列化<code>JSON</code>字符串成<code>Java</code>对象。</p>
+</blockquote>
+<p>如果想使用<code>GSON</code>而不是<code>Jackson</code>，那么只需在<code>pom.xml</code>文件中添加依赖项并在<code>application.properties</code> 配置文件中配置，即可让<code>Spring Boot</code>将<code>Gson</code>作为首选的<code>JSON</code> 解析器；</p>
+<h4 id="1-添加Gson依赖项"><a href="#1-添加Gson依赖项" class="headerlink" title="1. 添加Gson依赖项"></a>1. 添加Gson依赖项</h4><pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com.google.code.gson<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>gson<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+    <span class="token comment" spellcheck="true">&lt;!-- gson 版本 --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>{gson.version}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>添加<code>Gson</code>依赖后，<code>Spring Boot</code>将检测<code>Gson</code>对类路径的依赖，并自动创建一个具有默认配置的<code>Gson Bean</code>。</p>
+<p>可以在使用<code>Autowire</code> 注入 <code>Gson</code></p>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Autowire</span>
+<span class="token keyword">private</span> Gson gson<span class="token punctuation">;</span>
+</code></pre>
+<h4 id="2-将首选Json解析器设置为gson"><a href="#2-将首选Json解析器设置为gson" class="headerlink" title="2. 将首选Json解析器设置为gson"></a>2. 将首选Json解析器设置为gson</h4><p>在<code>application.properties</code> 中配置如下即可：</p>
+<pre class=" language-properties"><code class="language-properties"><span class="token attr-name">spring.http.converters.preferred-json-mapper</span><span class="token punctuation">=</span><span class="token attr-value">gson</span>
+</code></pre>
+<p>如何要完全排除<code>jackson</code> 依赖需要在 <code>pom.xml</code> 中配置：</p>
+<pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-starter-web<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exclusions</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exclusion</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-starter-json<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>exclusion</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>exclusions</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>下面是<code>Gson</code> 的全部配置：</p>
+<pre class=" language-properties"><code class="language-properties"><span class="token comment" spellcheck="true"># GSON (GsonProperties)</span>
+
+<span class="token comment" spellcheck="true"># Format to use when serializing Date objects.</span>
+<span class="token attr-name">spring.gson.date-format</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+
+<span class="token comment" spellcheck="true"># Whether to disable the escaping of HTML characters such as '&lt;', '>', etc.</span>
+<span class="token attr-name">spring.gson.disable-html-escaping</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+
+<span class="token comment" spellcheck="true"># Whether to exclude inner classes during serialization.</span>
+<span class="token attr-name">spring.gson.disable-inner-class-serialization</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+
+<span class="token comment" spellcheck="true"># Whether to enable serialization of complex map keys (i.e. non-primitives).</span>
+<span class="token attr-name">spring.gson.enable-complex-map-key-serialization</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+
+<span class="token comment" spellcheck="true"># Whether to exclude all fields from consideration for serialization or deserialization that do not have the "Expose" annotation.</span>
+<span class="token attr-name">spring.gson.exclude-fields-without-expose-annotation</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+
+<span class="token comment" spellcheck="true"># Naming policy that should be applied to an object's field during serialization and deserialization.</span>
+<span class="token attr-name">spring.gson.field-naming-policy</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+
+<span class="token comment" spellcheck="true"># Whether to generate non executable JSON by prefixing the output with some special text.</span>
+<span class="token attr-name">spring.gson.generate-non-executable-json</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+
+<span class="token comment" spellcheck="true"># Whether to be lenient about parsing JSON that doesn't conform to RFC 4627.</span>
+<span class="token attr-name">spring.gson.lenient</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+
+<span class="token comment" spellcheck="true"># Serialization policy for Long and long types.</span>
+<span class="token attr-name">spring.gson.long-serialization-policy</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+
+<span class="token comment" spellcheck="true"># Whether to output serialized JSON that fits in a page for pretty printing.</span>
+<span class="token attr-name">spring.gson.pretty-printing</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+
+<span class="token comment" spellcheck="true"># Whether to serialize null fields.</span>
+<span class="token attr-name">spring.gson.serialize-nulls</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+</code></pre>
+<p>这些配置都会被映射到在<code>Spring Boot</code> 的 <a href="https://github.com/spring-projects/spring-boot/blob/master/spring-boot-project/spring-boot-autoconfigure/src/main/java/org/springframework/boot/autoconfigure/gson/GsonProperties.java" target="_blank" rel="noopener">GsonProperties</a> 类中进行配置。</p>
+<h4 id="3-如果使用Swagger-会出现异常"><a href="#3-如果使用Swagger-会出现异常" class="headerlink" title="3. 如果使用Swagger 会出现异常"></a>3. 如果使用Swagger 会出现异常</h4><p>配置完Gson 后打开Swagger-ui 后发现一篇空白😳.最终在 <code>Stack Overflow</code> 中找到了答案。</p>
+<p>问题在于序列化这个类：</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> springfox<span class="token punctuation">.</span>documentation<span class="token punctuation">.</span>spring<span class="token punctuation">.</span>web<span class="token punctuation">.</span>json<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> com<span class="token punctuation">.</span>fasterxml<span class="token punctuation">.</span>jackson<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>JsonRawValue<span class="token punctuation">;</span>
+<span class="token keyword">import</span> com<span class="token punctuation">.</span>fasterxml<span class="token punctuation">.</span>jackson<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>JsonValue<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Json</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token keyword">final</span> String value<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token function">Json</span><span class="token punctuation">(</span>String value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>value <span class="token operator">=</span> value<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@JsonValue</span>
+    <span class="token annotation punctuation">@JsonRawValue</span>
+    <span class="token keyword">public</span> String <span class="token function">value</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre>
+<p>需要自己实现一个序列化方法：</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SpringfoxJsonToGsonAdapter</span> <span class="token keyword">implements</span> <span class="token class-name">JsonSerializer</span><span class="token operator">&lt;</span>Json<span class="token operator">></span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> JsonElement <span class="token function">serialize</span><span class="token punctuation">(</span>Json json<span class="token punctuation">,</span> Type type<span class="token punctuation">,</span> JsonSerializationContext context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">final</span> JsonParser parser <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JsonParser</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> parser<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>json<span class="token punctuation">.</span><span class="token function">value</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> 
+</code></pre>
+<p>然后配置<code>Gson</code></p>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Configuration</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">GsonHttpMessageConverterConfig</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Bean</span>
+    <span class="token keyword">public</span> GsonHttpMessageConverter <span class="token function">gsonHttpMessageConverter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        GsonHttpMessageConverter converter <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GsonHttpMessageConverter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        converter<span class="token punctuation">.</span><span class="token function">setGson</span><span class="token punctuation">(</span><span class="token function">gson</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> converter<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">private</span> Gson <span class="token function">gson</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">final</span> GsonBuilder builder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GsonBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        builder<span class="token punctuation">.</span><span class="token function">registerTypeAdapter</span><span class="token punctuation">(</span>Json<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">SpringfoxJsonToGsonAdapter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> builder<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p>其中  <code>build</code> 为 正式环境，<code>dev</code> 为开发环境。分别添加变量。</p>
-<p>然后修改<code>webpack.config.js</code>  </p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span>
-<span class="token keyword">const</span> webpack <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'webpack'</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true">//启动webpack时设置的环境变量全都存储在  process.env 变量下.</span>
-<span class="token comment" spellcheck="true">//判断当前启动环境是不是 开发环境.</span>
-<span class="token keyword">const</span> isDev <span class="token operator">=</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span>NODE_ENV <span class="token operator">===</span> <span class="token string">'development'</span>
-
-<span class="token comment" spellcheck="true">//config 中是 基础配置,下面会根据 isDev 来在基础配置上添加一些 开发环境的配置</span>
-<span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
-  target<span class="token punctuation">:</span> <span class="token string">'web'</span><span class="token punctuation">,</span><span class="token comment" spellcheck="true">//webpack 编译环境</span>
-  entry<span class="token punctuation">:</span> <span class="token operator">...</span><span class="token punctuation">,</span>
-  output<span class="token punctuation">:</span> <span class="token operator">...</span><span class="token punctuation">,</span>
-  module<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    <span class="token operator">...</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-    <span class="token comment" spellcheck="true">//1.vue会根据环境来区分打包代码,2.在代码中可以引用该变量</span>
-    <span class="token keyword">new</span> <span class="token class-name">webpack<span class="token punctuation">.</span>DefinePlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-      process<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-        env<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-          NODE_ENV<span class="token punctuation">:</span> isDev <span class="token operator">?</span> <span class="token string">'"develpoment"'</span> <span class="token punctuation">:</span> <span class="token string">'"production"'</span>
-        <span class="token punctuation">}</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span>
-  <span class="token punctuation">]</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment" spellcheck="true">//如果是 开发环境 则添加一些额外配置</span>
-<span class="token keyword">if</span> <span class="token punctuation">(</span>isDev<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token comment" spellcheck="true">//映射 source文件和编译后文件 便于调试    #webpack推荐方式</span>
-  config<span class="token punctuation">.</span>devtool <span class="token operator">=</span> <span class="token string">'#cheap-module-eval-source-map'</span>
-  config<span class="token punctuation">.</span>devServer <span class="token operator">=</span> <span class="token punctuation">{</span>
-    <span class="token operator">...</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-module<span class="token punctuation">.</span>exports <span class="token operator">=</span> config
-</code></pre>
-<p>通过 <code>scripts</code>中的启动参数来判断是非为开发环境。并添加<code>DefinePlugin</code> 。</p>
-<h4 id="Html文件通过插件生成"><a href="#Html文件通过插件生成" class="headerlink" title="Html文件通过插件生成"></a>Html文件通过插件生成</h4><p>这一项很简单</p>
-<pre class=" language-bash"><code class="language-bash">yarn add html-webpack-plugin
-</code></pre>
-<pre class=" language-javascript"><code class="language-javascript">plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-    <span class="token comment" spellcheck="true">//vue会根据环境来区分打包代码,在代码中可以引用该变量</span>
-    <span class="token keyword">new</span> <span class="token class-name">webpack<span class="token punctuation">.</span>DefinePlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-      process<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-        env<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-          NODE_ENV<span class="token punctuation">:</span> isDev <span class="token operator">?</span> <span class="token string">'"develpoment"'</span> <span class="token punctuation">:</span> <span class="token string">'"production"'</span>
-        <span class="token punctuation">}</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-    <span class="token keyword">new</span> <span class="token class-name">HTMLPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-  <span class="token punctuation">]</span>
-</code></pre>
-<p>这时 <code>webpack</code> 就会自动生成一个 html文件，并引入打包后的 js文件。</p>
-<h4 id="添加更多的loader"><a href="#添加更多的loader" class="headerlink" title="添加更多的loader"></a>添加更多的<code>loader</code></h4><pre class=" language-javascript"><code class="language-javascript">module<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    rules<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-      <span class="token comment" spellcheck="true">//指定 .vue 文件的 处理 loader</span>
-      <span class="token punctuation">{</span>
-        test<span class="token punctuation">:</span> <span class="token regex">/\.(vue)$/</span><span class="token punctuation">,</span>
-        loader<span class="token punctuation">:</span> <span class="token string">'vue-loader'</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span>
-        test<span class="token punctuation">:</span> <span class="token regex">/\.(css)$/</span><span class="token punctuation">,</span>
-        use<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-          <span class="token string">'style-loader'</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//把css 代码写入到 html页面中</span>
-          <span class="token string">'css-loader'</span>
-        <span class="token punctuation">]</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span>
-        test<span class="token punctuation">:</span> <span class="token regex">/\.(gif|jpg|jpeg|png|svg)$/</span><span class="token punctuation">,</span>
-        use<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-          <span class="token punctuation">{</span>
-            loader<span class="token punctuation">:</span> <span class="token string">'url-loader'</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">//url-loader 依赖于 file-loader</span>
-            options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-              limit<span class="token punctuation">:</span> <span class="token number">1024</span><span class="token punctuation">,</span>    <span class="token comment" spellcheck="true">//小于 1024kb的 图片直接转为 base64代码</span>
-              name<span class="token punctuation">:</span> <span class="token string">'[name].[ext]'</span>
-            <span class="token punctuation">}</span>
-          <span class="token punctuation">}</span>
-        <span class="token punctuation">]</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">]</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-</code></pre>
-<p>比如图片路径处理的 loader 或者添加 <code>sass</code> <code>less</code>等</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token punctuation">{</span> 
-    test<span class="token punctuation">:</span> <span class="token regex">/\.scss$/</span><span class="token punctuation">,</span>
-    use<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-      <span class="token string">'style-loader'</span><span class="token punctuation">,</span>
-      <span class="token string">'css-loader'</span><span class="token punctuation">,</span>
-      <span class="token string">'sass-loader'</span>
-    <span class="token punctuation">]</span> 
-<span class="token punctuation">}</span>
-</code></pre>
-<p>比如要使用 <code>sass</code> 需要安装<code>`loader</code></p>
-<pre class=" language-bash"><code class="language-bash">yarn add sass-loader node-sass
-</code></pre>
-<p><code>sass-loader</code> 依赖 <code>node-sass</code> 处理。</p>
-<p><code>use</code>的处理逻辑是从最后一层<code>loader</code>开始逐级向上一层处理：<code>sass-loader</code>处理完成后交由<code>css-loader</code>来处理，最后交给<code>style-loader</code> 来处理并添加到<code>html</code>代码中。</p>
-<h4 id="组件热加载"><a href="#组件热加载" class="headerlink" title="组件热加载"></a>组件热加载</h4><p>​    原来我理解的组件热加载是当我改动代码后，浏览器会自动的刷新页面来重新渲染组件，后来我发现这个理解是不对的。（也不能说不对，只是这种热加载是原来基于 <code>Java</code>开发的热加载的理解。😓），<code>webpack</code> 中的热加载是说，当修改组件后，页面只对修改后的组件进行重新渲染，而不是刷新整个页面。</p>
-<p>进入配置：</p>
-<pre class=" language-javascript"><code class="language-javascript">config<span class="token punctuation">.</span>devServer <span class="token operator">=</span> <span class="token punctuation">{</span>
-    port<span class="token punctuation">:</span> <span class="token number">3000</span><span class="token punctuation">,</span>
-    host<span class="token punctuation">:</span> <span class="token string">'0.0.0.0'</span><span class="token punctuation">,</span>
-    overlay<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      errors<span class="token punctuation">:</span> <span class="token boolean">true</span>     <span class="token comment" spellcheck="true">//开启在页面上显示报错信息</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    open<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    <span class="token comment" spellcheck="true">//开启热加载    修改组件后只重新渲染修改的组件 不会让整个页面重新加载 </span>
-    hot<span class="token punctuation">:</span> <span class="token boolean">true</span>
-  <span class="token punctuation">}</span>
-  <span class="token comment" spellcheck="true">//热加载需要的 插件</span>
-  config<span class="token punctuation">.</span>plugins<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
-    <span class="token keyword">new</span> <span class="token class-name">webpack<span class="token punctuation">.</span>HotModuleReplacementPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-    <span class="token comment" spellcheck="true">//解决一些不需要的信息的展示问题 -_- 不是很懂</span>
-    <span class="token keyword">new</span> <span class="token class-name">webpack<span class="token punctuation">.</span>NoEmitOnErrorsPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-  <span class="token punctuation">)</span>
-</code></pre>
-<p>在<code>devServer</code> 中开启 <code>hot</code> 热加载，然后需要添加相应的插件来做支持。热加载就开启完成了。</p>
-<p>后面我会对该配置项进行进一步的升级。因为目前来看这个配置显得很凌乱，而且扩展性不强。如果在添加更多的环境，配置起来就会很麻烦。</p>
+<p>这样再打开<code>Swagger-ui</code> 就一切正常了。原题在<a href="https://stackoverflow.com/questions/30219946/springfoxswagger2-does-not-work-with-gsonhttpmessageconverterconfig" target="_blank" rel="noopener">这里</a></p>
 
         
     
@@ -689,8 +671,8 @@ module<span class="token punctuation">.</span>exports <span class="token operato
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://zhangdi.site/vue-Webpack-dev-build-advance.html';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://zhangdi.site/vue-Webpack-dev-build-advance.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://zhangdi.site/configuring-spring-boot-to-use-gson.html';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://zhangdi.site/configuring-spring-boot-to-use-gson.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -720,21 +702,13 @@ module<span class="token punctuation">.</span>exports <span class="token operato
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/learn-more-about-react-1.html" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/macos-connection-mysql-appears-cant-connect-to-local-server-through-socket-tmpmysqlsock-2-solution.html" id="post_nav-older" class="next-content">
+        <a href="/centos-builds-easymock-service.html" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -828,7 +802,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">12</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">12</span></a>
             </ul>
         </li>
         
@@ -846,7 +820,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/hexo/">Hexo<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/share/">分享境<span class="sidebar_archives-count">14</span></a></li><li><a class="sidebar_archives-link" href="/categories/technology/">技术向<span class="sidebar_archives-count">27</span></a></li><li><a class="sidebar_archives-link" href="/categories/self-talk/">自言语<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/categories/hexo/">Hexo<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/share/">分享境<span class="sidebar_archives-count">14</span></a></li><li><a class="sidebar_archives-link" href="/categories/technology/">技术向<span class="sidebar_archives-count">28</span></a></li><li><a class="sidebar_archives-link" href="/categories/self-talk/">自言语<span class="sidebar_archives-count">2</span></a>
             </ul>
         </li>
         

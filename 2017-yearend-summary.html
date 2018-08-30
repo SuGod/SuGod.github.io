@@ -40,7 +40,7 @@
     
     <title>
         
-            React+Node.js全栈开发(一) | 
+            2017年终总结 | 
         
         Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.
     </title>
@@ -52,7 +52,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Zeddy">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",React,Redux,React-router,NodeJs">
+    <meta name="keywords" content="">
 
     <!-- Import lsloader -->
     <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
@@ -244,18 +244,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://zhangdi.site">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="React+Node.js全栈开发(一) | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
+    <meta property="og:title" content="2017年终总结 | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
     <meta property="og:image" content="http://zhangdi.site/img/favicon.png" />
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="React"> <meta property="og:article:tag" content="Redux"> <meta property="og:article:tag" content="React-router"> <meta property="og:article:tag" content="NodeJs"> 
+    
 
     
-        <meta property="article:published_time" content="Fri Nov 24 2017 12:13:07 GMT+0800" />
-        <meta property="article:modified_time" content="Tue Jun 26 2018 22:17:10 GMT+0800" />
+        <meta property="article:published_time" content="Sun Jan 21 2018 15:56:49 GMT+0800" />
+        <meta property="article:modified_time" content="Fri Aug 31 2018 00:08:53 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="React+Node.js全栈开发(一) | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
+    <meta name="twitter:title" content="2017年终总结 | Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="http://zhangdi.site/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -263,7 +263,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://zhangdi.site/Redux-React-Router-Node-js-a.html" />
+        <link rel="canonical" href="http://zhangdi.site/2017-yearend-summary.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -275,10 +275,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://zhangdi.site/Redux-React-Router-Node-js-a.html",
-    "headline": "React+Node.js全栈开发(一)",
-    "datePublished": "Fri Nov 24 2017 12:13:07 GMT+0800",
-    "dateModified": "Tue Jun 26 2018 22:17:10 GMT+0800",
+    "mainEntityOfPage": "http://zhangdi.site/2017-yearend-summary.html",
+    "headline": "2017年终总结",
+    "datePublished": "Sun Jan 21 2018 15:56:49 GMT+0800",
+    "dateModified": "Fri Aug 31 2018 00:08:53 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Zeddy",
@@ -296,7 +296,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",React,Redux,React-router,NodeJs",
+    "keywords": "",
     "description": "",
 }
 </script>
@@ -371,7 +371,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#技术栈-React-Redux-React-Router-Antd-mobile-Webpack-NodeJs-Express-MongoDB"><span class="post-toc-text">技术栈: React Redux React-Router Antd-mobile Webpack NodeJs Express MongoDB</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#正式开始"><span class="post-toc-text">正式开始:</span></a>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#和2017做个了断"><span class="post-toc-text">和2017做个了断</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#跟2018-Say-Hello"><span class="post-toc-text">跟2018 Say Hello</span></a></li></ol>
     </ul>
     
 
@@ -403,7 +403,7 @@
         
     
             <p class="article-headline-p">
-                React+Node.js全栈开发(一)
+                2017年终总结
             </p>
         </div>
 
@@ -422,7 +422,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Zeddy</strong>
-        <span>11月 24, 2017</span>
+        <span>1月 21, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -444,22 +444,13 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACaElEQVR42u3aS27DMAwFQN//0um2QBv1kbRlNxivisAfjRYiS/J4ffR14OHh4eHh4eHhPYx3xNf3+3++4efbfvlw6/d8bXh4eHg7eX8ctQPeu/vfLm75bLI1eHh4eDt5STBY39MLKknAKLwTDw8P72G8aoqcbFP+LB4eHt5/5K0T4ryU0NsmPDw8vKfx8n/4k9JDteiQsy+steDh4eHFvF4DbM/ft/X38PDw8N7wThhyGpQb8gDQHLrCw8PDu4CXtPaT43iSLlcLFqOhKzw8PLwxr9eOShjVMdZqYl2Ie3h4eHgX8/KBqqQ1lafL+XjWKDDg4eHhjXlJOXWyrPUSJ9TmZAQeHh7eFl7vY710fJKI4+Hh4e3h5UWBeZH33GJuub+Hh4eHdyqvejRXx7PKSyy+Ew8PD+9e3rzYWi1VnAvGw8PDu4tXGHJqpb9JMp2XffHw8PD283oLqhZkew2z9Vfw8PDw9vOqg6rVom1esMhHCsqjA3h4eHgX884qDVTbYL0NxcPDw7uXNxldzcNAtaiRl4nx8PDwdvLy5LX6+V5gSDYuKuPi4eHhXcyrNqLyQJL/Mkno8fDw8O7l9ZLmeYFjHqLw8PDw9vDWDyfFhVfxWm9Ktc2Gh4eHt5PXW1Y1vS4MmwaM5kwZHh4e3km8SQFi/bHeeOt8y/Dw8PD28PLDuvnJ1ihqdQ14eHh4+3mTA7oKmxcjTujv4eHh4W3kVUNC3kKrhhA8PDy85/N6R//RupoBAw8PD28jr9eUmrT5q2vAw8PDew6v1wCrJr7VRlpvqAsPDw/vat7nXXh4eHh4eHh4eA+4vgCp3ZunD1wP2AAAAABJRU5ErkJggg==">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACfklEQVR42u3aS27DMAwFwNz/0u22QGDlkfrYSMeroHEEjRYiS/L189XPCw8PDw8PDw8P72G8V/z8fX/8+X398V/Gb+Z7w8PDwzvJ+3DVvjHGm05I1TWTveHh4eGd5yXB4GpD1aCSHE1zb3h4eHgP4xVS2+m/4OHh4X0Hb/zm1aXfOwI8PDy85/MK//APt5vje6XhjbUWPDw8vJi3tgG29vPj+nt4eHj/nlceaRoWcJNkeiZBLw9d4eHh4W3gjTda3eJ4nWry3Rw4wMPDwzvIyxv8M2WLfICgeSh4eHh4R3jVCzopwubfjsNP8i0eHh7evbzkQq82t3JYXkQuFCPw8PDwNvDyYkReMuilxcmvNtZa8PDw8OLe+kwLqlrk7TGSBB0PDw/vPC8pIoyPoJpkj9fJB63w8PDwzvOqJdqksNtrmPXSaDw8PLzzvLx8UE188/Cwan08PDy83bzq0FU1Fe6FgRy8eKYMDw8PL+4QzRQgeuXd5AiWxT08PDy8pby8VFodKaiGk+p+LgMbHh4e3kHezLaSYJD8Kj+scmDAw8PDW8rLW1O9odVq6WHq+PDw8PA283qDAkniWw0Ayw4aDw8P7wgvL7AmZdlqiXbmoAuTEXh4eHiLeL1LP09w85GC5CkHBjw8PLwNvOrTa2XNDyjk4wt4eHh4u3nVSzmHJYEhGUjNk2k8PDy8k7wkGPQCQ3WkoLcyHh4e3l28Xiur1+6aD06Xq+Hh4eE9jNdrdOWr5aWQcpUaDw8P71Ze8n6vLJsczYexAzw8PLyDvKQY0byslwabD6MPeHh4eEd4Mw2wmcLEzBjBof4eHh4e3vTQ1fMfPDw8PDw8PDy8Bzy/gS8MN/lFLJgAAAAASUVORK5CYII=">
     
 </ul>
 
     
 
     <!-- Tags (bookmark) -->
-    
-    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-        <i class="material-icons" role="presentation">bookmark</i>
-        <span class="visuallyhidden">bookmark</span>
-    </button>
-    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
-        <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/NodeJs/">NodeJs</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/React/">React</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/React-router/">React-router</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Redux/">Redux</a>
-    </ul>
     
 
     <!-- Share -->
@@ -475,7 +466,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=React+Node.js全栈开发(一)&url=http://zhangdi.site/Redux-React-Router-Node-js-a.html&pic=http://zhangdi.site/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=2017年终总结&url=http://zhangdi.site/2017-yearend-summary.html&pic=http://zhangdi.site/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -484,7 +475,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=React+Node.js全栈开发(一)&url=http://zhangdi.site/Redux-React-Router-Node-js-a.html&via=Zeddy" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=2017年终总结&url=http://zhangdi.site/2017-yearend-summary.html&via=Zeddy" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -493,7 +484,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zhangdi.site/Redux-React-Router-Node-js-a.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zhangdi.site/2017-yearend-summary.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -502,7 +493,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://zhangdi.site/Redux-React-Router-Node-js-a.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://zhangdi.site/2017-yearend-summary.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -514,7 +505,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.&title=React+Node.js全栈开发(一)&summary=&pics=http://zhangdi.site/img/favicon.png&url=http://zhangdi.site/Redux-React-Router-Node-js-a.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Zhangdi&#39;Blog --- 爱技术爱折腾,无折腾不技术.&title=2017年终总结&summary=&pics=http://zhangdi.site/img/favicon.png&url=http://zhangdi.site/2017-yearend-summary.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -533,132 +524,34 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h4 id="技术栈-React-Redux-React-Router-Antd-mobile-Webpack-NodeJs-Express-MongoDB"><a href="#技术栈-React-Redux-React-Router-Antd-mobile-Webpack-NodeJs-Express-MongoDB" class="headerlink" title="技术栈: React Redux React-Router Antd-mobile Webpack NodeJs Express MongoDB"></a>技术栈: React Redux React-Router Antd-mobile Webpack NodeJs Express MongoDB</h4><p>开发前准备:</p>
-<p>nodeJS MongoDB create-react-app的安装就不赘述了.</p>
-<p><a href="http://es6.ruanyifeng.com/" target="_blank" rel="noopener">ES6语法参考 &lt;&lt;阮一峰-ECMAScript 6 入门&gt;&gt;</a></p>
-<h3 id="正式开始"><a href="#正式开始" class="headerlink" title="正式开始:"></a>正式开始:</h3><ol>
-<li><p>使用create-react-app 搭建 react全家桶(react redux router webpack antd-mobile …) <a href="!http://zhangdi.site/2017/11/02/%E5%9F%BA%E4%BA%8Ecreate-react-app%E6%9E%84%E5%BB%BAReact%E5%85%A8%E5%AE%B6%E6%A1%B6/">过程&gt;&gt;</a></p>
-<p> <img src="http://oox9lo3vp.bkt.clouddn.com/17-11-27/16476351.jpg" alt="项目结构"></p>
-<p> <img src="http://oox9lo3vp.bkt.clouddn.com/17-11-27/36406085.jpg" alt="默认package.json"></p>
-<p> 终端执行<code>npm run eject</code></p>
-<p> <strong>(如果项目使用git)执行这里可能会遇到一个错误</strong></p>
-<p> <img src="http://oox9lo3vp.bkt.clouddn.com/17-11-27/43474637.jpg" alt="run eject 错误"></p>
-<p> 解决办法是:在<code>.gitignore</code>文件中添加<code>/.idea</code>过滤项.然后重新<code>commit</code> and <code>push</code>;我认为原因是弹出配置这个操作是不可逆的,所以fb的工程师很人性化的去检查了<code>git</code>是否有未提交的内容,如果只是像看看配置项,或者不想弹出配置项了,还可以从<code>git</code>上恢复.<code>.idea</code>是<code>webstorm</code>生成的编辑器配置文件,应该是随时变化的,所以把<code>.idea</code>过滤掉就可以了.</p>
-<p> <img src="http://oox9lo3vp.bkt.clouddn.com/17-11-27/8862925.jpg" alt="弹出配置后文件目录"></p>
-</li>
-<li><p>安装各种插件</p>
-</li>
-</ol>
-<pre class=" language-bash"><code class="language-bash">yarn add redux react-redux react-router-dom antd-mobile babel-plugin-import babel-plugin-transform-decorators-legacy axios
-
-yarn add express mongoose --dev
-</code></pre>
-<ol>
-<li>配置及前后台联调.</li>
-</ol>
-<p>接下来在<code>package.json</code>中配置 <code>plugins</code>部分.其中第一项为<code>antd-mobile</code>的按需加载,第二项为<code>transform-decorators-legacy</code>插件,使<code>babel</code>支持装饰器写法.</p>
-<pre class=" language-json"><code class="language-json"><span class="token property">"babel"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token property">"presets"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-      <span class="token string">"react-app"</span>
-    <span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token property">"plugins"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-      <span class="token punctuation">[</span>
-        <span class="token string">"import"</span><span class="token punctuation">,</span>
-        <span class="token punctuation">{</span>
-          <span class="token property">"libraryName"</span><span class="token operator">:</span> <span class="token string">"antd-mobile"</span><span class="token punctuation">,</span>
-          <span class="token property">"style"</span><span class="token operator">:</span> <span class="token string">"css"</span>
-        <span class="token punctuation">}</span>
-      <span class="token punctuation">]</span><span class="token punctuation">,</span>
-      <span class="token string">"transform-decorators-legacy"</span>
-    <span class="token punctuation">]</span>
-<span class="token punctuation">}</span>
-
-</code></pre>
-<p>然后配置server,在项目根路径下新建 <code>server</code>文件夹,用于存放后端server的内容.<code>src</code>下是前台内容.</p>
-<p>关于<code>express</code> <a href="http://www.expressjs.com.cn/" target="_blank" rel="noopener">官方文档</a>有详细介绍.</p>
-<p>在<code>server</code>下新建<code>server.js</code>:</p>
-<pre class=" language-JavaScript"><code class="language-JavaScript">const express = require('express');
-
-const app = express();
-
-//监听8080端口启动server
-const server = app.listen('8080',function(){
-    let host = server.address().address,
-        port = server.address().port;
-    //启动成功后在控制台打印.
-    console.log('Express app listening at http://%s:%s',host,port);
-})
-
-</code></pre>
-<p>在 <code>package.json</code>添加<code>proxy</code>配置项. 表示把请求转发到<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a>.</p>
-<pre class=" language-json"><code class="language-json"> <span class="token property">"proxy"</span><span class="token operator">:</span><span class="token string">"http://localhost:8080"</span>
-</code></pre>
-<p>ok,到这一步就基本完成了前后台的配置.接下来进行测试:</p>
-<p>启动<code>server.js</code>,这里推荐 <code>nodemon</code>  自动重启的工具,使用 <code>nodemon</code>来启动<code>server.js</code>;</p>
-<pre class=" language-"><code class="language-">nodemon server/server.js 
-</code></pre>
-<p>同时启动 react</p>
-<pre><code>yarn start
-</code></pre><p><code>server.js</code>添加路由</p>
-<pre class=" language-JavaScript"><code class="language-JavaScript">app.get('/user',function (req,res) {
-    res.json({
-        name:'张三',
-        age:18
-    })
-});
-</code></pre>
-<p>修改<code>/src/App.js</code></p>
-<pre class=" language-JavaScript"><code class="language-JavaScript">import React from 'react';
-import {Button} from 'antd-mobile';
-import axios from 'axios';
-import './App.css';
-
-class App extends React.Component {
-
-    constructor(props){
-        super(props);
-        this.state = {
-            user:{
-                name:'李四',
-                age:12
-            }
-        }
-    }
-
-    componentDidMount(){
-        console.log('component did mount!');
-    }
-    handleClick(){
-        axios.get('/user').then(res => {
-            console.log(res);
-            if(res.status === 200){
-                this.setState({
-                    user:res.data
-                })
-            }
-        })
-    }
-
-    render() {
-        return (
-            <div className="App">
-                <Button type="primary" onClick={this.handleClick.bind(this)}>获取</Button>
-                <p>
-                    我叫{this.state.user.name} ,我今年{this.state.user.age}岁.
-                </p>
-            </div>
-        );
-    }
-}
-
-export default App;
-</code></pre>
-<p>到这里前后端联调已经通了,但是后台还没有链接数据库(mongodb),react还没有使用 redux 和 router 等,接下来我们需要对 项目进一步改造.</p>
-<p>未完待续…</p>
-<ol>
-<li>配置使用 mongodb</li>
-</ol>
-<p>关于<code>mongodb</code>.<a href="http://www.runoob.com/mongodb/mongodb-tutorial.html" target="_blank" rel="noopener">查看文档了解更多</a></p>
+        <p>2018的第一个月已经快过完了,我才想起来写年终总结..我实在是够懒的🤣</p>
+<blockquote>
+<p>借Rock前辈的话来说：看看今年的任务清单，还有哪些是没完成的，排个计划，看看哪些还可以拖到明年，毕竟前几年的计划已经不能再拖了。😂</p>
+</blockquote>
+<blockquote>
+<p>2017年对我来说确实不是很顺利的一年,很多事情的变化都超出我的预想,不管怎么说还是跟我的2017做个了断吧.</p>
+</blockquote>
+<h4 id="和2017做个了断"><a href="#和2017做个了断" class="headerlink" title="和2017做个了断"></a>和2017做个了断</h4><ul>
+<li>工作</li>
+</ul>
+<p>当然第一件事件就是我开了<code>Hexo</code> 的博客,让自己能坚持做一件事情. 原因就是:提醒自己做任何事情都要坚持.如果我再坚持坚持,也许就不会来西安这po地方 ):</p>
+<p>这一年我从一名Java开发人员转成了前端开发,相对于Java开发我一开始就对前端的更感兴趣一些.嗯,这件事也许是唯一一件我预想到的事情,这一年里我学习了大量的前端知识.学了 <code>React</code> <code>nodejs</code> <code>webpack</code> <code>require</code> <code>es6+</code> 等 大量的前端知识,总的来说在学习方面还是没有落下(虽然我很懒,但时间确实多..),虽然Java不再是我的重心,但也没有落下,断续做了些前后端分离方面的学习.</p>
+<p>这一年我从成都来到了西安.来西安之前的种种预想在来到这里的3个月内被一一打破.被眼前的事实打的不知所措.来到一家”大公司”,各种牛逼Title让我趋之若鹜..接下来………(此处省略吐槽一万字…),不过还好遇到几个”有趣的”同事.</p>
+<p>工作方面总的来说除了学习,强化自己以外的其他事情都不值一提了,因为我想离开这家”大公司”!!</p>
+<ul>
+<li>生活</li>
+</ul>
+<p>这一年我觉得只有读书这件事情可以说一说，主要是今年买了很多书，因为看《晓松奇谈》矮大紧的推荐，看了《月亮与六便士》，后来又无意间发现了《一九八四》，再后来在书店看了《白说》，接着又迷上了 <strong>东野圭吾</strong> ，从通宵看完《白夜行》后又陆续看了《恶意》《解忧杂货店》，并一口气买了<strong>东野圭吾</strong> 的四大名著，然而都没有看..也许是因为有点厌倦了。后来又受到矮大紧的影响品读了《三体》，目前看了前两本，第三部迟迟读不下去，确实是感觉 <strong>大刘</strong> 很大程度上受到了商业的影响，较前两部没有那么的吸引人那么的有意思。感觉自己又迷上了科幻，嗯。准备看一下《基地》系列。</p>
+<p>哈哈。像我这么懒的人能读这些书我已经很知足了。</p>
+<p>其他方面乏善可陈。</p>
+<hr>
+<h4 id="跟2018-Say-Hello"><a href="#跟2018-Say-Hello" class="headerlink" title="跟2018 Say Hello"></a>跟2018 Say Hello</h4><p>工作方面，坚持每天2小时技术学习，坚持每周1-2篇博客，坚持（争取）每个月读1-2本书。努力学习努力提升，争取上半年能脱坑，然后买车买房，升职就算了，加薪吧！！</p>
+<blockquote>
+<p>昨天一笔勾销吧<br>明天都尽管来吧<br>我什么都忘了<br>赤裸得像天堂</p>
+<p>—《好好地》朴树</p>
+</blockquote>
+<p>生活虐我千百遍，我待生活如初恋。💪</p>
+<p>先这么着吧，我又懒文笔又差，这点字都墨迹了快一个小时。</p>
 
         
     
@@ -677,8 +570,8 @@ export default App;
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://zhangdi.site/Redux-React-Router-Node-js-a.html';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://zhangdi.site/Redux-React-Router-Node-js-a.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://zhangdi.site/2017-yearend-summary.html';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://zhangdi.site/2017-yearend-summary.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -708,7 +601,7 @@ export default App;
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/understanding-the-browser-object-modelbom.html" id="post_nav-newer" class="prev-content">
+        <a href="/rxjs-study-notes-1.html" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -722,7 +615,7 @@ export default App;
 
     <!-- Next Nav -->
     
-        <a href="/use-of-svn-in-the-macos-environment-client.html" id="post_nav-older" class="next-content">
+        <a href="/webpack-study-notes-2.html" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -816,7 +709,7 @@ export default App;
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">12</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">12</span></a>
             </ul>
         </li>
         
@@ -834,7 +727,7 @@ export default App;
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/hexo/">Hexo<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/share/">分享境<span class="sidebar_archives-count">14</span></a></li><li><a class="sidebar_archives-link" href="/categories/technology/">技术向<span class="sidebar_archives-count">27</span></a></li><li><a class="sidebar_archives-link" href="/categories/self-talk/">自言语<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/categories/hexo/">Hexo<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/share/">分享境<span class="sidebar_archives-count">14</span></a></li><li><a class="sidebar_archives-link" href="/categories/technology/">技术向<span class="sidebar_archives-count">28</span></a></li><li><a class="sidebar_archives-link" href="/categories/self-talk/">自言语<span class="sidebar_archives-count">2</span></a>
             </ul>
         </li>
         
